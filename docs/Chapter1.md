@@ -74,3 +74,30 @@ Aplicando la técnica de análisis de problemas **5W+2H**, desglosamos la proble
 *   **Where (¿Dónde?):** En los centros de distribución, almacenes de las embotelladoras y durante la ruta de los camiones de transporte.
 *   **How (¿Cómo?):** Se soluciona implementando una plataforma SaaS que centralice la información y se integre con hardware IoT (sensores de peso, humedad, temperatura y antenas de lectura masiva RFID) para automatizar el registro y monitorear el estado de los envases.
 *   **How much (¿Cuánto?):** Las pérdidas por mermas no detectadas a tiempo y las ineficiencias en despachos representan millones en sobrecostos operativos anuales para la industria de bebidas masivas.
+
+### 1.2.2. Lean UX Process
+
+#### 1.2.2.1. Lean UX Problem Statements
+
+El estado actual de la gestión logística en empresas embotelladoras se ha enfocado en sistemas transaccionales básicos y registros en papel. Lo que este proceso no logra es proporcionar visibilidad en tiempo real y automatizar el control físico de la mercadería. Nuestro producto (BevTrace) abordará esta brecha ofreciendo un SaaS integral que combina Dashboards de KPI, gestión automatizada de despachos y monitoreo IoT, lo que reducirá las mermas y optimizará el flujo de trabajo operativo.
+
+#### 1.2.2.2. Lean UX Assumptions
+
+**Business Assumptions:**
+*   Las empresas embotelladoras están dispuestas a invertir en un modelo SaaS si demuestra una reducción directa en el porcentaje de mermas y productos dañados.
+*   La integración de sensores IoT (peso, humedad) es factible y los clientes perciben el valor de la telemetría para asegurar la calidad de los envases PET.
+
+**User Assumptions (Basado en User vs. Buyer Persona):**
+*   **Buyer Persona (Gerente de Logística):** Necesita consolidar datos rápidamente. Asumimos que valorará por encima de todo un *Dashboard de KPI en tiempo real* para la toma de decisiones estratégicas.
+*   **User Persona (Operario de Almacén):** Busca reducir su carga de trabajo manual. Asumimos que adoptará la plataforma si la funcionalidad de *Lectura Masiva* reduce drásticamente el tiempo de inventariado y carga.
+
+#### 1.2.2.3. Lean UX Hypothesis Statements
+
+*   **Hipótesis 1:** Creemos que una reducción del 25% en las mermas no justificadas se logrará si los *Gerentes de Logística* logran detectar anomalías físicas en tránsito con la *integración IoT (sensores de peso/humedad)*.
+*   **Hipótesis 2:** Creemos que un aumento del 30% en la velocidad de despacho se logrará si los *Operarios de Almacén* logran registrar pallets enteros simultáneamente con el *módulo de lectura masiva y asignación automatizada*.
+*   **Hipótesis 3:** Creemos que la retención de clientes corporativos aumentará en un 40% si los *Jefes de Logística* logran una visibilidad gerencial inmediata con el *Dashboard de KPI en tiempo real*.
+
+#### 1.2.2.4. Lean UX Canvas
+
+*(Espacio reservado para la inserción de la imagen del Lean UX Canvas del equipo)*
+<img src="../assets/Chapter1/Lean_UX_Canvas_BevTrace.png" alt="Lean UX Canvas" width="auto" height="550"/>
