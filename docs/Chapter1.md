@@ -58,3 +58,19 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
     </td>
   </tr>
 </table>
+
+## 1.2. Solution Profile
+
+### 1.2.1. Antecedentes y problemática
+
+El modelo de distribución de bebidas de consumo masivo, particularmente en envases PET no retornables, enfrenta serios desafíos logísticos. A pesar de los altos volúmenes de producción, los almacenes y distribuidoras operan frecuentemente con sistemas heredados o procesos manuales. El verdadero problema de la startup radica en la falta de visibilidad en tiempo real de la mercadería, lo que imposibilita un control estricto sobre las mermas y retrasa la gestión de despachos.
+
+Aplicando la técnica de análisis de problemas **5W+2H**, desglosamos la problemática de la siguiente manera:
+
+*   **What (¿Qué?):** Pérdida de inventario (mermas), desorganización en la asignación de despachos y nula trazabilidad del estado físico del producto durante las operaciones logísticas.
+*   **Why (¿Por qué?):** Porque los procesos dependen de verificaciones manuales y desconectadas. No existe un ecosistema que integre la lectura masiva de productos ni el monitoreo ambiental/físico de la carga en los vehículos.
+*   **Who (¿Quién?):** Afecta financieramente a las empresas embotelladoras y distribuidoras. Operativamente impacta a los Jefes/Gerentes de Logística y a los Operarios de Almacén.
+*   **When (¿Cuándo?):** Durante los procesos de preparación de pedidos (picking), asignación de rutas, carga de vehículos y transporte hacia los distribuidores finales.
+*   **Where (¿Dónde?):** En los centros de distribución, almacenes de las embotelladoras y durante la ruta de los camiones de transporte.
+*   **How (¿Cómo?):** Se soluciona implementando una plataforma SaaS que centralice la información y se integre con hardware IoT (sensores de peso, humedad, temperatura y antenas de lectura masiva RFID) para automatizar el registro y monitorear el estado de los envases.
+*   **How much (¿Cuánto?):** Las pérdidas por mermas no detectadas a tiempo y las ineficiencias en despachos representan millones en sobrecostos operativos anuales para la industria de bebidas masivas.
