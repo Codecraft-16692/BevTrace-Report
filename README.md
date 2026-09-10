@@ -17,12 +17,12 @@
 
 ### Integrantes
 
-| Código     | Apellidos y Nombres           |
-|:-----------|:------------------------------|
-|            |                               |
-| U201910803 | Heredia Hoyos, Danitza Ivonne |
-|            |                               |
-|            |                               |
+| Código     | Apellidos y Nombres                |
+|:-----------|:-----------------------------------|
+| u202113229 | Castillo Yataco, Mauricio Sebastian|
+| U201910803 | Heredia Hoyos, Danitza Ivonne      |
+|            |                                    |
+|            |                                    |
 
 **Período:** 2026-20  
 **Fecha:** Setiembre 2026
@@ -47,7 +47,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
 
 | Integrante | Participación |
 | :--- | :--- |
-|  |  |
+| Mauricio Castillo Yataco |  |
 | Danitza Ivonne Heredia Hoyos |  |
 |  |  |
 |  |  |
