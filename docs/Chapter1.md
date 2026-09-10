@@ -139,3 +139,19 @@ Los siguientes supuestos representan las creencias iniciales del equipo respecto
 #### 1.2.2.4. Lean UX Canvas
 ![C1-Canvas](/assets/Chapter1/LeanUXCanvas-BevTrace.png)
 
+### 1.3. Segmentos objetivo
+
+#### Empresas embotelladoras y distribuidoras de bebidas de consumo masivo
+
+- **Tipo de empresa:** Empresas embotelladoras y distribuidoras dedicadas a la comercialización y distribución de bebidas de consumo masivo en envases PET no retornables.
+- **Procesos:** Empresas que gestionan operaciones de almacén, inventarios, despachos y distribución de productos.
+- **Necesidad principal:** Mejorar el control de inventarios y despachos, reducir las pérdidas de productos y contar con mayor visibilidad sobre el proceso de distribución.
+- **Uso de tecnología:** Empresas interesadas en digitalizar sus procesos logísticos mediante soluciones SaaS e integrar tecnologías IoT para obtener información operativa en tiempo real.
+- **Beneficios buscados:** Reducción de discrepancias y mermas de inventario, mayor eficiencia en los despachos, trazabilidad de los productos y acceso a información actualizada para la toma de decisiones.
+
+#### Responsables de almacén, logística, distribución y operaciones
+
+- **Perfil:** Profesionales encargados de supervisar y gestionar las operaciones relacionadas con inventarios, despachos, distribución y control logístico dentro de las empresas objetivo.
+- **Necesidad principal:** Contar con información centralizada, actualizada y confiable para controlar los productos, supervisar los despachos y detectar oportunamente incidencias durante la distribución.
+- **Uso de tecnología:** Utilizan sistemas digitales para consultar, registrar y supervisar información relacionada con las operaciones logísticas.
+- **Beneficios buscados:** Mayor precisión en el control de inventarios, visibilidad del estado y recorrido de los productos, alertas sobre incidencias y acceso a indicadores que faciliten la toma de decisiones.
