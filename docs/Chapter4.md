@@ -87,6 +87,17 @@ La paleta de colores de BevTrace refuerza los atributos de confianza, precisión
 Esta distribución cromática busca transmitir a los clientes de BevTrace una imagen de control operativo y confiabilidad, reservando los colores funcionales exclusivamente para estados del sistema, a fin de evitar ambigüedad en la comunicación visual de alertas críticas de la cadena de distribución.
 </p>
 
+#### Spacing
+
+<p align="justify">
+BevTrace utiliza un sistema de espaciado modular basado en una unidad base de 8px, múltiplo estándar compatible con el sistema de grid de Angular Material. Esta unidad se multiplica para definir los distintos niveles de espaciado en la interfaz, garantizando consistencia visual y un ritmo predecible entre secciones, componentes y elementos internos.
+</p>
+
+- **Espaciado base**: 8px, unidad mínima del sistema.
+- **Espaciado entre elementos relacionados** (ej. ítems de una lista de despachos): 16px (2 unidades).
+- **Espaciado entre componentes** (ej. tarjetas de monitoreo): 24px (3 unidades).
+- **Padding de secciones principales**: 48px (6 unidades), para separar bloques de contenido en el Landing Page.
+  
 ### 4.1.2. Web Style Guidelines.
 
 ## 4.2. Information Architecture.
