@@ -51,6 +51,41 @@ La jerarquía tipográfica se establece de la siguiente manera, tomando como ref
 Esta jerarquía tipográfica busca garantizar una lectura clara de la información operativa en todas las resoluciones, priorizando el contraste suficiente entre el texto y el fondo según las pautas WCAG 2.1 AA, en línea con el enfoque de accesibilidad adoptado para el producto.
 </p>
 
+#### Colors
+
+<p align="justify">
+La paleta de colores de BevTrace refuerza los atributos de confianza, precisión y monitoreo en tiempo real que caracterizan al producto, dirigido a un público B2B del sector logístico. Se organiza en tres categorías: colores de marca, colores neutros y colores funcionales de estado.
+</p>
+
+**Paleta principal**
+
+| Color | Uso | Valor |
+|---|---|---|
+| Azul Petróleo (Primario) | Identidad de marca, elementos clave de navegación | `#0D5C63` |
+| Azul Cian (Secundario) | Acentos, elementos interactivos | `#00A8CC` |
+
+**Colores neutros**
+
+| Color | Uso | Valor |
+|---|---|---|
+| Neutro oscuro | Texto principal, fondos oscuros | `#2B2B2B` |
+| Neutro claro | Fondos de sección, tarjetas | `#F5F5F5` |
+
+**Colores funcionales**
+
+| Color | Uso | Valor |
+|---|---|---|
+| Verde (Éxito) | Confirmaciones, despachos completados | `#2E7D32` |
+| Ámbar (Alerta) | Advertencias, retrasos en tránsito | `#F9A825` |
+| Rojo (Error) | Errores, incidencias críticas de trazabilidad | `#C62828` |
+
+<p align="center">
+  <img src="../assets/Chapter4/colors_bevtrace.png" alt="Paleta de colores de BevTrace" width="650">
+</p>
+
+<p align="justify">
+Esta distribución cromática busca transmitir a los clientes de BevTrace una imagen de control operativo y confiabilidad, reservando los colores funcionales exclusivamente para estados del sistema, a fin de evitar ambigüedad en la comunicación visual de alertas críticas de la cadena de distribución.
+</p>
 ### 4.1.2. Web Style Guidelines.
 
 ## 4.2. Information Architecture.
