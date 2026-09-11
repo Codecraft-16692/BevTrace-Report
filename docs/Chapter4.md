@@ -23,6 +23,10 @@ La marca BevTrace se apoya en dos ideas centrales: la ruta (el trayecto que reco
 Para preservar la legibilidad del logotipo, se define un área de resguardo mínima equivalente a la altura de la letra inicial del wordmark, dentro de la cual no puede ubicarse ningún otro elemento visual. Asimismo, se establecen dos variantes de uso: una versión a color para fondos claros y una versión invertida (blanca) para fondos oscuros o imágenes de fondo, evitando en ambos casos distorsiones de proporción o rotaciones del isotipo.
 </p>
 
+<p align="center">
+  <img src="assets/Chapter4/logo_bevtrace.png" alt="Logotipo de BevTrace" width="280">
+</p>
+
 ### 4.1.2. Web Style Guidelines.
 
 ## 4.2. Information Architecture.
