@@ -50,11 +50,11 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
   </tr>
   <tr>
     <td width="140" valign="top" align="center">
-      <img src="../assets/Chapter1/placeholder_enrique.jpg" alt="Foto de Enrique" width="120" />
+      <img src="../assets/Chapter1/enrique.jpg" alt="Foto de Enrique" width="120" />
     </td>
     <td valign="top">
-      <strong>Enrique Augusto Ochoa Prado</strong> - <br><br>
-      [Insertar descripción manual aquí].
+      <strong>Enrique Augusto Ochoa Prado</strong> - Ingeniería de Software<br><br>
+      Desarrollador full-stack con experiencia en administración y mantenimiento de plataformas web en producción, incluyendo paneles administrativos y sitios públicos desplegados en servidores propios.
     </td>
   </tr>
 </table>
