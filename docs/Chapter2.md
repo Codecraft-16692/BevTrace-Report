@@ -8,6 +8,128 @@ En esta etapa, se analizan distintos tipos de competidores con el objetivo de en
 
 ### 2.1.1. Análisis competitivo.
 
+<table style="width:100%; border-collapse:collapse; table-layout:fixed;" border="1" align="center">
+  <!-- Título principal -->
+  <tr>
+    <th colspan="7" align="center">Competitive Analysis Landscape</th>
+  </tr>
+  <!-- Justificación -->
+  <tr>
+    <td rowspan="2" align="center"><b>¿Por qué llevar a cabo este análisis?</b></td>
+    <td colspan="6" align="center">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="6">
+      <b>Objetivo:</b>  <br> 
+    </td>
+  </tr>
+  <!-- Encabezados con logos -->
+  <tr>
+    <th colspan="2" style="width:20%">(En la cabecera colocar por cada competidor nombre y logo)</th>
+    <th style="width:20%">
+      <img src="" width="100" height="100">
+    </th>
+    <th style="width:20%">
+      <img src="" width="100" height="100">
+    </th>
+    <th style="width:20%">
+      <img src="" width="100" height="100">
+    </th>   
+    <th style="width:20%">
+      <img src="" width="100" height="100">
+    </th>
+    <th style="width:20%">
+      <img src="" width="100" height="100">
+    </th>
+  </tr>
+  <!-- PERFIL -->
+  <tr>
+    <td rowspan="2" align="center"><b>Perfil</b></td>
+    <td><b>Overview</b></td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td><b>Ventaja competitiva:<br>¿Qué valor ofrece a los clientes?</b></td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+    <td> </td>
+  </tr>
+  <!-- PERFIL DE MARKETING -->
+  <tr>
+    <td rowspan="2" align="center"><b>Perfil de Marketing</b></td>
+    <td><b>Mercado objetivo</b></td>
+    <td> </td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td><b>Estrategias de marketing</b></td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td>  </td>
+  </tr>
+  <!-- PERFIL DE PRODUCTO -->
+  <tr>
+    <td rowspan="3" align="center"><b>Perfil de Producto</b></td>
+    <td><b>Productos & Servicios</b></td>
+    <td> </td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td><b>Precios & Costos</b></td>
+    <td> </td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td><b>Canales de distribución<br>(Web y/o Móvil)</b></td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+  </tr>
+  <!-- SWOT -->
+  <tr>
+    <td rowspan="4" align="center"><b>Análisis SWOT</b></td>
+    <td><b>Fortalezas</b></td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td><b>Debilidades</b></td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td><b>Oportunidades</b></td>
+    <td> </td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td><b>Amenazas</b></td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+  </tr>
+</table>
+
+
 ### 2.1.2. Estrategias y tácticas frente a competidores.
 
 ## 2.2. Entrevistas.
@@ -67,3 +189,13 @@ Teniendo en cuenta la importancia en la información que nos pueden proveer los 
 *   ¿Qué características debería tener una herramienta digital para facilitar tus actividades?
 *   ¿Qué tipo de capacitación o acompañamiento necesitaría su equipo para migrar del conteo manual a un sistema de lectura masiva con IoT?
 *   ¿Qué información necesitas consultar con mayor frecuencia para realizar tu trabajo?
+
+### 2.2.2. Registro de entrevistas
+### 2.2.3. Análisis de entrevistas
+## 2.3. Needfinding
+### 2.3.1. User Personas
+### 2.3.2. User Task Matrix
+### 2.3.3. User Journey Mapping
+### 2.3.4. Empathy Mapping
+## 2.4. Big Picture Event Storm
+## 2.5. Ubiquitous Language
