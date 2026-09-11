@@ -62,6 +62,11 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
 ## 1.2. Solution Profile
 ### 1.2.1. Antecedentes y problemática
 
+El modelo de distribución de bebidas de consumo masivo, particularmente en envases PET no retornables, enfrenta serios desafíos logísticos. A pesar de los altos volúmenes de producción, los almacenes y distribuidoras operan frecuentemente con sistemas heredados o procesos manuales. El verdadero problema de la startup radica en la falta de visibilidad en tiempo real de la mercadería, lo que imposibilita un control estricto sobre las mermas y retrasa la gestión de despachos.
+
+
+Aplicando la técnica de análisis de problemas 5W+2H, desglosamos la problemática de la siguiente manera:
+
 * <b>Who? (¿Quiénes?) </b> <br> Empresas embotelladoras y distribuidoras de bebidas de consumo masivo, así como responsables de almacén, logística, distribución y operaciones. <br/>
 * <b>What? (¿Qué sucede?) </b> <br> Dificultades para controlar inventarios, gestionar despachos y realizar la trazabilidad de productos durante la distribución.<br/>
 * <b>Where? (¿Dónde ocurre?) </b> <br> En almacenes, centros de distribución y durante el traslado de productos hacia sus respectivos destinos.<br/>
