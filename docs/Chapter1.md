@@ -55,7 +55,7 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
     <td width="140" valign="top" align="center">
       <img src="../assets/Chapter1/enrique.jpg" alt="Foto de Enrique" width="120" />
     </td>
-        <td valign="top" style="text-align: justify;">
+        <td valign="top" align="justify">
       <strong>Enrique Augusto Ochoa Prado</strong> - Ingeniería de Software<br><br>
       Mi nombre es Enrique Augusto Ochoa Prado y actualmente tengo 19 años de edad. Me encuentro realizando mis estudios universitarios en el sexto ciclo de la carrera de Ingeniería de Software en la UPC. Durante este período académico, he adquirido conocimientos fundamentales en el desarrollo de software, abarcando áreas como programación, bases de datos y desarrollo web. Las dinámicas de trabajo colaborativo han sido una constante en mi experiencia estudiantil, donde he demostrado capacidad de integración y liderazgo en diversos equipos. Esta trayectoria me ha brindado la confianza necesaria para enfrentar desafíos de mayor alcance. Mi compromiso se centra en mantener una metodología rigurosa y perseverante que permita alcanzar resultados óptimos en conjunto con mis compañeros de proyecto.
     </td>
