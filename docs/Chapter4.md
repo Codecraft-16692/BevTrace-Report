@@ -97,7 +97,22 @@ BevTrace utiliza un sistema de espaciado modular basado en una unidad base de 8p
 - **Espaciado entre elementos relacionados** (ej. ítems de una lista de despachos): 16px (2 unidades).
 - **Espaciado entre componentes** (ej. tarjetas de monitoreo): 24px (3 unidades).
 - **Padding de secciones principales**: 48px (6 unidades), para separar bloques de contenido en el Landing Page.
-  
+
+#### Tono de Comunicación
+
+<p align="justify">
+La voz y el tono de BevTrace están diseñados para reflejar la precisión y confiabilidad que caracterizan al producto, dirigiéndose principalmente a gerentes de logística, operaciones y tecnología de empresas embotelladoras y distribuidoras. La comunicación busca proyectar control operativo y transparencia en cada etapa de la cadena de distribución.
+</p>
+
+- **Tono**: Formal y profesional, orientado a la confiabilidad operativa.
+- **Actitud**: Resolutiva y directa, enfocada en comunicar beneficios concretos (reducción de reportes manuales, visibilidad en tiempo real, trazabilidad inmutable del producto).
+- **Lenguaje**: Claro y preciso, evitando ambigüedad en mensajes relacionados con el estado de despachos o alertas del sistema.
+- **Voz**: Experta y confiable, posicionando a BevTrace como una solución tecnológica sólida para la gestión logística del sector de bebidas embotelladas.
+
+<p align="justify">
+Este enfoque comunicacional busca generar confianza en los clientes de BevTrace, asegurando que la plataforma automatiza y centraliza la gestión de despachos de forma segura, eliminando la dependencia de reportes manuales propensos a error.
+</p>
+
 ### 4.1.2. Web Style Guidelines.
 
 ## 4.2. Information Architecture.
