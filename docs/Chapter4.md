@@ -27,6 +27,22 @@ Para preservar la legibilidad del logotipo, se define un área de resguardo mín
   <img src="../assets/Chapter4/logo_bevtrace.png" alt="Logotipo de BevTrace" width="280">
 </p>
 
+#### Typography
+
+<p align="justify">
+BevTrace adopta **Roboto** como tipografía principal para toda la interfaz, al ser la fuente predeterminada de Material Design y, por consiguiente, de Angular Material, framework de componentes utilizado en el desarrollo de la Web Application. Esta decisión asegura consistencia tipográfica entre el Landing Page y la aplicación web, sin necesidad de cargar fuentes adicionales que impacten el rendimiento. Para la visualización de datos técnicos y numéricos (identificadores de lote, coordenadas GPS, códigos de despacho, timestamps de trazabilidad) se emplea **Roboto Mono**, cuyo espaciado monoespaciado facilita la alineación tabular y evita confusión entre caracteres similares (0, O, 1, l) en reportes operativos donde la exactitud del dato es crítica.
+</p>
+
+<p align="justify">
+La jerarquía tipográfica se establece de la siguiente manera, tomando como referencia la escala tipográfica de Angular Material, a fin de mantener coherencia entre el diseño planteado y su futura implementación:
+</p>
+
+- **Encabezado principal (H1)**: 2.5rem (40px) en escritorio, 2rem (32px) en móvil.
+- **Subtítulos de sección (H2)**: 2rem (32px) en escritorio, 1.75rem (28px) en móvil.
+- **Títulos de componente (H3/H4)**: 1.5rem (24px) a 1.25rem (20px).
+- **Cuerpo de texto (p)**: 1rem (16px), con interlineado (line-height) de 1.6 para facilitar la lectura de párrafos extensos.
+- **Etiquetas y botones (span/button)**: 0.875rem (14px) a 1rem (16px).
+  
 ### 4.1.2. Web Style Guidelines.
 
 ## 4.2. Information Architecture.
