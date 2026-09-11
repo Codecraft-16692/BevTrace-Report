@@ -24,7 +24,7 @@ Para preservar la legibilidad del logotipo, se define un área de resguardo mín
 </p>
 
 <p align="center">
-  <img src="assets/Chapter4/logo_bevtrace.png" alt="Logotipo de BevTrace" width="280">
+  <img src="../assets/Chapter4/logo_bevtrace.png" alt="Logotipo de BevTrace" width="280">
 </p>
 
 ### 4.1.2. Web Style Guidelines.
