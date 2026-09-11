@@ -42,7 +42,15 @@ La jerarquía tipográfica se establece de la siguiente manera, tomando como ref
 - **Títulos de componente (H3/H4)**: 1.5rem (24px) a 1.25rem (20px).
 - **Cuerpo de texto (p)**: 1rem (16px), con interlineado (line-height) de 1.6 para facilitar la lectura de párrafos extensos.
 - **Etiquetas y botones (span/button)**: 0.875rem (14px) a 1rem (16px).
-  
+
+<p align="center">
+  <img src="../assets/Chapter4/typography_bevtrace.png" alt="Muestra tipográfica de BevTrace" width="500">
+</p>
+
+<p align="justify">
+Esta jerarquía tipográfica busca garantizar una lectura clara de la información operativa en todas las resoluciones, priorizando el contraste suficiente entre el texto y el fondo según las pautas WCAG 2.1 AA, en línea con el enfoque de accesibilidad adoptado para el producto.
+</p>
+
 ### 4.1.2. Web Style Guidelines.
 
 ## 4.2. Information Architecture.
