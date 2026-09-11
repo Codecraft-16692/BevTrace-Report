@@ -86,6 +86,7 @@ La paleta de colores de BevTrace refuerza los atributos de confianza, precisión
 <p align="justify">
 Esta distribución cromática busca transmitir a los clientes de BevTrace una imagen de control operativo y confiabilidad, reservando los colores funcionales exclusivamente para estados del sistema, a fin de evitar ambigüedad en la comunicación visual de alertas críticas de la cadena de distribución.
 </p>
+
 ### 4.1.2. Web Style Guidelines.
 
 ## 4.2. Information Architecture.
