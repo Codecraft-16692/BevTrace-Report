@@ -8,129 +8,31 @@ En esta etapa, se analizan distintos tipos de competidores con el objetivo de en
 
 ### 2.1.1. Análisis competitivo.
 
-<table style="width:100%; border-collapse:collapse; table-layout:fixed;" border="1" align="center">
-  <!-- Título principal -->
-  <tr>
-    <th colspan="7" align="center">Competitive Analysis Landscape</th>
-  </tr>
-  <!-- Justificación -->
-  <tr>
-    <td rowspan="2" align="center"><b>¿Por qué llevar a cabo este análisis?</b></td>
-    <td colspan="6" align="center">
-    </td>
-  </tr>
-  <tr>
-    <td colspan="6">
-      <b>Objetivo:</b>  <br> 
-    </td>
-  </tr>
-  <!-- Encabezados con logos -->
-  <tr>
-    <th colspan="2" style="width:20%">(En la cabecera colocar por cada competidor nombre y logo)</th>
-    <th style="width:20%">
-      <img src="" width="100" height="100">
-    </th>
-    <th style="width:20%">
-      <img src="" width="100" height="100">
-    </th>
-    <th style="width:20%">
-      <img src="" width="100" height="100">
-    </th>   
-    <th style="width:20%">
-      <img src="" width="100" height="100">
-    </th>
-    <th style="width:20%">
-      <img src="" width="100" height="100">
-    </th>
-  </tr>
-  <!-- PERFIL -->
-  <tr>
-    <td rowspan="2" align="center"><b>Perfil</b></td>
-    <td><b>Overview</b></td>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-  </tr>
-  <tr>
-    <td><b>Ventaja competitiva:<br>¿Qué valor ofrece a los clientes?</b></td>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-    <td> </td>
-  </tr>
-  <!-- PERFIL DE MARKETING -->
-  <tr>
-    <td rowspan="2" align="center"><b>Perfil de Marketing</b></td>
-    <td><b>Mercado objetivo</b></td>
-    <td> </td>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-  </tr>
-  <tr>
-    <td><b>Estrategias de marketing</b></td>
-    <td> </td>
-    <td> </td>
-    <td> </td>
-    <td>  </td>
-  </tr>
-  <!-- PERFIL DE PRODUCTO -->
-  <tr>
-    <td rowspan="3" align="center"><b>Perfil de Producto</b></td>
-    <td><b>Productos & Servicios</b></td>
-    <td> </td>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-  </tr>
-  <tr>
-    <td><b>Precios & Costos</b></td>
-    <td> </td>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-  </tr>
-  <tr>
-    <td><b>Canales de distribución<br>(Web y/o Móvil)</b></td>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-  </tr>
-  <!-- SWOT -->
-  <tr>
-    <td rowspan="4" align="center"><b>Análisis SWOT</b></td>
-    <td><b>Fortalezas</b></td>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-  </tr>
-  <tr>
-    <td><b>Debilidades</b></td>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-    <td> </td>
-  </tr>
-  <tr>
-    <td><b>Oportunidades</b></td>
-    <td> </td>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-  </tr>
-  <tr>
-    <td><b>Amenazas</b></td>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-  </tr>
-</table>
+### Competitive Analysis Landscape
+
+
+|          **¿Por qué llevar a cabo este análisis?**              |    Identificar fortalezas, debilidades y estrategias de los principales competidores en logística de embotelladoras y trazabilidad del proceso (Verial, WebFleet, SAP EWM) para poder posicionar nuestra plataforma en el mercado.            |      Objetivo: Determinar que valor agredado ofrece nuestro producto para diferenciarse de la competencia y que     |                         
+|------------------------|----------------------------------------------|---|
+
+
+| Categoría              | Aspecto                                      | ![BevTrace](../assets/Chapter2/BevTrace_Logo.jpeg) | ![Verial](../assets/Chapter2/Verial_Logo.jpg) | ![WebFleet](../assets/Chapter2/WebFleet_Logo.png) | ![SAPEWM](../assets/Chapter2/SAP_EWM_Logo.jpg) |  
+|:------------------------|:----------------------------------------------|:---:|:---:|:---:|:---:|
+| Perfil                 | Overview                                      |  SaaS que digitaliza y automatiza la cadena de suministro de em- botelladoras/distribuidoras de be- bidas en envases PET no retornables, uniendo gestión operativa con IoT   |   ERP español specializado en distribución de bebidas: preventa, autoventa, rutas y trazabilidad de lotes.  |  Plataforma SaaS de telemática y gestión de flotas de Bridgestone, con foco en localización y navegación.   |  Módulo empresarial de SAP para gestión avanzada de almacenes (Extended Warehouse Management).    | 
+| Perfil                 | Ventaja competitiva (¿qué valor ofrece?)      |   Monitoreo en tiempo real vía telemetría IoT,  trazabilidad inmutable del producto desde almacén hasta destino y gestión centralizada de despachos, especializado en PET no retornable  |Cumplimiento normativo (Verifactu), control de lote origen y del destino específico para HORECA y retail de bebidas|   Precisión GPS en tiempo real, marca reconocida globalmente, integraciones con hardware vehicular certificado.  |  Robustez enterprise, integración nativa con todo el ecosistema SAP (finanzas, MM, SD) ya instalado en grandes embotelladoras   |   
+| Perfil de Marketing    | Mercado objetivo                              |  Empresas embotelladoras/distribuidoras de consumo masivo con envases PET no retornables; usuarios: responsables de almacén, logística, distribución y operaciones    |  PyMEs (pequeñas y medianas empresas ) y distribuidoras mayoristas de bebidas en España.   |  Empresas con flotas de transporte de cualquier industria, a nivel global.   |   Grandes corporativos y embotelladoras multinacionales (ej. grupos AB InBev, Coca-Cola FEMSA)  |   
+| Perfil de Marketing    | Estrategias de marketing                      |    Mostrar nuestra especialidad en el sector de embotelladoras con campañas y comerciales que comparan nuestros producto con otros competidores |   Versiones de prueba gratuitas de 30 días, marketing de contenido enfocado en dolor operativo (cuadres de caja/lote)  |   Alianzas con fabricantes de vehículos, presencia en ferias de logística internacionales.   |   Venta consultiva B2B (asesoramiento) de largo ciclo, a través de partners certificados SAP.   |    
+| Perfil de Producto     | Productos & Servicios                         |   Gestión de inventarios, gestión de despachos, trazabilidad de productos, monitoreo IoT, alertas de incidencias, dashboard de indicadores |   Preventa, autoventa, TPV (Terminal Punto de Venta), trazabilidad de lote, facturación electrónica  |  Rastreo GPS, navegación profesional, analítica de conducción y combustible.   |   Gestión de inventario multi-almacén, picking/packing, integración con RFID/IoT.  |    
+| Perfil de Producto     | Precios & Costos                              | Suscripción SaaS para medianas y pequeñas empresas     |   Suscripción SaaS de gama media, accesible para PyME.   |   Suscripción por vehículo/mes; costo medio-alto según hardware  |   Licenciamiento enterprise de alto costo, requiere implementación por consultora.  |   
+| Perfil de Producto     | Canales de distribución (Web y/o Móvil)       |  Web y app movil para los jefes de logistica y los operarios de almacen   |   Web y app móvil para vendedores/repartidores.  |   App móvil y hardware IoT propietario instalado en vehículo  |   Web (Fiori) y integraciones vía SAP Cloud Platform.  |     
+| Análisis SWOT          | Fortalezas                                    |  Enfoque único que combina IoT con trazabilidad del proceso y especialización en empresas que usan PET    |  Especialización vertical profunda en bebidas   |   Marca global, hardware confiable y probado  |  Escala enterprise, soporte 24/7, ecosistema completo.    |    
+| Análisis SWOT          | Debilidades                                   |  Por ser una nueva Startup carece de una base solida de usuarios y de experiencias reales con la aplicación   |   Sin telemetría IoT propia; trazabilidad principalmente documental/manual.   |  No gestiona inventario de almacén ni mermas de producto.    |  Costo y complejidad de implementación inaccesibles para PyMEs embotelladoras.   |    
+| Análisis SWOT          | Oportunidades                                 |   Brecha de mercado explícita: ningún competidor combina hoy información operativa y telemetría IoT en un solo producto  |    Podría integrar sensores IoT como partner en vez de competidor |    Podría expandirse a trazabilidad de producto, no solo de vehículo. |Interés creciente en módulos IoT dentro de su propio roadmap (SAP Leonardo/IoT)|    
+| Análisis SWOT          | Amenazas                                      | ERPs de bebidas (Verial) podrían incorporar IoT como feature; consultoras locales replican el mismo enfoque a medida para clientes grandes    |    Nuevos entrantes con IoT nativo (como BevTrace) le quitan el diferencial de trazabilidad.  |  Jugadores locales más baratos y especializados en el sector de bebidas   |   Soluciones SaaS ágiles y económicas capturando el segmento medio antes de que el cliente crezca a ”talla SAP”.   |    
 
 
 ### 2.1.2. Estrategias y tácticas frente a competidores.
+
+
 
 ## 2.2. Entrevistas.
 
@@ -190,6 +92,7 @@ Teniendo en cuenta la importancia en la información que nos pueden proveer los 
 *   ¿Qué tipo de capacitación o acompañamiento necesitaría su equipo para migrar del conteo manual a un sistema de lectura masiva con IoT?
 *   ¿Qué información necesitas consultar con mayor frecuencia para realizar tu trabajo?
 
+
 ### 2.2.2. Registro de entrevistas
 ### 2.2.3. Análisis de entrevistas
 ## 2.3. Needfinding
@@ -197,5 +100,7 @@ Teniendo en cuenta la importancia en la información que nos pueden proveer los 
 ### 2.3.2. User Task Matrix
 ### 2.3.3. User Journey Mapping
 ### 2.3.4. Empathy Mapping
+
 ## 2.4. Big Picture Event Storm
+
 ## 2.5. Ubiquitous Language
