@@ -197,7 +197,7 @@ Teniendo en cuenta la importancia en la información que nos pueden proveer los 
         </tr>
         <tr>
             <td>Evidencia</td>
-            <td><div align="center"><img src="../assets/Chapter2/entrevistamaria.png.png" alt="Entrevista"></div></td>
+            <td><div align="center"><img src="../assets/Chapter2/entrevistamaria.png" alt="Entrevista"></div></td>
         </tr>
         <tr>
             <td>Link</td>
