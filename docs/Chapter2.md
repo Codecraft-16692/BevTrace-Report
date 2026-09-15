@@ -146,7 +146,7 @@ Teniendo en cuenta la importancia en la información que nos pueden proveer los 
         </tr>
         <tr>
             <td>Link</td>
-            <td></td>
+            <td>https://sl1nk.com/qgqi6qh</td>
         </tr>
         <tr>
             <td>Timing donde inicia la entrevista<br></td>
@@ -155,11 +155,15 @@ Teniendo en cuenta la importancia en la información que nos pueden proveer los 
         <tr>
             <td>Duración de la entrevista<br></td>
             <td>8:31 min</td>
-        </tr>
+</tr>
         <tr>
             <td>Resumen</td>
             <td>
-            
+            El Sr. David Castillo, de 45 años, es Jefe de distribución de materiales con formación en administración[cite: 3]. Gestiona la recepción y distribución de materia prima hacia las plantas de producción utilizando principalmente el sistema SAP[cite: 3]. Su labor exige una coordinación precisa con proveedores y transportistas, ya que los principales cuellos de botella se generan por incumplimientos en los tiempos de entrega (adelantos o retrasos), lo que impacta directamente en la capacidad espacial del almacén y genera riesgos de quiebres de stock[cite: 3].
+            <br> <br>
+            <b>Comportamiento y Necesidades:</b> Es un profesional enfocado en la exactitud de los datos y la revisión de indicadores de rendimiento logístico (como ERI, OTIF, Fill Rate y rotación de inventario)[cite: 3]. Realiza controles diarios de inventario y auditorías mensuales para corregir discrepancias de inmediato[cite: 3]. Identifica que el mayor desafío en la gestión de almacenes no es el fallo del sistema, sino el error humano y la mala calidad de la información al ingresar los datos tarde o de forma incorrecta[cite: 3]. Necesita que cualquier herramienta digital a implementar sea altamente flexible y adaptable a la cultura y ritmo cambiante de cada operación específica, evitando flujos rígidos[cite: 3]. 
+            <br> <br>
+            <b>Tecnología, Marcas y Canales:</b> Está altamente familiarizado con plataformas ERP robustas (SAP) y software de rastreo para el seguimiento de unidades de transporte[cite: 3]. Utiliza diariamente laptop, celular y herramientas en la nube de forma simultánea[cite: 3]. Confía en la estabilidad de sus sistemas actuales, remarcando que las caídas de servidor son inusuales, por lo que su disposición a adoptar nuevas tecnologías dependerá de qué tan bien solucionen el ingreso manual de datos y se adapten a sus procesos sin entorpecerlos[cite: 3].
             </td>
         </tr>
     </tbody>
@@ -197,7 +201,7 @@ Teniendo en cuenta la importancia en la información que nos pueden proveer los 
         </tr>
         <tr>
             <td>Link</td>
-            <td></td>
+            <td>https://l1nq.com/k758tyw</td>
         </tr>
         <tr>
             <td>Timing donde inicia la entrevista<br></td>
@@ -206,11 +210,15 @@ Teniendo en cuenta la importancia en la información que nos pueden proveer los 
         <tr>
             <td>Duración de la entrevista<br></td>
             <td>9:27 min</td>
-        </tr>
+</tr>
         <tr>
             <td>Resumen</td>
             <td>
-            
+            La Sra. María López, de 32 años, es operaria de almacén encargada de apoyar en la recepción, organización, conteo y preparación de la mercadería antes del despacho. Su día a día involucra la verificación manual de cargas y pallets, un proceso que actualmente depende de una mezcla ineficiente de anotaciones en papel impreso y registros posteriores en computadora. Esto genera redundancia operativa, ya que los operarios deben revisar la información varias veces para confirmar que todo coincida, provocando retrasos cuando hay un alto volumen de movimiento.
+            <br> <br>
+            <b>Comportamiento y Necesidades:</b> María busca agilidad y la reducción de tareas repetitivas. Reconoce que el conteo manual propicia errores humanos y que la falta de un mecanismo de alerta automática hace que los daños o discrepancias en la mercadería se detecten tarde, a menudo mediante simples revisiones visuales. Necesita un sistema intuitivo, rápido, con botones grandes y pocos pasos que le permita ver el inventario en tiempo real, identificar pallets fácilmente y recibir alertas automáticas. Además, requiere que cualquier transición tecnológica se acompañe de capacitaciones prácticas en campo y con soporte técnico presencial durante las primeras semanas.
+            <br> <br>
+            <b>Tecnología, Marcas y Canales:</b> Está habituada al uso de celulares y computadoras de manera cotidiana, y emplea lectores de códigos de barras de forma ocasional cuando están disponibles. Valora las interfaces sencillas que no exigen conocimientos técnicos avanzados, priorizando herramientas en tiempo real que se puedan usar desde los dispositivos móviles que ya maneja en el almacén para registrar automáticamente entradas y salidas, eliminando definitivamente la dependencia del papel y la transcripción manual de datos.
             </td>
         </tr>
     </tbody>
