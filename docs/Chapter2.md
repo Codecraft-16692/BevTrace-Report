@@ -113,6 +113,109 @@ Teniendo en cuenta la importancia en la información que nos pueden proveer los 
 
 
 ### 2.2.2. Registro de entrevistas
+
+**Segmento objetivo: Jefes y Gerentes de Logística**
+
+<table>
+    <colgroup></colgroup>
+    <thead>
+        <tr>
+            <th colspan="2">Entrevista #1<br></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Nombre</td>
+            <td>David</td>
+        </tr>
+        <tr>
+            <td>Apellidos</td>
+            <td>Castillo</td>
+        </tr>
+        <tr>
+            <td>Edad</td>
+            <td>45 años</td>
+        </tr>
+        <tr>
+            <td>Distrito</td>
+            <td>Chorrillos</td>
+        </tr>
+        <tr>
+            <td>Evidencia</td>
+            <td><div align="center"><img src="../assets/Chapter2/david.png" alt="Entrevista"></div></td>
+        </tr>
+        <tr>
+            <td>Link</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Timing donde inicia la entrevista<br></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Duración de la entrevista<br></td>
+            <td>8:31 min</td>
+        </tr>
+        <tr>
+            <td>Resumen</td>
+            <td>
+            
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+**Segmento objetivo: Operarios y Supervisores de Almacén**
+
+<table>
+    <colgroup></colgroup>
+    <thead>
+        <tr>
+            <th colspan="2">Entrevista #1<br></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Nombre</td>
+            <td>Maria</td>
+        </tr>
+        <tr>
+            <td>Apellidos</td>
+            <td>Lopez</td>
+        </tr>
+        <tr>
+            <td>Edad</td>
+            <td>32 años</td>
+        </tr>
+        <tr>
+            <td>Distrito</td>
+            <td>Chorrillos</td>
+        </tr>
+        <tr>
+            <td>Evidencia</td>
+            <td><div align="center"><img src="../assets/Chapter2/entrevistamaria.png.png" alt="Entrevista"></div></td>
+        </tr>
+        <tr>
+            <td>Link</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Timing donde inicia la entrevista<br></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Duración de la entrevista<br></td>
+            <td>9:27 min</td>
+        </tr>
+        <tr>
+            <td>Resumen</td>
+            <td>
+            
+            </td>
+        </tr>
+    </tbody>
+</table>
+
 ### 2.2.3. Análisis de entrevistas
 ## 2.3. Needfinding
 ### 2.3.1. User Personas
