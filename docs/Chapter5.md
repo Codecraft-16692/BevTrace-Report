@@ -2,7 +2,26 @@
 
 ## 5.1. Software Configuration Management.
 
+En esta sección se describen y explican las desiciones, convenciones y herramientas utilizadas por el equipo CodeCraft para la gestion, implementación y despliegue de BevTrace.
+
+El proyecto desarrollo tres artefactos cómo solución a la problematica: Landing Page, FrontEnd Web Application y BackEnd Web Services.
+
 ### 5.1.1. Software Development Environment Configuration.
+
+En este segmento se presentara las herramientas utilizadas en el ciclo de vida del proyecto BevTrace.
+
+
+|        Actividad     |     Herramienta/Guía   |    Proposito  |  Tipo de acceso/Ruta (links)   | 
+|:---: |:---: |:--: |:--: | 
+|Gestión de proyecto|Trello|Organizar y dar seguimiento a las tareas asignadas|[Trello][1]|
+|Gestión de requerimientos|Gherkin Conventions|Definir criterios de aceptación y validación para los user stories|[Guía Gherkin][2]|
+|Producto UI/UX|Figma|Diseño de interfaces (wireframes y mockups) y prototipos|[Figma][3]|
+|Landing Page|Visual Studio Code|Edición y desarrollo del código de las pantallas|[VS Code][4]|
+|Control de versiones|Git|Gestión de versiones del código de la Landing Page, FrontEnd y BackEnd|[Git][5]|
+|Despliegue|GitHub Pages|Publicación de la aplicación web|[GitHub Pages][6]|
+|Event Storming|Miro|Colaboración y modelado de los procesos involucrados en los Bounded Context|[Miro][7]|
+|Diagramas|PlantUML|Generación de diagramas UML requeridos de la aplicación|[PlantUML][8]|
+
 
 ### 5.1.2. Source Code Management.
 
@@ -39,3 +58,15 @@
 ### 5.3.3. Evaluaciones según heurísticas.
 
 ## 5.4. Video About-the-Product.
+
+
+
+
+[1]: https://trello.com "Trello"
+[2]: https://cucumber.io/docs/gherkin/ "Guía Gherkin"
+[3]: https://figma.com "Figma"
+[4]: https://code.visualstudio.com "VS Code"
+[5]: https://git-scm.com "Git"
+[6]: https://pages.github.com "GitHub Pages"
+[7]: https://miro.com "Miro"
+[8]: https://plantuml.com "PlantUML"
