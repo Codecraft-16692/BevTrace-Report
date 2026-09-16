@@ -190,6 +190,25 @@ Posteriormente, organizamos los eventos en líneas de tiempo para visualizar el 
 * **Operations Analytics Flow:** dirigido a los responsables de operaciones para visualizar información consolidada sobre inventarios, despachos y trazabilidad para la toma de decisiones logísticas.
 
 Esta organización temporal facilitó la comprensión de dependencias y secuencias críticas entre la operación logística humana y la automatización del sistema.
+
+#### Paso 2: Commands
+
+En este paso definimos los comandos que los diferentes actores pueden ejecutar en el sistema. Los comandos representan las intenciones o acciones (en verbo imperativo) que mutan el estado de la aplicación y desencadenan los eventos en el dominio logístico.
+
+| Actor | Comandos |
+|-------|----------|
+| **Logistics Manager** | Schedule Dispatch, Assign Transport Vehicle, Authorize Dispatch, Link IoT Device To Batch, Acknowledge Route Incident, Initiate Corrective Action, Resolve Incident. |
+| **Warehouse Manager** | Register Product Batch, Reconcile Physical Inventory, Detect Inventory Discrepancy. |
+| **Warehouse Operator** | Update Inventory Stock, Register Product Waste, Assign Cargo To Dispatch, Register Dispatch Departure. |
+| **Distribution Manager** | Start Route Traceability, Change Product Status, Deliver Product At Destination, Finalize Batch Traceability. |
+| **Operations Manager** | Evaluate Shrinkage Rate, Generate Logistics Report. |
+| **System Admin** | Provision IoT Device. |
+| **System / Analytics Engine** | Deplete Inventory Stock, Start Telemetry Stream, Capture Sensor Data, Update Product Location, Reach Checkpoint, Lose Device Connectivity, Restore Device Connectivity, Detect Distribution Anomaly, Generate Automated Alert, Send Incident Notification, Complete Dispatch, Consolidate Operational Performance, Calculate Inventory Metric, Update Dispatch Indicator. |
+
+<img src="../assets/Chapter4/event11.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event12.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event13.png" alt="Bounded Context Commands" width="80%"/>
+
 ### 4.6.2. Software Architecture Context Diagram.
 
 ### 4.6.3. Software Architecture Container Diagrams.
