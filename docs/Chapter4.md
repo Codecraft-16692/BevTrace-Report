@@ -231,6 +231,9 @@ Estas políticas permiten automatizar procesos críticos del sistema, reduciendo
 <img src="../assets/Chapter4/event21.png" alt="Bounded Context Commands" width="80%"/>
 <img src="../assets/Chapter4/event22.png" alt="Bounded Context Commands" width="80%"/>
 <img src="../assets/Chapter4/event23.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event24.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event25.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event26.png" alt="Bounded Context Commands" width="80%"/>
 
 
 ### 4.6.2. Software Architecture Context Diagram.
