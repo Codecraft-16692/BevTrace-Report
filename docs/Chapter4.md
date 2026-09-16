@@ -209,6 +209,30 @@ En este paso definimos los comandos que los diferentes actores pueden ejecutar e
 <img src="../assets/Chapter4/event12.png" alt="Bounded Context Commands" width="80%"/>
 <img src="../assets/Chapter4/event13.png" alt="Bounded Context Commands" width="80%"/>
 
+#### Paso 3: Policies and Actors
+
+En este paso identificamos las políticas de negocio (reglas WHEN/THEN) y los actores responsables de cada flujo. Las políticas representan las reglas automáticas que el sistema ejecuta en respuesta a ciertos eventos, garantizando el estricto control de inventarios y la visibilidad de la distribución sin depender de la intervención humana constante.
+
+Las políticas identificadas fueron:
+
+* **WHEN** physical inventory is reconciled and discrepancies are found **THEN** auto-detect inventory discrepancy and flag for review.
+* **WHEN** product waste is registered **THEN** auto-deplete inventory stock and evaluate shrinkage rate.
+* **WHEN** dispatch departure is registered **THEN** auto-start route traceability and initialize telemetry stream.
+* **WHEN** checkpoint is reached via telemetry **THEN** auto-update product location.
+* **WHEN** telemetry stream loses device connectivity **THEN** generate automated alert for the logistics manager.
+* **WHEN** sensor data captures an unexpected delay or route deviation **THEN** detect distribution anomaly.
+* **WHEN** distribution anomaly is detected **THEN** generate automated alert and send incident notification to the distribution team.
+* **WHEN** route incident is resolved **THEN** update dispatch indicator and consolidate operational performance.
+* **WHEN** product is delivered at destination **THEN** auto-complete dispatch and finalize batch traceability.
+* **WHEN** logistics report is generated **THEN** auto-calculate and update global shrinkage and performance metrics.
+
+Estas políticas permiten automatizar procesos críticos del sistema, reduciendo drásticamente el error humano y asegurando respuestas oportunas ante incidencias en ruta o discrepancias de stock que podrían generar pérdidas económicas o retrasos en la entrega de bebidas.
+
+<img src="../assets/Chapter4/event21.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event22.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event23.png" alt="Bounded Context Commands" width="80%"/>
+
+
 ### 4.6.2. Software Architecture Context Diagram.
 
 ### 4.6.3. Software Architecture Container Diagrams.
