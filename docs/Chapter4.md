@@ -235,6 +235,21 @@ Estas políticas permiten automatizar procesos críticos del sistema, reduciendo
 <img src="../assets/Chapter4/event25.png" alt="Bounded Context Commands" width="80%"/>
 <img src="../assets/Chapter4/event26.png" alt="Bounded Context Commands" width="80%"/>
 
+Una vez identificados los eventos, flujos, comandos y políticas del dominio, se procedió al descubrimiento de contextos candidatos. Esta etapa permitió agrupar elementos relacionados según su cohesión funcional y sus reglas de negocio compartidas, delimitando áreas específicas como el control de inventarios, la gestión de despachos, la trazabilidad de rutas, el monitoreo por telemetría y el manejo de incidencias logísticas. De esta manera, el equipo logró estructurar el dominio de BevTrace en contextos con responsabilidades claramente diferenciadas y alineadas a los módulos de la arquitectura del software.
+
+#### Paso 4: Read Models
+
+Los Read Models representan las vistas de consulta críticas que los actores utilizan para tomar decisiones dentro del sistema. Para mantener el enfoque en el Core Domain, el modelado destaca las 4 vistas principales (post-its verdes) que cruzan mayor cantidad de información operativa:
+
+* **Inventory & Shrinkage Catalog:** utilizado por el Warehouse Manager y los operadores para verificar el stock de bebidas disponible en tiempo real, los lotes registrados y las mermas (waste) detectadas.
+* **Dispatch & Fleet Assignment Board:** panel operativo utilizado por el Logistics Manager para consultar los envíos programados, asignar carga a los vehículos y autorizar las salidas desde el centro de distribución.
+* **Active Route Traceability Map:** vista esencial utilizada por el Distribution Manager para monitorear la ubicación en tiempo real de los despachos, validar los puntos de control (checkpoints) alcanzados y gestionar alertas de incidencias.
+* **Logistics Performance & KPI Dashboard:** panel gerencial utilizado por el Operations Manager para visualizar el rendimiento de las entregas, evaluar la tasa global de mermas (shrinkage rate) y analizar el impacto de las anomalías en la distribución.
+
+<img src="../assets/Chapter4/event31.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event32.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event33.png" alt="Bounded Context Commands" width="80%"/>
+
 
 ### 4.6.2. Software Architecture Context Diagram.
 
