@@ -263,6 +263,40 @@ En este paso identificamos los sistemas externos que interactúan con el dominio
 <img src="../assets/Chapter4/event42.png" alt="Bounded Context Commands" width="80%"/>
 <img src="../assets/Chapter4/event43.png" alt="Bounded Context Commands" width="80%"/>
 
+#### Paso 6: Add Aggregates
+
+En este paso identificamos los Aggregates, que representan los objetos de dominio centrales que agrupan entidades relacionadas y se tratan como una sola unidad de consistencia. Cada aggregate (post-it amarillo grande) actúa como el punto central alrededor del cual giran los eventos y comandos operativos de la cadena de suministro:
+
+* **Product Batch & Inventory Ledger:** gestiona el registro de lotes de bebidas, la disponibilidad de stock, el registro de mermas y el cuadre físico.
+* **Dispatch Order & Cargo Assignment:** controla la programación de salidas, autorizaciones y la asignación de productos a los vehículos de transporte.
+* **Traceability Log & Delivery Record:** controla la trazabilidad de la ruta, el registro de puntos de control alcanzados y la confirmación de entrega en destino.
+* **Telemetry Stream & Device Link:** centraliza la captura de datos (simulados) de ubicación y gestiona el estado de conexión de la flota.
+* **Incident Record & Alert Engine:** gestiona la detección de anomalías, la emisión de notificaciones automáticas y el flujo de acciones correctivas.
+* **Logistics Report & Performance KPI:** encapsula el cálculo de tasas de mermas operativas y la generación de documentos de auditoría logística.
+  
+<img src="../assets/Chapter4/event51.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event52.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event53.png" alt="Bounded Context Commands" width="80%"/>
+
+#### Paso 7: Bounded Contexts
+
+Finalmente, definimos los Bounded Contexts que agrupan los flujos relacionados en contextos delimitados con responsabilidades claras. Tras la abstracción de la arquitectura, se definieron un total de 6 contextos independientes:
+
+| Bounded Context | Descripción de Componentes Clave |
+|-----------------|----------------------------------|
+| **BC: Inventory Management** | Contiene el Aggregate `Product Batch & Inventory Ledger` para controlar integralmente el estado del almacén. |
+| **BC: Dispatch Management** | Agrupa el Aggregate `Dispatch Order & Cargo Assignment` para orquestar la preparación y salida de los vehículos. |
+| **BC: Product Traceability** | Contiene el Aggregate `Traceability Log & Delivery Record` para el seguimiento continuo de la carga hasta su destino. |
+| **BC: IoT Telemetry** | Gestiona el Aggregate `Telemetry Stream & Device Link` para procesar los datos de ruta simulados. |
+| **BC: Incident & Alert Management** | Agrupa el Aggregate `Incident Record & Alert Engine` para el manejo centralizado de excepciones y alertas. |
+| **BC: Operations Analytics** | Contiene el Aggregate `Logistics Report & Performance KPI` para la evaluación de mermas y toma de decisiones gerenciales. |
+
+<img src="../assets/Chapter4/event61.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event62.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event63.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event64.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event65.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event66.png" alt="Bounded Context Commands" width="80%"/>
 
 ### 4.6.2. Software Architecture Context Diagram.
 
