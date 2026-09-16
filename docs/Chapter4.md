@@ -250,6 +250,19 @@ Los Read Models representan las vistas de consulta críticas que los actores uti
 <img src="../assets/Chapter4/event32.png" alt="Bounded Context Commands" width="80%"/>
 <img src="../assets/Chapter4/event33.png" alt="Bounded Context Commands" width="80%"/>
 
+#### Paso 5: External Systems
+
+En este paso identificamos los sistemas externos que interactúan con el dominio, pero que están fuera del control directo del sistema (representados con post-its rosados). Dado el enfoque actual del producto, el rastreo se apoya en servicios simulados en lugar de hardware físico.
+
+* **Maps API (Geocoding / Routing):** sistema externo utilizado únicamente para validar las direcciones de los destinos y trazar las rutas estáticas planificadas, sin requerir rastreo satelital en tiempo real.
+* **Fleet Tracking API:** servicio externo que provee el flujo de datos de ubicación, puntos de control alcanzados y estado de conectividad de los vehículos en ruta.
+* **Notification Gateway:** plataforma de mensajería externa utilizada en el contexto de gestión de incidencias para despachar alertas automáticas a los responsables logísticos.
+* **Cloud Storage Service:** servicio de almacenamiento en la nube utilizado para resguardar de forma segura los comprobantes de entrega (Proof of Delivery) y los reportes logísticos generados.
+
+<img src="../assets/Chapter4/event41.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event42.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event43.png" alt="Bounded Context Commands" width="80%"/>
+
 
 ### 4.6.2. Software Architecture Context Diagram.
 
