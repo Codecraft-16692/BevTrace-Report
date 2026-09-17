@@ -25,9 +25,70 @@ En este segmento se presentara las herramientas utilizadas en el ciclo de vida d
 
 ### 5.1.2. Source Code Management.
 
+Para el manejo del codigo fuente de BevTrace se organiza en repositorios independientes que facilita la gestión, revisión y el despliegue de los diferentes artefactos del proyecto.
+
+|     Artefacto     |     URL del Repositorio  |   
+|:---: |:---: | 
+| Proyect Report  | [Report][9] |
+| Landing Page  | [LandingPage][10] |
+| FrontEnd Web Application  | [FrontEnd][11] |
+| BackEnd Web Services  | [Backend][12] |
+
+##### GitFlow WorFlow
+
+Se implemento GitFlow cómo flujo de trabajo para organizar el desarrollo de los artefactos por funcionalidades, mantener una separación del codigo para evitar errores y mantener ramas de desarrollos especificas para cada módulo o bounded context
+
+###### Ramas principales
+
+1.  main: Rama pincipal para versiones estables y desplegables de los artefactos
+2.  develop: Rama de integración utilizada para consolidar las funcionalidades o cambios previos a la versión final del producto
+
+###### Ramas de soporte
+
+1.  feature/*:  Rama creada a partir del develop para poder implementar nuevas funcionalidades.
+
+Convención: `feature/<nombre-corto-descriptivo>`
+Ejemplo: `feature/chapter 1`
+
+2.  docs/*: Ramas creadas para los cambios relacionados a la documentación del proyecto.
+
+Convención: ` docs/<parte-del-documento>`  
+Ejemplo: `docs/sources`
+
+3.  fix/*: Ramas utilizadas para corregir errores criticos en los artefactos.
+
+Convención:  `hotfix/<descripción-corta>`
+Ejemplo: `hotfix/fix-item-validation`
+
+##### Semantic Versioning
+
+Se aplica Semantic Versioning 2.0.0, con el formato:
+
+- **MAJOR**: Cambios incompatibles con las versiones anteriores del artefacto.
+- **MINOR**: Nuevas funcionalidades compatibles con versiones anteriores del artefacto.
+- **PATCH**: Correcciones menores y ajustes sin afectar funcionalidades del artefacto.
+
+Ejemplo de versión: `v1.3.2`
+
+##### Conventional Commits
+
+La organización utilizó la especificación de los Conventional Commits para mantener un orden y claridad en los mensajes de cada commit realizado por los integrantes. En este caso la estructura general de cada commit seria la siguiente: ` tipo(enfoque opcional): <descripción> `
+
+Ejemplos de los commits utilizados
+
+-  **chore: setup initial folder structure and empty markdown files**
+-  **docs(chap-5): added headers for Chapter 5**
+-  **fix(chap 1-2): fix merging problems for Chapter 1 and 2**
+
+
 ### 5.1.3. Source Code Style Guide & Conventions.
 
+
+
+
 ### 5.1.4. Software Deployment Configuration.
+
+
 
 ## 5.2. Landing Page, Services & Applications Implementation.
 
@@ -70,3 +131,9 @@ En este segmento se presentara las herramientas utilizadas en el ciclo de vida d
 [6]: https://pages.github.com "GitHub Pages"
 [7]: https://miro.com "Miro"
 [8]: https://plantuml.com "PlantUML"
+[9]: https://github.com/Codecraft-16692/Codecraft-Report.git "Report"
+[10]: https://github.com/Codecraft-16692/Codecraft-LandingPage.git "LandingPage"
+[11]: githttps://github.com/Codecraft-16692/Codecraft-FrontEnd.git  "FrontEnd"
+[12]: https://github.com/Codecraft-16692/Codecraft-BackEnd.git "BackEnd"
+
+
