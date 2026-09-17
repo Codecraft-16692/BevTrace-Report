@@ -83,12 +83,57 @@ Ejemplos de los commits utilizados
 
 ### 5.1.3. Source Code Style Guide & Conventions.
 
+En esta sección se describen las convenciones de estilo y nomenclatura adoptadas para los lenguajes y frameworks utilizados en BevTrace.
+
+|Tecnología o Lenguaje|Guía de estilo|
+|:----|:----|
+| HTML/CSS|[Google HTML/CSS Style Guide][html-css]|
+| JavaScript|[Google JavaScript Style Guide][js]|
+| TypeScript|[Google TypeScript Style Guide][ts]|
+|Angular |[Angular Style Guide][angular]|
+| Java|[Google Java Style Guide][java]|
+|Spring Boot |[Spring Boot Documentation][spring]|
+|Gherkin |[Gherkin Reference][gherkin]|
+
+##### Nomenclatura general
+
+| Elemento | Convención | Ejemplo |
+|:----|:----|:----|
+| Clases Java/TypeScript | PascalCase | `BatchCommandServiceImpl`, `EquipmentApiEndpoint` |
+| Interfaces TypeScript | PascalCase | `SignInRequest`, `CreateBatchCommand` |
+| Métodos y funciones | camelCase | `getBatchById()`, `registerEquipment()` |
+| Variables | camelCase | `laboratoryId`, `selectedPlanCode` |
+| Constantes | SCREAMING_SNAKE_CASE | `API_BASE_URL`, `DEFAULT_LANGUAGE` |
+| Archivos Angular | kebab-case | `billing-summary.ts`, `equipment-detail.html` |
+| Clases CSS | kebab-case | `.summary-card`, `.toolbar-actions` |
+| Endpoints REST | kebab-case plural | `/api/v1/batches`, `/api/v1/equipments` |
+
+
+**Convenciones frontend**
+
+- Uso de Angular standalone components.
+- Separación por bounded context dentro de `src/app`.
+- Organización por capas: domain, application, infrastructure y presentation.
+- Uso de stores y signals para gestión de estado.
+- Uso de servicios/endpoints para encapsular comunicación HTTP.
+- Uso de archivos de traducción para soporte bilingüe ES/EN.
+- Uso de nombres en inglés para componentes, entidades, comandos y recursos.
+
+**Convenciones backend**
+
+- Organización por bounded context dentro del paquete `platform`.
+- Uso de capas domain, application, infrastructure e interfaces.
+- Uso de REST controllers dentro de `interfaces.rest`.
+- Uso de resources y assemblers para transformar datos de entrada y salida.
+- Uso de command services y query services para separar casos de uso.
+- Uso de repositorios como puertos de persistencia del dominio.
+- Uso de entidades JPA, assemblers y adapters dentro de infrastructure.
+- Uso de endpoints REST con recursos en plural y parámetros de recurso por path.
+- Uso de Javadoc para clases públicas relevantes.
 
 
 
 ### 5.1.4. Software Deployment Configuration.
-
-
 
 ## 5.2. Landing Page, Services & Applications Implementation.
 
@@ -137,3 +182,10 @@ Ejemplos de los commits utilizados
 [12]: https://github.com/Codecraft-16692/Codecraft-BackEnd.git "BackEnd"
 
 
+[html-css]: https://google.github.io/styleguide/htmlcssguide.html "Google HTML/CSS Style Guide"
+[js]: https://google.github.io/styleguide/jsguide.html "Google JavaScript Style Guide"
+[ts]: https://google.github.io/styleguide/tsguide.html "Google TypeScript Style Guide"
+[angular]: https://angular.dev/style-guide "Angular Style Guide"
+[java]: https://google.github.io/styleguide/javaguide.html "Google Java Style Guide"
+[spring]: https://docs.spring.io/spring-boot/documentation.html "Spring Boot Documentation"
+[gherkin]: https://cucumber.io/docs/gherkin/reference/ "Gherkin Reference"
