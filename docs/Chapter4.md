@@ -298,11 +298,91 @@ Finalmente, definimos los Bounded Contexts que agrupan los flujos relacionados e
 <img src="../assets/Chapter4/event65.png" alt="Bounded Context Commands" width="80%"/>
 <img src="../assets/Chapter4/event66.png" alt="Bounded Context Commands" width="80%"/>
 
-### 4.6.2. Software Architecture Context Diagram.
+## 4.6.2. Software Architecture Context Diagram
 
-### 4.6.3. Software Architecture Container Diagrams.
+En este nivel se presenta una vista de alto nivel de la arquitectura, donde el foco está en el sistema de software BevTrace como una "caja negra" y en las interacciones que mantiene con sus usuarios y con otros sistemas externos.
 
-### 4.6.4. Software Architecture Components Diagrams.
+El context diagram muestra a la **BevTrace Platform** como un recuadro en el centro, rodeado por los principales actores y sistemas con los que se comunica:
+
+- **Logistics Manager:** usuario interno responsable de programar los despachos, asignar la flota de transporte, autorizar las salidas desde los centros de distribución, gestionar incidencias en ruta y evaluar métricas operativas gerenciales.
+
+- **Warehouse Operator:** usuario operativo encargado de controlar el stock físico, registrar la entrada y salida de lotes de bebidas, reportar mermas (waste) y asignar la carga física a los vehículos antes del despacho.
+
+- **Telemetry Mock API:** simulador externo que inyecta datos de avance y puntos de control (checkpoints) alcanzados. Reemplaza temporalmente a los dispositivos GPS/IoT físicos, enviando telemetría de ubicación y estado de conectividad de la flota hacia BevTrace de forma automática mediante endpoints REST.
+
+- **Maps API:** sistema externo (como Google Maps o Mapbox) utilizado para la geocodificación de las direcciones de los destinos y el trazado de las rutas estáticas planificadas para los despachos.
+
+- **Notification Gateway:** plataforma externa de mensajería (ej. Twilio o SendGrid) utilizada para enviar notificaciones transaccionales y alertas automáticas a los responsables logísticos cuando se detectan anomalías o retrasos en la distribución.
+
+- **Cloud Storage Service:** servicio en la nube utilizado para almacenar de forma segura y permanente los comprobantes de entrega (Proof of Delivery) y los reportes logísticos inmutables generados para el área gerencial.
+
+En el diagrama se representan las relaciones entre estos elementos. El Logistics Manager y el Warehouse Operator interactúan con BevTrace a través de la interfaz web. La Telemetry Mock API envía datos entrantes hacia BevTrace de forma automática. BevTrace se encarga de orquestar las integraciones salientes con los servicios externos (validación de rutas, notificaciones por mensajería y almacenamiento de documentos). Esta vista permite entender el alcance del sistema, los límites de responsabilidad y el ecosistema logístico en el que se inserta BevTrace antes de entrar a detalles de implementación.
+
+<img src="../assets/Chapter4/ContextDiagram-dark.png" alt="Context Diagram" width="100%"/>
+
+---
+
+## 4.6.3. Software Architecture Container Diagrams
+
+En el nivel de contenedores, la atención se desplaza desde "quién usa el sistema" hacia "cómo se organiza internamente el sistema en aplicaciones y fuentes de datos". El container diagram muestra los elementos de alto nivel de la arquitectura de BevTrace, sus responsabilidades principales y la forma en que se comunican entre sí y con los sistemas externos.
+
+La arquitectura lógica de BevTrace se estructura en los siguientes contenedores:
+
+- **Landing Page:** aplicación web estática que presenta la propuesta de valor de BevTrace y sus soluciones de trazabilidad para la cadena de suministro. Está desarrollada con tecnologías web estándar (HTML, CSS y JavaScript). Cuando el usuario desea acceder a la aplicación, delega la entrega del bundle al servidor web.
+
+- **Web Application:** servidor web implementado con **Nginx** que actúa como servidor de archivos estáticos. Recibe la delegación de la Landing Page y entrega el bundle compilado de la SPA Angular al navegador del usuario. Este contenedor separa la responsabilidad de servir el contenido estático de la lógica de negocio del backend.
+
+- **BevTrace Web Client Application (SPA):** aplicación web principal implementada en **Angular** que corre directamente en el navegador del usuario. Una vez entregado el bundle por el Web Application, el Logistics Manager y el Warehouse Operator interactúan con esta SPA para gestionar inventarios, autorizar despachos, monitorear la ruta y evaluar analíticas. Concentra la lógica de presentación para los contextos de Inventory Management, Dispatch Management, Product Traceability, Incident & Alert Management y Operations Analytics.
+
+- **API Application:** backend implementado con **C# y .NET Core**, que expone una API REST y encapsula la lógica de negocio, reglas de validación logística y orquestación de trazabilidad. Este contenedor agrupa los componentes backend por contexto (Inventory Component, Dispatch Component, Traceability Component, Telemetry Component, Incident & Alert Component, Analytics Component y Shared Component).
+
+- **Database:** base de datos relacional **MySQL**, donde se persiste la información estructurada del sistema: catálogos de productos, disponibilidad de stock, órdenes de despacho, asignación de carga, logs de trazabilidad en ruta, registro de incidencias y métricas operativas.
+
+En el diagrama se observa que:
+
+- Los usuarios acceden primero a la **Landing Page**, que delega la entrega del bundle al **Web Application (Nginx)**, el cual sirve el bundle compilado al navegador del usuario como la **SPA Angular**.
+- La **SPA** se comunica exclusivamente con la **API Application** mediante peticiones **HTTP/HTTPS** con mensajes **JSON**, siguiendo un estilo REST.
+- La **API Application** persiste y consulta datos en la **Database** mediante **Entity Framework Core** y mapeo objeto–relacional.
+- La **Telemetry Mock API** envía telemetría entrante directamente a la **API Application** mediante peticiones POST al endpoint de ingesta, sin intervención de la SPA.
+- La **API Application** interactúa con los sistemas externos salientes: el **Maps API** para validar direcciones, el **Notification Gateway** para el envío de alertas críticas en ruta, y el **Cloud Storage Service** para el resguardo de comprobantes de entrega.
+
+Esta vista permite apreciar cómo se distribuyen las responsabilidades entre la capa de presentación (Landing Page, Web Application y SPA), la capa de lógica de negocio (API Application) y la capa de persistencia (Database).
+
+<img src="../assets/Chapter4/ContainerDiagram-dark.png" alt="Container Diagram" width="100%"/>
+
+---
+
+## 4.6.4. Software Architecture Components Diagrams
+
+En el nivel de componentes se detalla la descomposición interna de los contenedores, mostrando los bloques estructurales que conforman cada uno y las relaciones entre ellos. Dado que la **SPA** y la **Database** se abordan en sus respectivos diseños, en esta sección se pone especial énfasis en el contenedor **API Application** (C# / .NET Core), donde reside la mayor parte de la lógica de negocio y las reglas logísticas.
+
+El component diagram de la **API Application** agrupa la arquitectura interna siguiendo los 6 bounded contexts definidos en el dominio de BevTrace. Cada módulo backend representa un componente principal dentro del contenedor:
+
+- **Inventory Management Component:** se encarga de gestionar la entrada de lotes de bebidas, el registro de mermas (waste), la reconciliación física y la actualización del stock disponible. Interactúa estrechamente con la base de datos para garantizar la consistencia del inventario en el almacén.
+
+- **Dispatch Management Component:** orquesta la programación de salidas. Gestiona la creación de la orden de despacho, la asignación de carga a los vehículos y la autorización final de salida. Se integra con la **Maps API** para validar las direcciones de destino.
+
+- **Product Traceability Component:** registra el avance de la ruta una vez que el vehículo abandona el almacén. Gestiona el registro de puntos de control (checkpoints) y el cambio de estado hasta la confirmación de entrega. Se integra con el **Cloud Storage Service** para guardar de forma inmutable el Proof of Delivery (PoD).
+
+- **IoT Telemetry Component:** implementa el endpoint de ingesta que recibe los datos enviados automáticamente por la **Telemetry Mock API**. Almacena las simulaciones de ubicación y el estado de conectividad de los vehículos, traduciendo estos datos externos a eventos de dominio internos.
+
+- **Incident & Alert Component:** constituye el motor de control de excepciones. Evalúa los datos recibidos de la telemetría para detectar anomalías operativas (desvíos de ruta o retrasos). Al detectar una incidencia crítica, se integra con el **Notification Gateway** para despachar alertas automáticas a los responsables.
+
+- **Operations Analytics Component:** consolida la información de inventarios, despachos e incidencias para calcular métricas de rendimiento (KPIs) y evaluar la tasa de mermas operativas. Genera los reportes logísticos gerenciales y los envía al **Cloud Storage Service**.
+
+- **Shared Component:** provee componentes compartidos, value objects comunes, clases base, eventos de dominio y mecanismos de infraestructura transversales utilizados por todos los módulos backend, favoreciendo la reutilización de código en .NET.
+
+En el diagrama se refleja cómo:
+
+- La **SPA** consume los servicios expuestos por cada módulo backend a través de la **API Application**, utilizando endpoints REST específicos por contexto.
+- La **Telemetry Mock API** envía datos entrantes directamente al **IoT Telemetry Component** mediante HTTP POST, sin pasar por la SPA.
+- El **IoT Telemetry Component** y el **Incident & Alert Component** trabajan en conjunto: el primero ingesta la data simulada y publica el evento correspondiente; el segundo lo evalúa y, si detecta una anomalía, dispara la notificación externa.
+- Las integraciones externas se delegan a sus respectivos contextos (Dispatch valida rutas con Maps API, Incident envía notificaciones, y Traceability/Analytics suben archivos a la nube).
+- Todos los módulos backend persisten el estado de sus Aggregates en la **Database** compartida y reutilizan capacidades provistas por el **Shared Component**.
+
+De esta forma, los component diagrams muestran cómo los contenedores se descomponen en componentes coherentes con los bounded contexts del dominio logístico y cómo estos colaboran entre sí para orquestar la distribución de BevTrace.
+
+<img src="../assets/Chapter4/ComponentDiagram-dark.png" alt="Component Diagram" width="100%"/>
 
 ## 4.7. Software Object-Oriented Design.
 
