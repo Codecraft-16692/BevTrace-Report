@@ -402,7 +402,13 @@ El diagrama de clases presentado pertenece al contexto delimitado de **Inventory
 
 Este diagrama representa el contexto de **Dispatch Management**, el cual centraliza la programación y orquestación de salidas. En este contexto, el **Aggregate Root es `DispatchOrder`**, el cual contiene la lógica para autorizar y planificar la distribución. El diseño separa claramente las responsabilidades: la orden agrupa la carga física (`CargoAssignment`), traza la ruta planificada (`RoutePlan` y `DeliveryDestination`), y se asigna a un vehículo específico (`TransportVehicle`), el cual es conducido por un chofer autorizado (`Driver`). Esta estructura modular permite validar capacidades y disponibilidades antes de iniciar cualquier despacho, preservando la integridad del modelo logístico.
 
-<img src="../assets/Chapter4/db3.png" alt="class inventory" width="100%"/>
+<img src="../assets/Chapter4/db3.png" alt="class dispatch" width="100%"/>
+
+#### Bounded Context: Product Traceability
+
+El contexto **Product Traceability** encapsula todo lo relacionado con el seguimiento en tiempo real y el ciclo de vida de la distribución en ruta. Aquí, el **Aggregate Root es `TraceabilityLog`**, que actúa como la bitácora principal del viaje. Este registro está compuesto por múltiples puntos de control (`RouteCheckpoint`) y mantiene un historial inmutable de cambios de estado (`StatusTransition`). Finalmente, concluye su ciclo de vida relacionándose con la entidad `DeliveryRecord`, la cual sella la entrega exitosa validando la firma del cliente mediante `SignatureValidator`.
+
+<img src="../assets/Chapter4/db4.png" alt="class Traceability" width="100%"/>
 
 ## 4.8. Database Design.
 
