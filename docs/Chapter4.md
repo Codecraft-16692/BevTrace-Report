@@ -384,9 +384,13 @@ De esta forma, los component diagrams muestran cómo los contenedores se descomp
 
 <img src="../assets/Chapter4/ComponentDiagram-dark.png" alt="Component Diagram" width="100%"/>
 
-## 4.7. Software Object-Oriented Design.
+# 4.7 Software Object-Oriented Design
 
-### 4.7.1. Class Diagrams.
+### 4.7.1 Class Diagram
+
+El siguiente diagrama de clases general representa la vista global del modelo de dominio de BevTrace, integrando los 6 contextos delimitados (Bounded Contexts) en un solo esquema. Se modela la herencia de los actores principales (`LogisticsManager` y `WarehouseOperator`) desde una clase base genérica `User`. Asimismo, expone cómo interactúan las entidades transversales del sistema; por ejemplo, cómo una orden de despacho se conecta con la trazabilidad en ruta, o cómo un vehículo físico se vincula con un dispositivo de telemetría. Este diseño de alto nivel promueve una separación clara de responsabilidades y facilita la implementación de una arquitectura basada en el enfoque de Domain-Driven Design (DDD).
+
+<img src="../assets/Chapter4/db1.png" alt="class" width="100%"/>
 
 ## 4.8. Database Design.
 
