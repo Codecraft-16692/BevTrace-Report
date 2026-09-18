@@ -410,6 +410,12 @@ El contexto **Product Traceability** encapsula todo lo relacionado con el seguim
 
 <img src="../assets/Chapter4/db4.png" alt="class Traceability" width="100%"/>
 
+#### Bounded Context: IoT Telemetry
+
+El diagrama de clases presentado pertenece al contexto delimitado de **IoT Telemetry**, el cual representa la ingesta y procesamiento de los datos de rastreo. El **Aggregate Root es `TelemetryDevice`**, que simula el hardware instalado en los vehículos. Este dispositivo recibe flujos constantes de ubicación (`LocationStream`) y mantiene un registro de conectividad (`ConnectionStatus`). Para evitar acoplamientos fuertes con el resto del sistema, los datos procesados disparan un `TelemetryEvent`, permitiendo notificar al sistema sobre actualizaciones de ubicación de forma asíncrona.
+
+<img src="../assets/Chapter4/db5.png" alt="class iot" width="100%"/>
+
 ## 4.8. Database Design.
 
 ### 4.8.1. Database Diagrams.
