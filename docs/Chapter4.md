@@ -422,6 +422,12 @@ Este diagrama representa el contexto de **Incident & Alert Management**, el cual
 
 <img src="../assets/Chapter4/db6.png" alt="class alert" width="100%"/>
 
+#### Bounded Context: Operations Analytics
+
+El contexto **Operations Analytics** encapsula la evaluación del rendimiento gerencial y el cálculo de métricas de la cadena de suministro. El **Aggregate Root es `LogisticsReport`**, que consolida la información de un periodo específico. El reporte está compuesto por indicadores clave de rendimiento (`LogisticsKPI`) y evaluaciones financieras de pérdida (`ShrinkageMetric`). Para automatizar la inteligencia de negocios, la entidad `ReportScheduler` permite configurar la generación y distribución periódica de estos documentos gerenciales.
+
+<img src="../assets/Chapter4/db7.png" alt="class operations" width="100%"/>
+
 ## 4.8. Database Design.
 
 ### 4.8.1. Database Diagrams.
