@@ -398,6 +398,12 @@ El diagrama de clases presentado pertenece al contexto delimitado de **Inventory
 
 <img src="../assets/Chapter4/db2.png" alt="class inventory" width="100%"/>
 
+#### Bounded Context: Dispatch Management
+
+Este diagrama representa el contexto de **Dispatch Management**, el cual centraliza la programación y orquestación de salidas. En este contexto, el **Aggregate Root es `DispatchOrder`**, el cual contiene la lógica para autorizar y planificar la distribución. El diseño separa claramente las responsabilidades: la orden agrupa la carga física (`CargoAssignment`), traza la ruta planificada (`RoutePlan` y `DeliveryDestination`), y se asigna a un vehículo específico (`TransportVehicle`), el cual es conducido por un chofer autorizado (`Driver`). Esta estructura modular permite validar capacidades y disponibilidades antes de iniciar cualquier despacho, preservando la integridad del modelo logístico.
+
+<img src="../assets/Chapter4/db3.png" alt="class inventory" width="100%"/>
+
 ## 4.8. Database Design.
 
 ### 4.8.1. Database Diagrams.
