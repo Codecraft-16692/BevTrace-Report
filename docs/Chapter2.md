@@ -228,6 +228,16 @@ Teniendo en cuenta la importancia en la información que nos pueden proveer los 
 ## 2.3. Needfinding
 ### 2.3.1. User Personas
 
+Para el segmento de los Jefes y Gerentes de Logistica:
+
+
+![UserPersona1](<../assets/Chapter2/Jose Peréz.png>)
+
+
+Para el segmento de Operarios y Supervisores de almacén
+
+![UserPersona2](<../assets/Chapter2/María Paz.png>)
+
 
 ### 2.3.2. User Task Matrix
 
