@@ -428,6 +428,46 @@ El contexto **Operations Analytics** encapsula la evaluación del rendimiento ge
 
 <img src="../assets/Chapter4/db7.png" alt="class operations" width="100%"/>
 
-## 4.8. Database Design.
+## 4.8 Database Design
 
-### 4.8.1. Database Diagrams.
+### 4.8.1 Database Diagram
+
+El siguiente diagrama general representa la arquitectura de base de datos relacional completa para la plataforma BevTrace. Este esquema unifica todos los Bounded Contexts logísticos, junto con la gestión de identidad, ilustrando las relaciones principales mediante el uso de llaves foráneas (Foreign Keys). El diseño emplea restricciones estrictas para garantizar la integridad referencial y utiliza un enfoque de normalización que evita la redundancia de datos a través de tablas de catálogo compartidas.
+
+<img src="../assets/Chapter4/bk1.png" alt="bk bk" width="100%"/>
+
+#### Bounded Context: Inventory Management
+
+Este esquema detalla el contexto de gestión de inventario, estructurado para ofrecer un control granular del almacén. El catálogo `product_categories` agrupa las bebidas según sus características, alimentando a la tabla maestra `products`, que define los SKU, volumen y tipo de empaque. El control físico recae sobre la tabla `product_batches`, la cual registra cada lote ingresado, su cantidad inicial y actual, fecha de expiración, y se vincula tanto a `warehouse_zones` (para ubicar el lote en pasillos o estantes con control de temperatura) como a `batch_states` (para identificar si está disponible o en cuarentena). Finalmente, la tabla `waste_records` permite auditar cualquier pérdida o merma asociada a un lote específico, registrando el usuario que reportó el incidente, la cantidad afectada, el motivo y el impacto financiero calculado.
+
+<img src="../assets/Chapter4/bk2.png" alt="bk Inventory" width="100%"/>
+
+#### Bounded Context: Dispatch Management
+
+Este esquema representa la compleja lógica de orquestación de salidas. El núcleo es la tabla `dispatch_orders`, que consolida el plan de despacho asociando un gerente responsable, fechas programadas, un peso estimado y enlazándose con el catálogo `dispatch_states`. Para garantizar la entrega, la orden se relaciona con `delivery_destinations`, que almacena la información geográfica y de contacto del cliente receptor. En cuanto a los recursos móviles, el sistema relaciona la orden con `transport_vehicles`, tabla que especifica la placa, capacidad y disponibilidad del camión basándose en `vehicle_types`. Estos vehículos son operados por recursos humanos definidos en la tabla `drivers`, validando sus tipos y números de licencia. Por último, la tabla `cargo_assignments` actúa como el detalle de la orden, vinculando los lotes específicos del inventario con la orden de despacho correspondiente, especificando el peso exacto y la cantidad de palets cargados.
+
+<img src="../assets/Chapter4/bk3.png" alt="bk Dispatch" width="100%"/>
+
+#### Bounded Context: Product Traceability
+
+Este esquema modela la trazabilidad en ruta de los despachos. La tabla central `traceability_logs` mantiene un registro vivo del viaje, referenciando a la orden de despacho e indicando su tiempo estimado de llegada. Para mantener un historial inmutable y auditable de lo ocurrido, el sistema utiliza la tabla `status_transitions`, que registra cada cambio de estado (vinculado al catálogo `traceability_states`) junto con la fecha exacta y comentarios adicionales. Durante el recorrido, el sistema almacena hitos geográficos en la tabla `route_checkpoints`. Una vez concluido el viaje, se genera un registro en `delivery_records`, que documenta quién recibió la carga y el feedback del cliente. Para cumplir con las auditorías logísticas (Proof of Delivery), la tabla `proof_of_delivery_files` permite almacenar múltiples evidencias adjuntas (como fotografías o firmas escaneadas) asociadas a la entrega final.
+
+<img src="../assets/Chapter4/bk4.png" alt="bk Traceability" width="100%"/>
+
+#### Bounded Context: IoT Telemetry
+
+Este esquema encapsula la ingesta masiva de datos provenientes de los simuladores de telemetría. La tabla `telemetry_devices` vincula a un vehículo con su identificador de hardware específico y su fecha de instalación, basándose en la especificación técnica almacenada en el catálogo `device_models`. El monitoreo continuo de la conexión se mantiene en la tabla `connection_statuses` (relación 1 a 1). La ingesta cruda se realiza en la tabla `location_streams`, optimizada para altos volúmenes de transacciones, donde se registran las coordenadas (latitud y longitud), velocidad y dirección en cada instante de tiempo. Para interactuar con el resto de los módulos de manera asíncrona, la tabla `telemetry_events` almacena los eventos derivados del flujo de ubicaciones que han sido procesados y validados por el sistema.
+
+<img src="../assets/Chapter4/bk5.png" alt="bk Telemetry" width="100%"/>
+
+#### Bounded Context: Incident & Alert Management
+
+Este esquema representa el motor lógico de manejo de excepciones en ruta. La base del sistema recae en el catálogo `incident_severities`, que clasifica el nivel de urgencia. A partir de este, se configuran las condiciones en la tabla `alert_rules`, definiendo los umbrales de tolerancia operativos. Cuando se rompe una regla durante la ruta, se genera una entrada en la tabla `incident_records`, detallando el tipo de anomalía, el log de trazabilidad afectado y su estado de resolución. Este incidente dispara notificaciones automatizadas que quedan auditadas en la tabla `dispatched_alerts` para confirmar el envío de advertencias al personal. Paralelamente, los operadores logísticos pueden registrar las acciones de mitigación tomadas a través de la tabla `corrective_actions`, indicando la descripción de la solución, el momento de aplicación y si la resolución fue exitosa.
+
+<img src="../assets/Chapter4/bk6.png" alt="bk Incident" width="100%"/>
+
+#### Bounded Context: Operations Analytics
+
+Este esquema representa la estructura de almacenamiento orientada al procesamiento analítico y la inteligencia de negocios gerencial. La generación de informes se centraliza en la tabla `logistics_reports`, categorizada mediante `report_types` y definiendo el periodo evaluado. Este reporte consolida dos grandes grupos de métricas: primero, los indicadores en la tabla `logistics_kpis`, los cuales se calculan en base a las metas definidas en el catálogo `kpi_catalogs` (incluyendo la varianza y el valor actual de rendimiento); segundo, las métricas financieras de pérdida almacenadas en `shrinkage_metrics`, que resumen el total de merma en kilogramos y su impacto económico. Finalmente, la tabla `report_schedulers` automatiza este proceso, definiendo frecuencias, destinatarios de correo y fechas de próxima ejecución para el envío automático de los resúmenes gerenciales.
+
+<img src="../assets/Chapter4/bk7.png" alt="bk operations" width="100%"/>
