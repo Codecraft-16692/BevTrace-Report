@@ -392,6 +392,12 @@ El siguiente diagrama de clases general representa la vista global del modelo de
 
 <img src="../assets/Chapter4/db1.png" alt="class" width="100%"/>
 
+#### Bounded Context: Inventory Management
+
+El diagrama de clases presentado pertenece al contexto delimitado de **Inventory Management**, el cual representa el núcleo de las funcionalidades relacionadas con el control del almacén de bebidas. Este contexto tiene como **Aggregate Root principal a `ProductInventory`**, el cual orquesta las relaciones con otras entidades y garantiza la consistencia del stock físico. El inventario se compone de múltiples lotes (`ProductBatch`), los cuales a su vez categorizan productos específicos (`BeverageProduct`) y se ubican en zonas físicas del almacén (`WarehouseZone`). Adicionalmente, la entidad `WasteRecord` encapsula los datos relacionados con las mermas operativas, permitiendo calcular su impacto financiero. 
+
+<img src="../assets/Chapter4/db2.png" alt="class inventory" width="100%"/>
+
 ## 4.8. Database Design.
 
 ### 4.8.1. Database Diagrams.
