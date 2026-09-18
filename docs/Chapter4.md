@@ -416,6 +416,12 @@ El diagrama de clases presentado pertenece al contexto delimitado de **IoT Telem
 
 <img src="../assets/Chapter4/db5.png" alt="class iot" width="100%"/>
 
+#### Bounded Context: Incident & Alert Management
+
+Este diagrama representa el contexto de **Incident & Alert Management**, el cual gestiona el control de excepciones y anomalías operativas. El **Aggregate Root es `IncidentRecord`**, que encapsula los detalles de un problema detectado en ruta (ej. desvíos, excesos de tiempo). Este contexto opera a través de un motor de reglas (`AlertRule`) que, al cumplirse, genera el incidente y dispara notificaciones externas automáticas (`AutomatedAlert`). Además, permite a los usuarios registrar soluciones formales a través de la entidad `CorrectiveAction`.
+
+<img src="../assets/Chapter4/db6.png" alt="class alert" width="100%"/>
+
 ## 4.8. Database Design.
 
 ### 4.8.1. Database Diagrams.
