@@ -675,4 +675,210 @@
 
 ## 3.3. Product Backlog
 
+<table border="1" style="border-collapse:collapse; width:100%; table-layout:fixed;">
+<tr>
+  <th style="width:4%; word-wrap:break-word; white-space:normal;"># Orden</th>
+  <th style="width:10%; word-wrap:break-word; white-space:normal;">User Story Id</th>
+  <th style="width:24%; word-wrap:break-word; white-space:normal;">Título</th>
+  <th style="width:42%; word-wrap:break-word; white-space:normal;">Descripción</th>
+  <th style="width:20%; word-wrap:break-word; white-space:normal;">Story Points <br> (1 / 2 / 3 / 5 / 8)</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td>US19</td>
+  <td>Conocer la propuesta de valor de BevTrace</td>
+  <td>Landing Page con la propuesta de valor y beneficios de BevTrace por segmento.</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>US20</td>
+  <td>Suscripción a información comercial</td>
+  <td>Formulario de suscripción para recibir información comercial de BevTrace.</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>US01</td>
+  <td>Registro automático de ingreso de lote</td>
+  <td>Registrar el ingreso de un lote escaneando su código para actualizar el inventario.</td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>TS01</td>
+  <td>Endpoint de consulta de nivel de stock por lote</td>
+  <td>Endpoint REST que retorna el nivel de stock actual de un lote.</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>US02</td>
+  <td>Alerta de discrepancia de inventario</td>
+  <td>Alertar al Jefe de Distribución cuando se detecte una discrepancia de inventario.</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>US03</td>
+  <td>Registro de mermas de producto</td>
+  <td>Registrar el desperdicio o merma de un producto dañado.</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td>US04</td>
+  <td>Conciliación de inventario físico</td>
+  <td>Confirmar la conciliación del inventario físico frente al inventario registrado.</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td>US05</td>
+  <td>Programación de un despacho</td>
+  <td>Programar un despacho indicando los lotes y el destino.</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td>US06</td>
+  <td>Asignación de vehículo a despacho</td>
+  <td>Asignar un vehículo de transporte a un despacho programado y autorizar su salida.</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td>US07</td>
+  <td>Validación masiva de pallets antes del despacho</td>
+  <td>Validar mediante lectura masiva que los pallets cargados coincidan con la orden de despacho.</td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td>US08</td>
+  <td>Registro de salida de un despacho</td>
+  <td>Registrar la salida del transporte una vez autorizado el despacho.</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td>TS02</td>
+  <td>Endpoint de consulta de estado de despacho</td>
+  <td>Endpoint REST para consultar el estado actual de un despacho.</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td>TS03</td>
+  <td>Webhook de notificación de despacho completado</td>
+  <td>Webhook que notifica a sistemas externos cuando un despacho se completa.</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td>TS05</td>
+  <td>Endpoint de aprovisionamiento de dispositivo IoT</td>
+  <td>Endpoint REST para aprovisionar un nuevo dispositivo IoT en el sistema.</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td>TS06</td>
+  <td>Servicio de ingesta de telemetría de sensores</td>
+  <td>Endpoint de ingesta de alta frecuencia para datos de sensores IoT.</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td>US09</td>
+  <td>Seguimiento en tiempo real de un lote en tránsito</td>
+  <td>Visualizar la ubicación en tiempo real de un lote en tránsito.</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td>US10</td>
+  <td>Registro de checkpoint en ruta</td>
+  <td>Registrar automáticamente cuando un lote alcanza un checkpoint de ruta.</td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td>US12</td>
+  <td>Visualización de estado de conectividad de dispositivos</td>
+  <td>Visualizar qué dispositivos IoT están conectados o han perdido señal.</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td>US13</td>
+  <td>Notificación de reconexión de dispositivo</td>
+  <td>Notificar cuando un dispositivo recupera la conectividad.</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td>TS04</td>
+  <td>Endpoint de historial de trazabilidad de un lote</td>
+  <td>Endpoint REST que retorna el historial completo de checkpoints de un lote.</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td>US11</td>
+  <td>Finalización de la trazabilidad de un lote</td>
+  <td>Finalizar automáticamente la trazabilidad del lote al confirmarse la entrega en destino.</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td>US14</td>
+  <td>Detección de anomalía en la distribución</td>
+  <td>Generar una alerta automática cuando se detecte una anomalía en la carga o en ruta.</td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td>US15</td>
+  <td>Notificación de resolución de incidencia</td>
+  <td>Notificar al Jefe de Distribución cuando se resuelva una incidencia reportada en ruta.</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td>US16</td>
+  <td>Registro de acción correctiva</td>
+  <td>Registrar la acción correctiva tomada ante una incidencia.</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td>TS07</td>
+  <td>Endpoint de consulta de incidencias abiertas</td>
+  <td>Endpoint REST que permite consultar las incidencias abiertas.</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td>US17</td>
+  <td>Reporte consolidado de indicadores logísticos</td>
+  <td>Generar un reporte consolidado de OTIF, Fill Rate, ERI y rotación de inventario.</td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>27</td>
+  <td>US18</td>
+  <td>Cálculo automático de la tasa de mermas</td>
+  <td>Calcular automáticamente la tasa de mermas del periodo.</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>28</td>
+  <td>TS08</td>
+  <td>Endpoint de exportación de indicadores operativos</td>
+  <td>Endpoint REST que exporta los indicadores operativos consolidados en JSON/CSV.</td>
+  <td>2</td>
+</tr>
+</table>
 
+<br>
