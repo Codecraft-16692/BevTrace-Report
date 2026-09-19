@@ -35,8 +35,8 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
       <img src="../assets/Chapter1/christofer.jpg" alt="Foto de Christofer" width="120" />
     </td>
     <td valign="top">
-      <strong>Christofer William Costa Morales</strong> - Ingeniería<br><br>
-      [Insertar descripción manual aquí].
+      <strong>Christofer William Costa Morales</strong> - Ingeniería de Software<br><br>
+      Soy estudiante de la carrera de Ingeniería de Software. Cuento con conocimientos en programación C++, edición de videos en canvas, experiencia con los formatos Start up y conocimiento con los programas de Office, como Excel.
     </td>
   </tr>
   <tr>
@@ -44,7 +44,7 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
       <img src="../assets/Chapter1/Danitza.webp" alt="Foto de Danitza" width="120" />
     </td>
     <td valign="top">
-      <strong>Danitza Ivonne Heredia Hoyos</strong> - Ingeniería<br><br>
+      <strong>Danitza Ivonne Heredia Hoyos</strong> - Ingeniería de Software<br><br>
       [Insertar descripción manual aquí].
     </td>
   </tr>
@@ -53,7 +53,7 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
       <img src="../assets/Chapter1/placeholder_enrique.jpg" alt="Foto de Enrique" width="120" />
     </td>
     <td valign="top">
-      <strong>Enrique Augusto Ochoa Prado</strong> - <br><br>
+      <strong>Enrique Augusto Ochoa Prado</strong> - Ingenieria de Software <br><br>
       [Insertar descripción manual aquí].
     </td>
   </tr>
