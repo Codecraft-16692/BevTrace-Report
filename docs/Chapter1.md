@@ -35,8 +35,8 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
       <img src="../assets/Chapter1/christofer.jpg" alt="Foto de Christofer" width="120" />
     </td>
     <td valign="top">
-      <strong>Christofer William Costa Morales</strong> - Ingeniería<br><br>
-      [Insertar descripción manual aquí].
+      <strong>Christofer William Costa Morales</strong> - Ingeniería de Software<br><br>
+      Soy estudiante de la carrera de Ingeniería de Software. Cuento con conocimientos en programación C++, edición de videos en canvas, experiencia con los formatos Start up y conocimiento con los programas de Office, como Excel.
     </td>
   </tr>
   <tr>
@@ -44,7 +44,7 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
       <img src="../assets/Chapter1/Danitza.webp" alt="Foto de Danitza" width="120" />
     </td>
     <td valign="top">
-      <strong>Danitza Ivonne Heredia Hoyos</strong> - Ingeniería<br><br>
+      <strong>Danitza Ivonne Heredia Hoyos</strong> - Ingeniería de Software<br><br>
       [Insertar descripción manual aquí].
     </td>
   </tr>
@@ -53,7 +53,7 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
       <img src="../assets/Chapter1/placeholder_enrique.jpg" alt="Foto de Enrique" width="120" />
     </td>
     <td valign="top">
-      <strong>Enrique Augusto Ochoa Prado</strong> - <br><br>
+      <strong>Enrique Augusto Ochoa Prado</strong> - Ingenieria de Software <br><br>
       [Insertar descripción manual aquí].
     </td>
   </tr>
@@ -62,18 +62,14 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
 ## 1.2. Solution Profile
 ### 1.2.1. Antecedentes y problemática
 
-El modelo de distribución de bebidas de consumo masivo, particularmente en envases PET no retornables, enfrenta serios desafíos logísticos. A pesar de los altos volúmenes de producción, los almacenes y distribuidoras operan frecuentemente con sistemas heredados o procesos manuales. El verdadero problema de la startup radica en la falta de visibilidad en tiempo real de la mercadería, lo que imposibilita un control estricto sobre las mermas y retrasa la gestión de despachos.
 
-
-Aplicando la técnica de análisis de problemas 5W+2H, desglosamos la problemática de la siguiente manera:
-
-* <b>Who? (¿Quiénes?) </b> <br> Empresas embotelladoras y distribuidoras de bebidas de consumo masivo, así como responsables de almacén, logística, distribución y operaciones. <br/>
-* <b>What? (¿Qué sucede?) </b> <br> Dificultades para controlar inventarios, gestionar despachos y realizar la trazabilidad de productos durante la distribución.<br/>
-* <b>Where? (¿Dónde ocurre?) </b> <br> En almacenes, centros de distribución y durante el traslado de productos hacia sus respectivos destinos.<br/>
-* <b>When? (¿Cuándo ocurre?) </b>	<br> Durante las actividades de almacenamiento, preparación de pedidos, despacho, transporte y recepción de productos.<br/>
-* <b>Why? (¿Por qué es un problema?) </b>	<br> Debido a la dependencia de registros manuales, inventarios estáticos, información fragmentada y ausencia de monitoreo en tiempo real.<br/>
-* <b>How? (¿Cómo lo solucionan hoy?) </b>	<br> Mediante hojas de cálculo, reportes manuales y diferentes registros que no se encuentran necesariamente integrados o actualizados.<br/>
-* <b>How much? (¿Cuánto cuesta no resolverlo?) </b>	<br> La problemática puede generar pérdidas económicas relacionadas con mermas, errores operativos, diferencias de inventario, retrasos y mayores costos de control.<br/>
+*   **What (¿Qué?):** Pérdida de inventario (mermas), desorganización en la asignación de despachos y nula trazabilidad del estado físico del producto durante las operaciones logísticas.
+*   **Why (¿Por qué?):** Porque los procesos dependen de verificaciones manuales y desconectadas. No existe un ecosistema que integre la lectura masiva de productos ni el monitoreo ambiental/físico de la carga en los vehículos.
+*   **Who (¿Quién?):** Afecta financieramente a las empresas embotelladoras y distribuidoras. Operativamente impacta a los Jefes/Gerentes de Logística y a los Operarios de Almacén.
+*   **When (¿Cuándo?):** Durante los procesos de preparación de pedidos (picking), asignación de rutas, carga de vehículos y transporte hacia los distribuidores finales.
+*   **Where (¿Dónde?):** En los centros de distribución, almacenes de las embotelladoras y durante la ruta de los camiones de transporte.
+*   **How (¿Cómo?):** Se soluciona implementando una plataforma SaaS que centralice la información y se integre con hardware IoT (sensores de peso, humedad, temperatura y antenas de lectura masiva RFID) para automatizar el registro y monitorear el estado de los envases.
+*   **How much (¿Cuánto?):** Las pérdidas por mermas no detectadas a tiempo y las ineficiencias en despachos representan millones en sobrecostos operativos anuales para la industria de bebidas masivas.
 
 ### 1.2.2. Lean UX Process
 
@@ -81,13 +77,7 @@ Aplicando la técnica de análisis de problemas 5W+2H, desglosamos la problemát
 
 <b>Problem Statement</b>
 
-El estado actual del dominio de distribución de bebidas se enfoca principalmente en la gestión de inventarios, operaciones de almacén y despachos mediante registros manuales, inventarios estáticos e información fragmentada, especialmente en empresas embotelladoras y distribuidoras de bebidas de consumo masivo.
-Los productos y servicios existentes no abordan completamente la necesidad de contar con un enfoque integrado y en tiempo real para la trazabilidad de productos y la gestión de despachos, que permita combinar la información operativa con datos provenientes de dispositivos IoT para mejorar la visibilidad de la distribución y reducir las pérdidas de inventario.
-
-Nuestro producto abordará esta brecha mediante una plataforma SaaS que centralice la gestión de inventarios y despachos, permita el monitoreo de los productos en tiempo real e integre telemetría IoT para facilitar la trazabilidad desde el almacén hasta el destino.
-
-Nuestro enfoque inicial estará dirigido a empresas embotelladoras y distribuidoras de bebidas de consumo masivo que trabajen con productos en envases PET no retornables y requieran un mayor control sobre sus operaciones de distribución.
-Sabremos que tenemos éxito cuando observemos una reducción de las discrepancias y pérdidas de inventario, una mejora en el control de los despachos, un mayor uso de información operativa en tiempo real y una mayor visibilidad de los productos durante el proceso de distribución.
+El estado actual de la gestión logística en empresas embotelladoras se ha enfocado en sistemas transaccionales básicos y registros en papel. Lo que este proceso no logra es proporcionar visibilidad en tiempo real y automatizar el control físico de la mercadería. Nuestro producto (BevTrace) abordará esta brecha ofreciendo un SaaS integral que combina Dashboards de KPI, gestión automatizada de despachos y monitoreo IoT, lo que reducirá las mermas y optimizará el flujo de trabajo operativo.
 
 #### 1.2.2.2. Lean UX Assumptions
 
@@ -146,17 +136,20 @@ Los siguientes supuestos representan las creencias iniciales del equipo respecto
 
 ### 1.3. Segmentos objetivo
 
-#### Empresas embotelladoras y distribuidoras de bebidas de consumo masivo
+Basados en la distinción entre *Buyer Persona* (quien toma la decisión de compra) y *User Persona* (quien interactúa diariamente con la herramienta), se definen los siguientes segmentos:
 
-- **Tipo de empresa:** Empresas embotelladoras y distribuidoras dedicadas a la comercialización y distribución de bebidas de consumo masivo en envases PET no retornables.
-- **Procesos:** Empresas que gestionan operaciones de almacén, inventarios, despachos y distribución de productos.
-- **Necesidad principal:** Mejorar el control de inventarios y despachos, reducir las pérdidas de productos y contar con mayor visibilidad sobre el proceso de distribución.
-- **Uso de tecnología:** Empresas interesadas en digitalizar sus procesos logísticos mediante soluciones SaaS e integrar tecnologías IoT para obtener información operativa en tiempo real.
-- **Beneficios buscados:** Reducción de discrepancias y mermas de inventario, mayor eficiencia en los despachos, trazabilidad de los productos y acceso a información actualizada para la toma de decisiones.
+<h3 id="segment1">Segmento Objetivo 1: Buyer Persona - Jefes y Gerentes de Logística</h3>
 
-#### Responsables de almacén, logística, distribución y operaciones
+Este segmento es el encargado de adquirir la plataforma SaaS. Su motivación principal es el retorno de inversión (ROI) a través de la optimización de procesos.
 
-- **Perfil:** Profesionales encargados de supervisar y gestionar las operaciones relacionadas con inventarios, despachos, distribución y control logístico dentro de las empresas objetivo.
-- **Necesidad principal:** Contar con información centralizada, actualizada y confiable para controlar los productos, supervisar los despachos y detectar oportunamente incidencias durante la distribución.
-- **Uso de tecnología:** Utilizan sistemas digitales para consultar, registrar y supervisar información relacionada con las operaciones logísticas.
-- **Beneficios buscados:** Mayor precisión en el control de inventarios, visibilidad del estado y recorrido de los productos, alertas sobre incidencias y acceso a indicadores que faciliten la toma de decisiones.
+*   **Demografía:** Profesionales entre 35 y 55 años, Ingenieros Industriales o Administradores con especialización en Supply Chain Management.
+*   **Necesidades:** Visibilidad total de la operación, control estricto de mermas y KPIs actualizados al segundo para reportar a la alta gerencia.
+*   **Relación con el sistema:** Interactúan principalmente con el Dashboard de KPI, configuraciones de reglas de negocio y reportes de trazabilidad IoT.
+
+<h3 id="segment2">Segmento Objetivo 2: User Persona - Operarios y Supervisores de Almacén</h3>
+
+Este segmento es el usuario final y operativo del sistema. El éxito de la implementación depende de que la plataforma les resulte intuitiva y eficiente.
+
+*   **Demografía:** Hombres y mujeres entre 20 y 45 años, con educación técnica o secundaria completa.
+*   **Necesidades:** Herramientas rápidas que no entorpezcan su labor física, interfaces claras para leer órdenes de trabajo y evitar el conteo manual repetitivo.
+*   **Relación con el sistema:** Interactúan con el módulo de Gestión y Asignación de Despachos, operando los escáneres/antenas de lectura masiva y validando la carga física contra el sistema antes del despliegue de las unidades de transporte.
