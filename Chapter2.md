@@ -15,7 +15,7 @@ En esta etapa, se analizan distintos tipos de competidores con el objetivo de en
 |------------------------|----------------------------------------------|---|
 
 
-| Categoría              | Aspecto                                      | ![BevTrace](../assets/Chapter2/BevTrace_Logo.jpeg) | ![Verial](../assets/Chapter2/Verial_Logo.jpg) | ![WebFleet](../assets/Chapter2/WebFleet_Logo.png) | ![SAPEWM](../assets/Chapter2/SAP_EWM_Logo.jpg) |  
+| Categoría              | Aspecto                                      | ![BevTrace](assets/Chapter2/BevTrace_Logo.jpeg) | ![Verial](assets/Chapter2/Verial_Logo.jpg) | ![WebFleet](assets/Chapter2/WebFleet_Logo.png) | ![SAPEWM](assets/Chapter2/SAP_EWM_Logo.jpg) |  
 |:------------------------|:----------------------------------------------|:---:|:---:|:---:|:---:|
 | Perfil                 | Overview                                      |  SaaS que digitaliza y automatiza la cadena de suministro de em- botelladoras/distribuidoras de be- bidas en envases PET no retornables, uniendo gestión operativa con IoT   |   ERP español specializado en distribución de bebidas: preventa, autoventa, rutas y trazabilidad de lotes.  |  Plataforma SaaS de telemática y gestión de flotas de Bridgestone, con foco en localización y navegación.   |  Módulo empresarial de SAP para gestión avanzada de almacenes (Extended Warehouse Management).    | 
 | Perfil                 | Ventaja competitiva (¿qué valor ofrece?)      |   Monitoreo en tiempo real vía telemetría IoT,  trazabilidad inmutable del producto desde almacén hasta destino y gestión centralizada de despachos, especializado en PET no retornable  |Cumplimiento normativo (Verifactu), control de lote origen y del destino específico para HORECA y retail de bebidas|   Precisión GPS en tiempo real, marca reconocida globalmente, integraciones con hardware vehicular certificado.  |  Robustez enterprise, integración nativa con todo el ecosistema SAP (finanzas, MM, SD) ya instalado en grandes embotelladoras   |   
@@ -142,7 +142,7 @@ Teniendo en cuenta la importancia en la información que nos pueden proveer los 
         </tr>
         <tr>
             <td>Evidencia</td>
-            <td><div align="center"><img src="../assets/Chapter2/david.png" alt="Entrevista"></div></td>
+            <td><div align="center"><img src="assets/Chapter2/david.png" alt="Entrevista"></div></td>
         </tr>
         <tr>
             <td>Link</td>
@@ -197,7 +197,7 @@ Teniendo en cuenta la importancia en la información que nos pueden proveer los 
         </tr>
         <tr>
             <td>Evidencia</td>
-            <td><div align="center"><img src="../assets/Chapter2/entrevistamaria.png" alt="Entrevista"></div></td>
+            <td><div align="center"><img src="assets/Chapter2/entrevistamaria.png" alt="Entrevista"></div></td>
         </tr>
         <tr>
             <td>Link</td>
@@ -231,12 +231,12 @@ Teniendo en cuenta la importancia en la información que nos pueden proveer los 
 Para el segmento de los Jefes y Gerentes de Logistica:
 
 
-![UserPersona1](<../assets/Chapter2/Jose Peréz.png>)
+![UserPersona1](<assets/Chapter2/Jose Peréz.png>)
 
 
 Para el segmento de Operarios y Supervisores de almacén
 
-![UserPersona2](<../assets/Chapter2/María Paz.png>)
+![UserPersona2](<assets/Chapter2/María Paz.png>)
 
 
 ### 2.3.2. User Task Matrix
@@ -280,12 +280,12 @@ El User Task Matrix presenta las tareas que realizan los User Persona para cumpl
 
 Para el segmento de Jefes y Gerentes de Logistica
 
-![Logistica](<../assets/Chapter2/Customer journey - Jefes y Gerentes de Logistica.png>)
+![Logistica](<assets/Chapter2/Customer journey - Jefes y Gerentes de Logistica.png>)
 
 
 Para el segmento de Operarios y Supervidores de Almacen:
 
-![Operarios](<../assets/Chapter2/Customer journey - Operarios y Supervisores de Almacen.png>)
+![Operarios](<assets/Chapter2/Customer journey - Operarios y Supervisores de Almacen.png>)
 
 
 ### 2.3.4. Empathy Mapping
@@ -293,11 +293,11 @@ Para el segmento de Operarios y Supervidores de Almacen:
 
 Para el segmento de Jefes y Gerentes de Logistica
 
-![Logistica](<../assets/Chapter2/Empathy map Logistica.png>)
+![Logistica](<assets/Chapter2/Empathy map Logistica.png>)
 
 Para el segmento de Operarios y Supervidores de Almacen:
 
-![Almacen](<../assets/Chapter2/Empathy map Almacen.png>)
+![Almacen](<assets/Chapter2/Empathy map Almacen.png>)
 
 
 ## 2.4. Big Picture Event Storm
@@ -330,7 +330,7 @@ fue detectada o un reporte logístico fue generado.
 </p>
 
 <div align="center">
-  <img src="../assets/Chapter2/Eventstorming1.jpeg" alt="Big Picture Event Storming 1" width="auto" height="450"/>
+  <img src="assets/Chapter2/Eventstorming1.jpeg" alt="Big Picture Event Storming 1" width="auto" height="450"/>
   <p><em>Figura: Primera etapa del Big Picture Event Storming, enfocada en la recolección de eventos de dominio para BevTrace.</em></p>
 </div>
 

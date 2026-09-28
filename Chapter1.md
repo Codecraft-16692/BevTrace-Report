@@ -26,7 +26,7 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
   </colgroup>
   <tr>
     <td width="140" valign="top" align="center">
-      <img src="../assets/Chapter1/Mauricio.jpg" alt="Foto de Mauricio" width="120" />
+      <img src="assets/Chapter1/Mauricio.jpg" alt="Foto de Mauricio" width="120" />
     </td>
     <td valign="top">
       <strong>Mauricio Sebastian Castillo Yataco</strong> - Ingeniería de Software<br><br>
@@ -35,7 +35,7 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
   </tr>
   <tr>
     <td width="140" valign="top" align="center">
-      <img src="../assets/Chapter1/christofer.jpg" alt="Foto de Christofer" width="120" />
+      <img src="assets/Chapter1/christofer.jpg" alt="Foto de Christofer" width="120" />
     </td>
     <td valign="top">
       <strong>Christofer William Costa Morales</strong> - Ingeniería de Software<br><br>
@@ -44,7 +44,7 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
   </tr>
   <tr>
     <td width="140" valign="top" align="center">
-      <img src="../assets/Chapter1/Danitza.webp" alt="Foto de Danitza" width="120" />
+      <img src="assets/Chapter1/Danitza.webp" alt="Foto de Danitza" width="120" />
     </td>
     <td valign="top">
       <strong>Danitza Ivonne Heredia Hoyos</strong> - Ingeniería de Software<br><br>
@@ -53,7 +53,7 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
   </tr>
   <tr>
     <td width="140" valign="top" align="center">
-      <img src="../assets/Chapter1/enrique.jpg" alt="Foto de Enrique" width="120" />
+      <img src="assets/Chapter1/enrique.jpg" alt="Foto de Enrique" width="120" />
     </td>
         <td valign="top" align="justify">
       <strong>Enrique Augusto Ochoa Prado</strong> - Ingeniería de Software<br><br>
@@ -135,8 +135,7 @@ Los siguientes supuestos representan las creencias iniciales del equipo respecto
 - <b>Hipótesis 6:</b> Creemos que lograremos mejorar la toma de decisiones logísticas si los responsables de operaciones obtienen una visión consolidada de los indicadores de inventario, despachos y trazabilidad mediante un dashboard de indicadores. Sabremos que esto es cierto cuando al menos el 80% de los responsables de operaciones puedan identificar correctamente los principales indicadores y utilizarlos para analizar situaciones relacionadas con inventarios y despachos durante las pruebas de validación.
 
 #### 1.2.2.4. Lean UX Canvas
-![C1-Canvas](/assets/Chapter1/LeanUXCanvas-BevTrace.png)
-
+![C1-Canvas](assets/Chapter1/LeanUXCanvas-BevTrace.png)
 ### 1.3. Segmentos objetivo
 
 Basados en la distinción entre *Buyer Persona* (quien toma la decisión de compra) y *User Persona* (quien interactúa diariamente con la herramienta), se definen los siguientes segmentos:
