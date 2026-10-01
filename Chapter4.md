@@ -470,4 +470,4 @@ Este esquema representa el motor lógico de manejo de excepciones en ruta. La ba
 
 Este esquema representa la estructura de almacenamiento orientada al procesamiento analítico y la inteligencia de negocios gerencial. La generación de informes se centraliza en la tabla `logistics_reports`, categorizada mediante `report_types` y definiendo el periodo evaluado. Este reporte consolida dos grandes grupos de métricas: primero, los indicadores en la tabla `logistics_kpis`, los cuales se calculan en base a las metas definidas en el catálogo `kpi_catalogs` (incluyendo la varianza y el valor actual de rendimiento); segundo, las métricas financieras de pérdida almacenadas en `shrinkage_metrics`, que resumen el total de merma en kilogramos y su impacto económico. Finalmente, la tabla `report_schedulers` automatiza este proceso, definiendo frecuencias, destinatarios de correo y fechas de próxima ejecución para el envío automático de los resúmenes gerenciales.
 
-<img src="../assets/Chapter4/bk7.png" alt="bk operations" width="100%"/>
+<img src="assets/Chapter4/bk7.png" alt="bk operations" width="100%"/>
