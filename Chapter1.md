@@ -26,7 +26,7 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
   </colgroup>
   <tr>
     <td width="140" valign="top" align="center">
-      <img src="../assets/Chapter1/Mauricio.jpg" alt="Foto de Mauricio" width="120" />
+      <img src="assets/Chapter1/Mauricio.jpg" alt="Foto de Mauricio" width="120" />
     </td>
     <td valign="top">
       <strong>Mauricio Sebastian Castillo Yataco</strong> - Ingeniería de Software<br><br>
