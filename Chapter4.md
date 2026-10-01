@@ -24,7 +24,7 @@ Para preservar la legibilidad del logotipo, se define un área de resguardo mín
 </p>
 
 <p align="center">
-  <img src="../assets/Chapter4/logo_bevtrace.png" alt="Logotipo de BevTrace" width="280">
+  <img src="assets/Chapter4/logo_bevtrace.png" alt="Logotipo de BevTrace" width="280">
 </p>
 
 #### Typography
@@ -44,7 +44,7 @@ La jerarquía tipográfica se establece de la siguiente manera, tomando como ref
 - **Etiquetas y botones (span/button)**: 0.875rem (14px) a 1rem (16px).
 
 <p align="center">
-  <img src="../assets/Chapter4/typography_bevtrace.png" alt="Muestra tipográfica de BevTrace" width="500">
+  <img src="assets/Chapter4/typography_bevtrace.png" alt="Muestra tipográfica de BevTrace" width="500">
 </p>
 
 <p align="justify">
@@ -80,7 +80,7 @@ La paleta de colores de BevTrace refuerza los atributos de confianza, precisión
 | Rojo (Error) | Errores, incidencias críticas de trazabilidad | `#C62828` |
 
 <p align="center">
-  <img src="../assets/Chapter4/colors_bevtrace.png" alt="Paleta de colores de BevTrace" width="650">
+  <img src="assets/Chapter4/colors_bevtrace.png" alt="Paleta de colores de BevTrace" width="650">
 </p>
 
 <p align="justify">
@@ -228,12 +228,12 @@ Las políticas identificadas fueron:
 
 Estas políticas permiten automatizar procesos críticos del sistema, reduciendo drásticamente el error humano y asegurando respuestas oportunas ante incidencias en ruta o discrepancias de stock que podrían generar pérdidas económicas o retrasos en la entrega de bebidas.
 
-<img src="../assets/Chapter4/event21.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event22.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event23.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event24.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event25.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event26.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event21.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event22.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event23.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event24.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event25.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event26.png" alt="Bounded Context Commands" width="80%"/>
 
 Una vez identificados los eventos, flujos, comandos y políticas del dominio, se procedió al descubrimiento de contextos candidatos. Esta etapa permitió agrupar elementos relacionados según su cohesión funcional y sus reglas de negocio compartidas, delimitando áreas específicas como el control de inventarios, la gestión de despachos, la trazabilidad de rutas, el monitoreo por telemetría y el manejo de incidencias logísticas. De esta manera, el equipo logró estructurar el dominio de BevTrace en contextos con responsabilidades claramente diferenciadas y alineadas a los módulos de la arquitectura del software.
 
@@ -246,9 +246,9 @@ Los Read Models representan las vistas de consulta críticas que los actores uti
 * **Active Route Traceability Map:** vista esencial utilizada por el Distribution Manager para monitorear la ubicación en tiempo real de los despachos, validar los puntos de control (checkpoints) alcanzados y gestionar alertas de incidencias.
 * **Logistics Performance & KPI Dashboard:** panel gerencial utilizado por el Operations Manager para visualizar el rendimiento de las entregas, evaluar la tasa global de mermas (shrinkage rate) y analizar el impacto de las anomalías en la distribución.
 
-<img src="../assets/Chapter4/event31.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event32.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event33.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event31.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event32.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event33.png" alt="Bounded Context Commands" width="80%"/>
 
 #### Paso 5: External Systems
 
@@ -259,9 +259,9 @@ En este paso identificamos los sistemas externos que interactúan con el dominio
 * **Notification Gateway:** plataforma de mensajería externa utilizada en el contexto de gestión de incidencias para despachar alertas automáticas a los responsables logísticos.
 * **Cloud Storage Service:** servicio de almacenamiento en la nube utilizado para resguardar de forma segura los comprobantes de entrega (Proof of Delivery) y los reportes logísticos generados.
 
-<img src="../assets/Chapter4/event41.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event42.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event43.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event41.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event42.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event43.png" alt="Bounded Context Commands" width="80%"/>
 
 #### Paso 6: Add Aggregates
 
@@ -274,9 +274,9 @@ En este paso identificamos los Aggregates, que representan los objetos de domini
 * **Incident Record & Alert Engine:** gestiona la detección de anomalías, la emisión de notificaciones automáticas y el flujo de acciones correctivas.
 * **Logistics Report & Performance KPI:** encapsula el cálculo de tasas de mermas operativas y la generación de documentos de auditoría logística.
   
-<img src="../assets/Chapter4/event51.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event52.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event53.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event51.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event52.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event53.png" alt="Bounded Context Commands" width="80%"/>
 
 #### Paso 7: Bounded Contexts
 
@@ -291,12 +291,12 @@ Finalmente, definimos los Bounded Contexts que agrupan los flujos relacionados e
 | **BC: Incident & Alert Management** | Agrupa el Aggregate `Incident Record & Alert Engine` para el manejo centralizado de excepciones y alertas. |
 | **BC: Operations Analytics** | Contiene el Aggregate `Logistics Report & Performance KPI` para la evaluación de mermas y toma de decisiones gerenciales. |
 
-<img src="../assets/Chapter4/event61.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event62.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event63.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event64.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event65.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event66.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event61.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event62.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event63.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event64.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event65.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event66.png" alt="Bounded Context Commands" width="80%"/>
 
 ## 4.6.2. Software Architecture Context Diagram
 
@@ -318,7 +318,7 @@ El context diagram muestra a la **BevTrace Platform** como un recuadro en el cen
 
 En el diagrama se representan las relaciones entre estos elementos. El Logistics Manager y el Warehouse Operator interactúan con BevTrace a través de la interfaz web. La Telemetry Mock API envía datos entrantes hacia BevTrace de forma automática. BevTrace se encarga de orquestar las integraciones salientes con los servicios externos (validación de rutas, notificaciones por mensajería y almacenamiento de documentos). Esta vista permite entender el alcance del sistema, los límites de responsabilidad y el ecosistema logístico en el que se inserta BevTrace antes de entrar a detalles de implementación.
 
-<img src="../assets/Chapter4/ContextDiagram-dark.png" alt="Context Diagram" width="100%"/>
+<img src="assets/Chapter4/ContextDiagram-dark.png" alt="Context Diagram" width="100%"/>
 
 ---
 
@@ -348,7 +348,7 @@ En el diagrama se observa que:
 
 Esta vista permite apreciar cómo se distribuyen las responsabilidades entre la capa de presentación (Landing Page, Web Application y SPA), la capa de lógica de negocio (API Application) y la capa de persistencia (Database).
 
-<img src="../assets/Chapter4/ContainerDiagram-dark.png" alt="Container Diagram" width="100%"/>
+<img src="assets/Chapter4/ContainerDiagram-dark.png" alt="Container Diagram" width="100%"/>
 
 ---
 
@@ -382,7 +382,7 @@ En el diagrama se refleja cómo:
 
 De esta forma, los component diagrams muestran cómo los contenedores se descomponen en componentes coherentes con los bounded contexts del dominio logístico y cómo estos colaboran entre sí para orquestar la distribución de BevTrace.
 
-<img src="../assets/Chapter4/ComponentDiagram-dark.png" alt="Component Diagram" width="100%"/>
+<img src="assets/Chapter4/ComponentDiagram-dark.png" alt="Component Diagram" width="100%"/>
 
 # 4.7 Software Object-Oriented Design
 
@@ -396,37 +396,37 @@ El siguiente diagrama de clases general representa la vista global del modelo de
 
 El diagrama de clases presentado pertenece al contexto delimitado de **Inventory Management**, el cual representa el núcleo de las funcionalidades relacionadas con el control del almacén de bebidas. Este contexto tiene como **Aggregate Root principal a `ProductInventory`**, el cual orquesta las relaciones con otras entidades y garantiza la consistencia del stock físico. El inventario se compone de múltiples lotes (`ProductBatch`), los cuales a su vez categorizan productos específicos (`BeverageProduct`) y se ubican en zonas físicas del almacén (`WarehouseZone`). Adicionalmente, la entidad `WasteRecord` encapsula los datos relacionados con las mermas operativas, permitiendo calcular su impacto financiero. 
 
-<img src="../assets/Chapter4/db2.png" alt="class inventory" width="100%"/>
+<img src="assets/Chapter4/db2.png" alt="class inventory" width="100%"/>
 
 #### Bounded Context: Dispatch Management
 
 Este diagrama representa el contexto de **Dispatch Management**, el cual centraliza la programación y orquestación de salidas. En este contexto, el **Aggregate Root es `DispatchOrder`**, el cual contiene la lógica para autorizar y planificar la distribución. El diseño separa claramente las responsabilidades: la orden agrupa la carga física (`CargoAssignment`), traza la ruta planificada (`RoutePlan` y `DeliveryDestination`), y se asigna a un vehículo específico (`TransportVehicle`), el cual es conducido por un chofer autorizado (`Driver`). Esta estructura modular permite validar capacidades y disponibilidades antes de iniciar cualquier despacho, preservando la integridad del modelo logístico.
 
-<img src="../assets/Chapter4/db3.png" alt="class dispatch" width="100%"/>
+<img src="assets/Chapter4/db3.png" alt="class dispatch" width="100%"/>
 
 #### Bounded Context: Product Traceability
 
 El contexto **Product Traceability** encapsula todo lo relacionado con el seguimiento en tiempo real y el ciclo de vida de la distribución en ruta. Aquí, el **Aggregate Root es `TraceabilityLog`**, que actúa como la bitácora principal del viaje. Este registro está compuesto por múltiples puntos de control (`RouteCheckpoint`) y mantiene un historial inmutable de cambios de estado (`StatusTransition`). Finalmente, concluye su ciclo de vida relacionándose con la entidad `DeliveryRecord`, la cual sella la entrega exitosa validando la firma del cliente mediante `SignatureValidator`.
 
-<img src="../assets/Chapter4/db4.png" alt="class Traceability" width="100%"/>
+<img src="assets/Chapter4/db4.png" alt="class Traceability" width="100%"/>
 
 #### Bounded Context: IoT Telemetry
 
 El diagrama de clases presentado pertenece al contexto delimitado de **IoT Telemetry**, el cual representa la ingesta y procesamiento de los datos de rastreo. El **Aggregate Root es `TelemetryDevice`**, que simula el hardware instalado en los vehículos. Este dispositivo recibe flujos constantes de ubicación (`LocationStream`) y mantiene un registro de conectividad (`ConnectionStatus`). Para evitar acoplamientos fuertes con el resto del sistema, los datos procesados disparan un `TelemetryEvent`, permitiendo notificar al sistema sobre actualizaciones de ubicación de forma asíncrona.
 
-<img src="../assets/Chapter4/db5.png" alt="class iot" width="100%"/>
+<img src="assets/Chapter4/db5.png" alt="class iot" width="100%"/>
 
 #### Bounded Context: Incident & Alert Management
 
 Este diagrama representa el contexto de **Incident & Alert Management**, el cual gestiona el control de excepciones y anomalías operativas. El **Aggregate Root es `IncidentRecord`**, que encapsula los detalles de un problema detectado en ruta (ej. desvíos, excesos de tiempo). Este contexto opera a través de un motor de reglas (`AlertRule`) que, al cumplirse, genera el incidente y dispara notificaciones externas automáticas (`AutomatedAlert`). Además, permite a los usuarios registrar soluciones formales a través de la entidad `CorrectiveAction`.
 
-<img src="../assets/Chapter4/db6.png" alt="class alert" width="100%"/>
+<img src="assets/Chapter4/db6.png" alt="class alert" width="100%"/>
 
 #### Bounded Context: Operations Analytics
 
 El contexto **Operations Analytics** encapsula la evaluación del rendimiento gerencial y el cálculo de métricas de la cadena de suministro. El **Aggregate Root es `LogisticsReport`**, que consolida la información de un periodo específico. El reporte está compuesto por indicadores clave de rendimiento (`LogisticsKPI`) y evaluaciones financieras de pérdida (`ShrinkageMetric`). Para automatizar la inteligencia de negocios, la entidad `ReportScheduler` permite configurar la generación y distribución periódica de estos documentos gerenciales.
 
-<img src="../assets/Chapter4/db7.png" alt="class operations" width="100%"/>
+<img src="assets/Chapter4/db7.png" alt="class operations" width="100%"/>
 
 ## 4.8 Database Design
 
@@ -434,37 +434,37 @@ El contexto **Operations Analytics** encapsula la evaluación del rendimiento ge
 
 El siguiente diagrama general representa la arquitectura de base de datos relacional completa para la plataforma BevTrace. Este esquema unifica todos los Bounded Contexts logísticos, junto con la gestión de identidad, ilustrando las relaciones principales mediante el uso de llaves foráneas (Foreign Keys). El diseño emplea restricciones estrictas para garantizar la integridad referencial y utiliza un enfoque de normalización que evita la redundancia de datos a través de tablas de catálogo compartidas.
 
-<img src="../assets/Chapter4/bk1.png" alt="bk bk" width="100%"/>
+<img src="assets/Chapter4/bk1.png" alt="bk bk" width="100%"/>
 
 #### Bounded Context: Inventory Management
 
 Este esquema detalla el contexto de gestión de inventario, estructurado para ofrecer un control granular del almacén. El catálogo `product_categories` agrupa las bebidas según sus características, alimentando a la tabla maestra `products`, que define los SKU, volumen y tipo de empaque. El control físico recae sobre la tabla `product_batches`, la cual registra cada lote ingresado, su cantidad inicial y actual, fecha de expiración, y se vincula tanto a `warehouse_zones` (para ubicar el lote en pasillos o estantes con control de temperatura) como a `batch_states` (para identificar si está disponible o en cuarentena). Finalmente, la tabla `waste_records` permite auditar cualquier pérdida o merma asociada a un lote específico, registrando el usuario que reportó el incidente, la cantidad afectada, el motivo y el impacto financiero calculado.
 
-<img src="../assets/Chapter4/bk2.png" alt="bk Inventory" width="100%"/>
+<img src="assets/Chapter4/bk2.png" alt="bk Inventory" width="100%"/>
 
 #### Bounded Context: Dispatch Management
 
 Este esquema representa la compleja lógica de orquestación de salidas. El núcleo es la tabla `dispatch_orders`, que consolida el plan de despacho asociando un gerente responsable, fechas programadas, un peso estimado y enlazándose con el catálogo `dispatch_states`. Para garantizar la entrega, la orden se relaciona con `delivery_destinations`, que almacena la información geográfica y de contacto del cliente receptor. En cuanto a los recursos móviles, el sistema relaciona la orden con `transport_vehicles`, tabla que especifica la placa, capacidad y disponibilidad del camión basándose en `vehicle_types`. Estos vehículos son operados por recursos humanos definidos en la tabla `drivers`, validando sus tipos y números de licencia. Por último, la tabla `cargo_assignments` actúa como el detalle de la orden, vinculando los lotes específicos del inventario con la orden de despacho correspondiente, especificando el peso exacto y la cantidad de palets cargados.
 
-<img src="../assets/Chapter4/bk3.png" alt="bk Dispatch" width="100%"/>
+<img src="assets/Chapter4/bk3.png" alt="bk Dispatch" width="100%"/>
 
 #### Bounded Context: Product Traceability
 
 Este esquema modela la trazabilidad en ruta de los despachos. La tabla central `traceability_logs` mantiene un registro vivo del viaje, referenciando a la orden de despacho e indicando su tiempo estimado de llegada. Para mantener un historial inmutable y auditable de lo ocurrido, el sistema utiliza la tabla `status_transitions`, que registra cada cambio de estado (vinculado al catálogo `traceability_states`) junto con la fecha exacta y comentarios adicionales. Durante el recorrido, el sistema almacena hitos geográficos en la tabla `route_checkpoints`. Una vez concluido el viaje, se genera un registro en `delivery_records`, que documenta quién recibió la carga y el feedback del cliente. Para cumplir con las auditorías logísticas (Proof of Delivery), la tabla `proof_of_delivery_files` permite almacenar múltiples evidencias adjuntas (como fotografías o firmas escaneadas) asociadas a la entrega final.
 
-<img src="../assets/Chapter4/bk4.png" alt="bk Traceability" width="100%"/>
+<img src="assets/Chapter4/bk4.png" alt="bk Traceability" width="100%"/>
 
 #### Bounded Context: IoT Telemetry
 
 Este esquema encapsula la ingesta masiva de datos provenientes de los simuladores de telemetría. La tabla `telemetry_devices` vincula a un vehículo con su identificador de hardware específico y su fecha de instalación, basándose en la especificación técnica almacenada en el catálogo `device_models`. El monitoreo continuo de la conexión se mantiene en la tabla `connection_statuses` (relación 1 a 1). La ingesta cruda se realiza en la tabla `location_streams`, optimizada para altos volúmenes de transacciones, donde se registran las coordenadas (latitud y longitud), velocidad y dirección en cada instante de tiempo. Para interactuar con el resto de los módulos de manera asíncrona, la tabla `telemetry_events` almacena los eventos derivados del flujo de ubicaciones que han sido procesados y validados por el sistema.
 
-<img src="../assets/Chapter4/bk5.png" alt="bk Telemetry" width="100%"/>
+<img src="assets/Chapter4/bk5.png" alt="bk Telemetry" width="100%"/>
 
 #### Bounded Context: Incident & Alert Management
 
 Este esquema representa el motor lógico de manejo de excepciones en ruta. La base del sistema recae en el catálogo `incident_severities`, que clasifica el nivel de urgencia. A partir de este, se configuran las condiciones en la tabla `alert_rules`, definiendo los umbrales de tolerancia operativos. Cuando se rompe una regla durante la ruta, se genera una entrada en la tabla `incident_records`, detallando el tipo de anomalía, el log de trazabilidad afectado y su estado de resolución. Este incidente dispara notificaciones automatizadas que quedan auditadas en la tabla `dispatched_alerts` para confirmar el envío de advertencias al personal. Paralelamente, los operadores logísticos pueden registrar las acciones de mitigación tomadas a través de la tabla `corrective_actions`, indicando la descripción de la solución, el momento de aplicación y si la resolución fue exitosa.
 
-<img src="../assets/Chapter4/bk6.png" alt="bk Incident" width="100%"/>
+<img src="assets/Chapter4/bk6.png" alt="bk Incident" width="100%"/>
 
 #### Bounded Context: Operations Analytics
 
