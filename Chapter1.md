@@ -30,7 +30,7 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
     </td>
     <td valign="top">
       <strong>Mauricio Sebastian Castillo Yataco</strong> - Ingeniería de Software<br><br>
-      [Insertar descripción manual aquí].
+      Mi nombre es Mauricio Castillo y me encuentro realizando mis estudios universitarios en la carrera de Ingeniería de Software en la UPC. Durante mi formación académica, he adquirido conocimientos fundamentales en el desarrollo de software, abarcando áreas clave como programación, bases de datos y desarrollo web. Las dinámicas de trabajo colaborativo han sido una constante en mi experiencia estudiantil, donde he demostrado capacidad de integración y trabajo en equipo. Mi compromiso se centra en aplicar una metodología rigurosa y perseverante que permita alcanzar resultados óptimos en conjunto con mis compañeros de proyecto..
     </td>
   </tr>
   <tr>
