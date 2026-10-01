@@ -671,7 +671,7 @@
 
 ## 3.2. Impact Mapping.
 
-![alt text](<../assets/Chapter3/Impact maping.png>)
+![alt text](<assets/Chapter3/Impact maping.png>)
 
 ## 3.3. Product Backlog
 
