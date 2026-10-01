@@ -35,15 +35,6 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
   </tr>
   <tr>
     <td width="140" valign="top" align="center">
-      <img src="assets/Chapter1/christofer.jpg" alt="Foto de Christofer" width="120" />
-    </td>
-    <td valign="top">
-      <strong>Christofer William Costa Morales</strong> - Ingeniería de Software<br><br>
-      Soy estudiante de la carrera de Ingeniería de Software. Cuento con conocimientos en programación C++, edición de videos en canvas, experiencia con los formatos Start up y conocimiento con los programas de Office, como Excel.
-    </td>
-  </tr>
-  <tr>
-    <td width="140" valign="top" align="center">
       <img src="assets/Chapter1/Danitza.webp" alt="Foto de Danitza" width="120" />
     </td>
     <td valign="top">
