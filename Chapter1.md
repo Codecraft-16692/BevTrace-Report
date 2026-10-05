@@ -80,51 +80,56 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
 
 <b>Problem Statement</b>
 
-El estado actual de la gestión logística en empresas embotelladoras se ha enfocado en sistemas transaccionales básicos y registros en papel. Lo que este proceso no logra es proporcionar visibilidad en tiempo real y automatizar el control físico de la mercadería. Nuestro producto (BevTrace) abordará esta brecha ofreciendo un SaaS integral que combina Dashboards de KPI, gestión automatizada de despachos y monitoreo IoT, lo que reducirá las mermas y optimizará el flujo de trabajo operativo.
+Actualmente, las empresas embotelladoras y distribuidoras presentan dificultades para controlar las mermas, asignar despachos y mantener la trazabilidad de sus productos, debido a procesos manuales y sistemas desconectados. Si bien existen soluciones para la gestión de almacenes, distribución y monitoreo de flotas, estas se encuentran fragmentadas y pueden presentar altos costos o complejidad de implementación. Los responsables de logística necesitan mayor visibilidad de la operación, mientras que los operarios requieren procesos más ágiles y menos verificaciones manuales. Ante esta situación, BevTrace busca integrar la gestión logística y el monitoreo IoT en una plataforma SaaS, considerando como restricciones el costo del hardware, la integración con sistemas existentes, la conectividad durante el transporte y la facilidad de adopción.
 
 #### 1.2.2.2. Lean UX Assumptions
 
-Los siguientes supuestos representan las creencias iniciales del equipo respecto al negocio, los resultados esperados, los usuarios, los beneficios y las funcionalidades que conformarán la solución BevTrace.
+Los siguientes supuestos representan las creencias iniciales del equipo sobre el negocio, los usuarios, los resultados esperados y las funcionalidades principales de BevTrace.
 
 <b>Business Assumptions</b>
 
-- Creemos que las empresas embotelladoras y distribuidoras de bebidas están dispuestas a adoptar soluciones SaaS para digitalizar y optimizar sus procesos logísticos.
-- Creemos que reducir las mermas y mejorar el control de los despachos representa un beneficio económico relevante para las empresas del sector.
-- Creemos que un modelo SaaS puede resultar viable para empresas que buscan digitalizar sus operaciones sin asumir el desarrollo y mantenimiento de una solución tecnológica propia.
-- Creemos que la integración de tecnologías IoT puede representar un elemento diferenciador frente a soluciones que únicamente permiten administrar inventarios y operaciones de manera tradicional.
+- Creemos que las empresas embotelladoras y distribuidoras que presentan problemas de control de mermas y despachos están dispuestas a evaluar una solución SaaS para centralizar su operación logística.
+- Creemos que la reducción de mermas y la mejora del control de despachos representan beneficios económicos relevantes para estas empresas.
+- Creemos que la integración de tecnologías IoT puede diferenciar a BevTrace frente a soluciones que se limitan a la gestión tradicional de inventarios y despachos.
 
 <b>Business Outcome Assumptions</b>
-- Creemos que BevTrace permitirá reducir las discrepancias entre el inventario registrado y el inventario real.
-- Creemos que BevTrace permitirá reducir las pérdidas de productos asociadas a mermas durante el proceso de distribución.
-- Creemos que BevTrace permitirá mejorar la eficiencia de la gestión de despachos.
-- Creemos que disponer de información actualizada permitirá mejorar la toma de decisiones relacionadas con las operaciones logísticas.
+
+- Creemos que centralizar la información de inventarios, despachos y trazabilidad permitirá reducir las discrepancias entre los registros y la operación física.
+- Creemos que disponer de información actualizada sobre la operación permitirá detectar incidencias y mejorar la toma de decisiones logísticas.
 
 <b>User Assumptions</b>
-- Creemos que los responsables de almacén necesitan consultar y actualizar información relacionada con el inventario de productos.
-- Creemos que los responsables de logística necesitan registrar, gestionar y supervisar los despachos realizados por la empresa.
+
+- Creemos que los responsables de almacén necesitan reducir el tiempo dedicado a verificaciones y registros manuales de productos.
+- Creemos que los responsables de logística necesitan consultar y supervisar el estado de inventarios y despachos desde un único sistema.
 - Creemos que los responsables de distribución necesitan conocer el estado y recorrido de los productos durante su traslado.
-- Creemos que los responsables de operaciones necesitan consultar información consolidada sobre el desempeño de las operaciones logísticas.
+- Creemos que los responsables de operaciones necesitan información consolidada para identificar incidencias y evaluar el desempeño logístico.
 
 <b>User Outcome and Benefit Assumptions</b>
-- Creemos que los responsables de almacén podrán identificar con mayor rapidez las diferencias entre el inventario registrado y el inventario disponible.
-- Creemos que los responsables de logística podrán gestionar y supervisar los despachos de manera más eficiente al disponer de información centralizada y actualizada.
-- Creemos que los responsables de distribución podrán conocer el estado y recorrido de los productos durante el proceso de traslado.
-- Creemos que los responsables de operaciones podrán tomar decisiones más oportunas al disponer de información confiable sobre inventarios, despachos y distribución.
+
+- Creemos que los usuarios podrán identificar más rápidamente las diferencias entre el inventario registrado y el inventario físico.
+- Creemos que los responsables de logística podrán gestionar los despachos de manera más eficiente al disponer de información centralizada.
+- Creemos que los responsables de distribución podrán detectar oportunamente incidencias durante el traslado de los productos.
+- Creemos que los responsables de operaciones podrán tomar decisiones con mayor rapidez al contar con indicadores actualizados.
 
 <b>Feature Assumptions</b>
 
 1. <b>Gestión de inventarios</b>
-<br>Creemos que un módulo digital para registrar, consultar y actualizar el inventario permitirá a los responsables de almacén mantener un control más preciso de los productos disponibles.</br>
+   <br>Creemos que registrar y consultar digitalmente el inventario permitirá reducir errores y discrepancias en el control de productos.</br>
+
 2. <b>Gestión de despachos</b>
-<br>Creemos que un módulo centralizado para registrar, asignar y supervisar los despachos permitirá a los responsables de logística mejorar el control de las operaciones de distribución.</br>
+   <br>Creemos que centralizar el registro y asignación de despachos permitirá mejorar su seguimiento y reducir inconsistencias durante la distribución.</br>
+
 3. <b>Trazabilidad de productos</b>
-<br>Creemos que una funcionalidad de trazabilidad permitirá a los responsables de distribución consultar el recorrido y estado de los productos desde el almacén hasta su destino.</br>
-4. <b>Monitoreo mediante IoT</b>
-<br>Creemos que la integración con dispositivos IoT permitirá obtener información de telemetría en tiempo real sobre los productos durante su distribución.</br>
+   <br>Creemos que registrar el recorrido de los productos permitirá conocer su estado desde el almacén hasta el destino.</br>
+
+4. <b>Monitoreo IoT</b>
+   <br>Creemos que la integración con sensores y dispositivos IoT permitirá obtener información sobre las condiciones de los productos durante el transporte.</br>
+
 5. <b>Alertas de incidencias</b>
-<br>Creemos que un sistema automatizado de alertas permitirá identificar oportunamente eventos o inconsistencias que puedan afectar el inventario o la distribución de los productos.</br>
+   <br>Creemos que las alertas automáticas permitirán detectar oportunamente eventos que puedan afectar los productos o la operación logística.</br>
+
 6. <b>Dashboard de indicadores</b>
-<br>Creemos que un dashboard con indicadores logísticos permitirá a los responsables de operaciones visualizar información consolidada sobre inventarios, despachos y trazabilidad para apoyar la toma de decisiones.</br>
+   <br>Creemos que un dashboard con indicadores de inventario, despachos y trazabilidad permitirá a los responsables de operaciones identificar problemas y tomar decisiones oportunamente.</br>
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 - <b>Hipótesis 1:</b> Creemos que lograremos reducir las discrepancias de inventario si los responsables de almacén obtienen mayor precisión y visibilidad sobre los productos disponibles mediante un módulo centralizado de gestión de inventarios. Sabremos que esto es cierto cuando al menos el 70% de los responsables de almacén que utilicen la solución reporten una reducción de las diferencias entre el inventario registrado y el inventario real durante el periodo de validación.
