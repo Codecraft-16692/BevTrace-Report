@@ -37,8 +37,8 @@ cat > "$BUILD/style.css" <<'CSS'
 html { -webkit-print-color-adjust: exact; }
 body {
   font-family: "Times New Roman", "Liberation Serif", serif;
-  font-size: 11.5pt;
-  line-height: 1.55;
+  font-size: 12.5pt;
+  line-height: 1.6;
   color: #000;
   text-align: justify;
   hyphens: auto;
@@ -50,12 +50,12 @@ h1, h2, h3, h4 { color: #000; }
   width: auto; max-width: 70%; margin: 12px auto;
   font-size: 10.5pt;
 }
-.doc:first-of-type h3 { font-size: 18pt; margin: 16px 0; }
-.doc:first-of-type h4 { font-size: 14.5pt; margin: 14px 0; }
-.doc:first-of-type p  { font-size: 12.5pt; margin: 10px 0; }
-h1 { font-size: 20pt; border-bottom: 2px solid #000; padding-bottom: 4px; }
-h2 { font-size: 15pt; margin-top: 22px; }
-h3 { font-size: 13pt; margin-top: 15px; }
+.doc:first-of-type h3 { font-size: 20pt; margin: 16px 0; }
+.doc:first-of-type h4 { font-size: 16pt; margin: 14px 0; }
+.doc:first-of-type p  { font-size: 13.5pt; margin: 10px 0; }
+h1 { font-size: 22pt; border-bottom: 2px solid #000; padding-bottom: 4px; }
+h2 { font-size: 16.5pt; margin-top: 22px; }
+h3 { font-size: 14pt; margin-top: 15px; }
 /* Saltos de pagina entre documentos, salvo la caratula */
 .doc { page-break-before: always; }
 .doc:first-of-type { page-break-before: avoid; }
@@ -66,7 +66,7 @@ table {
   table-layout: auto;
   border-collapse: collapse;
   margin: 12px 0;
-  font-size: 9.5pt;
+  font-size: 10.5pt;
 }
 
 th, td {
@@ -76,7 +76,7 @@ th, td {
   text-align: left;
   overflow-wrap: break-word;
 }
-th { background: #e6e6e6; color: #000; font-size: 9.5pt; }
+th { background: #e6e6e6; color: #000; font-size: 10.5pt; }
 tr { page-break-inside: avoid; }
 img {
   max-width: 100%;
