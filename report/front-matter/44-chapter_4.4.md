@@ -46,9 +46,9 @@ Los wireflows se organizan **por objetivo de usuario (user goal)**: cada diagram
 </p>
 <p align="center"><i>Wireflow User Goal 8 — Consultar indicadores y reportes</i></p>
 
-### 4.4.2. Web Applications Mock-ups.
+### 4.4.3. Web Applications Mock-ups.
 
-### 4.4.3. Web Applications User Flow Diagrams.
+### 4.4.4. Web Applications User Flow Diagrams.
 
 Cada objetivo de usuario se documenta con su **user flow en mock-ups de alta fidelidad**, incluyendo el happy path y los flujos alternativos, sobre las rutas reales del frontend:
 
