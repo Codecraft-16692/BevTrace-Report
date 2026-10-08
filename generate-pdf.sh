@@ -128,7 +128,7 @@ chromium --headless --no-sandbox --disable-gpu --no-pdf-header-footer \
   --print-to-pdf="$BUILD/out.pdf" "file://$BUILD/report.html" 2>/dev/null
 
 # Normalizar a A4 exacto (595.28 x 841.89 pts) y comprimir imagenes
-gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sPAPERSIZE=a4 \
+gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sPAPERSIZE=a4 -dFIXEDMEDIA -dNORANGEPAGESIZE \
    -dCompatibilityLevel=1.5 -dPDFSETTINGS=/ebook \
    -sOutputFile="$BUILD/final.pdf" "$BUILD/out.pdf"
 cp "$BUILD/final.pdf" "$OUT"
