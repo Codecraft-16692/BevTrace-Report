@@ -205,9 +205,9 @@ En este paso definimos los comandos que los diferentes actores pueden ejecutar e
 | **System Admin** | Provision IoT Device. |
 | **System / Analytics Engine** | Deplete Inventory Stock, Start Telemetry Stream, Capture Sensor Data, Update Product Location, Reach Checkpoint, Lose Device Connectivity, Restore Device Connectivity, Detect Distribution Anomaly, Generate Automated Alert, Send Incident Notification, Complete Dispatch, Consolidate Operational Performance, Calculate Inventory Metric, Update Dispatch Indicator. |
 
-<img src="../assets/Chapter4/event11.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event12.png" alt="Bounded Context Commands" width="80%"/>
-<img src="../assets/Chapter4/event13.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event11.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event12.png" alt="Bounded Context Commands" width="80%"/>
+<img src="assets/Chapter4/event13.png" alt="Bounded Context Commands" width="80%"/>
 
 #### Paso 3: Policies and Actors
 
