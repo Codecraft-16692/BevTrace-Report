@@ -29,10 +29,10 @@ Para el manejo del codigo fuente de BevTrace se organiza en repositorios indepen
 
 |     Artefacto     |     URL del Repositorio  |   
 |:---: |:---: | 
-| Proyect Report  | [Report][9] |
-| Landing Page  | [LandingPage][10] |
-| FrontEnd Web Application  | [FrontEnd][11] |
-| BackEnd Web Services  | [Backend][12] |
+| Proyect Report  | [Report][https://github.com/Codecraft-16692/BevTrace-Report] |
+| Landing Page  | [LandingPage][https://github.com/Codecraft-16692/BevTrace-LandingPage] |
+| FrontEnd Web Application  | [FrontEnd][https://github.com/Codecraft-16692/BevTrace-FrontEnd] |
+| BackEnd Web Services  | [Backend][https://github.com/Codecraft-16692/BevTrace-BackEnd] |
 
 ##### GitFlow WorFlow
 
