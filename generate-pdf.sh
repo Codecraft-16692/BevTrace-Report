@@ -25,11 +25,8 @@ FILES=(
   97-conclusions.md 98-bibliographic_references.md 99-annexes.md
 )
 
-# Concatenar en orden y normalizar rutas de imagenes respecto a $SRC
-for f in "${FILES[@]}"; do
-  cat "$SRC/front-matter/$f"
-  printf '\n\n'
-done | sed "s|../assets/|assets/|g; s|(<assets/|(assets/|g; s|\.png>)|.png)|g" > "$BUILD/report.md"
+# Concatenar en orden y normalizar rutas de imagenes respecto a $SRC (vista previa sin usar)
+: # (la normalizacion se hace por archivo mas abajo)
 
 cat > "$BUILD/style.css" <<'CSS'
 @page {
@@ -73,7 +70,14 @@ th, td {
 }
 th { background: #e8e8e8; color: #000; font-size: 8pt; }
 tr { page-break-inside: avoid; }
-img { max-width: 100%; height: auto; }
+img {
+  max-width: 100%;
+  max-height: 23cm;
+  height: auto;
+  display: block;
+  margin: 8px auto;
+}
+figcaption { text-align: center; font-size: 9pt; color: #444; }
 blockquote {
   margin: 8px 0;
   padding: 2px 12px;
@@ -86,19 +90,20 @@ CSS
 
 # Un <section class="doc"> por archivo para el salto de pagina
 : > "$BUILD/report-wrapped.md"
-while IFS= read -r line; do
-  if [[ $line == '<h1 '* ]]; then
-    printf '<section class="doc">\n\n%s\n' "$line" >> "$BUILD/report-wrapped.md"
-  else
-    printf '%s\n' "$line" >> "$BUILD/report-wrapped.md"
-  fi
-done < "$BUILD/report.md"
-printf '</section>\n' >> "$BUILD/report-wrapped.md"
+for f in "${FILES[@]}"; do
+  printf '<section class="doc">\n\n' >> "$BUILD/report-wrapped.md"
+  sed "s|../assets/|assets/|g; s|(<assets/|(assets/|g; s|\.png>)|.png)|g" \
+    "$SRC/front-matter/$f" >> "$BUILD/report-wrapped.md"
+  printf '\n</section>\n\n' >> "$BUILD/report-wrapped.md"
+done
 
-# --metadata pagetitle: evita el bloque de titulo visible (la caratula queda intacta)
+# --embed-resources: incrusta las imagenes en el HTML para que Chromium
+# las resuelva sin depender de rutas relativas
 pandoc "$BUILD/report-wrapped.md" \
   -f markdown+raw_html+raw_attribute \
   -t html5 -s \
+  --embed-resources \
+  --resource-path="$SRC":"$BUILD" \
   --metadata pagetitle=" " \
   -c style.css \
   -o "$BUILD/report.html"
