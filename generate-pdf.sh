@@ -138,7 +138,7 @@ chromium --headless --no-sandbox --disable-gpu --no-pdf-header-footer \
 
 # Normalizar a A4 exacto (595.28 x 841.89 pts) y comprimir imagenes
 gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sPAPERSIZE=a4 -dFIXEDMEDIA -dNORANGEPAGESIZE \
-   -dCompatibilityLevel=1.5 -dPDFSETTINGS=/ebook \
+   -dCompatibilityLevel=1.5 -dPDFSETTINGS=/printer \
    -sOutputFile="$BUILD/final.pdf" "$BUILD/out.pdf"
 cp "$BUILD/final.pdf" "$OUT"
 echo "OK -> $OUT ($(du -h "$OUT" | cut -f1))"

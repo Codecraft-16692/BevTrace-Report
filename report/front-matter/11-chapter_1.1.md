@@ -38,7 +38,7 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
     </td>
     <td valign="top">
       <strong>Danitza Ivonne Heredia Hoyos</strong> - Ingeniería de Software<br><br>
-      [Insertar descripción manual aquí].
+      Mi nombre es Danitza Ivonne Heredia Hoyos y soy estudiante de Ingeniería de Software en la UPC. A lo largo de mi formación he desarrollado competencias en desarrollo web y de software, trabajando con enfoque colaborativo en equipos multidisciplinarios. Me caracterizo por la organización, la comunicación y el compromiso con la calidad de cada entrega, aportando al equipo una perspectiva detallista que asegura que los requisitos de cada módulo se cumplan con precisión desde el diseño hasta la implementación.
     </td>
   </tr>
   <tr>
