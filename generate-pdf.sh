@@ -31,16 +31,17 @@ FILES=(
 cat > "$BUILD/style.css" <<'CSS'
 @page {
   size: A4;
-  margin: 20mm 16mm;
+  margin: 22mm 18mm;
   @bottom-center { content: counter(page); font-size: 9pt; color: #666; }
 }
 html { -webkit-print-color-adjust: exact; }
 body {
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: 10.5pt;
-  line-height: 1.45;
+  font-size: 11pt;
+  line-height: 1.5;
   color: #111;
   text-align: justify;
+  hyphens: auto;
 }
 /* Titulos neutros, sin color */
 h1, h2, h3, h4 { color: #000; text-align: left; }
@@ -56,19 +57,19 @@ table {
   max-width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
-  margin: 10px 0;
-  font-size: 8pt;
+  margin: 12px 0;
+  font-size: 9.5pt;
   word-wrap: break-word;
   overflow-wrap: anywhere;
 }
 th, td {
-  border: 0.6pt solid #999;
-  padding: 3px 5px;
+  border: 0.6pt solid #888;
+  padding: 5px 7px;
   vertical-align: top;
   text-align: left;
   overflow-wrap: anywhere;
 }
-th { background: #e8e8e8; color: #000; font-size: 8pt; }
+th { background: #e6e6e6; color: #000; font-size: 9.5pt; }
 tr { page-break-inside: avoid; }
 img {
   max-width: 100%;
@@ -92,8 +93,16 @@ CSS
 : > "$BUILD/report-wrapped.md"
 for f in "${FILES[@]}"; do
   printf '<section class="doc">\n\n' >> "$BUILD/report-wrapped.md"
-  sed "s|../assets/|assets/|g; s|(<assets/|(assets/|g; s|\.png>)|.png)|g" \
-    "$SRC/front-matter/$f" >> "$BUILD/report-wrapped.md"
+  if [[ $f == 31-chapter_3.1.md ]]; then
+    # Rebalancear anchos de la tabla de user stories: dar 40% a Criterios de Aceptacion
+    sed "s|../assets/|assets/|g; s|(<assets/|(assets/|g; s|\.png>)|.png)|g;
+        s|width:10%|width:8%|g;  s|width:25%|width:16%|g; s|width:35%|width:26%|g" \
+      "$SRC/front-matter/$f" | awk '{ gsub(/width:15%/, (c["15"]++ == 0) ? "width:40%" : "width:10%"); print }' \
+      >> "$BUILD/report-wrapped.md"
+  else
+    sed "s|../assets/|assets/|g; s|(<assets/|(assets/|g; s|\.png>)|.png)|g" \
+      "$SRC/front-matter/$f" >> "$BUILD/report-wrapped.md"
+  fi
   printf '\n</section>\n\n' >> "$BUILD/report-wrapped.md"
 done
 
