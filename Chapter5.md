@@ -746,7 +746,7 @@ Durante el Sprint 2 se completó la primera versión funcional de la Frontend We
 </div>
 
 <div align="center">
-  <img src="assets/Chapter5/subscription-plans.png" alt="Subscription Plans BevTrace" width="90%">
+  <img src="assets/Chapter5/suscription-plans.png" alt="Subscription Plans BevTrace" width="90%">
   <p><em>Figura: Subscription — Planes de suscripción disponibles y suscripción vigente del cliente.</em></p>
 </div>
 
