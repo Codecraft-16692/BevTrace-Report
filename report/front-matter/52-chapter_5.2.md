@@ -27,7 +27,7 @@ Para este entregable, los datos se obtienen de una <strong>Mock API</strong> con
   </thead>
   <tbody>
     <tr><td colspan="2" style="text-align:center;"><strong>Sprint Planning Background</strong></td></tr>
-    <tr><td>Date</td><td>30/09/2026</td></tr>
+    <tr><td>Date</td><td>22/09/2026</td></tr>
     <tr><td>Time</td><td>4:00 p.m.</td></tr>
     <tr><td>Location</td><td>WhatsApp, Microsoft Teams y Class (UPC)</td></tr>
     <tr><td>Prepared By</td><td>Castillo Yataco, Mauricio Sebastian</td></tr>
@@ -331,7 +331,7 @@ El Sprint Backlog 2 reúne las historias de usuario y tareas necesarias para imp
 #### 5.2.2.4. Development Evidence for Sprint Review
 
 <p align="justify">
-En esta sección se presentan los avances de implementación del Sprint 2 en la Frontend Web Application de BevTrace. Se construyó la primera versión de la SPA Angular con los nueve contextos del dominio, aplicando la arquitectura por capas del Capítulo IV, soporte bilingüe y consumo de la Mock API. El repositorio registra <strong>156 commits</strong>, <strong>9 Pull Requests</strong> integrados y la versión <code>1.0.0</code> entre el 29 de septiembre y el 08 de octubre de 2026. La tabla resume los commits más relevantes, indicando rama, identificador, mensaje (según Conventional Commits), descripción y fecha.
+En esta sección se presentan los avances de implementación del Sprint 2 en la Frontend Web Application de BevTrace. Se construyó la primera versión de la SPA Angular con los nueve contextos del dominio, aplicando la arquitectura por capas del Capítulo IV, soporte bilingüe y consumo de la Mock API. El repositorio registra <strong>156 commits</strong>, <strong>9 Pull Requests</strong> integrados y la versión <code>1.0.0</code> entre el 22 de septiembre y el 09 de octubre de 2026. La tabla resume los commits más relevantes, indicando rama, identificador, mensaje (según Conventional Commits), descripción y fecha.
 </p>
 
 <table border="1" cellpadding="4" cellspacing="0">
