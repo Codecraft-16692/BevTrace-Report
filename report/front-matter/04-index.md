@@ -64,8 +64,6 @@
 
 ## Capítulo V: Product Implementation, Validation & Deployment
 - [5.1. Software Configuration Management](51-chapter_5.1.md)
-- [5.3. Validation Interviews](53-chapter_5.3.md)
-- [5.4. Video About-the-Product](54-chapter_5.4.md)
 
 ---
 
