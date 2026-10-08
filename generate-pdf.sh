@@ -55,19 +55,18 @@ h3 { font-size: 12pt; margin-top: 14px; }
 table {
   width: 100%;
   max-width: 100%;
-  table-layout: fixed;
+  table-layout: auto;
   border-collapse: collapse;
   margin: 12px 0;
   font-size: 9.5pt;
-  word-wrap: break-word;
-  overflow-wrap: anywhere;
 }
+
 th, td {
   border: 0.6pt solid #888;
   padding: 5px 7px;
   vertical-align: top;
   text-align: left;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 th { background: #e6e6e6; color: #000; font-size: 9.5pt; }
 tr { page-break-inside: avoid; }
