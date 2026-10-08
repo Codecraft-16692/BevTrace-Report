@@ -1,6 +1,6 @@
 <div align="center">
 
-![LogoUPC](/assets/img-upc.png)
+![LogoUPC](report/assets/logos/UPC-logo.png)
 # Universidad Peruana de Ciencias Aplicadas
 ## Carrera de Ingeniería de Software
 
@@ -21,7 +21,6 @@
 |:-----------|:-----------------------------------|
 | u202113229 | Castillo Yataco, Mauricio Sebastian|
 | U201910803 | Heredia Hoyos, Danitza Ivonne      |
-| U202315968 | Costa Morales, Christofer William  |
 | U202411222 | Enrique Augusto Ochoa Prado        |
 
 **Período:** 2026-20  
@@ -45,7 +44,7 @@
 
 Evidencias de colaboración y participación del equipo para la entrega AV1:
 
-![alt text](assets/Collab_insight_av1.png)
+![alt text](report/assets/Collab_insight_av1.png)
 
 <div style="page-break-after: always;"></div>
 
@@ -72,10 +71,6 @@ rango de audiencias.
     <td><b>AV1:</b> Desarrollo del Capitulo 1 y revisión de preguntas de las entrevistas y capitulo 4</td>
   </tr>
   <tr>
-    <td>Costa Morales, Christofer William </td>
-    <td><b>AV1:</b> Desarrollo del Capitulo 2, 3 y 5, además de las correcciones pertinentes en los demás capitulos</td>
-  </tr>
-  <tr>
     <td>Enrique Augusto Ochoa Prado </td>
     <td><b>AV1:</b> Desarrollo del capitulo 4</td>
   </tr>
@@ -88,10 +83,6 @@ rango de audiencias.
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
     <td><b>AV1:</b> Desarrollo del Capitulo 1 y revisión de preguntas de las entrevistas y capitulo 4</td>
-  </tr>
-  <tr>
-    <td>Costa Morales, Christofer William </td>
-    <td><b>AV1:</b> Desarrollo del Capitulo 2, 3 y 5, además de las correcciones pertinentes en los demás capitulos</td>
   </tr>
   <tr>
     <td>Enrique Augusto Ochoa Prado </td>
