@@ -1,10 +1,5 @@
 # Registro de versiones del informe
 
-| Código | Apellidos y Nombres |
-|:-------|:--------------------|
-| u202113229 | Castillo Yataco, Mauricio Sebastian |
-| U201910803 | Heredia Hoyos, Danitza Ivonne |
-| U202411222 | Ochoa Prado, Enrique Augusto |
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |

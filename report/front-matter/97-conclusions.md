@@ -19,4 +19,3 @@
 - Automatizar el pipeline de despliegue (CI/CD) del frontend y del backend, incluyendo pruebas automatizadas por bounded context, para reducir el esfuerzo manual de integración y asegurar la calidad en cada release.
 - Mantener el registro de control de versiones, el Student Outcome y las métricas de colaboración actualizados en cada entrega, acumulando las conclusiones por avance de forma continua.
 
-## Video About-the-Team.

@@ -10,11 +10,6 @@
 </p>
 <p align="center"><i>Logotipo de BevTrace</i></p>
 
-<p align="center">
-  <img src="../assets/Chapter2/BevTrace_Logo.jpeg" alt="Logotipo alternativo de BevTrace" width="40%">
-</p>
-<p align="center"><i>Logotipo alternativo de BevTrace</i></p>
-.
 <p align="justify">
 Las decisiones visuales de BevTrace responden a la naturaleza operativa del producto: una plataforma pensada para que gerentes de logística y distribución supervisen despachos y trazabilidad sin fricción visual ni ambigüedad en la lectura de datos. Por ello, el equipo CodeCraft prioriza un diseño funcional y sobrio por encima de elementos ornamentales, buscando que cada componente de la interfaz refuerce la percepción de control y confiabilidad sobre la cadena de distribución.
 </p>
