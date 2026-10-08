@@ -77,7 +77,7 @@ Los siguientes supuestos representan las creencias iniciales del equipo respecto
 </p>
 <p align="center"><i>Lean UX Canvas — BevTrace</i></p>
 
-![C1-Canvas](/assets/Chapter1/LeanUXCanvas-BevTrace.png)
+![C1-Canvas](../assets/Chapter1/LeanUXCanvas-BevTrace.png)
 
 ### 1.3. Segmentos objetivo
 
