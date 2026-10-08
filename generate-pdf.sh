@@ -44,7 +44,12 @@ body {
   hyphens: auto;
 }
 /* Titulos neutros, sin color */
-h1, h2, h3, h4 { color: #000; text-align: left; }
+h1, h2, h3, h4 { color: #000; }
+[align="center"], [align = "center"] { text-align: center !important; }
+.doc:first-of-type table {
+  width: auto; max-width: 60%; margin: 10px auto;
+  font-size: 10pt;
+}
 h1 { font-size: 19pt; border-bottom: 2px solid #000; padding-bottom: 4px; }
 h2 { font-size: 14pt; margin-top: 20px; }
 h3 { font-size: 12pt; margin-top: 14px; }
