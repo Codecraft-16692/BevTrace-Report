@@ -34,7 +34,8 @@
 
 | Versión | Fecha      | Autor            | Descripción de modificación |
 | :--- |:-----------|:-----------------| :--- |
-| AV1 | 09-09-2026 | Equipo Codecraft | Estructura inicial correspondiente a la primera entrega. |
+| AV1 | 09-09-2026 | Castillo Yataco, Mauricio Sebastian | Estructura inicial correspondiente a la primera entrega. |
+| TB1 | 08-10-2026 | Ochoa Prado, Enrique Augusto | Segunda entrega: capítulos I-V completos, aplicación web por bounded contexts y despliegue. |
 
 <div style="page-break-after: always;"></div>
 
