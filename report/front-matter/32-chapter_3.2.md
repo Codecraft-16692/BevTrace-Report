@@ -16,7 +16,7 @@ A partir de esta meta, estructuramos el mapa identificando a los actores clave (
 
 ### User Persona 1: José Peréz (Jefe de Logística)
 
-**URL para una mejor visión**: [Impact Mapping BevTrace](../URL-de-UXPressia)
+**URL para una mejor visión**: [Impact Mapping BevTrace](https://shorturl.at/n69Ex)
 
 ### User Persona 2: María Paz (Operaria de Almacén)
 
