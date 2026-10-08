@@ -63,28 +63,28 @@ rango de audiencias.
   <tr>
     <td rowspan="4">Comunica oralmente con efectividad a diferentes rangos de audiencia</td>
     <td>Castillo Yataco, Mauricio Sebastian</td>
-    <td><b>AV1:</b> Desarrollo del Capitulo 1 y 2 y Diagramas de clase y base de datos</td>
+    <td><b>AV1:</b> Desarrollo del Capitulo 1 y 2 y Diagramas de clase y base de datos<br><br><b>TB1:</b> Lideré el diseño UX/UI de BevTrace y la implementación del bounded context de Inventory Management (registro de lotes, mermas y conciliación de inventario), además de la elaboración de wireframes y mockups.</td>
     <td rowspan="4"><b>AV1:</b> El equipo evidenció una comunicación oral efectiva al sustentar los capítulos que cada integrante desarrolló, logrando explicar con claridad tanto los fundamentos del negocio (Startup Profile, análisis de requisitos) como las decisiones técnicas derivadas de ellos (diagramas de clases, base de datos, diseño de producto). La distribución de capítulos entre los integrantes permitió que cada uno dominara su segmento y lo comunicara de forma coherente ante la audiencia, evidenciando comprensión real del contenido más allá de una simple lectura del informe.</td>
   </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
-    <td><b>AV1:</b> Desarrollo del Capitulo 1 y revisión de preguntas de las entrevistas y capitulo 4</td>
+    <td><b>AV1:</b> Desarrollo del Capitulo 1 y revisión de preguntas de las entrevistas y capitulo 4<br><br><b>TB1:</b> Lideré el Event Storming a nivel de diseño y la implementación del bounded context de Incident & Alert Management, y participé en la recolección de requerimientos mediante entrevistas.</td>
   </tr>
   <tr>
     <td>Enrique Augusto Ochoa Prado </td>
-    <td><b>AV1:</b> Desarrollo del capitulo 4</td>
+    <td><b>AV1:</b> Desarrollo del capitulo 4<br><br><b>TB1:</b> Lideré la implementación del frontend Angular por bounded contexts, la elaboración de los wireflows y user flows por objetivo de usuario y la coordinación del equipo.</td>
   </tr>
   <tr>
     <td rowspan="4">Comunica por escrito con efectividad a diferentes rangos de audiencia</td>
     <td>Castillo Yataco, Mauricio Sebastian</td>
-    <td><b>AV1:</b> Desarrollo del Capitulo 1 y 2 y Diagramas de clase y base de datos</td>
+    <td><b>AV1:</b> Desarrollo del Capitulo 1 y 2 y Diagramas de clase y base de datos<br><br><b>TB1:</b> Lideré el diseño UX/UI de BevTrace y la implementación del bounded context de Inventory Management (registro de lotes, mermas y conciliación de inventario), además de la elaboración de wireframes y mockups.</td>
     <td rowspan="4"><b>AV1:</b> El equipo demostró capacidad de comunicación escrita efectiva mediante la redacción estructurada y consistente de los cinco capítulos del informe. La revisión cruzada de capítulos y preguntas de entrevista contribuyó a mantener coherencia terminológica y de formato en todo el documento, mientras que el uso de recursos complementarios (diagramas de clases, base de datos y prototipos en Figma) reforzó la claridad y comprensión del contenido escrito para distintos tipos de lector.</td>
   </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
-    <td><b>AV1:</b> Desarrollo del Capitulo 1 y revisión de preguntas de las entrevistas y capitulo 4</td>
+    <td><b>AV1:</b> Desarrollo del Capitulo 1 y revisión de preguntas de las entrevistas y capitulo 4<br><br><b>TB1:</b> Lideré el Event Storming a nivel de diseño y la implementación del bounded context de Incident & Alert Management, y participé en la recolección de requerimientos mediante entrevistas.</td>
   </tr>
   <tr>
     <td>Enrique Augusto Ochoa Prado </td>
-    <td><b>AV1:</b> Desarrollo del capitulo 4 y figma</td>
+    <td><b>AV1:</b> Desarrollo del capitulo 4 y figma<br><br><b>TB1:</b> Lideré la implementación del frontend Angular por bounded contexts, la elaboración de los wireflows y user flows por objetivo de usuario y la coordinación del equipo.</td>
   </tr>
