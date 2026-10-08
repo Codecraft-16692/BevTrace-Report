@@ -79,6 +79,7 @@ th, td {
 th { background: #e6e6e6; color: #000; font-size: 11.5pt; }
 tr { page-break-inside: avoid; }
 img {
+  width: auto !important;   /* anula width="100%" del fuente: sin distorsion */
   max-width: 100%;
   max-height: 23cm;
   height: auto;
