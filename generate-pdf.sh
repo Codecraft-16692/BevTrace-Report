@@ -36,10 +36,10 @@ cat > "$BUILD/style.css" <<'CSS'
 }
 html { -webkit-print-color-adjust: exact; }
 body {
-  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: 11pt;
-  line-height: 1.5;
-  color: #111;
+  font-family: "Times New Roman", "Liberation Serif", serif;
+  font-size: 11.5pt;
+  line-height: 1.55;
+  color: #000;
   text-align: justify;
   hyphens: auto;
 }
@@ -47,12 +47,15 @@ body {
 h1, h2, h3, h4 { color: #000; }
 [align="center"], [align = "center"] { text-align: center !important; }
 .doc:first-of-type table {
-  width: auto; max-width: 60%; margin: 10px auto;
-  font-size: 10pt;
+  width: auto; max-width: 70%; margin: 12px auto;
+  font-size: 10.5pt;
 }
-h1 { font-size: 19pt; border-bottom: 2px solid #000; padding-bottom: 4px; }
-h2 { font-size: 14pt; margin-top: 20px; }
-h3 { font-size: 12pt; margin-top: 14px; }
+.doc:first-of-type h3 { font-size: 18pt; margin: 16px 0; }
+.doc:first-of-type h4 { font-size: 14.5pt; margin: 14px 0; }
+.doc:first-of-type p  { font-size: 12.5pt; margin: 10px 0; }
+h1 { font-size: 20pt; border-bottom: 2px solid #000; padding-bottom: 4px; }
+h2 { font-size: 15pt; margin-top: 22px; }
+h3 { font-size: 13pt; margin-top: 15px; }
 /* Saltos de pagina entre documentos, salvo la caratula */
 .doc { page-break-before: always; }
 .doc:first-of-type { page-break-before: avoid; }
@@ -124,5 +127,9 @@ pandoc "$BUILD/report-wrapped.md" \
 chromium --headless --no-sandbox --disable-gpu --no-pdf-header-footer \
   --print-to-pdf="$BUILD/out.pdf" "file://$BUILD/report.html" 2>/dev/null
 
-cp "$BUILD/out.pdf" "$OUT"
+# Normalizar a A4 exacto (595.28 x 841.89 pts) y comprimir imagenes
+gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sPAPERSIZE=a4 \
+   -dCompatibilityLevel=1.5 -dPDFSETTINGS=/ebook \
+   -sOutputFile="$BUILD/final.pdf" "$BUILD/out.pdf"
+cp "$BUILD/final.pdf" "$OUT"
 echo "OK -> $OUT ($(du -h "$OUT" | cut -f1))"

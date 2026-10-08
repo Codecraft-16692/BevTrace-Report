@@ -1,5 +1,5 @@
 <p align = "center">
-  <img src="../assets/logos/UPC-logo.png" width ="115">
+  <img src="../assets/logos/UPC-logo.png" width ="20%">
 </p>
 <p align = "center">
   Universidad Peruana de Ciencias Aplicadas<br>
@@ -43,10 +43,9 @@
 
 || Código     | Apellidos y Nombres                           |
 | :--- |:-----------|:----------------------------------------------|
-|1| U202411222 | Ochoa Prado, Enrique Augusto                  |
-|2|            | Castillo Yataco, Mauricio Sebastian           |
-|3|            | Heredia Hoyos, Danitza Ivonne                 |
-
+|1| u202113229 | Castillo Yataco, Mauricio Sebastian            |
+|2| U201910803 | Heredia Hoyos, Danitza Ivonne                  |
+|3| U202411222 | Ochoa Prado, Enrique Augusto                   |
 </div>
 <h4 align = "center">
   Período 202620
