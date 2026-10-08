@@ -33,10 +33,6 @@ Teniendo en cuenta la importancia en la información que nos pueden proveer los 
 
 <h4 id="Segmento2">Segmento objetivo: Operarios y Supervisores de Almacén
 
-<p align="center">
-  <img src="../assets/Chapter2/entrevistamaria.png" alt="Evidencia de entrevista — Operarios y Supervisores de Almacén" width="100%">
-</p>
-<p align="center"><i>Evidencia de entrevista — Operarios y Supervisores de Almacén</i></p>
 </h4>
 
 **Objetivo:** Conocer cómo gestionan inventarios y despachos e identificar sus principales dificultades.

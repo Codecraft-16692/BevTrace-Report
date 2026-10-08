@@ -15,13 +15,7 @@
 Para el segmento de los Jefes y Gerentes de Logistica:
 
 
-![UserPersona1](../assets/Chapter2/Jose Peréz.png)
-
-
 Para el segmento de Operarios y Supervisores de almacén
-
-![UserPersona2](../assets/Chapter2/María Paz.png)
-
 
 ### 2.3.2. User Task Matrix
 
@@ -75,13 +69,7 @@ El User Task Matrix presenta las tareas que realizan los User Persona para cumpl
 
 Para el segmento de Jefes y Gerentes de Logistica
 
-![Logistica](../assets/Chapter2/Customer journey - Jefes y Gerentes de Logistica.png)
-
-
 Para el segmento de Operarios y Supervidores de Almacen:
-
-![Operarios](../assets/Chapter2/Customer journey - Operarios y Supervisores de Almacen.png)
-
 
 ### 2.3.4. Empathy Mapping
 
@@ -99,8 +87,5 @@ Para el segmento de Operarios y Supervidores de Almacen:
 
 Para el segmento de Jefes y Gerentes de Logistica
 
-![Logistica](../assets/Chapter2/Empathy map Logistica.png)
-
 Para el segmento de Operarios y Supervidores de Almacen:
 
-![Almacen](../assets/Chapter2/Empathy map Almacen.png)

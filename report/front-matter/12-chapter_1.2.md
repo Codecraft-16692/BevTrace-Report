@@ -77,8 +77,6 @@ Los siguientes supuestos representan las creencias iniciales del equipo respecto
 </p>
 <p align="center"><i>Lean UX Canvas — BevTrace</i></p>
 
-![C1-Canvas](../assets/Chapter1/LeanUXCanvas-BevTrace.png)
-
 ### 1.3. Segmentos objetivo
 
 Basados en la distinción entre *Buyer Persona* (quien toma la decisión de compra) y *User Persona* (quien interactúa diariamente con la herramienta), se definen los siguientes segmentos:

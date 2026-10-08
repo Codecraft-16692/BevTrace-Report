@@ -1,10 +1,5 @@
 ## 2.4. Big Picture Event Storm
 
-<p align="center">
-  <img src="../assets/Chapter2/Eventstorming1.jpeg" alt="Big Picture Event Storming — BevTrace" width="100%">
-</p>
-<p align="center"><i>Big Picture Event Storming — BevTrace</i></p>
-
 <p>
 Antes de definir funcionalidades, módulos o componentes técnicos para <strong>BevTrace</strong>,
 el equipo realizó una sesión de <strong>Big Picture Event Storming</strong> con el objetivo de
