@@ -1,6 +1,5 @@
 # Capítulo V: Product Implementation, Validation & Deployment
 
-
 ## 5.1. Software Configuration Management.
 
 En esta sección se describen y explican las desiciones, convenciones y herramientas utilizadas por el equipo CodeCraft para la gestion, implementación y despliegue de BevTrace.
@@ -14,7 +13,7 @@ En este segmento se presentara las herramientas utilizadas en el ciclo de vida d
 
 |        Actividad     |     Herramienta/Guía   |    Proposito  |  Tipo de acceso/Ruta (links)   | 
 |:---: |:---: |:--: |:--: | 
-|Gestión de proyecto|Trello|Organizar y dar seguimiento a las tareas asignadas|[Trello][1]|
+|Gestión de proyecto|Jira|Organizar y dar seguimiento a las tareas asignadas|[Jira][1]|
 |Gestión de requerimientos|Gherkin Conventions|Definir criterios de aceptación y validación para los user stories|[Guía Gherkin][2]|
 |Producto UI/UX|Figma|Diseño de interfaces (wireframes y mockups) y prototipos|[Figma][3]|
 |Landing Page|Visual Studio Code|Edición y desarrollo del código de las pantallas|[VS Code][4]|
@@ -30,10 +29,10 @@ Para el manejo del codigo fuente de BevTrace se organiza en repositorios indepen
 
 |     Artefacto     |     URL del Repositorio  |   
 |:---: |:---: | 
-| Proyect Report  | [Report][9] |
-| Landing Page  | [LandingPage][10] |
-| FrontEnd Web Application  | [FrontEnd][11] |
-| BackEnd Web Services  | [Backend][12] |
+| Proyect Report  | [https://github.com/Codecraft-16692/BevTrace-Report] |
+| Landing Page  | [https://github.com/Codecraft-16692/BevTrace-LandingPage] |
+| FrontEnd Web Application  | [https://github.com/Codecraft-16692/BevTrace-FrontEnd] |
+| BackEnd Web Services  | [https://github.com/Codecraft-16692/BevTrace-BackEnd] |
 
 ##### GitFlow WorFlow
 
@@ -132,6 +131,3 @@ En esta sección se describen las convenciones de estilo y nomenclatura adoptada
 - Uso de endpoints REST con recursos en plural y parámetros de recurso por path.
 - Uso de Javadoc para clases públicas relevantes.
 
-
-
-### 5.1.4. Software Deployment Configuration.

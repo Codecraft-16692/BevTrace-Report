@@ -1,4 +1,135 @@
-## 5.2. Landing Page, Services & Applications Implementation.
+# Capítulo V: Product Implementation, Validation & Deployment
+
+## 5.1. Software Configuration Management.
+
+En esta sección se describen y explican las desiciones, convenciones y herramientas utilizadas por el equipo CodeCraft para la gestion, implementación y despliegue de BevTrace.
+
+El proyecto desarrollo tres artefactos cómo solución a la problematica: Landing Page, FrontEnd Web Application y BackEnd Web Services.
+
+### 5.1.1. Software Development Environment Configuration.
+
+En este segmento se presentara las herramientas utilizadas en el ciclo de vida del proyecto BevTrace.
+
+
+|        Actividad     |     Herramienta/Guía   |    Proposito  |  Tipo de acceso/Ruta (links)   | 
+|:---: |:---: |:--: |:--: | 
+|Gestión de proyecto|Jira|Organizar y dar seguimiento a las tareas asignadas|[Jira][1]|
+|Gestión de requerimientos|Gherkin Conventions|Definir criterios de aceptación y validación para los user stories|[Guía Gherkin][2]|
+|Producto UI/UX|Figma|Diseño de interfaces (wireframes y mockups) y prototipos|[Figma][3]|
+|Landing Page|Visual Studio Code|Edición y desarrollo del código de las pantallas|[VS Code][4]|
+|Control de versiones|Git|Gestión de versiones del código de la Landing Page, FrontEnd y BackEnd|[Git][5]|
+|Despliegue|GitHub Pages|Publicación de la aplicación web|[GitHub Pages][6]|
+|Event Storming|Miro|Colaboración y modelado de los procesos involucrados en los Bounded Context|[Miro][7]|
+|Diagramas|PlantUML|Generación de diagramas UML requeridos de la aplicación|[PlantUML][8]|
+
+
+### 5.1.2. Source Code Management.
+
+Para el manejo del codigo fuente de BevTrace se organiza en repositorios independientes que facilita la gestión, revisión y el despliegue de los diferentes artefactos del proyecto.
+
+|     Artefacto     |     URL del Repositorio  |   
+|:---: |:---: | 
+| Proyect Report  | [https://github.com/Codecraft-16692/BevTrace-Report] |
+| Landing Page  | [https://github.com/Codecraft-16692/BevTrace-LandingPage] |
+| FrontEnd Web Application  | [https://github.com/Codecraft-16692/BevTrace-FrontEnd] |
+| BackEnd Web Services  | [https://github.com/Codecraft-16692/BevTrace-BackEnd] |
+
+##### GitFlow WorFlow
+
+Se implemento GitFlow cómo flujo de trabajo para organizar el desarrollo de los artefactos por funcionalidades, mantener una separación del codigo para evitar errores y mantener ramas de desarrollos especificas para cada módulo o bounded context
+
+###### Ramas principales
+
+1.  main: Rama pincipal para versiones estables y desplegables de los artefactos
+2.  develop: Rama de integración utilizada para consolidar las funcionalidades o cambios previos a la versión final del producto
+
+###### Ramas de soporte
+
+1.  feature/*:  Rama creada a partir del develop para poder implementar nuevas funcionalidades.
+
+Convención: `feature/<nombre-corto-descriptivo>`
+Ejemplo: `feature/chapter 1`
+
+2.  docs/*: Ramas creadas para los cambios relacionados a la documentación del proyecto.
+
+Convención: ` docs/<parte-del-documento>`  
+Ejemplo: `docs/sources`
+
+3.  fix/*: Ramas utilizadas para corregir errores criticos en los artefactos.
+
+Convención:  `hotfix/<descripción-corta>`
+Ejemplo: `hotfix/fix-item-validation`
+
+##### Semantic Versioning
+
+Se aplica Semantic Versioning 2.0.0, con el formato:
+
+- **MAJOR**: Cambios incompatibles con las versiones anteriores del artefacto.
+- **MINOR**: Nuevas funcionalidades compatibles con versiones anteriores del artefacto.
+- **PATCH**: Correcciones menores y ajustes sin afectar funcionalidades del artefacto.
+
+Ejemplo de versión: `v1.3.2`
+
+##### Conventional Commits
+
+La organización utilizó la especificación de los Conventional Commits para mantener un orden y claridad en los mensajes de cada commit realizado por los integrantes. En este caso la estructura general de cada commit seria la siguiente: ` tipo(enfoque opcional): <descripción> `
+
+Ejemplos de los commits utilizados
+
+-  **chore: setup initial folder structure and empty markdown files**
+-  **docs(chap-5): added headers for Chapter 5**
+-  **fix(chap 1-2): fix merging problems for Chapter 1 and 2**
+
+
+### 5.1.3. Source Code Style Guide & Conventions.
+
+En esta sección se describen las convenciones de estilo y nomenclatura adoptadas para los lenguajes y frameworks utilizados en BevTrace.
+
+|Tecnología o Lenguaje|Guía de estilo|
+|:----|:----|
+| HTML/CSS|[Google HTML/CSS Style Guide][html-css]|
+| JavaScript|[Google JavaScript Style Guide][js]|
+| TypeScript|[Google TypeScript Style Guide][ts]|
+|Angular |[Angular Style Guide][angular]|
+| Java|[Google Java Style Guide][java]|
+|Spring Boot |[Spring Boot Documentation][spring]|
+|Gherkin |[Gherkin Reference][gherkin]|
+
+##### Nomenclatura general
+
+| Elemento | Convención | Ejemplo |
+|:----|:----|:----|
+| Clases Java/TypeScript | PascalCase | `BatchCommandServiceImpl`, `EquipmentApiEndpoint` |
+| Interfaces TypeScript | PascalCase | `SignInRequest`, `CreateBatchCommand` |
+| Métodos y funciones | camelCase | `getBatchById()`, `registerEquipment()` |
+| Variables | camelCase | `laboratoryId`, `selectedPlanCode` |
+| Constantes | SCREAMING_SNAKE_CASE | `API_BASE_URL`, `DEFAULT_LANGUAGE` |
+| Archivos Angular | kebab-case | `billing-summary.ts`, `equipment-detail.html` |
+| Clases CSS | kebab-case | `.summary-card`, `.toolbar-actions` |
+| Endpoints REST | kebab-case plural | `/api/v1/batches`, `/api/v1/equipments` |
+
+
+**Convenciones frontend**
+
+- Uso de Angular standalone components.
+- Separación por bounded context dentro de `src/app`.
+- Organización por capas: domain, application, infrastructure y presentation.
+- Uso de stores y signals para gestión de estado.
+- Uso de servicios/endpoints para encapsular comunicación HTTP.
+- Uso de archivos de traducción para soporte bilingüe ES/EN.
+- Uso de nombres en inglés para componentes, entidades, comandos y recursos.
+
+**Convenciones backend**
+
+- Organización por bounded context dentro del paquete `platform`.
+- Uso de capas domain, application, infrastructure e interfaces.
+- Uso de REST controllers dentro de `interfaces.rest`.
+- Uso de resources y assemblers para transformar datos de entrada y salida.
+- Uso de command services y query services para separar casos de uso.
+- Uso de repositorios como puertos de persistencia del dominio.
+- Uso de entidades JPA, assemblers y adapters dentro de infrastructure.
+- Uso de endpoints REST con recursos en plural y parámetros de recurso por path.
+- Uso de Javadoc para clases públicas relevantes.
 
 ### 5.2.2. Sprint 2
 
@@ -110,7 +241,7 @@ El Sprint Backlog 2 reúne las historias de usuario y tareas necesarias para imp
 </p>
 
 <div align="center">
-  <img src="../assets/Chapter5/sprint2-board.png" alt="Sprint 2 Board Screenshot" width="100%">
+  <img src="assets/Chapter5/sprint2-board.png" alt="Sprint 2 Board Screenshot" width="100%">
   <p><em>Figura: Tablero del Sprint 2 en Jira (Proyecto BevTrace)</em></p>
 </div>
 
@@ -605,62 +736,62 @@ Durante el Sprint 2 se completó la primera versión funcional de la Frontend We
 <p><strong>Sprint 2 Demo Video:</strong> <strong></strong></p>
 
 <div align="center">
-  <img src="../assets/Chapter5/sign-in.png" alt="Sign In BevTrace" width="90%">
+  <img src="assets/Chapter5/sign-in.png" alt="Sign In BevTrace" width="90%">
   <p><em>Figura: IAM — Pantalla de inicio de sesión con validación de credenciales.</em></p>
 </div>
 
 <div align="center">
-  <img src="../assets/Chapter5/sign-up.png" alt="Sign Up BevTrace" width="90%">
+  <img src="assets/Chapter5/sign-up.png" alt="Sign Up BevTrace" width="90%">
   <p><em>Figura: IAM — Pantalla de registro con las reglas de validación de correo y contraseña.</em></p>
 </div>
 
 <div align="center">
-  <img src="../assets/Chapter5/suscription-plans.png" alt="Subscription Plans BevTrace" width="90%">
+  <img src="assets/Chapter5/suscription-plans.png" alt="Subscription Plans BevTrace" width="90%">
   <p><em>Figura: Subscription — Planes de suscripción disponibles y suscripción vigente del cliente.</em></p>
 </div>
 
 <div align="center">
-  <img src="../assets/Chapter5/batch-entry.png" alt="Batch Entry BevTrace" width="90%">
+  <img src="assets/Chapter5/batch-entry.png" alt="Batch Entry BevTrace" width="90%">
   <p><em>Figura: Inventory — Registro de ingreso de lote (US01), con rechazo de códigos inválidos.</em></p>
 </div>
 
 <div align="center">
-  <img src="../assets/Chapter5/waste-discrepancies.png" alt="Waste and Discrepancies BevTrace" width="90%">
+  <img src="assets/Chapter5/waste-discrepancies.png" alt="Waste and Discrepancies BevTrace" width="90%">
   <p><em>Figura: Inventory — Registro de mermas y alertas de discrepancia (US02, US03).</em></p>
 </div>
 
 <div align="center">
-  <img src="../assets/Chapter5/reconciliation.png" alt="Reconciliation BevTrace" width="90%">
+  <img src="assets/Chapter5/reconciliation.png" alt="Reconciliation BevTrace" width="90%">
   <p><em>Figura: Inventory — Conciliación de inventario físico con el porcentaje de exactitud (ERI) (US04).</em></p>
 </div>
 
 <div align="center">
-  <img src="../assets/Chapter5/dispatch-schedule.png" alt="Dispatch Scheduling BevTrace" width="90%">
+  <img src="assets/Chapter5/dispatch-schedule.png" alt="Dispatch Scheduling BevTrace" width="90%">
   <p><em>Figura: Dispatch — Programación de despacho y lista de órdenes con su estado (US05).</em></p>
 </div>
 
 <div align="center">
-  <img src="../assets/Chapter5/pallet-validation.png" alt="Pallet Validation BevTrace" width="90%">
+  <img src="assets/Chapter5/pallet-validation.png" alt="Pallet Validation BevTrace" width="90%">
   <p><em>Figura: Dispatch — Asignación de vehículo, validación de pallets y registro de salida (US06, US07, US08).</em></p>
 </div>
 
 <div align="center">
-  <img src="../assets/Chapter5/traceability-tracking.png" alt="Traceability BevTrace" width="90%">
+  <img src="assets/Chapter5/traceability-tracking.png" alt="Traceability BevTrace" width="90%">
   <p><em>Figura: Traceability — Seguimiento de un lote en tránsito, con checkpoints y cierre de la entrega (US09, US10, US11).</em></p>
 </div>
 
 <div align="center">
-  <img src="../assets/Chapter5/telemetry-devices.png" alt="Telemetry BevTrace" width="90%">
+  <img src="assets/Chapter5/telemetry-devices.png" alt="Telemetry BevTrace" width="90%">
   <p><em>Figura: Telemetry — Estado de conectividad de los dispositivos y notificación de reconexión (US12, US13).</em></p>
 </div>
 
 <div align="center">
-  <img src="../assets/Chapter5/incidents.png" alt="Incidents BevTrace" width="90%">
+  <img src="assets/Chapter5/incidents.png" alt="Incidents BevTrace" width="90%">
   <p><em>Figura: Incident — Incidencias detectadas, resolución y acciones correctivas (US14, US15, US16).</em></p>
 </div>
 
 <div align="center">
-  <img src="../assets/Chapter5/kpi-dashboard.png" alt="KPI Dashboard BevTrace" width="90%">
+  <img src="assets/Chapter5/kpi-dashboard.png" alt="KPI Dashboard BevTrace" width="90%">
   <p><em>Figura: Analytics — Reporte consolidado de indicadores logísticos y tasa de mermas (US17, US18).</em></p>
 </div>
 
@@ -898,12 +1029,12 @@ Durante el Sprint 2 se desplegaron dos artefactos: la <strong>Frontend Web Appli
 <p><strong>URL de la Mock API:</strong> <a href="https://bevtrace-backend-production.up.railway.app/api/v1" target="_blank">https://bevtrace-backend-production.up.railway.app/api/v1</a></p>
 
 <div align="center">
-  <img src="../assets/Chapter5/deployment-vercel.png" alt="Vercel Deployment Evidence Sprint 2" width="90%">
+  <img src="assets/Chapter5/deployment-vercel.png" alt="Vercel Deployment Evidence Sprint 2" width="90%">
   <p><em>Figura: Despliegue de la Frontend Web Application de BevTrace en Vercel</em></p>
 </div>
 
 <div align="center">
-  <img src="../assets/Chapter5/deployment-railway.png" alt="Railway Deployment Evidence Sprint 2" width="90%">
+  <img src="assets/Chapter5/deployment-railway.png" alt="Railway Deployment Evidence Sprint 2" width="90%">
   <p><em>Figura: Despliegue de la Mock API de BevTrace en Railway</em></p>
 </div>
 
@@ -922,7 +1053,7 @@ El trabajo se distribuyó entre los tres integrantes del equipo, con colaboraci�
 </p>
 
 <div align="center">
-  <img src="../assets/Chapter5/commits-frontend.png" alt="Commit History Frontend Sprint 2" width="90%">
+  <img src="assets/Chapter5/commits-frontend.png" alt="Commit History Frontend Sprint 2" width="90%">
   <p><em>Figura: Historial de commits del repositorio BevTrace-FrontEnd durante el Sprint 2.</em></p>
 </div>
 
@@ -931,7 +1062,7 @@ El Network Graph de GitHub refleja el uso de GitFlow con múltiples feature bran
 </p>
 
 <div align="center">
-  <img src="../assets/Chapter5/network-frontend.png" alt="Network Graph Sprint 2" width="90%">
+  <img src="assets/Chapter5/network-frontend.png" alt="Network Graph Sprint 2" width="90%">
   <p><em>Figura: Network Graph del repositorio BevTrace-FrontEnd mostrando el flujo de feature branches y merges durante el Sprint 2.</em></p>
 </div>
 
