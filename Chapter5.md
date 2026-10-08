@@ -13,7 +13,7 @@ En este segmento se presentara las herramientas utilizadas en el ciclo de vida d
 
 |        Actividad     |     Herramienta/Guía   |    Proposito  |  Tipo de acceso/Ruta (links)   | 
 |:---: |:---: |:--: |:--: | 
-|Gestión de proyecto|Trello|Organizar y dar seguimiento a las tareas asignadas|[Trello][1]|
+|Gestión de proyecto|Jira|Organizar y dar seguimiento a las tareas asignadas|[Jira][1]|
 |Gestión de requerimientos|Gherkin Conventions|Definir criterios de aceptación y validación para los user stories|[Guía Gherkin][2]|
 |Producto UI/UX|Figma|Diseño de interfaces (wireframes y mockups) y prototipos|[Figma][3]|
 |Landing Page|Visual Studio Code|Edición y desarrollo del código de las pantallas|[VS Code][4]|
@@ -29,10 +29,10 @@ Para el manejo del codigo fuente de BevTrace se organiza en repositorios indepen
 
 |     Artefacto     |     URL del Repositorio  |   
 |:---: |:---: | 
-| Proyect Report  | [Report][https://github.com/Codecraft-16692/BevTrace-Report] |
-| Landing Page  | [LandingPage][https://github.com/Codecraft-16692/BevTrace-LandingPage] |
-| FrontEnd Web Application  | [FrontEnd][https://github.com/Codecraft-16692/BevTrace-FrontEnd] |
-| BackEnd Web Services  | [Backend][https://github.com/Codecraft-16692/BevTrace-BackEnd] |
+| Proyect Report  | [https://github.com/Codecraft-16692/BevTrace-Report] |
+| Landing Page  | [https://github.com/Codecraft-16692/BevTrace-LandingPage] |
+| FrontEnd Web Application  | [https://github.com/Codecraft-16692/BevTrace-FrontEnd] |
+| BackEnd Web Services  | [https://github.com/Codecraft-16692/BevTrace-BackEnd] |
 
 ##### GitFlow WorFlow
 
