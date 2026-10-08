@@ -25,7 +25,7 @@ A partir de esta meta, estructuramos el mapa identificando a los actores clave (
     <img src="../assets/Chapter3/impact-mapping-bevtrace.png">
 </p>
 
-**URL para una mejor visión**: [Impact Mapping BevTrace](<URL-de-UXPressia>)
+**URL para una mejor visión**: [Impact Mapping BevTrace](../URL-de-UXPressia)
 
 ### User Persona 2: María Paz (Operaria de Almacén)
 
