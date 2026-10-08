@@ -48,7 +48,7 @@ Se implemento GitFlow cómo flujo de trabajo para organizar el desarrollo de los
 1.  feature/*:  Rama creada a partir del develop para poder implementar nuevas funcionalidades.
 
 Convención: `feature/<nombre-corto-descriptivo>`
-Ejemplo: `feature/chapter 1`
+Ejemplo: `feature/inventory`
 
 2.  docs/*: Ramas creadas para los cambios relacionados a la documentación del proyecto.
 
