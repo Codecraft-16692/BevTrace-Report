@@ -21,7 +21,6 @@
 |:-----------|:-----------------------------------|
 | u202113229 | Castillo Yataco, Mauricio Sebastian|
 | U201910803 | Heredia Hoyos, Danitza Ivonne      |
-| U202315968 | Costa Morales, Christofer William  |
 | U202411222 | Enrique Augusto Ochoa Prado        |
 
 **Período:** 2026-20  
