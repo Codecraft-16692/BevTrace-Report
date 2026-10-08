@@ -331,7 +331,7 @@ El Sprint Backlog 2 reúne las historias de usuario y tareas necesarias para imp
 #### 5.2.2.4. Development Evidence for Sprint Review
 
 <p align="justify">
-En esta sección se presentan los avances de implementación del Sprint 2 en la Frontend Web Application de BevTrace. Se construyó la primera versión de la SPA Angular con los nueve contextos del dominio, aplicando la arquitectura por capas del Capítulo IV, soporte bilingüe y consumo de la Mock API. El repositorio registra <strong>156 commits</strong>, <strong>9 Pull Requests</strong> integrados y la versión <code>1.0.0</code> entre el 22 de septiembre y el 08 de octubre de 2026. La tabla resume los commits más relevantes, indicando rama, identificador, mensaje (según Conventional Commits), descripción y fecha.
+En esta sección se presentan los avances de implementación del Sprint 2 en la Frontend Web Application de BevTrace. Se construyó la primera versión de la SPA Angular con los nueve contextos del dominio, aplicando la arquitectura por capas del Capítulo IV, soporte bilingüe y consumo de la Mock API. El repositorio registra <strong>156 commits</strong>, <strong>9 Pull Requests</strong> integrados y la versión <code>1.0.0</code> entre el 22 de septiembre y el 07 de octubre de 2026. La tabla resume los commits más relevantes, indicando rama, identificador, mensaje (según Conventional Commits), descripción y fecha.
 </p>
 
 <table border="1" cellpadding="4" cellspacing="0">
@@ -343,196 +343,196 @@ En esta sección se presentan los avances de implementación del Sprint 2 en la 
   <tbody>
     <tr>
       <td rowspan="83"><a href="https://github.com/Codecraft-16692/BevTrace-FrontEnd">BevTrace-FrontEnd</a></td>
-      <td>main</td><td>34254de</td><td>chore(core): initialize base project configuration and angular shell.</td><td>Inicializa el proyecto Angular 21 con la configuración base y el shell de la aplicación.</td><td>22-09-2026</td>
+      <td>main</td><td>e67f6cc</td><td>chore(core): initialize base project configuration and angular shell.</td><td>Inicializa el proyecto Angular 21 con la configuración base y el shell de la aplicación.</td><td>22-09-2026</td>
     </tr>
     <tr>
-      <td>feature/shared</td><td>7b74fb6</td><td>feat(shared): implement core domain models and entities</td><td>Implementa los modelos de dominio y entidades base compartidos por los contextos.</td><td>22-09-2026</td>
+      <td>feature/shared</td><td>673d95c</td><td>feat(shared): implement core domain models and entities</td><td>Implementa los modelos de dominio y entidades base compartidos por los contextos.</td><td>22-09-2026</td>
     </tr>
     <tr>
-      <td>feature/shared</td><td>1322990</td><td>feat(shared): setup base api client and endpoints</td><td>Crea el cliente base de API y los endpoints genéricos para el consumo de la Mock API.</td><td>22-09-2026</td>
+      <td>feature/shared</td><td>87ab7b9</td><td>feat(shared): setup base api client and endpoints</td><td>Crea el cliente base de API y los endpoints genéricos para el consumo de la Mock API.</td><td>22-09-2026</td>
     </tr>
     <tr>
-      <td>feature/shared</td><td>816bc24</td><td>feat(shared): add base assembler for data mapping</td><td>Agrega el assembler base para transformar recursos de la API en entidades.</td><td>22-09-2026</td>
+      <td>feature/shared</td><td>c2e9109</td><td>feat(shared): add base assembler for data mapping</td><td>Agrega el assembler base para transformar recursos de la API en entidades.</td><td>22-09-2026</td>
     </tr>
     <tr>
-      <td>feature/shared</td><td>158f051</td><td>feat(shared): implement base state management store</td><td>Implementa el store base con signals para la gestión de estado.</td><td>23-09-2026</td>
+      <td>feature/shared</td><td>9ed94a3</td><td>feat(shared): implement base state management store</td><td>Implementa el store base con signals para la gestión de estado.</td><td>23-09-2026</td>
     </tr>
     <tr>
-      <td>feature/shared</td><td>d623196</td><td>feat(shared): develop toolbar component</td><td>Desarrolla la barra de navegación superior de la aplicación.</td><td>22-09-2026</td>
+      <td>feature/shared</td><td>8fdd0a4</td><td>feat(shared): develop toolbar component</td><td>Desarrolla la barra de navegación superior de la aplicación.</td><td>22-09-2026</td>
     </tr>
     <tr>
-      <td>feature/shared</td><td>b4a580d</td><td>feat(shared): implement base layout component</td><td>Implementa el layout base con sidebar y área de contenido.</td><td>22-09-2026</td>
+      <td>feature/shared</td><td>0ede625</td><td>feat(shared): implement base layout component</td><td>Implementa el layout base con sidebar y área de contenido.</td><td>23-09-2026</td>
     </tr>
     <tr>
-      <td>feature/shared</td><td>b9f443e</td><td>feat(shared): add language switcher component and translations</td><td>Agrega el selector de idioma ES/EN y las primeras traducciones.</td><td>22-09-2026</td>
+      <td>feature/shared</td><td>fa4a702</td><td>feat(shared): add language switcher component and translations</td><td>Agrega el selector de idioma ES/EN y las primeras traducciones.</td><td>23-09-2026</td>
     </tr>
     <tr>
-      <td>feature/shared</td><td>f24ab8e</td><td>feat(shared): create message banner and status chip ui elements</td><td>Crea los componentes de banner de mensajes y chips de estado.</td><td>22-09-2026</td>
+      <td>feature/shared</td><td>f0bda27</td><td>feat(shared): create message banner and status chip ui elements</td><td>Crea los componentes de banner de mensajes y chips de estado.</td><td>23-09-2026</td>
     </tr>
     <tr>
-      <td>feature/shared</td><td>1a158fa</td><td>feat(shared):implement route canvas map component</td><td>Implementa el componente de mapa de ruta para visualizar recorridos.</td><td>22-09-2026</td>
+      <td>feature/shared</td><td>2ab9bc9</td><td>feat(shared):implement route canvas map component</td><td>Implementa el componente de mapa de ruta para visualizar recorridos.</td><td>23-09-2026</td>
     </tr>
     <tr>
-      <td>feature/shared</td><td>096f8ca</td><td>feat(shared): implement dashboard main view</td><td>Implementa la vista principal (dashboard) de la aplicación.</td><td>23-09-2026</td>
+      <td>feature/shared</td><td>b1a5641</td><td>feat(shared): implement dashboard main view</td><td>Implementa la vista principal (dashboard) de la aplicación.</td><td>23-09-2026</td>
     </tr>
     <tr>
-      <td>feature/shared</td><td>f6cc242</td><td>feat(shared): add 404 page not found view</td><td>Agrega la vista de página no encontrada.</td><td>23-09-2026</td>
+      <td>feature/shared</td><td>692d987</td><td>feat(shared): add 404 page not found view</td><td>Agrega la vista de página no encontrada.</td><td>23-09-2026</td>
     </tr>
     <tr>
-      <td>feature/analytics</td><td>1ef09c0</td><td>feat(analytics): add logistics report entity and generation command.</td><td>Crea la entidad LogisticsReport y el comando de generación de reportes.</td><td>24-09-2026</td>
+      <td>feature/analytics</td><td>db87371</td><td>feat(analytics): add logistics report entity and generation command.</td><td>Crea la entidad LogisticsReport y el comando de generación de reportes.</td><td>26-09-2026</td>
     </tr>
     <tr>
-      <td>feature/analytics</td><td>b75e14e</td><td>feat(analytics): implement kpi metric models and calculation logic.</td><td>Implementa los modelos de indicadores (KPI) y su lógica de cálculo.</td><td>24-09-2026</td>
+      <td>feature/analytics</td><td>8366cdc</td><td>feat(analytics): implement kpi metric models and calculation logic.</td><td>Implementa los modelos de indicadores (KPI) y su lógica de cálculo.</td><td>26-09-2026</td>
     </tr>
     <tr>
-      <td>feature/analytics</td><td>5aeb5b8</td><td>feat(analytics): develop kpi dashboard view layout and logic.</td><td>Desarrolla la vista del dashboard de indicadores logísticos.</td><td>25-09-2026</td>
+      <td>feature/analytics</td><td>2bcc5be</td><td>feat(analytics): develop kpi dashboard view layout and logic.</td><td>Desarrolla la vista del dashboard de indicadores logísticos.</td><td>26-09-2026</td>
     </tr>
     <tr>
-      <td>feature/analytics</td><td>6c2ed85</td><td>feat(analytics): build logistics report generator interface.</td><td>Construye la interfaz del generador de reportes logísticos.</td><td>25-09-2026</td>
+      <td>feature/analytics</td><td>12286e4</td><td>feat(analytics): build logistics report generator interface.</td><td>Construye la interfaz del generador de reportes logísticos.</td><td>26-09-2026</td>
     </tr>
     <tr>
-      <td>feature/dispatch</td><td>4e84d4a</td><td>feat(dispatch): add dispatch order domain models and commands</td><td>Crea los modelos de dominio y comandos de las órdenes de despacho.</td><td>25-09-2026</td>
+      <td>feature/dispatch</td><td>c65fdcd</td><td>feat(dispatch): add dispatch order domain models and commands</td><td>Crea los modelos de dominio y comandos de las órdenes de despacho.</td><td>26-09-2026</td>
     </tr>
     <tr>
-      <td>feature/dispatch</td><td>d6dfc93</td><td>feat(dispatch): implement cargo assignment domain logic</td><td>Implementa la lógica de asignación de carga a un despacho.</td><td>25-09-2026</td>
+      <td>feature/dispatch</td><td>a756206</td><td>feat(dispatch): implement cargo assignment domain logic</td><td>Implementa la lógica de asignación de carga a un despacho.</td><td>26-09-2026</td>
     </tr>
     <tr>
-      <td>feature/dispatch</td><td>d8a7ed9</td><td>feat(dispatch): add driver and transport vehicle entities</td><td>Agrega las entidades de conductor y vehículo de transporte.</td><td>25-09-2026</td>
+      <td>feature/dispatch</td><td>4d08243</td><td>feat(dispatch): add driver and transport vehicle entities</td><td>Agrega las entidades de conductor y vehículo de transporte.</td><td>28-09-2026</td>
     </tr>
     <tr>
-      <td>feature/dispatch</td><td>aee8c3a</td><td>feat(dispatch): configure endpoints and dtos for orders and cargo</td><td>Configura los endpoints y DTOs de órdenes y carga.</td><td>25-09-2026</td>
+      <td>feature/dispatch</td><td>8811385</td><td>feat(dispatch): configure endpoints and dtos for orders and cargo</td><td>Configura los endpoints y DTOs de órdenes y carga.</td><td>28-09-2026</td>
     </tr>
     <tr>
-      <td>feature/dispatch</td><td>271b76c</td><td>feat(dispatch): implement state management store for dispatch</td><td>Implementa el store de estado del contexto Dispatch.</td><td>26-09-2026</td>
+      <td>feature/dispatch</td><td>d1e9b95</td><td>feat(dispatch): implement state management store for dispatch</td><td>Implementa el store de estado del contexto Dispatch.</td><td>28-09-2026</td>
     </tr>
     <tr>
-      <td>feature/dispatch</td><td>9d680e5</td><td>feat(dispatch): build dispatch queue presentation view</td><td>Construye la vista de cola de despachos (programación, asignación y salida).</td><td>26-09-2026</td>
+      <td>feature/dispatch</td><td>3d583d0</td><td>feat(dispatch): build dispatch queue presentation view</td><td>Construye la vista de cola de despachos (programación, asignación y salida).</td><td>28-09-2026</td>
     </tr>
     <tr>
-      <td>feature/dispatch</td><td>dec2a98</td><td>feat(dispatch): develop dispatch detail view</td><td>Desarrolla la vista de detalle de un despacho (carga y validación de pallets).</td><td>26-09-2026</td>
+      <td>feature/dispatch</td><td>f67bec9</td><td>feat(dispatch): develop dispatch detail view</td><td>Desarrolla la vista de detalle de un despacho (carga y validación de pallets).</td><td>28-09-2026</td>
     </tr>
     <tr>
-      <td>feature/dispatch</td><td>136402d</td><td>feat(dispatch): configure routing for dispatch module</td><td>Configura las rutas del módulo Dispatch.</td><td>26-09-2026</td>
+      <td>feature/dispatch</td><td>ba35a16</td><td>feat(dispatch): configure routing for dispatch module</td><td>Configura las rutas del módulo Dispatch.</td><td>28-09-2026</td>
     </tr>
     <tr>
-      <td>feature/inventory</td><td>e81fa26</td><td>feat(inventory): add product and batch domain models</td><td>Agrega los modelos de dominio de productos y lotes.</td><td>23-09-2026</td>
+      <td>feature/inventory</td><td>99b6990</td><td>feat(inventory): add product and batch domain models</td><td>Agrega los modelos de dominio de productos y lotes.</td><td>24-09-2026</td>
     </tr>
     <tr>
-      <td>feature/inventory</td><td>3214eeb</td><td>feat(inventory): define reconciliation and discrepancy logic</td><td>Define la lógica de conciliación y discrepancias de inventario.</td><td>23-09-2026</td>
+      <td>feature/inventory</td><td>b439aed</td><td>feat(inventory): define reconciliation and discrepancy logic</td><td>Define la lógica de conciliación y discrepancias de inventario.</td><td>24-09-2026</td>
     </tr>
     <tr>
-      <td>feature/inventory</td><td>6eb748f</td><td>feat(inventory): configure dtos and endpoints for products and batches</td><td>Configura los DTOs y endpoints de productos y lotes.</td><td>24-09-2026</td>
+      <td>feature/inventory</td><td>902ff7d</td><td>feat(inventory): configure dtos and endpoints for products and batches</td><td>Configura los DTOs y endpoints de productos y lotes.</td><td>25-09-2026</td>
     </tr>
     <tr>
-      <td>feature/inventory</td><td>1ac114d</td><td>feat(inventory): implement state management store</td><td>Implementa el store de estado del contexto Inventory.</td><td>24-09-2026</td>
+      <td>feature/inventory</td><td>c78878d</td><td>feat(inventory): implement state management store</td><td>Implementa el store de estado del contexto Inventory.</td><td>25-09-2026</td>
     </tr>
     <tr>
-      <td>feature/inventory</td><td>86d2a57</td><td>feat(inventory): build inventory catalog view</td><td>Construye la vista de catálogo de inventario.</td><td>24-09-2026</td>
+      <td>feature/inventory</td><td>f01a112</td><td>feat(inventory): build inventory catalog view</td><td>Construye la vista de catálogo de inventario.</td><td>25-09-2026</td>
     </tr>
     <tr>
-      <td>feature/inventory</td><td>39a3cd9</td><td>feat(inventory): create batch entry and form views</td><td>Crea las vistas de ingreso de lote y su formulario (US01).</td><td>24-09-2026</td>
+      <td>feature/inventory</td><td>87f230e</td><td>feat(inventory): create batch entry and form views</td><td>Crea las vistas de ingreso de lote y su formulario (US01).</td><td>25-09-2026</td>
     </tr>
     <tr>
-      <td>feature/inventory</td><td>5ba3a3c</td><td>feat(inventory): develop reconciliation management view</td><td>Desarrolla la vista de conciliación y discrepancias (US02, US04).</td><td>24-09-2026</td>
+      <td>feature/inventory</td><td>07ce40a</td><td>feat(inventory): develop reconciliation management view</td><td>Desarrolla la vista de conciliación y discrepancias (US02, US04).</td><td>25-09-2026</td>
     </tr>
     <tr>
-      <td>feature/inventory</td><td>f807364</td><td>feat(inventory): implement waste management interface</td><td>Implementa la interfaz de registro de mermas (US03).</td><td>24-09-2026</td>
+      <td>feature/inventory</td><td>db8c9f5</td><td>feat(inventory): implement waste management interface</td><td>Implementa la interfaz de registro de mermas (US03).</td><td>25-09-2026</td>
     </tr>
     <tr>
-      <td>feature/inventory</td><td>f83bc8e</td><td>feat(inventory): configure routing for inventory module</td><td>Configura las rutas del módulo Inventory.</td><td>24-09-2026</td>
+      <td>feature/inventory</td><td>1cc5f85</td><td>feat(inventory): configure routing for inventory module</td><td>Configura las rutas del módulo Inventory.</td><td>25-09-2026</td>
     </tr>
     <tr>
-      <td>feature/iam</td><td>e8729c8</td><td>feat(iam): implement role management</td><td>Implementa la gestión de roles (administrador, Logistics Manager y Warehouse Operator).</td><td>30-09-2026</td>
+      <td>feature/iam</td><td>28c4924</td><td>feat(iam): implement role management</td><td>Implementa la gestión de roles (administrador, Logistics Manager y Warehouse Operator).</td><td>07-10-2026</td>
     </tr>
     <tr>
-      <td>feature/iam</td><td>17b8cb3</td><td>feat(iam): implement credentials validation</td><td>Implementa las reglas de validación de correo y contraseña.</td><td>30-09-2026</td>
+      <td>feature/iam</td><td>436d63b</td><td>feat(iam): implement credentials validation</td><td>Implementa las reglas de validación de correo y contraseña.</td><td>07-10-2026</td>
     </tr>
     <tr>
-      <td>feature/iam</td><td>b9a05b3</td><td>feat(iam): implement sign in</td><td>Implementa el formulario y el flujo de inicio de sesión.</td><td>01-10-2026</td>
+      <td>feature/iam</td><td>b1ce6bb</td><td>feat(iam): implement sign in</td><td>Implementa el formulario y el flujo de inicio de sesión.</td><td>07-10-2026</td>
     </tr>
     <tr>
-      <td>feature/iam</td><td>b0d82e2</td><td>feat(iam): implement sign up</td><td>Implementa el formulario y el flujo de registro de usuarios.</td><td>01-10-2026</td>
+      <td>feature/iam</td><td>a1f0e63</td><td>feat(iam): implement sign up</td><td>Implementa el formulario y el flujo de registro de usuarios.</td><td>07-10-2026</td>
     </tr>
     <tr>
-      <td>feature/iam</td><td>8d99a21</td><td>feat(iam): implement user management</td><td>Implementa la gestión de usuarios del contexto IAM.</td><td>01-10-2026</td>
+      <td>feature/iam</td><td>8edc190</td><td>feat(iam): implement user management</td><td>Implementa la gestión de usuarios del contexto IAM.</td><td>07-10-2026</td>
     </tr>
     <tr>
-      <td>feature/iam</td><td>0bf20c6</td><td>feat(iam): implement iam session management</td><td>Implementa el manejo de la sesión del usuario autenticado.</td><td>01-10-2026</td>
+      <td>feature/iam</td><td>d9c57d3</td><td>feat(iam): implement iam session management</td><td>Implementa el manejo de la sesión del usuario autenticado.</td><td>07-10-2026</td>
     </tr>
     <tr>
-      <td>feature/iam</td><td>bb13bcd</td><td>fix(main): Revise README with English content and setup instructions</td><td>Actualiza el README con contenido en inglés e instrucciones de instalación.</td><td>01-10-2026</td>
+      <td>feature/iam</td><td>a01c5ee</td><td>fix(main): Revise README with English content and setup instructions</td><td>Actualiza el README con contenido en inglés e instrucciones de instalación.</td><td>07-10-2026</td>
     </tr>
     <tr>
-      <td>feature/subscription</td><td>f4a7191</td><td>feat(subscription): implement subscription plan management</td><td>Implementa la gestión de planes de suscripción.</td><td>29-09-2026</td>
+      <td>feature/subscription</td><td>80906cd</td><td>feat(subscription): implement subscription plan management</td><td>Implementa la gestión de planes de suscripción.</td><td>05-10-2026</td>
     </tr>
     <tr>
-      <td>feature/subscription</td><td>f83aa53</td><td>feat(subscription): implement subscription management</td><td>Implementa la gestión de la suscripción vigente del cliente.</td><td>30-09-2026</td>
+      <td>feature/subscription</td><td>ac38e9a</td><td>feat(subscription): implement subscription management</td><td>Implementa la gestión de la suscripción vigente del cliente.</td><td>06-10-2026</td>
     </tr>
     <tr>
-      <td>feature/subscription</td><td>331392f</td><td>feat(subscription): implement checkout and payment</td><td>Implementa el checkout y el pago con tarjeta.</td><td>30-09-2026</td>
+      <td>feature/subscription</td><td>5fb1f39</td><td>feat(subscription): implement checkout and payment</td><td>Implementa el checkout y el pago con tarjeta.</td><td>06-10-2026</td>
     </tr>
     <tr>
-      <td>feature/subscription</td><td>53736c3</td><td>feat(subscription): implement billing view</td><td>Implementa la vista de facturación.</td><td>30-09-2026</td>
+      <td>feature/subscription</td><td>87515a7</td><td>feat(subscription): implement billing view</td><td>Implementa la vista de facturación.</td><td>06-10-2026</td>
     </tr>
     <tr>
-      <td>feature/subscription</td><td>441a517</td><td>feat(subscription): implement contact requests</td><td>Implementa las solicitudes de contacto comercial.</td><td>30-09-2026</td>
+      <td>feature/subscription</td><td>e375574</td><td>feat(subscription): implement contact requests</td><td>Implementa las solicitudes de contacto comercial.</td><td>06-10-2026</td>
     </tr>
     <tr>
-      <td>feature/subscription</td><td>a5f801c</td><td>feat(subscription): implement newsletter subscription</td><td>Implementa la suscripción al boletín informativo.</td><td>30-09-2026</td>
+      <td>feature/subscription</td><td>bceca8e</td><td>feat(subscription): implement newsletter subscription</td><td>Implementa la suscripción al boletín informativo.</td><td>06-10-2026</td>
     </tr>
     <tr>
-      <td>feature/subscription</td><td>e6e979c</td><td>feat(subscription): implement subscription administration and card</td><td>Implementa la administración de suscripciones y la tarjeta de pago.</td><td>30-09-2026</td>
+      <td>feature/subscription</td><td>62f9620</td><td>feat(subscription): implement subscription administration and card</td><td>Implementa la administración de suscripciones y la tarjeta de pago.</td><td>06-10-2026</td>
     </tr>
     <tr>
-      <td>feature/incident</td><td>5299711</td><td>feat(incident): configure incident api</td><td>Configura los endpoints y servicios API del contexto Incident.</td><td>28-09-2026</td>
+      <td>feature/incident</td><td>366ab2e</td><td>feat(incident): configure incident api</td><td>Configura los endpoints y servicios API del contexto Incident.</td><td>01-10-2026</td>
     </tr>
     <tr>
-      <td>feature/incident</td><td>ac70b24</td><td>feat(incident): configure incident application</td><td>Configura la capa de aplicación (store, comandos y consultas) de Incident.</td><td>28-09-2026</td>
+      <td>feature/incident</td><td>1f7e3be</td><td>feat(incident): configure incident application</td><td>Configura la capa de aplicación (store, comandos y consultas) de Incident.</td><td>02-10-2026</td>
     </tr>
     <tr>
-      <td>feature/incident</td><td>a7996f1</td><td>feat(incident): implement incident record management</td><td>Implementa la gestión de incidencias (US14, US15).</td><td>26-09-2026</td>
+      <td>feature/incident</td><td>4b063f7</td><td>feat(incident): implement incident record management</td><td>Implementa la gestión de incidencias (US14, US15).</td><td>01-10-2026</td>
     </tr>
     <tr>
-      <td>feature/incident</td><td>1994d91</td><td>feat(incident): implement alert rule management</td><td>Implementa la gestión de reglas de alerta.</td><td>28-09-2026</td>
+      <td>feature/incident</td><td>386be4b</td><td>feat(incident): implement alert rule management</td><td>Implementa la gestión de reglas de alerta.</td><td>01-10-2026</td>
     </tr>
     <tr>
-      <td>feature/incident</td><td>5df1b9a</td><td>feat(incident): implement corrective action management</td><td>Implementa el registro de acciones correctivas (US16).</td><td>28-09-2026</td>
+      <td>feature/incident</td><td>68b8bf7</td><td>feat(incident): implement corrective action management</td><td>Implementa el registro de acciones correctivas (US16).</td><td>01-10-2026</td>
     </tr>
     <tr>
-      <td>feature/incident</td><td>920f37c</td><td>feat(incident): implement notification center</td><td>Implementa el centro de notificaciones.</td><td>28-09-2026</td>
+      <td>feature/incident</td><td>8ae4c5c</td><td>feat(incident): implement notification center</td><td>Implementa el centro de notificaciones.</td><td>01-10-2026</td>
     </tr>
     <tr>
-      <td>feature/traceability</td><td>23295fe</td><td>feat(traceability): add traceability module</td><td>Agrega el módulo de trazabilidad: seguimiento, checkpoints y registro de entrega (US09, US10, US11).</td><td>02-10-2026</td>
+      <td>feature/traceability</td><td>5af7590</td><td>feat(traceability): add traceability module</td><td>Agrega el módulo de trazabilidad: seguimiento, checkpoints y registro de entrega (US09, US10, US11).</td><td>30-09-2026</td>
     </tr>
     <tr>
-      <td>feature/telemetry</td><td>86c4080</td><td>feat(telemetry): add telemetry module</td><td>Agrega el módulo de telemetría: dispositivos, conectividad y reconexión (US12, US13).</td><td>01-10-2026</td>
+      <td>feature/telemetry</td><td>65e2f57</td><td>feat(telemetry): add telemetry module</td><td>Agrega el módulo de telemetría: dispositivos, conectividad y reconexión (US12, US13).</td><td>05-10-2026</td>
     </tr>
     <tr>
-      <td>feature/server</td><td>e93b928</td><td>feat(server): add mock api server</td><td>Agrega el servidor de la Mock API con los datos de prueba de todos los contextos.</td><td>25-09-2026</td>
+      <td>feature/server</td><td>148ecf3</td><td>feat(server): add mock api server</td><td>Agrega el servidor de la Mock API con los datos de prueba de todos los contextos.</td><td>24-09-2026</td>
     </tr>
     <tr>
-      <td>feature/shared</td><td>25b7d46</td><td>feat(shared): add i18n translation files</td><td>Agrega los archivos de traducción ES/EN de la aplicación.</td><td>23-09-2026</td>
+      <td>feature/shared</td><td>ba91bbb</td><td>feat(shared): add i18n translation files</td><td>Agrega los archivos de traducción ES/EN de la aplicación.</td><td>23-09-2026</td>
     </tr>
     <tr>
-      <td>feature/analytics-v2</td><td>e3a9ff3</td><td>feat(analytics): add logistics report domain entity</td><td>Rehace el contexto Analytics: agrega la entidad de dominio LogisticsReport.</td><td>28-09-2026</td>
+      <td>feature/analytics-v2</td><td>0fb40c5</td><td>feat(analytics): add logistics report domain entity</td><td>Rehace el contexto Analytics: agrega la entidad de dominio LogisticsReport.</td><td>02-10-2026</td>
     </tr>
     <tr>
-      <td>feature/analytics-v2</td><td>c4ad67e</td><td>feat(analytics): implement kpi metric models and calculation logic</td><td>Implementa los modelos de KPI y su lógica de cálculo.</td><td>28-09-2026</td>
+      <td>feature/analytics-v2</td><td>458d825</td><td>feat(analytics): implement kpi metric models and calculation logic</td><td>Implementa los modelos de KPI y su lógica de cálculo.</td><td>02-10-2026</td>
     </tr>
     <tr>
-      <td>feature/analytics-v2</td><td>b3ee3e1</td><td>feat(analytics): configure analytics api client and endpoints</td><td>Configura el cliente de API y los endpoints de Analytics.</td><td>29-09-2026</td>
+      <td>feature/analytics-v2</td><td>9f633bf</td><td>feat(analytics): configure analytics api client and endpoints</td><td>Configura el cliente de API y los endpoints de Analytics.</td><td>02-10-2026</td>
     </tr>
     <tr>
-      <td>feature/analytics-v2</td><td>08b9499</td><td>feat(analytics): implement state management store for analytics</td><td>Implementa el store de estado de Analytics.</td><td>29-09-2026</td>
+      <td>feature/analytics-v2</td><td>6e5b0b9</td><td>feat(analytics): implement state management store for analytics</td><td>Implementa el store de estado de Analytics.</td><td>02-10-2026</td>
     </tr>
     <tr>
-      <td>feature/analytics-v2</td><td>e48f5ce</td><td>feat(analytics): build kpi dashboard presentation view</td><td>Construye la vista del dashboard de indicadores (US17).</td><td>29-09-2026</td>
+      <td>feature/analytics-v2</td><td>1f0aa30</td><td>feat(analytics): build kpi dashboard presentation view</td><td>Construye la vista del dashboard de indicadores (US17).</td><td>02-10-2026</td>
     </tr>
     <tr>
-      <td>feature/analytics-v2</td><td>7b71df8</td><td>feat(analytics): develop report generator view components</td><td>Desarrolla los componentes del generador de reportes y la tasa de mermas (US17, US18).</td><td>29-09-2026</td>
+      <td>feature/analytics-v2</td><td>cb064ec</td><td>feat(analytics): develop report generator view components</td><td>Desarrolla los componentes del generador de reportes y la tasa de mermas (US17, US18).</td><td>02-10-2026</td>
     </tr>
     <tr>
-      <td>feature/analytics-v2</td><td>889de0d</td><td>feat(analytics): configure routing for analytics module</td><td>Configura las rutas del módulo Analytics.</td><td>29-09-2026</td>
+      <td>feature/analytics-v2</td><td>fde2555</td><td>feat(analytics): configure routing for analytics module</td><td>Configura las rutas del módulo Analytics.</td><td>03-10-2026</td>
     </tr>
     <tr>
       <td>develop</td><td>6d1478d</td><td>Merge pull request #1 from Codecraft-16692/feature/shared</td><td>Integra el contexto Shared a develop.</td><td>04-10-2026</td>
