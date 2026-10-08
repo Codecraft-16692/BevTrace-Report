@@ -1,21 +1,20 @@
 ## 2.3. Needfinding
 ### 2.3.1. User Personas
 
+#### Para el segmento de Jefes y Gerentes de Logística
+
 <p align="center">
   <img src="../assets/Chapter2/Jose Peréz.png" alt="User Persona — José Pérez (Jefe de Logística)" width="100%">
 </p>
 <p align="center"><i>User Persona — José Pérez (Jefe de Logística)</i></p>
+
+#### Para el segmento de Operarios y Supervisores de Almacén
 
 <p align="center">
   <img src="../assets/Chapter2/María Paz.png" alt="User Persona — María Paz (Operaria de Almacén)" width="100%">
 </p>
 <p align="center"><i>User Persona — María Paz (Operaria de Almacén)</i></p>
 
-
-Para el segmento de los Jefes y Gerentes de Logistica:
-
-
-Para el segmento de Operarios y Supervisores de almacén
 
 ### 2.3.2. User Task Matrix
 
@@ -55,37 +54,33 @@ El User Task Matrix presenta las tareas que realizan los User Persona para cumpl
 
 ### 2.3.3. User Journey Mapping
 
+#### Para el segmento de Jefes y Gerentes de Logística
+
 <p align="center">
   <img src="../assets/Chapter2/Customer journey - Jefes y Gerentes de Logistica.png" alt="Customer Journey — Jefes y Gerentes de Logística" width="100%">
 </p>
 <p align="center"><i>Customer Journey — Jefes y Gerentes de Logística</i></p>
+
+#### Para el segmento de Operarios y Supervisores de Almacén
 
 <p align="center">
   <img src="../assets/Chapter2/Customer journey - Operarios y Supervisores de Almacen.png" alt="Customer Journey — Operarios y Supervisores de Almacén" width="100%">
 </p>
 <p align="center"><i>Customer Journey — Operarios y Supervisores de Almacén</i></p>
 
-
-
-Para el segmento de Jefes y Gerentes de Logistica
-
-Para el segmento de Operarios y Supervidores de Almacen:
-
 ### 2.3.4. Empathy Mapping
+
+#### Para el segmento de Jefes y Gerentes de Logística
 
 <p align="center">
   <img src="../assets/Chapter2/Empathy map Logistica.png" alt="Empathy Map — Jefes y Gerentes de Logística" width="100%">
 </p>
 <p align="center"><i>Empathy Map — Jefes y Gerentes de Logística</i></p>
 
+#### Para el segmento de Operarios y Supervisores de Almacén
+
 <p align="center">
   <img src="../assets/Chapter2/Empathy map Almacen.png" alt="Empathy Map — Operarios y Supervisores de Almacén" width="100%">
 </p>
 <p align="center"><i>Empathy Map — Operarios y Supervisores de Almacén</i></p>
-
-
-
-Para el segmento de Jefes y Gerentes de Logistica
-
-Para el segmento de Operarios y Supervidores de Almacen:
 
