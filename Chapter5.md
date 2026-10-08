@@ -241,7 +241,7 @@ El Sprint Backlog 2 reúne las historias de usuario y tareas necesarias para imp
 </p>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/sprint2-board.png" alt="Sprint 2 Board Screenshot" width="100%">
+  <img src="assets/Chapter5/sprint2-board.png" alt="Sprint 2 Board Screenshot" width="100%">
   <p><em>Figura: Tablero del Sprint 2 en Jira (Proyecto BevTrace)</em></p>
 </div>
 
@@ -736,62 +736,62 @@ Durante el Sprint 2 se completó la primera versión funcional de la Frontend We
 <p><strong>Sprint 2 Demo Video:</strong> <strong></strong></p>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/sign-in.png" alt="Sign In BevTrace" width="90%">
+  <img src="assets/Chapter5/sign-in.png" alt="Sign In BevTrace" width="90%">
   <p><em>Figura: IAM — Pantalla de inicio de sesión con validación de credenciales.</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/sign-up.png" alt="Sign Up BevTrace" width="90%">
+  <img src="assets/Chapter5/sign-up.png" alt="Sign Up BevTrace" width="90%">
   <p><em>Figura: IAM — Pantalla de registro con las reglas de validación de correo y contraseña.</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/subscription-plans.png" alt="Subscription Plans BevTrace" width="90%">
+  <img src="assets/Chapter5/subscription-plans.png" alt="Subscription Plans BevTrace" width="90%">
   <p><em>Figura: Subscription — Planes de suscripción disponibles y suscripción vigente del cliente.</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/batch-entry.png" alt="Batch Entry BevTrace" width="90%">
+  <img src="assets/Chapter5/batch-entry.png" alt="Batch Entry BevTrace" width="90%">
   <p><em>Figura: Inventory — Registro de ingreso de lote (US01), con rechazo de códigos inválidos.</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/waste-discrepancies.png" alt="Waste and Discrepancies BevTrace" width="90%">
+  <img src="assets/Chapter5/waste-discrepancies.png" alt="Waste and Discrepancies BevTrace" width="90%">
   <p><em>Figura: Inventory — Registro de mermas y alertas de discrepancia (US02, US03).</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/reconciliation.png" alt="Reconciliation BevTrace" width="90%">
+  <img src="assets/Chapter5/reconciliation.png" alt="Reconciliation BevTrace" width="90%">
   <p><em>Figura: Inventory — Conciliación de inventario físico con el porcentaje de exactitud (ERI) (US04).</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/dispatch-schedule.png" alt="Dispatch Scheduling BevTrace" width="90%">
+  <img src="assets/Chapter5/dispatch-schedule.png" alt="Dispatch Scheduling BevTrace" width="90%">
   <p><em>Figura: Dispatch — Programación de despacho y lista de órdenes con su estado (US05).</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/pallet-validation.png" alt="Pallet Validation BevTrace" width="90%">
+  <img src="assets/Chapter5/pallet-validation.png" alt="Pallet Validation BevTrace" width="90%">
   <p><em>Figura: Dispatch — Asignación de vehículo, validación de pallets y registro de salida (US06, US07, US08).</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/traceability-tracking.png" alt="Traceability BevTrace" width="90%">
+  <img src="assets/Chapter5/traceability-tracking.png" alt="Traceability BevTrace" width="90%">
   <p><em>Figura: Traceability — Seguimiento de un lote en tránsito, con checkpoints y cierre de la entrega (US09, US10, US11).</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/telemetry-devices.png" alt="Telemetry BevTrace" width="90%">
+  <img src="assets/Chapter5/telemetry-devices.png" alt="Telemetry BevTrace" width="90%">
   <p><em>Figura: Telemetry — Estado de conectividad de los dispositivos y notificación de reconexión (US12, US13).</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/incidents.png" alt="Incidents BevTrace" width="90%">
+  <img src="assets/Chapter5/incidents.png" alt="Incidents BevTrace" width="90%">
   <p><em>Figura: Incident — Incidencias detectadas, resolución y acciones correctivas (US14, US15, US16).</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/kpi-dashboard.png" alt="KPI Dashboard BevTrace" width="90%">
+  <img src="assets/Chapter5/kpi-dashboard.png" alt="KPI Dashboard BevTrace" width="90%">
   <p><em>Figura: Analytics — Reporte consolidado de indicadores logísticos y tasa de mermas (US17, US18).</em></p>
 </div>
 
@@ -1029,12 +1029,12 @@ Durante el Sprint 2 se desplegaron dos artefactos: la <strong>Frontend Web Appli
 <p><strong>URL de la Mock API:</strong> <a href="https://bevtrace-backend-production.up.railway.app/api/v1" target="_blank">https://bevtrace-backend-production.up.railway.app/api/v1</a></p>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/deployment-vercel.png" alt="Vercel Deployment Evidence Sprint 2" width="90%">
+  <img src="assets/Chapter5/deployment-vercel.png" alt="Vercel Deployment Evidence Sprint 2" width="90%">
   <p><em>Figura: Despliegue de la Frontend Web Application de BevTrace en Vercel</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/deployment-railway.png" alt="Railway Deployment Evidence Sprint 2" width="90%">
+  <img src="assets/Chapter5/deployment-railway.png" alt="Railway Deployment Evidence Sprint 2" width="90%">
   <p><em>Figura: Despliegue de la Mock API de BevTrace en Railway</em></p>
 </div>
 
@@ -1053,7 +1053,7 @@ El trabajo se distribuyó entre los tres integrantes del equipo, con colaboraci�
 </p>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/commits-frontend.png" alt="Commit History Frontend Sprint 2" width="90%">
+  <img src="assets/Chapter5/commits-frontend.png" alt="Commit History Frontend Sprint 2" width="90%">
   <p><em>Figura: Historial de commits del repositorio BevTrace-FrontEnd durante el Sprint 2.</em></p>
 </div>
 
@@ -1062,7 +1062,7 @@ El Network Graph de GitHub refleja el uso de GitFlow con múltiples feature bran
 </p>
 
 <div align="center">
-  <img src="assets/Chapter5/Sprint2/network-frontend.png" alt="Network Graph Sprint 2" width="90%">
+  <img src="assets/Chapter5/network-frontend.png" alt="Network Graph Sprint 2" width="90%">
   <p><em>Figura: Network Graph del repositorio BevTrace-FrontEnd mostrando el flujo de feature branches y merges durante el Sprint 2.</em></p>
 </div>
 
