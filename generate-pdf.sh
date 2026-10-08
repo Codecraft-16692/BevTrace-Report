@@ -96,16 +96,18 @@ a { color: inherit; overflow-wrap: anywhere; }
 li { margin-bottom: 2px; }
 CSS
 
-# Enlaces internos a .md se convierten en texto plano (no existen junto al PDF)
-STRIP_MD_LINKS='s/\[([^]]+)\]\([^)]*\.md[^)]*\)/\1/g'
+# Enlaces internos a .md se convierten en anclas al documento correspondiente
+# (21-chapter_2.1.md#x  ->  #21-chapter_2.1): Chromium las exporta como salto interno del PDF
+CONVERT_MD_LINKS='s/\]\(([0-9][0-9]-[^)#]*)\.md(#[^)]*)?\)/\](#\1)/g'
 
 # Un <section class="doc"> por archivo para el salto de pagina
 : > "$BUILD/report-wrapped.md"
 for f in "${FILES[@]}"; do
-  printf '<section class="doc">\n\n' >> "$BUILD/report-wrapped.md"
+  secid="$(basename "$f" .md)"
+  printf '<section class="doc" id="%s">\n\n' "$secid" >> "$BUILD/report-wrapped.md"
   if [[ $f == 04-index.md ]]; then
     # 4.5 se excluye del PDF: omitir su entrada en el indice
-    sed -E "s|\.\./assets/|assets/|g; $STRIP_MD_LINKS" "$SRC/front-matter/$f" | grep -v '4.5. Web Applications Prototyping' >> "$BUILD/report-wrapped.md"
+    sed -E "s|\.\./assets/|assets/|g; $CONVERT_MD_LINKS" "$SRC/front-matter/$f" | grep -v '4.5. Web Applications Prototyping' >> "$BUILD/report-wrapped.md"
   elif [[ $f == 31-chapter_3.1.md ]]; then
     # Rebalancear anchos de la tabla de user stories: dar 40% a Criterios de Aceptacion
     sed "s|../assets/|assets/|g; s|(<assets/|(assets/|g; s|\.png>)|.png)|g;
@@ -113,7 +115,7 @@ for f in "${FILES[@]}"; do
       "$SRC/front-matter/$f" | awk '{ gsub(/width:15%/, (c["15"]++ == 0) ? "width:40%" : "width:10%"); print }' \
       >> "$BUILD/report-wrapped.md"
   else
-    sed -E "s|\.\./assets/|assets/|g; s|\(<assets/|\(assets/|g; s|\.png>\)|.png)|g; $STRIP_MD_LINKS" \
+    sed -E "s|\.\./assets/|assets/|g; s|\(<assets/|\(assets/|g; s|\.png>\)|.png)|g; $CONVERT_MD_LINKS" \
       "$SRC/front-matter/$f" >> "$BUILD/report-wrapped.md"
   fi
   printf '\n</section>\n\n' >> "$BUILD/report-wrapped.md"
