@@ -71,6 +71,12 @@ Los siguientes supuestos representan las creencias iniciales del equipo respecto
 - <b>Hipótesis 6:</b> Creemos que lograremos mejorar la toma de decisiones logísticas si los responsables de operaciones obtienen una visión consolidada de los indicadores de inventario, despachos y trazabilidad mediante un dashboard de indicadores. Sabremos que esto es cierto cuando al menos el 80% de los responsables de operaciones puedan identificar correctamente los principales indicadores y utilizarlos para analizar situaciones relacionadas con inventarios y despachos durante las pruebas de validación.
 
 #### 1.2.2.4. Lean UX Canvas
+
+<p align="center">
+  <img src="../assets/Chapter1/LeanUXCanvas-BevTrace.png" alt="Lean UX Canvas — BevTrace" width="100%">
+</p>
+<p align="center"><i>Lean UX Canvas — BevTrace</i></p>
+
 ![C1-Canvas](/assets/Chapter1/LeanUXCanvas-BevTrace.png)
 
 ### 1.3. Segmentos objetivo

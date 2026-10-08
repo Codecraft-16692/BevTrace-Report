@@ -1,5 +1,16 @@
 ## 3.2. Impact Mapping.
 
+<p align="center">
+  <img src="../assets/Chapter3/impact-mapping-bevtrace.png" alt="Impact Mapping — BevTrace" width="100%">
+</p>
+<p align="center"><i>Impact Mapping — BevTrace</i></p>
+
+<p align="center">
+  <img src="../assets/Chapter3/Impact maping.png" alt="Impact Mapping — detalle por segmento" width="100%">
+</p>
+<p align="center"><i>Impact Mapping — detalle por segmento</i></p>
+
+
 En esta sección se presenta el Impact Mapping para nuestro modelo de negocio digital, elaborado mediante la herramienta UXPressia. Este artefacto estratégico nos permite alinear nuestras iniciativas de desarrollo de software con los objetivos comerciales de BevTrace.
 
 Para la construcción del mapa, definimos la meta de negocio (Business Goal) bajo criterios SMART:

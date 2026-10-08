@@ -33,6 +33,22 @@ En esta etapa, se analizan distintos tipos de competidores con el objetivo de en
 
 ### 2.1.2. Estrategias y tácticas frente a competidores.
 
+<p align="center">
+  <img src="../assets/Chapter2/SAP_EWM_Logo.jpg" alt="Competidor: SAP EWM" width="30%">
+</p>
+<p align="center"><i>Competidor: SAP EWM</i></p>
+
+<p align="center">
+  <img src="../assets/Chapter2/Verial_Logo.jpg" alt="Competidor: Verial" width="30%">
+</p>
+<p align="center"><i>Competidor: Verial</i></p>
+
+<p align="center">
+  <img src="../assets/Chapter2/WebFleet_Logo.png" alt="Competidor: WebFleet" width="30%">
+</p>
+<p align="center"><i>Competidor: WebFleet</i></p>
+
+
 A partir del análisis SWOT, BevTrace no compite en igualdad de condiciones con los tres competidores identificados: cada uno domina una porción distinta de la cadena de valor (gestión comercial, telemetría de transporte, o infraestructura enterprise), y ninguno cubre el problema completo — información operativa + IoT + trazabilidad, pero ninguno cubre los puntos que identificamos de la problematica. Por eso, la estrategia general de BevTrace no es "competir de frente" en ningún segmento, sino posicionarse en el espacio vacío que estos tres dejan entre sí, y usar tácticas específicas para neutralizar el riesgo de que cada uno se mueva hacia ese espacio.
 
 **Frente a Verial:** 
