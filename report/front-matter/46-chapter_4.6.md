@@ -55,12 +55,12 @@ Las políticas identificadas fueron:
 
 Estas políticas permiten automatizar procesos críticos del sistema, reduciendo drásticamente el error humano y asegurando respuestas oportunas ante incidencias en ruta o discrepancias de stock que podrían generar pérdidas económicas o retrasos en la entrega de bebidas.
 
-<img src="assets/Chapter4/event21.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event22.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event23.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event24.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event25.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event26.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event21.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event22.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event23.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event24.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event25.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event26.png" alt="Bounded Context Commands" width="80%"/>
 
 Una vez identificados los eventos, flujos, comandos y políticas del dominio, se procedió al descubrimiento de contextos candidatos. Esta etapa permitió agrupar elementos relacionados según su cohesión funcional y sus reglas de negocio compartidas, delimitando áreas específicas como el control de inventarios, la gestión de despachos, la trazabilidad de rutas, el monitoreo por telemetría y el manejo de incidencias logísticas. De esta manera, el equipo logró estructurar el dominio de BevTrace en contextos con responsabilidades claramente diferenciadas y alineadas a los módulos de la arquitectura del software.
 
@@ -73,9 +73,9 @@ Los Read Models representan las vistas de consulta críticas que los actores uti
 * **Active Route Traceability Map:** vista esencial utilizada por el Distribution Manager para monitorear la ubicación en tiempo real de los despachos, validar los puntos de control (checkpoints) alcanzados y gestionar alertas de incidencias.
 * **Logistics Performance & KPI Dashboard:** panel gerencial utilizado por el Operations Manager para visualizar el rendimiento de las entregas, evaluar la tasa global de mermas (shrinkage rate) y analizar el impacto de las anomalías en la distribución.
 
-<img src="assets/Chapter4/event31.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event32.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event33.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event31.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event32.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event33.png" alt="Bounded Context Commands" width="80%"/>
 
 #### Paso 5: External Systems
 
@@ -86,9 +86,9 @@ En este paso identificamos los sistemas externos que interactúan con el dominio
 * **Notification Gateway:** plataforma de mensajería externa utilizada en el contexto de gestión de incidencias para despachar alertas automáticas a los responsables logísticos.
 * **Cloud Storage Service:** servicio de almacenamiento en la nube utilizado para resguardar de forma segura los comprobantes de entrega (Proof of Delivery) y los reportes logísticos generados.
 
-<img src="assets/Chapter4/event41.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event42.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event43.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event41.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event42.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event43.png" alt="Bounded Context Commands" width="80%"/>
 
 #### Paso 6: Add Aggregates
 
@@ -101,9 +101,9 @@ En este paso identificamos los Aggregates, que representan los objetos de domini
 * **Incident Record & Alert Engine:** gestiona la detección de anomalías, la emisión de notificaciones automáticas y el flujo de acciones correctivas.
 * **Logistics Report & Performance KPI:** encapsula el cálculo de tasas de mermas operativas y la generación de documentos de auditoría logística.
   
-<img src="assets/Chapter4/event51.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event52.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event53.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event51.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event52.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event53.png" alt="Bounded Context Commands" width="80%"/>
 
 #### Paso 7: Bounded Contexts
 
@@ -118,12 +118,12 @@ Finalmente, definimos los Bounded Contexts que agrupan los flujos relacionados e
 | **BC: Incident & Alert Management** | Agrupa el Aggregate `Incident Record & Alert Engine` para el manejo centralizado de excepciones y alertas. |
 | **BC: Operations Analytics** | Contiene el Aggregate `Logistics Report & Performance KPI` para la evaluación de mermas y toma de decisiones gerenciales. |
 
-<img src="assets/Chapter4/event61.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event62.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event63.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event64.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event65.png" alt="Bounded Context Commands" width="80%"/>
-<img src="assets/Chapter4/event66.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event61.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event62.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event63.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event64.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event65.png" alt="Bounded Context Commands" width="80%"/>
+<img src="../assets/Chapter4/event66.png" alt="Bounded Context Commands" width="80%"/>
 
 ## 4.6.2. Software Architecture Context Diagram
 
@@ -151,7 +151,7 @@ El context diagram muestra a la **BevTrace Platform** como un recuadro en el cen
 
 En el diagrama se representan las relaciones entre estos elementos. El Visitante accede a la landing page y, cuando decide registrarse, es dirigido a la aplicación web. El Logistics Manager, el Warehouse Operator y el Administrador interactúan con BevTrace a través de la interfaz web. BevTrace se encarga de orquestar las integraciones con los servicios externos: obtención de telemetría, validación de rutas, notificaciones por mensajería, almacenamiento de documentos y procesamiento de pagos. Esta vista permite entender el alcance del sistema, los límites de responsabilidad y el ecosistema logístico en el que se inserta BevTrace antes de entrar a detalles de implementación.
 
-<img src="assets/Chapter4/ContextDiagram-dark.png" alt="Context Diagram" width="100%"/>
+<img src="../assets/Chapter4/ContextDiagram-dark.png" alt="Context Diagram" width="100%"/>
 
 ---
 
@@ -180,7 +180,7 @@ En el diagrama se observa que:
 
 Esta vista permite apreciar cómo se distribuyen las responsabilidades entre la capa de presentación (Landing Page, Web Application y SPA), la capa de lógica de negocio (API Application) y la capa de persistencia (Database).
 
-<img src="assets/Chapter4/ContainerDiagram-dark.png" alt="Container Diagram" width="100%"/>
+<img src="../assets/Chapter4/ContainerDiagram-dark.png" alt="Container Diagram" width="100%"/>
 
 ---
 
@@ -217,5 +217,5 @@ En el diagrama se refleja cómo:
 
 De esta forma, los component diagrams muestran cómo los contenedores se descomponen en componentes coherentes con los bounded contexts del dominio logístico y cómo estos colaboran entre sí para orquestar la distribución de BevTrace.
 
-<img src="assets/Chapter4/ComponentDiagram-dark1.png" alt="Component Diagram" width="100%"/>
-<img src="assets/Chapter4/ComponentDiagram-dark2.png" alt="Component Diagram" width="100%"/>
+<img src="../assets/Chapter4/ComponentDiagram-dark1.png" alt="Component Diagram" width="100%"/>
+<img src="../assets/Chapter4/ComponentDiagram-dark2.png" alt="Component Diagram" width="100%"/>
