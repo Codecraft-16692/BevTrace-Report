@@ -1,0 +1,25 @@
+## Bibliographic References
+
+- Angular. (s. f.). *Angular: The modern web developer's platform*. https://angular.dev/
+- Angular Material. (s. f.). *Angular Material: Modern UI components for Angular*. https://material.angular.dev/
+- Brandolini, A. (2018). *Introducing EventStorming: An act of deliberate collective learning*. Leanpub. https://leanpub.com/introducing_eventstorming
+- Brown, S. (s. f.). *The C4 Model for visualising software architecture*. https://c4model.com/
+- Brown, S. (s. f.). *Structurizr DSL*. https://docs.structurizr.com/dsl/
+- Chart.js. (s. f.). *Chart.js: Open source HTML5 charts*. https://www.chartjs.org/
+- Conventional Commits. (s. f.). *Conventional Commits 1.0.0*. https://www.conventionalcommits.org/
+- Driessen, V. (2010). *A successful Git branching model*. https://nvie.com/posts/a-successful-git-branching-model/
+- Evans, E. (2003). *Domain-Driven Design: Tackling complexity in the heart of software*. Addison-Wesley.
+- GitHub. (s. f.). *GitHub: Where the world builds software*. https://github.com/
+- Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing great products with agile teams* (3rd ed.). O'Reilly Media. https://www.oreilly.com/library/view/lean-ux-3rd/9781492049588/
+- JSON Server. (s. f.). *json-server: Get a full fake REST API with zero coding*. https://github.com/typicode/json-server
+- Markdown Guide. (s. f.). *The Markdown Guide*. https://www.markdownguide.org/
+- Microsoft. (s. f.). *TypeScript documentation*. https://www.typescriptlang.org/docs/
+- Miro. (s. f.). *Miro: The visual workspace for innovation*. https://miro.com/
+- NGX Translate. (s. f.). *@ngx-translate/core: Internationalization for Angular*. https://github.com/ngx-translate/core
+- PlantUML. (s. f.). *PlantUML: Open-source tool for drawing UML diagrams*. https://plantuml.com/
+- Preston-Werner, T. (2013). *Semantic Versioning 2.0.0*. https://semver.org/
+- ReactiveX. (s. f.). *RxJS: Reactive extensions library for JavaScript*. https://rxjs.dev/
+- Schwaber, K., & Sutherland, J. (2020). *The Scrum Guide: The definitive guide to Scrum*. https://scrumguides.org/
+- Structurizr. (s. f.). *Structurizr: Software architecture visualisation*. https://structurizr.com/
+- UXPressia. (s. f.). *UXPressia: User persona, journey map and impact map tool*. https://uxpressia.com/
+- Vercel. (s. f.). *Vercel: The frontend cloud*. https://vercel.com/
