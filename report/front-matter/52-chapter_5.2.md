@@ -78,23 +78,22 @@ En esta sección se presenta la matriz <strong>Leadership-and-Collaboration (LAC
   <li><strong>Shared, Inventory, Dispatch &amp; Analytics:</strong> layout, internacionalización y clases base; gestión de lotes, mermas, discrepancias y conciliación; programación y validación de despachos; reporte de indicadores logísticos.</li>
   <li><strong>IAM, Subscription &amp; Incident:</strong> autenticación y roles; planes y suscripción; detección, resolución y acciones correctivas de incidencias.</li>
   <li><strong>Traceability, Telemetry &amp; Mock API:</strong> seguimiento de lotes en tránsito, checkpoints, conectividad de dispositivos y servidor de datos de prueba (carpeta <code>server</code>).</li>
-  <li><strong>Deployment:</strong> despliegue de la Frontend Web Application en Vercel y de la Mock API en Railway.</li>
 </ul>
 
 <table border="1" cellpadding="4" cellspacing="0" align="center">
   <thead>
     <tr>
       <th>Team Member (Last Name, First Name)</th>
-      <th>Aspect: Shared, Inventory, Dispatch &amp; Analytics</th>
-      <th>Aspect: IAM, Subscription &amp; Incident</th>
-      <th>Aspect: Traceability, Telemetry &amp; Mock API</th>
-      <th>Aspect: Deployment</th>
+      <th>GitHub Username</th>
+      <th>Shared, Inventory, Dispatch &amp; Analytics</th>
+      <th>IAM, Subscription &amp; Incident</th>
+      <th>Traceability, Telemetry &amp; Mock API</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Castillo Yataco, Mauricio Sebastian</td><td>L</td><td>C</td><td>C</td><td>L</td></tr>
-    <tr><td>Heredia Hoyos, Danitza Ivonne</td><td>C</td><td>L</td><td>C</td><td>C</td></tr>
-    <tr><td>Ochoa Prado, Enrique Augusto</td><td>C</td><td>C</td><td>L</td><td>C</td></tr>
+    <tr><td>Castillo Yataco, Mauricio Sebastian</td><td>M4uricioCastillo</td><td>L</td><td>C</td><td>C</td></tr>
+    <tr><td>Heredia Hoyos, Danitza Ivonne</td><td>UDnTzh</td><td>C</td><td>L</td><td>C</td></tr>
+    <tr><td>Ochoa Prado, Enrique Augusto</td><td>EnriqueO-18</td><td>C</td><td>C</td><td>L</td></tr>
   </tbody>
 </table>
 
