@@ -56,3 +56,21 @@ En el caso del segmento de Jefes y Gerentes de Logística, la evaluación se ori
 18. ¿Qué tipo de capacitación o acompañamiento necesitaría su equipo para usar BevTrace en el día a día?
 19. ¿Qué parte de la plataforma le resultó más difícil de usar o encontrar?
 20. Después de probar BevTrace, ¿la usaría en su trabajo diario? ¿Qué cambios serían prioritarios?
+    
+### 5.3.2. Registro de Entrevistas
+ 
+A continuación se presentan los registros detallados de las entrevistas semiestructuradas realizadas a los representantes de los segmentos objetivo identificados para el proyecto BevTrace: el Segmento 1 (Jefes y Gerentes de Logística) y el Segmento 2 (Operarios y Supervisores de Almacén).
+ 
+#### Entrevistados del segmento 1 (Jefes y Gerentes de Logística)
+ 
+| N° de Entrevista | Datos del Entrevistado | Evidencia de Video |
+|:---:|:---|:---|
+| E1 | (pendiente) | Duración de video: (pendiente)<br>[Enlace de entrevista](#) |
+| E2 | (pendiente) | Duración de video: (pendiente)<br>[Enlace de entrevista](#) |
+ 
+#### Entrevistados del segmento 2 (Operarios y Supervisores de Almacén)
+ 
+| N° de Entrevista | Datos del Entrevistado | Evidencia de Video |
+|:---:|:---|:---|
+| E1 | (pendiente) | Duración de video: (pendiente)<br>[Enlace de entrevista](#) |
+| E2 | (pendiente) | Duración de video: (pendiente)<br>[Enlace de entrevista](#) |
