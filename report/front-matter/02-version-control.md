@@ -3,7 +3,7 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
-| 2.1.0 | 10/11/26 | Ochoa Prado, Enrique Augusto | Corrección del Student Outcome al ABET – EAC - Student Outcome 3 (comunicación oral y escrita) y de los datos del curso 1ASI0729 en la carátula y los anexos |
+| 2.1.0 | 10/11/26 | Ochoa Prado, Enrique Augusto | Corrección de los datos del curso 1ASI0729 en la carátula y los anexos, y sincronización del Student Outcome 3 con el contenido del README |
 | 2.0.0 | 08/10/26 | Ochoa Prado, Enrique Augusto | Entrega de la segunda versión del informe (TB1) |
 | 1.9.0 | 08/10/26 | Ochoa Prado, Enrique Augusto | Conclusiones y recomendaciones correspondientes a la entrega TB1 |
 | 1.8.0 | 08/10/26 | Castillo Yataco, Mauricio Sebastian | Sección 5.2.2: Sprint 2 completa (planning, LACX, sprint backlog con Jira, evidencias de desarrollo, ejecución, servicios y despliegue) |
