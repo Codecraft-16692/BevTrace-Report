@@ -10,7 +10,7 @@
   1ASI0729
 </h4>
 <h4 align = "center">
-  Aplicaciones Web
+  Desarrollo de Aplicaciones Open Source
 </h4>
 <p align = "center">
   NRC
