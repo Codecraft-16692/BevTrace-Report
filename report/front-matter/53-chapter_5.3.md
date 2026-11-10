@@ -74,3 +74,57 @@ A continuación se presentan los registros detallados de las entrevistas semiest
 |:---:|:---|:---|
 | E1 | (pendiente) | Duración de video: (pendiente)<br>[Enlace de entrevista](#) |
 | E2 | (pendiente) | Duración de video: (pendiente)<br>[Enlace de entrevista](#) |
+
+### 5.3.3. Evaluaciones según heurísticas
+ 
+**UX Heuristics & Principles Evaluation**
+ 
+Usability - Inclusive Design - Information Architecture
+ 
+**CARRERA:** Ingeniería de Software
+**CURSO:** 1ASI0729 Desarrollo de Aplicaciones Open Source
+**NRC:** 16692
+**PROFESORES:** Angel Augusto Velásquez Nuñez
+**AUDITOR:** Mauricio Sebastian Castillo Yataco, Enrique Augusto Ochoa Prado (Equipo CodeCraft)
+**CLIENTE(S):** Jefes y Gerentes de Logística, Operarios y Supervisores de Almacén de empresas embotelladoras y distribuidoras
+**SITE o APP A EVALUAR:**
+BevTrace Web (Plataforma SaaS para la gestión logística, trazabilidad y monitoreo IoT de bebidas en envases PET)
+ 
+**TAREAS A EVALUAR:**
+ 
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+ 
+1. Registro de usuario e inicio de sesión en la plataforma.
+2. Consulta del panel de control operativo y cambio de idioma de la interfaz.
+3. Recepción de un lote y registro de una merma de producto.
+4. Programación de un despacho, asignación de vehículo y validación de la carga antes de la salida.
+5. Seguimiento de un lote en tránsito (mapa de ruta, checkpoints y estado de dispositivos IoT).
+6. Gestión de una incidencia (reconocimiento, acción correctiva y resolución).
+7. Generación del reporte consolidado de indicadores logísticos (OTIF, Fill Rate, ERI, rotación y tasa de mermas).
+8. Suscripción a un plan con pago simulado y consulta del historial de facturación.
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+ 
+1. (completar, p. ej., integración con sistemas externos vía API/Webhooks).
+2. (completar, p. ej., exportación de indicadores en JSON/CSV).
+3. (completar).
+**ESCALA DE SEVERIDAD:**
+ 
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+ 
+| Nivel | Descripción |
+|:---:|:---|
+| 1 | **Problema superficial:** Puede ser fácilmente superado por el usuario y ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| 2 | **Problema menor:** Puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja para resolverlo de cara al siguiente release. |
+| 3 | **Problema mayor:** Ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| 4 | **Problema muy grave:** Un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+ 
+**TABLA RESUMEN:**
+ 
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+|:---:|:---|:---:|:---|
+| 1 | (pendiente) | (1-4) | (pendiente) |
+| 2 | (pendiente) | (1-4) | (pendiente) |
+| 3 | (pendiente) | (1-4) | (pendiente) |
+| 4 | (pendiente) | (1-4) | (pendiente) |
+ 
+**DESCRIPCIÓN DE PROBLEMAS:**
