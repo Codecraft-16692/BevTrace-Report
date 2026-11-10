@@ -7,10 +7,10 @@
 </p>
 <h4 align = "center">
 <br>
-  1ASI0730
+  1ASI0729
 </h4>
 <h4 align = "center">
-  Aplicaciones Web
+  Desarrollo de Aplicaciones Open Source
 </h4>
 <p align = "center">
   NRC
@@ -51,5 +51,5 @@
   Período 202620
 </h4>
 <h4 align = "center">
-  Octubre 2026
+  Noviembre 2026
 </h4>
