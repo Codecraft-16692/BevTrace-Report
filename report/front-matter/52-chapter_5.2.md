@@ -1032,3 +1032,39 @@ El backend se organizó en los bounded contexts definidos en el Capítulo IV: <s
   </tbody>
 </table>
 
+#### 5.2.3.2. Aspect Leaders and Collaborators
+
+<p align="justify">
+En esta sección se presenta la matriz <strong>Leadership-and-Collaboration (LACX)</strong> del Sprint 3. Los aspectos se derivan del Sprint 3 Goal:
+</p>
+
+<ul>
+  <li><strong>Web Services: Shared, IAM, Inventory, Dispatch, Incident, Analytics &amp; Subscription:</strong> clases base, seguridad JWT, endpoints y reglas de dominio de estos contextos.</li>
+  <li><strong>Web Services: Traceability &amp; Telemetry:</strong> endpoints de registros de trazabilidad, checkpoints, entregas, dispositivos IoT, lecturas y periodos de desconexión.</li>
+  <li><strong>Web Services Deployment:</strong> despliegue en Railway, base de datos MySQL, variables de entorno y correcciones de producción.</li>
+  <li><strong>Web Application Integration:</strong> migración de la aplicación Angular desde la Mock https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 hacia los Web Services.</li>
+</ul>
+
+<table border="1" cellpadding="4" cellspacing="0" align="center">
+  <thead>
+    <tr>
+      <th>Team Member (Last Name, First Name)</th>
+      <th>GitHub Username</th>
+      <th>Web Services: Shared, IAM, Inventory, Dispatch, Incident, Analytics &amp; Subscription</th>
+      <th>Web Services: Traceability &amp; Telemetry</th>
+      <th>Web Services Deployment</th>
+      <th>Web Application Integration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Castillo Yataco, Mauricio Sebastian</td><td>M4uricioCastillo</td><td>L</td><td>C</td><td>C</td><td>L</td></tr>
+    <tr><td>Heredia Hoyos, Danitza Ivonne</td><td>UDnTzh</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+    <tr><td>Ochoa Prado, Enrique Augusto</td><td>EnriqueO-18</td><td>C</td><td>L</td><td>L</td><td>C</td></tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>L</strong> = Líder del aspecto</li>
+  <li><strong>C</strong> = Colaborador en el aspecto</li>
+</ul>
+
