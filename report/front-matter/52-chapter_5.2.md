@@ -1274,3 +1274,12 @@ En el Sprint 3 se implementó la primera versión de los Web Services de BevTrac
   </tbody>
 </table>
 
+#### 5.2.3.5. Execution Evidence for Sprint Review
+
+<p align="justify">
+Al cierre del Sprint 3, BevTrace cuenta con Web Services desplegados y documentados, y con una Frontend Web Application que consume dichos servicios mediante autenticación JWT. El usuario puede registrarse, iniciar sesión y operar los flujos de inventario, despacho, trazabilidad, telemetría, incidencias, analítica y suscripción con datos persistidos en MySQL.
+</p>
+
+<!-- PENDIENTE: agregar capturas de las vistas principales de la Web Application conectada a los Web Services y el enlace al video de este sprint -->
+<p><strong>Video de navegación del Sprint 3:</strong> <a href="#" target="_blank">URL pendiente</a></p>
+
