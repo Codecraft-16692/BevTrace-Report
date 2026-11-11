@@ -965,3 +965,20 @@ El seguimiento de las tareas, su estimación y el aporte individual de cada inte
 [java]: https://google.github.io/styleguide/javaguide.html "Google Java Style Guide"
 [spring]: https://docs.spring.io/spring-boot/documentation.html "Spring Boot Documentation"
 [gherkin]: https://cucumber.io/docs/gherkin/reference/ "Gherkin Reference"
+
+### 5.2.3. Sprint 3
+
+<p align="justify">
+Durante el Sprint 3, el equipo CodeCraft se enfocó en la implementación de la primera versión de los <strong>Web Services</strong> de BevTrace, construidos como una RESTful https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 con <strong>Java 21</strong>, <strong>Spring Boot 4</strong>, <strong>Spring Data JPA</strong>, <strong>Spring Security (JWT)</strong> y <strong>MySQL</strong>, documentada con <strong>Openhttps://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1</strong>. Este sprint reemplazó la Mock https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 utilizada en el Sprint 2 por un backend real que traslada las reglas de negocio del navegador a comandos de dominio, manteniendo los mismos nombres de recursos que consume la Frontend Web Application.
+</p>
+
+<p align="justify">
+El backend se organizó en los bounded contexts definidos en el Capítulo IV: <strong>Shared</strong>, <strong>IAM</strong>, <strong>Inventory</strong>, <strong>Dispatch</strong>, <strong>Traceability</strong>, <strong>Telemetry</strong>, <strong>Incident</strong>, <strong>Analytics</strong> y <strong>Subscription</strong>, cada uno con las capas <code>domain</code>, <code>application</code>, <code>infrastructure</code> e <code>interfaces</code>. Además, la Frontend Web Application fue actualizada para consumir los Web Services con autenticación JWT, y los Web Services fueron desplegados en <strong>Railway</strong> junto con una base de datos MySQL.
+</p>
+
+<p><strong>Repositorio Web Services:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-BackEnd" target="_blank">https://github.com/Codecraft-16692/BevTrace-BackEnd</a></p>
+<p><strong>Repositorio Frontend:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-FrontEnd" target="_blank">https://github.com/Codecraft-16692/BevTrace-FrontEnd</a></p>
+<p><strong>Web Services desplegados (Railway):</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1</a></p>
+<p><strong>Documentación Openhttps://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 (Swagger UI):</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html</a></p>
+<p><strong>Frontend Web Application (Vercel):</strong> <a href="https://bev-trace-front-end.vercel.app" target="_blank">https://bev-trace-front-end.vercel.app</a></p>
+
