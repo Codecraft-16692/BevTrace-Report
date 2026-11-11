@@ -1314,6 +1314,16 @@ Las siguientes capturas muestran el recorrido principal realizado sobre la Front
   <p><em>Figura: Despacho en tránsito luego del registro de salida</em></p>
 </div>
 
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-traceability-map.png" alt="traceability-map" width="90%">
+  <p><em>Figura: Mapa de trazabilidad de la ruta activa generado al iniciar el despacho</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-device-connectivity.png" alt="device-connectivity" width="90%">
+  <p><em>Figura: Conectividad del dispositivo IoT aprovisionado en el vehículo</em></p>
+</div>
+
 <!-- PENDIENTE: agregar el enlace al video de navegación de este sprint -->
 <p><strong>Video de navegación del Sprint 3:</strong> <a href="#" target="_blank">URL pendiente</a></p>
 
