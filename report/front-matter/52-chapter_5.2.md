@@ -1071,7 +1071,7 @@ En esta sección se presenta la matriz <strong>Leadership-and-Collaboration (LAC
 #### 5.2.3.3. Sprint Backlog 3
 
 <p align="justify">
-El Sprint Backlog 3 reúne las Technical Stories del Product Backlog (Capítulo III) asociadas a los Web Services de BevTrace, junto con las tareas de despliegue e integración. Las tareas son monitoreadas mediante <strong>Jira</strong>.
+El Sprint Backlog 3 reúne las Technical Stories del Product Backlog (Capítulo III) asociadas a los Web Services de BevTrace, junto con las tareas de despliegue e integración. Las tareas son monitoreadas mediante <strong>(https://acortar.link/3wP02w)</strong>.
 </p>
 
 <!-- PENDIENTE: agregar captura del tablero del Sprint 3 en Jira (report/assets/Chapter5/sprint3/sprint3-board.png) y su URL pública -->
