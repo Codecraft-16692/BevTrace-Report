@@ -1522,3 +1522,32 @@ Durante el Sprint 3 se desplegaron por primera vez los <strong>Web Services</str
 
 <!-- PENDIENTE: agregar captura del despliegue de la Frontend Web Application y de la Landing Page en Vercel -->
 
+#### 5.2.3.8. Team Collaboration Insights during Sprint
+
+<p align="justify">
+Durante el Sprint 3, el esfuerzo del equipo CodeCraft se centró en la implementación de los Web Services y su integración con la Frontend Web Application. En el repositorio de Web Services se aplicó GitFlow con una rama por bounded context (<code>feature/shared</code>, <code>feature/iam</code>, <code>feature/inventory</code>, <code>feature/dispatch</code>, <code>feature/traceability</code>, <code>feature/telemetry</code>, <code>feature/incident</code>, <code>feature/analytics</code> y <code>feature/subscription</code>), integradas hacia <code>develop</code> mediante Pull Requests y luego hacia <code>main</code>, además de la rama <code>fix/enable-jpa-auditing</code> para la corrección detectada en producción.
+</p>
+
+<p align="justify">
+<strong>Mauricio Castillo</strong> (<code>M4uricioCastillo</code>) implementó la base del proyecto Spring Boot y los contextos Shared, IAM, Inventory, Dispatch, Incident, Analytics y Subscription, la documentación técnica del repositorio y la migración de la aplicación Angular hacia los Web Services. <strong>Enrique Ochoa</strong> (<code>EnriqueO-18</code>) implementó los contextos Traceability y Telemetry con sus diagramas, desplegó los Web Services y la base de datos en Railway, corrigió la auditoría JPA requerida por los comandos POST y actualizó la URL de producción de la aplicación.
+</p>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/github-insights-backend.png" alt="Insights BackEnd" width="90%">
+  <p><em>Figura: Contribuciones al repositorio de Web Services (GitHub Insights)</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/github-insights-frontend.png" alt="Insights FrontEnd" width="90%">
+  <p><em>Figura: Contribuciones al repositorio Frontend (GitHub Insights)</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/github-insights-landing.png" alt="Insights Landing Page" width="90%">
+  <p><em>Figura: Contribuciones al repositorio de la Landing Page (GitHub Insights)</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/github-insights-report.png" alt="Insights Report" width="90%">
+  <p><em>Figura: Contribuciones al repositorio del informe (GitHub Insights)</em></p>
+</div>
