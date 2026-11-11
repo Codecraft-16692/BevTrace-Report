@@ -1280,7 +1280,16 @@ En el Sprint 3 se implementó la primera versión de los Web Services de BevTrac
 Al cierre del Sprint 3, BevTrace cuenta con Web Services desplegados y documentados, y con una Frontend Web Application que consume dichos servicios mediante autenticación JWT. El usuario puede registrarse, iniciar sesión y operar los flujos de inventario, despacho, trazabilidad, telemetría, incidencias, analítica y suscripción con datos persistidos en MySQL.
 </p>
 
-<!-- PENDIENTE: agregar capturas de las vistas principales de la Web Application conectada a los Web Services y el enlace al video de este sprint -->
+<p align="justify">
+Las siguientes capturas muestran el recorrido principal realizado sobre la Frontend Web Application desplegada en Vercel, conectada a los Web Services en Railway: ingreso de lotes, registro de mermas, programación, autorización, validación y salida de un despacho, seguimiento de la ruta en el mapa de trazabilidad, aprovisionamiento de un dispositivo IoT y consulta de los planes de suscripción. Para el recorrido se utilizaron un usuario con rol <em>Logistics Manager</em> y otro con rol <em>Warehouse Operator</em>, junto con datos de catálogo de ejemplo cargados en la base de datos.
+</p>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-dashboard.png" alt="dashboard" width="90%">
+  <p><em>Figura: Panel principal con el resumen operativo calculado a partir de los Web Services</em></p>
+</div>
+
+<!-- PENDIENTE: agregar el enlace al video de navegación de este sprint -->
 <p><strong>Video de navegación del Sprint 3:</strong> <a href="#" target="_blank">URL pendiente</a></p>
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
