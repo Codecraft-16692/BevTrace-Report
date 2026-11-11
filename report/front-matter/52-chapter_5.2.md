@@ -1464,3 +1464,61 @@ A continuación se presentan capturas de la interacción con la documentación d
   </tbody>
 </table>
 
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
+
+<p align="justify">
+Durante el Sprint 3 se desplegaron por primera vez los <strong>Web Services</strong> de BevTrace en <strong>Railway</strong>, junto con una base de datos <strong>MySQL</strong> administrada en el mismo proyecto. Además, se actualizó la Frontend Web Application desplegada en Vercel para que consuma los Web Services en lugar de la Mock API.
+</p>
+
+<p><strong>Despliegue de los Web Services (Railway):</strong></p>
+
+<ol>
+  <li>Se creó un nuevo proyecto en Railway con una cuenta del equipo y se conectó el repositorio <code>Codecraft-16692/BevTrace-BackEnd</code>, rama <code>main</code>, con despliegue automático en cada push.</li>
+  <li>Railway construyó la imagen a partir del <code>Dockerfile</code> multi-etapa del repositorio (Maven con JDK 21 para el build y JRE 21 para la ejecución).</li>
+  <li>Se agregó un servicio de base de datos <strong>MySQL</strong> al proyecto, con un volumen persistente.</li>
+  <li>Se configuraron las variables de entorno del servicio: <code>SPRING_PROFILES_ACTIVE=prod</code>, los datos de conexión <code>DATABASE_URL</code>, <code>DATABASE_PORT</code>, <code>DATABASE_NAME</code>, <code>DATABASE_USER</code> y <code>DATABASE_PASSWORD</code> (referenciados desde el servicio MySQL), <code>JWT_SECRET</code>, <code>SWAGGER_ENABLED</code>, <code>CORS_ORIGINS</code> (dominio de la aplicación en Vercel) y <code>SERVER_FORWARD_HEADERS_STRATEGY</code> para que la documentación OpenAPI reconozca el protocolo HTTPS del proxy.</li>
+  <li>Se generó un dominio público asociado al puerto 8080.</li>
+  <li>Se cargaron los roles iniciales (<code>ROLE_ADMIN</code>, <code>ROLE_LOGISTICS_MANAGER</code> y <code>ROLE_WAREHOUSE_OPERATOR</code>) en la tabla <code>roles</code>, necesarios para el registro de usuarios.</li>
+  <li>Al probar el registro se detectó que los comandos POST fallaban porque <code>created_at</code> quedaba nulo; se corrigió habilitando <code>@EnableJpaAuditing</code> en la aplicación y Railway redesplegó automáticamente la nueva versión.</li>
+  <li>Se verificó el despliegue con el endpoint de salud <code>/actuator/health</code> (estado <code>UP</code>) y ejecutando endpoints desde Swagger UI.</li>
+</ol>
+
+<p><strong>URL de los Web Services:</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1</a></p>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/railway-repo-connected.png" alt="Railway project" width="90%">
+  <p><em>Figura: Creación del servicio BevTrace-BackEnd en Railway desde el repositorio de GitHub</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/railway-variables.png" alt="Railway variables" width="90%">
+  <p><em>Figura: Variables de entorno del servicio (valores ocultos)</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/railway-networking.png" alt="Railway networking" width="90%">
+  <p><em>Figura: Dominio público del servicio y servicios MySQL y BevTrace-BackEnd en línea</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/railway-mysql-roles.png" alt="Railway MySQL roles" width="90%">
+  <p><em>Figura: Carga de los roles iniciales en la base de datos MySQL</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/railway-deployments.png" alt="Railway deployments" width="90%">
+  <p><em>Figura: Historial de despliegues de los Web Services en Railway</em></p>
+</div>
+
+<p><strong>Actualización de la Frontend Web Application (Vercel):</strong></p>
+
+<ol>
+  <li>Se migró la aplicación Angular para consumir los Web Services con autenticación JWT y se eliminó la Mock API (rama <code>feat/backend-integration</code>).</li>
+  <li>Se actualizó la URL de producción de la API en <code>src/environments/environment.ts</code> hacia el despliegue de Railway.</li>
+  <li>Vercel redesplegó automáticamente la aplicación desde la rama <code>main</code>.</li>
+</ol>
+
+<p><strong>URL de producción (Frontend):</strong> <a href="https://bev-trace-front-end.vercel.app" target="_blank">https://bev-trace-front-end.vercel.app</a></p>
+
+<!-- PENDIENTE: agregar captura del despliegue de la Frontend Web Application y de la Landing Page en Vercel -->
+
