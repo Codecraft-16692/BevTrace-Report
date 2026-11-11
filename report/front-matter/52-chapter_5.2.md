@@ -1068,3 +1068,38 @@ En esta sección se presenta la matriz <strong>Leadership-and-Collaboration (LAC
   <li><strong>C</strong> = Colaborador en el aspecto</li>
 </ul>
 
+#### 5.2.3.3. Sprint Backlog 3
+
+<p align="justify">
+El Sprint Backlog 3 reúne las Technical Stories del Product Backlog (Capítulo III) asociadas a los Web Services de BevTrace, junto con las tareas de despliegue e integración. Las tareas son monitoreadas mediante <strong>Jira</strong>.
+</p>
+
+<!-- PENDIENTE: agregar captura del tablero del Sprint 3 en Jira (report/assets/Chapter5/sprint3/sprint3-board.png) y su URL pública -->
+<p><strong>Tablero del Sprint 3 (Jira):</strong> <a href="#" target="_blank">URL pendiente</a></p>
+
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead>
+    <tr><th colspan="8" style="text-align:center;">Sprint # 3</th></tr>
+    <tr><th colspan="2">User Story</th><th colspan="6">Work-Item / Task</th></tr>
+    <tr><th>Id</th><th>Title</th><th>Id</th><th>Title</th><th>Description</th><th>Estimation (Hours)</th><th>Assigned To</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr><td rowspan="1">TS09</td><td rowspan="1">Endpoint de autenticación de usuarios</td><td>T301</td><td>Implementar sign-in con JWT</td><td>Endpoint <code>POST /api/v1/authentication/sign-in</code> que valida credenciales con BCrypt y retorna un token JWT.</td><td>3h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS10</td><td rowspan="1">Endpoint de registro de usuario</td><td>T302</td><td>Implementar sign-up con política de contraseñas</td><td>Endpoint <code>POST /api/v1/authentication/sign-up</code> que registra usuarios con un rol existente y aplica la política de contraseñas.</td><td>2h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS01</td><td rowspan="1">Endpoint de consulta de nivel de stock por lote</td><td>T303</td><td>Implementar endpoints de lotes, mermas y conciliación</td><td>Endpoints de <code>batches</code>, <code>waste-records</code>, <code>reconciliations</code> y <code>discrepancies</code> con sus comandos de dominio.</td><td>6h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS02</td><td rowspan="1">Endpoint de consulta de estado de despacho</td><td>T304</td><td>Implementar endpoints de órdenes de despacho</td><td>Endpoints de <code>dispatch-orders</code> con programación, prioridad, asignación de vehículo, validación de carga, salida y cancelación.</td><td>6h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS03</td><td rowspan="1">Webhook de notificación de despacho completado</td><td>T305</td><td>Implementar webhook de despacho completado</td><td>Notificar a sistemas externos cuando un despacho se completa.</td><td>3h</td><td>-</td><td>To Do</td></tr>
+    <tr><td rowspan="1">TS04</td><td rowspan="1">Endpoint de historial de trazabilidad de un lote</td><td>T306</td><td>Implementar endpoints de trazabilidad</td><td>Endpoints de <code>logs</code>, <code>route-checkpoints</code> y <code>delivery-records</code>, con confirmación y rechazo de entregas.</td><td>5h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS05</td><td rowspan="1">Endpoint de aprovisionamiento de dispositivo IoT</td><td>T307</td><td>Implementar aprovisionamiento de dispositivos</td><td>Endpoints de <code>devices</code> y <code>models</code> para aprovisionar dispositivos IoT en vehículos.</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS06</td><td rowspan="1">Servicio de ingesta de telemetría de sensores</td><td>T308</td><td>Implementar ingesta de lecturas y desconexiones</td><td>Endpoints de <code>location-streams</code> y <code>disconnection-periods</code>, con monitor de conectividad programado.</td><td>6h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS07</td><td rowspan="1">Endpoint de consulta de incidencias abiertas</td><td>T309</td><td>Implementar endpoints de incidencias y alertas</td><td>Endpoints de <code>incidents</code>, <code>rules</code>, <code>corrective-actions</code> y <code>notifications</code>.</td><td>5h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS08</td><td rowspan="1">Endpoint de exportación de indicadores operativos</td><td>T310</td><td>Implementar cálculo de indicadores y reportes</td><td>Endpoints <code>analytics/indicators</code> y <code>logistics-reports</code> con cálculo de OTIF, Fill Rate, ERI, rotación y mermas.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS11</td><td rowspan="1">Endpoint de creación de suscripción con pago</td><td>T311</td><td>Implementar suscripción con pago simulado</td><td>Endpoints de <code>subscriptions</code> y <code>subscription-plans</code> con validación de tarjeta simulada.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS12</td><td rowspan="1">Endpoint de consulta de pagos</td><td>T312</td><td>Implementar consulta de pagos</td><td>Endpoint de <code>payments</code> con el historial de pagos de la organización.</td><td>2h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="2">-</td><td rowspan="2">Despliegue de los Web Services</td><td>T313</td><td>Desplegar Web Services y MySQL en Railway</td><td>Configurar el servicio desde el repositorio, la base de datos MySQL, las variables de entorno, el dominio público y la carga de roles iniciales.</td><td>3h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td>T314</td><td>Corregir auditoría JPA en producción</td><td>Habilitar <code>@EnableJpaAuditing</code> para registrar <code>createdAt</code> y <code>updatedAt</code>, requisito de todos los comandos POST.</td><td>1h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td rowspan="2">-</td><td rowspan="2">Integración de la Web Application</td><td>T315</td><td>Migrar la aplicación Angular a los Web Services</td><td>Reemplazar la Mock API por los Web Services con autenticación JWT en todos los contextos.</td><td>6h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td>T316</td><td>Apuntar la aplicación desplegada a los Web Services</td><td>Actualizar la URL de producción de la API en <code>environment.ts</code> hacia el despliegue en Railway.</td><td>1h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+  </tbody>
+</table>
+
