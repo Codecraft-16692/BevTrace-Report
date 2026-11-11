@@ -1324,6 +1324,11 @@ Las siguientes capturas muestran el recorrido principal realizado sobre la Front
   <p><em>Figura: Conectividad del dispositivo IoT aprovisionado en el vehículo</em></p>
 </div>
 
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-plans.png" alt="plans" width="90%">
+  <p><em>Figura: Planes de suscripción obtenidos desde los Web Services</em></p>
+</div>
+
 <!-- PENDIENTE: agregar el enlace al video de navegación de este sprint -->
 <p><strong>Video de navegación del Sprint 3:</strong> <a href="#" target="_blank">URL pendiente</a></p>
 
