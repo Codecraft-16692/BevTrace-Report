@@ -1103,3 +1103,174 @@ El Sprint Backlog 3 reúne las Technical Stories del Product Backlog (Capítulo 
   </tbody>
 </table>
 
+#### 5.2.3.4. Development Evidence for Sprint Review
+
+<p align="justify">
+En el Sprint 3 se implementó la primera versión de los Web Services de BevTrace y se integró la Frontend Web Application con ellos. En el repositorio de Web Services se desarrolló cada bounded context en una rama <code>feature/*</code> integrada a <code>develop</code> mediante Pull Requests y luego a <code>main</code>. En el repositorio Frontend se reemplazó la Mock API por llamadas autenticadas a los Web Services. La siguiente tabla presenta los commits de implementación de cada repositorio durante el sprint, sin considerar los commits de merge.
+</p>
+
+<p><strong>Repositorio:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-BackEnd" target="_blank">Codecraft-16692/BevTrace-BackEnd</a> (129 commits)</p>
+
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead><tr><th>Repository</th><th>Branch</th><th>Commit Id</th><th>Commit Message</th><th>Commit Message Body</th><th>Committed on (Date)</th></tr></thead>
+  <tbody>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>fix/enable-jpa-auditing</td><td>32173e1</td><td>fix(shared): enable jpa auditing to populate created and updated timestamps</td><td>-</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>2543fdc</td><td>docs(telemetry): add database diagram</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>4d706a0</td><td>docs(traceability): add database diagram</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>90043c3</td><td>docs(telemetry): add backend class diagram</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>d3a8160</td><td>docs(traceability): add backend class diagram</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>d68a7a7</td><td>feat(telemetry): add disconnection periods controller</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>bef8485</td><td>feat(traceability): add delivery records controller</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>871fc93</td><td>feat(telemetry): add disconnection period resource and assembler</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>aa34ede</td><td>feat(traceability): add delivery record resource and assembler</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>1240127</td><td>feat(telemetry): add location streams controller</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>9dfce63</td><td>feat(traceability): add route checkpoints controller</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>414b944</td><td>feat(telemetry): add location stream resource and assembler</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>bfe7db5</td><td>feat(telemetry): add telemetry devices controller</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>b788c83</td><td>feat(traceability): add route checkpoint resource and assembler</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>261cef2</td><td>feat(telemetry): add telemetry device resources and assemblers</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>a709d41</td><td>feat(traceability): add traceability logs controller</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>e0e5c59</td><td>feat(telemetry): add device models controller</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>ff8b705</td><td>feat(traceability): add traceability log resources and assemblers</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>e33356e</td><td>feat(telemetry): add device model resource and assembler</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>691fcc4</td><td>feat(traceability): add traceability context facade for other bounded contexts</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>chore/project-docs-and-tests</td><td>7451962</td><td>docs: add architecture, api and context map documentation</td><td>Architecture notes, REST API reference, redundancy review, frontend migration guide and the bounded context map.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>chore/project-docs-and-tests</td><td>39d126f</td><td>test: add application context loads test</td><td>Boots the Spring application context against an in-memory H2 database.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/analytics</td><td>0eb1c28</td><td>docs(analytics): add backend and database diagrams</td><td>PlantUML class diagram of the analytics context and its database diagram.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>3ee4e18</td><td>feat(telemetry): add telemetry context facade for other bounded contexts</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/analytics</td><td>4b372ae</td><td>feat(analytics): add indicators and reports controllers</td><td>IndicatorsController and LogisticsReportsController with their resources and assemblers.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/analytics</td><td>6419a66</td><td>feat(analytics): add jpa adapter, report entity and kpi embeddable</td><td>LogisticsReportPersistenceEntity and KpiMetricEmbeddable with their repository and adapter.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/analytics</td><td>1bf6b06</td><td>feat(analytics): add report and indicator services</td><td>LogisticsReportCommandService, LogisticsReportQueryService and IndicatorQueryService. Includes the ACL outbound service that reads data from other contexts.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/analytics</td><td>056212e</td><td>feat(analytics): add report command, queries and kpi calculator</td><td>GenerateLogisticsReportCommand, report and indicator queries, the repository port and the KpiCalculator domain service.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/analytics</td><td>f9ecd00</td><td>feat(analytics): add logistics report aggregate and value objects</td><td>LogisticsReport aggregate and the value objects used by its KPIs.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>9404169</td><td>feat(traceability): add delivery record query service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>fa51ef1</td><td>feat(telemetry): add disconnection period query service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>6dded8a</td><td>feat(traceability): add route checkpoint query service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>b6364a5</td><td>feat(telemetry): add location stream query service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/dispatch</td><td>5680a85</td><td>docs(dispatch): add backend and database diagrams</td><td>PlantUML class diagram of the dispatch context and its database diagram.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/dispatch</td><td>d989a31</td><td>feat(dispatch): add rest controllers, resources and facade</td><td>Controllers for dispatch orders, cargo assignments, destinations, drivers and vehicles. Includes resources, assemblers and DispatchContextFacade.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/dispatch</td><td>482ec9f</td><td>feat(dispatch): add jpa entities, repositories and adapters</td><td>Persistence of the five dispatch aggregates with Spring Data JPA.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>9a05df3</td><td>feat(telemetry): add telemetry device query service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/dispatch</td><td>92824ba</td><td>feat(dispatch): add command service, query services and event handler</td><td>DispatchOrderCommandService, five query services and DeliveryConfirmedEventHandler.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/dispatch</td><td>bf00851</td><td>feat(dispatch): add dispatch commands, queries and cargo policy</td><td>Commands: ScheduleDispatchOrder, AssignVehicle, ValidateCargo, RegisterDeparture, CompleteDelivery, ChangeDispatchPriority and CancelDispatchOrder. Includes the repository ports and the CargoPolicy domain service.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/dispatch</td><td>d9a6612</td><td>feat(dispatch): add dispatch aggregates and domain events</td><td>Aggregates: DispatchOrder, CargoAssignment, DeliveryDestination, Driver and TransportVehicle.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/iam</td><td>440da7d</td><td>docs(iam): add backend and database diagrams</td><td>PlantUML class diagram of the iam context and its database diagram.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/iam</td><td>d584e1d</td><td>feat(iam): add auth, users and roles controllers</td><td>AuthenticationController, UsersController and RolesController with their resources and assemblers. Includes IamContextFacade for other contexts.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>46b9dd6</td><td>feat(traceability): add traceability log query service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/iam</td><td>ae9596c</td><td>feat(iam): add bcrypt hashing, jwt tokens and security pipeline</td><td>Includes WebSecurityConfiguration, the request authorization pipeline and UserDetailsServiceImpl.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/iam</td><td>67d20dd</td><td>feat(iam): add jpa entities, repositories and adapters</td><td>Persistence of users and roles with Spring Data JPA.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/iam</td><td>ce014a1</td><td>feat(iam): add user command service and query services</td><td>UserCommandService, UserQueryService and RoleQueryService. Includes the outbound ports used for password hashing and token generation.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>f6fb83b</td><td>feat(telemetry): add device model query service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/iam</td><td>105520d</td><td>feat(iam): add auth commands, queries and password policy</td><td>Commands: SignInCommand, SignUpCommand, AssignRoleCommand, ChangeUserStatusCommand. Includes the repository ports and the PasswordPolicy domain service.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/iam</td><td>8c7d62e</td><td>feat(iam): add User aggregate and Role entity</td><td>Domain model of the identity and access context.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>c62442a</td><td>feat(traceability): add event handlers for dispatch departure and telemetry readings</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>c6fa17a</td><td>feat(telemetry): add connectivity monitor scheduler</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>e34c359</td><td>feat(traceability): add traceability log command service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>155aba0</td><td>feat(telemetry): add location stream command service</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>6c3809b</td><td>feat(traceability): add delivery record repository adapter</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>2bfd7a6</td><td>feat(telemetry): add telemetry device command service</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>383ef3b</td><td>feat(traceability): add delivery record persistence entity and jpa repository</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>ab596e6</td><td>feat(telemetry): add disconnection period repository adapter</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>1e7f71c</td><td>feat(telemetry): add disconnection period persistence entity and jpa repository</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>cabcac2</td><td>feat(traceability): add route checkpoint repository adapter</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>5dbdd06</td><td>feat(telemetry): add location stream repository adapter</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>4afee87</td><td>feat(traceability): add route checkpoint persistence entity and jpa repository</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>a67c043</td><td>feat(telemetry): add location stream persistence entity and jpa repository</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>7c09b3f</td><td>feat(traceability): add traceability log repository adapter</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>8c047f0</td><td>feat(telemetry): add telemetry device repository adapter</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>1b2780c</td><td>feat(traceability): add traceability log persistence entity and jpa repository</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>ce3e66b</td><td>feat(telemetry): add telemetry device persistence entity and jpa repository</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>120f371</td><td>feat(traceability): add route planner domain service</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/incident</td><td>c70a42f</td><td>docs(incident): add backend and database diagrams</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>8c97430</td><td>feat(telemetry): add device model repository adapter</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>5942edf</td><td>feat(telemetry): add device model persistence entity and jpa repository</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/incident</td><td>27d992b</td><td>feat(incident): add rest controllers and resources</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>b22930f</td><td>feat(traceability): add delivery record repository port</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/incident</td><td>0405a77</td><td>feat(incident): add jpa entities, repositories and adapters</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>d2b117a</td><td>feat(telemetry): add disconnection period repository port</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>b12a71f</td><td>feat(traceability): add route checkpoint repository port</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/incident</td><td>d6d5273</td><td>feat(incident): add services, event handlers and anomaly scheduler</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>7fddc18</td><td>feat(telemetry): add location stream repository port</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/incident</td><td>8558f1c</td><td>feat(incident): add domain model, commands and queries</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>1f275be</td><td>feat(traceability): add traceability log repository port</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>3fe469b</td><td>feat(telemetry): add telemetry device repository port</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>d2b023e</td><td>feat(traceability): add delivery record queries</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>23e8a00</td><td>feat(telemetry): add device model repository port</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>58e2847</td><td>feat(traceability): add route checkpoint queries</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>3c7130a</td><td>feat(telemetry): add disconnection period queries</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>0a6c29f</td><td>feat(telemetry): add location stream queries</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>6756884</td><td>feat(traceability): add traceability log queries</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>0056121</td><td>feat(telemetry): add telemetry device queries</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>178e89a</td><td>feat(traceability): add confirm and reject delivery commands</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>bc240b8</td><td>feat(telemetry): add device model queries</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>a31b98d</td><td>feat(traceability): add update position command</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>59771ae</td><td>feat(telemetry): add detect disconnections command</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>4e0329d</td><td>feat(traceability): add start route command</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>92713cd</td><td>feat(telemetry): add record reading command</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>ef34634</td><td>feat(traceability): add delivery record aggregate</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>40cec44</td><td>feat(telemetry): add provision device command</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>86f0892</td><td>feat(traceability): add delivery confirmed domain event</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>d63c544</td><td>feat(telemetry): add disconnection period aggregate</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>d479e95</td><td>feat(telemetry): add location stream aggregate</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>d5e1a90</td><td>feat(traceability): add route checkpoint aggregate</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>f4f1866</td><td>feat(telemetry): add reading recorded domain event</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>6b35438</td><td>feat(traceability): add traceability log aggregate</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>12fff2e</td><td>feat(telemetry): add telemetry device aggregate</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>aed0989</td><td>feat(traceability): add delivery outcome value object</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>575720c</td><td>feat(telemetry): add device model aggregate</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>2206347</td><td>feat(traceability): add checkpoint status value object</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>8245010</td><td>feat(telemetry): add data status value object</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>c0d6393</td><td>feat(traceability): add log status value object</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>5a71caf</td><td>feat(telemetry): add connection status value object</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/subscription</td><td>c585d70</td><td>docs(subscription): add backend and database diagrams</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/subscription</td><td>09334a4</td><td>feat(subscription): add rest controllers and resources</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/subscription</td><td>b2efa47</td><td>feat(subscription): add jpa entities, repositories and adapters</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/subscription</td><td>e004484</td><td>feat(subscription): add command and query services</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/subscription</td><td>076eb20</td><td>feat(subscription): add domain model, commands and queries</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/inventory</td><td>47eabfd</td><td>docs(inventory): add backend and database diagrams</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/inventory</td><td>4a318b2</td><td>feat(inventory): add rest controllers, resources and acl facade</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/inventory</td><td>a34d8cb</td><td>feat(inventory): add jpa entities, repositories and adapters</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/inventory</td><td>7f7b34d</td><td>feat(inventory): add command and query services</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/inventory</td><td>a9e330c</td><td>feat(inventory): add domain model, commands and queries</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/shared</td><td>57a02e9</td><td>docs(shared): add backend diagram</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/shared</td><td>54df3b1</td><td>feat(shared): add global exception handler and response assemblers</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/shared</td><td>ed6d496</td><td>feat(shared): add openapi and i18n configuration</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/shared</td><td>a9f4d73</td><td>feat(shared): add auditable entity, naming strategy and filter specifications</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/shared</td><td>fa8b800</td><td>feat(shared): add result types and base aggregate root</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>main</td><td>e0b3f8c</td><td>docs: add project readme</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>main</td><td>cd62abb</td><td>feat: add spring boot application entry point</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>main</td><td>d24dc28</td><td>chore: add docker and docker compose setup</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>main</td><td>87770b9</td><td>chore: add application properties for dev and prod</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>main</td><td>c8145f4</td><td>chore: add maven build and gitignore</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>main</td><td>f72ad95</td><td>Delete server directory</td><td>-</td><td>04/11/2026</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Repositorio:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-FrontEnd" target="_blank">Codecraft-16692/BevTrace-FrontEnd</a> (20 commits)</p>
+
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead><tr><th>Repository</th><th>Branch</th><th>Commit Id</th><th>Commit Message</th><th>Commit Message Body</th><th>Committed on (Date)</th></tr></thead>
+  <tbody>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>ee2fbbc</td><td>chore: remove json-server mock</td><td>Delete the server folder, the api script and the json-server dependency. Update the README to run against the backend.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>c4d1b2f</td><td>feat(subscription): subscribe, cancel and public forms via the backend</td><td>Payment, card validation and declined-card handling are done by the server. Cancellation uses POST /subscriptions/{id}/cancellation.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>863f511</td><td>feat(analytics): generate reports on the backend</td><td>POST /logistics-reports computes the KPIs server-side.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>c9a27b0</td><td>feat(incident): run detection and incident actions on the backend</td><td>Detection uses POST /incidents/detections. Acknowledge, corrective action and resolution are commands. Notifications are created by the server.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>23f2c10</td><td>feat(telemetry): provision devices through the backend</td><td>The server validates duplicated codes and one device per vehicle.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>754da33</td><td>feat(traceability): confirm and reject deliveries through the backend</td><td>Route tracing now starts on departure on the server. Remove the client-side log, checkpoint and record creation.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>9d7008a</td><td>feat(dispatch): use dispatch order commands</td><td>Schedule, vehicle assignment, cargo validation, priority, departure and cancellation are single calls. Weight, pallets, stock and vehicle release are handled by the server.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>f3bd482</td><td>feat(inventory): use batch, waste and reconciliation commands</td><td>The backend enforces duplicate codes, stock deduction, discrepancies and notifications. Client-side stock updates are removed.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>0897ef9</td><td>feat(iam): authenticate against the backend with JWT</td><td>Sign-in and sign-up post to /authentication. The interceptor only touches API requests and signs out on 401. Role and active changes use PATCH /users/{id}/role|active.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>a7b7a5c</td><td>feat(shared): map backend error details and add command calls</td><td>Errors carrying an i18n key in details become BusinessError. BaseApiEndpoint gets command() for POST/PATCH sub-resources and tolerates forbidden relation lookups.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>1cb5216</td><td>chore(env): point development API to the Spring backend</td><td>Use http://localhost:8080/api/v1 instead of the json-server mock.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>main</td><td>72e2a1b</td><td>chore(release): 1.1.0</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>6d0d78b</td><td>fix(traceability): close lifecycle hook comment in route map</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>c4d4e5b</td><td>fix(routing): redirect empty path to home before the authenticated layout</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>75be5b4</td><td>docs(i18n): update translations and README after removing simulations</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>d711826</td><td>feat(shared): add auto-refresh helper and refresh buttons</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>81e75bb</td><td>refactor(dispatch): remove simulated pallet scan buttons</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>4b3129d</td><td>refactor(traceability): remove simulated checkpoints and read position from API</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>0a7171b</td><td>refactor(telemetry): remove IoT simulator and make device panel read-only</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>10a9a79</td><td>refactor(routing): use plural resource paths under each bounded context</td><td>-</td><td>28/10/2026</td></tr>
+  </tbody>
+</table>
+
