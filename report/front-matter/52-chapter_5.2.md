@@ -1280,7 +1280,56 @@ En el Sprint 3 se implementó la primera versión de los Web Services de BevTrac
 Al cierre del Sprint 3, BevTrace cuenta con Web Services desplegados y documentados, y con una Frontend Web Application que consume dichos servicios mediante autenticación JWT. El usuario puede registrarse, iniciar sesión y operar los flujos de inventario, despacho, trazabilidad, telemetría, incidencias, analítica y suscripción con datos persistidos en MySQL.
 </p>
 
-<!-- PENDIENTE: agregar capturas de las vistas principales de la Web Application conectada a los Web Services y el enlace al video de este sprint -->
+<p align="justify">
+Las siguientes capturas muestran el recorrido principal realizado sobre la Frontend Web Application desplegada en Vercel, conectada a los Web Services en Railway: ingreso de lotes, registro de mermas, programación, autorización, validación y salida de un despacho, seguimiento de la ruta en el mapa de trazabilidad, aprovisionamiento de un dispositivo IoT y consulta de los planes de suscripción. Para el recorrido se utilizaron un usuario con rol <em>Logistics Manager</em> y otro con rol <em>Warehouse Operator</em>, junto con datos de catálogo de ejemplo cargados en la base de datos.
+</p>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-dashboard.png" alt="dashboard" width="90%">
+  <p><em>Figura: Panel principal con el resumen operativo calculado a partir de los Web Services</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-inventory-catalog.png" alt="inventory-catalog" width="90%">
+  <p><em>Figura: Catálogo de inventario con los lotes registrados e ingresados al almacén</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-waste-registry.png" alt="waste-registry" width="90%">
+  <p><em>Figura: Registro de una merma y actualización del stock del lote</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-schedule-dispatch.png" alt="schedule-dispatch" width="90%">
+  <p><em>Figura: Programación de un despacho con destino, prioridad y carga</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-cargo-validated.png" alt="cargo-validated" width="90%">
+  <p><em>Figura: Validación de los pallets cargados por el operador de almacén</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-dispatch-in-transit.png" alt="dispatch-in-transit" width="90%">
+  <p><em>Figura: Despacho en tránsito luego del registro de salida</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-traceability-map.png" alt="traceability-map" width="90%">
+  <p><em>Figura: Mapa de trazabilidad de la ruta activa generado al iniciar el despacho</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-device-connectivity.png" alt="device-connectivity" width="90%">
+  <p><em>Figura: Conectividad del dispositivo IoT aprovisionado en el vehículo</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-plans.png" alt="plans" width="90%">
+  <p><em>Figura: Planes de suscripción obtenidos desde los Web Services</em></p>
+</div>
+
+<!-- PENDIENTE: agregar el enlace al video de navegación de este sprint -->
 <p><strong>Video de navegación del Sprint 3:</strong> <a href="#" target="_blank">URL pendiente</a></p>
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
