@@ -982,3 +982,53 @@ El backend se organizó en los bounded contexts definidos en el Capítulo IV: <s
 <p><strong>Documentación Openhttps://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 (Swagger UI):</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html</a></p>
 <p><strong>Frontend Web Application (Vercel):</strong> <a href="https://bev-trace-front-end.vercel.app" target="_blank">https://bev-trace-front-end.vercel.app</a></p>
 
+#### 5.2.3.1. Sprint Planning 3
+
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead>
+    <tr><th colspan="2" style="text-align:center;">Sprint Planning Sprint 3</th></tr>
+  </thead>
+  <tbody>
+    <tr><td colspan="2" style="text-align:center;"><strong>Sprint Planning Background</strong></td></tr>
+    <tr><td>Date</td><td>28/10/2026</td></tr>
+    <tr><td>Time</td><td>4:00 p.m.</td></tr>
+    <tr><td>Location</td><td>WhatsApp, Microsoft Teams y Class (UPC)</td></tr>
+    <tr><td>Prepared By</td><td>Castillo Yataco, Mauricio Sebastian</td></tr>
+    <tr>
+      <td>Attendees (to planning meeting)</td>
+      <td>
+        Castillo Yataco, Mauricio Sebastian<br>
+        Heredia Hoyos, Danitza Ivonne<br>
+        Ochoa Prado, Enrique Augusto
+      </td>
+    </tr>
+    <tr><td>Sprint 3 Period</td><td>28/10/2026 - 12/11/2026</td></tr>
+    <tr><td colspan="2" style="text-align:center;"><strong>Sprint 2 Review Summary</strong></td></tr>
+    <tr>
+      <td colspan="2" align="justify">
+        Se completó la primera versión de la Frontend Web Application en Angular, con los nueve contextos de la SPA navegables, soporte bilingüe ES/EN y despliegue en Vercel. Durante la revisión se confirmó que los flujos principales de inventario, despacho, trazabilidad, telemetría, incidencias y analítica podían recorrerse de extremo a extremo, aunque los datos provenían de una Mock https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 con <code>json-server</code> y las reglas de negocio se ejecutaban en el navegador.
+      </td>
+    </tr>
+    <tr><td colspan="2" style="text-align:center;"><strong>Sprint 2 Retrospective Summary</strong></td></tr>
+    <tr>
+      <td colspan="2" align="justify">
+        El equipo identificó que la Mock https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 no permitía validar reglas de negocio, autenticación real ni persistencia, por lo que se acordó implementar los Web Services en Spring Boot respetando los mismos nombres de recursos y campos que consume la aplicación Angular, para facilitar la migración. Como acciones de mejora se acordó mantener GitFlow con una rama <code>feature/*</code> por bounded context, documentar cada endpoint con Openhttps://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 y desplegar los Web Services en un proveedor cloud con base de datos administrada.
+      </td>
+    </tr>
+    <tr><td colspan="2" style="text-align:center;"><strong>Sprint Goal &amp; User Stories</strong></td></tr>
+    <tr>
+      <td colspan="2" align="justify">
+        <strong>Sprint 3 Goal (Outcome-Impact-Customer-Confirmation):</strong><br><br>
+        <em>Our focus is on providing the first version of the BevTrace RESTful Web Services and connecting the web application to them.</em><br><br>
+        <em>We believe it delivers reliable and persistent operational data to Warehouse Operators and Logistics Managers, by moving the business rules of inventory, dispatch, traceability, telemetry, incidents, analytics and subscriptions from the browser to secured domain services.</em><br><br>
+        <em>This will be confirmed when a user can sign up and sign in with a JWT token, the documented endpoints can be executed from the deployed Openhttps://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 documentation with sample data, and the deployed web application consumes the deployed Web Services instead of the Mock https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1.</em>
+      </td>
+    </tr>
+    <tr><td>Sprint 3 Velocity</td><td>34 Story Points</td></tr>
+    <tr>
+      <td>Sum of Story Points</td>
+      <td>34 SP (TS01: 2 · TS02: 2 · TS03: 3 · TS04: 3 · TS05: 3 · TS06: 8 · TS07: 2 · TS08: 2 · TS09: 2 · TS10: 2 · TS11: 3 · TS12: 2)</td>
+    </tr>
+  </tbody>
+</table>
+
