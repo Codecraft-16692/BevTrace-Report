@@ -1299,6 +1299,21 @@ Las siguientes capturas muestran el recorrido principal realizado sobre la Front
   <p><em>Figura: Registro de una merma y actualización del stock del lote</em></p>
 </div>
 
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-schedule-dispatch.png" alt="schedule-dispatch" width="90%">
+  <p><em>Figura: Programación de un despacho con destino, prioridad y carga</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-cargo-validated.png" alt="cargo-validated" width="90%">
+  <p><em>Figura: Validación de los pallets cargados por el operador de almacén</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-dispatch-in-transit.png" alt="dispatch-in-transit" width="90%">
+  <p><em>Figura: Despacho en tránsito luego del registro de salida</em></p>
+</div>
+
 <!-- PENDIENTE: agregar el enlace al video de navegación de este sprint -->
 <p><strong>Video de navegación del Sprint 3:</strong> <a href="#" target="_blank">URL pendiente</a></p>
 
