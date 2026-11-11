@@ -1283,3 +1283,184 @@ Al cierre del Sprint 3, BevTrace cuenta con Web Services desplegados y documenta
 <!-- PENDIENTE: agregar capturas de las vistas principales de la Web Application conectada a los Web Services y el enlace al video de este sprint -->
 <p><strong>Video de navegación del Sprint 3:</strong> <a href="#" target="_blank">URL pendiente</a></p>
 
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+<p align="justify">
+En este sprint se documentaron con <strong>OpenAPI</strong> (springdoc) los 93 endpoints de los Web Services de BevTrace, agrupados por recurso. La documentación se encuentra desplegada junto con los Web Services y permite ejecutar cada endpoint con datos de muestra desde Swagger UI. Los endpoints protegidos requieren un token JWT obtenido en <code>sign-in</code>, que se envía en la cabecera <code>Authorization: Bearer &lt;token&gt;</code> mediante el botón <strong>Authorize</strong>. Los endpoints de listado aceptan filtros con <code>?campo=valor</code>, ordenamiento con <code>_sort</code> y <code>_order</code>, y límite con <code>_limit</code>.
+</p>
+
+<p><strong>Documentación desplegada:</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html</a></p>
+<p><strong>Especificación OpenAPI (JSON):</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/v3/api-docs" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/v3/api-docs</a></p>
+<p><strong>Repositorio Web Services:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-BackEnd" target="_blank">https://github.com/Codecraft-16692/BevTrace-BackEnd</a></p>
+
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead><tr><th>Resource</th><th>HTTP Verb</th><th>Endpoint</th><th>Action</th><th>Parameters</th><th>Request Body</th><th>Response</th></tr></thead>
+  <tbody>
+    <tr><td>Authentication</td><td>POST</td><td><code>/api/v1/authentication/sign-up</code></td><td>Register a user</td><td>-</td><td><code>SignUpResource</code>: roleId, name, email, phone, password</td><td>201: usuario creado</td></tr>
+    <tr><td>Authentication</td><td>POST</td><td><code>/api/v1/authentication/sign-in</code></td><td>Sign in</td><td>-</td><td><code>SignInResource</code>: email, password</td><td>200: usuario autenticado con <code>roles</code> y <code>token</code> JWT</td></tr>
+    <tr><td>Users</td><td>GET</td><td><code>/api/v1/users</code></td><td>List users</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>Users</td><td>GET</td><td><code>/api/v1/users/{id}</code></td><td>Get a user by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Users</td><td>PATCH</td><td><code>/api/v1/users/{id}/role</code></td><td>Assign a role to a user</td><td>id (path)</td><td><code>UpdateUserRoleResource</code>: roleId</td><td>200: recurso actualizado</td></tr>
+    <tr><td>Users</td><td>PATCH</td><td><code>/api/v1/users/{id}/active</code></td><td>Enable or disable a user</td><td>id (path)</td><td><code>UpdateUserStatusResource</code>: active</td><td>200: recurso actualizado</td></tr>
+    <tr><td>Roles</td><td>GET</td><td><code>/api/v1/roles</code></td><td>List roles</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>Roles</td><td>GET</td><td><code>/api/v1/roles/{id}</code></td><td>Get a role by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Products</td><td>GET</td><td><code>/api/v1/products</code></td><td>List products</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>Products</td><td>GET</td><td><code>/api/v1/products/{id}</code></td><td>Get a product by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>WarehouseZones</td><td>GET</td><td><code>/api/v1/zones</code></td><td>List warehouse zones</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>WarehouseZones</td><td>GET</td><td><code>/api/v1/zones/{id}</code></td><td>Get a warehouse zone by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>ProductBatches</td><td>GET</td><td><code>/api/v1/batches</code></td><td>List product batches</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>ProductBatches</td><td>GET</td><td><code>/api/v1/batches/{id}</code></td><td>Get a product batch by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>ProductBatches</td><td>POST</td><td><code>/api/v1/batches</code></td><td>Register a batch announced by the plant</td><td>-</td><td><code>RegisterBatchResource</code>: productId, zoneId, batchNumber, initialQty, expirationDate</td><td>201: recurso creado</td></tr>
+    <tr><td>ProductBatches</td><td>POST</td><td><code>/api/v1/batches/receptions</code></td><td>Receive a batch by scanning its code</td><td>-</td><td><code>ReceiveBatchResource</code>: scanCode</td><td>201: recurso creado</td></tr>
+    <tr><td>WasteRecords</td><td>GET</td><td><code>/api/v1/waste-records</code></td><td>List waste records</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>WasteRecords</td><td>GET</td><td><code>/api/v1/waste-records/{id}</code></td><td>Get a waste record by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>WasteRecords</td><td>POST</td><td><code>/api/v1/waste-records</code></td><td>Report waste</td><td>-</td><td><code>ReportWasteResource</code>: batchId, quantity, reason</td><td>201: recurso creado</td></tr>
+    <tr><td>InventoryReconciliations</td><td>GET</td><td><code>/api/v1/reconciliations</code></td><td>List inventory reconciliations</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>InventoryReconciliations</td><td>GET</td><td><code>/api/v1/reconciliations/{id}</code></td><td>Get an inventory reconciliation by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>InventoryReconciliations</td><td>POST</td><td><code>/api/v1/reconciliations</code></td><td>Run a physical reconciliation</td><td>-</td><td><code>RunReconciliationResource</code>: counts</td><td>201: recurso creado</td></tr>
+    <tr><td>InventoryReconciliations</td><td>POST</td><td><code>/api/v1/reconciliations/{id}/confirmation</code></td><td>Confirm a reconciliation</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>InventoryDiscrepancies</td><td>GET</td><td><code>/api/v1/discrepancies</code></td><td>List inventory discrepancies</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>InventoryDiscrepancies</td><td>GET</td><td><code>/api/v1/discrepancies/{id}</code></td><td>Get an inventory discrepancy by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>InventoryDiscrepancies</td><td>POST</td><td><code>/api/v1/discrepancies/{id}/resolution</code></td><td>Resolve a discrepancy</td><td>id (path)</td><td><code>ResolveDiscrepancyResource</code>: note</td><td>200: recurso actualizado</td></tr>
+    <tr><td>DeliveryDestinations</td><td>GET</td><td><code>/api/v1/destinations</code></td><td>List delivery destinations</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>DeliveryDestinations</td><td>GET</td><td><code>/api/v1/destinations/{id}</code></td><td>Get a delivery destination by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Drivers</td><td>GET</td><td><code>/api/v1/drivers</code></td><td>List drivers</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>Drivers</td><td>GET</td><td><code>/api/v1/drivers/{id}</code></td><td>Get a driver by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>TransportVehicles</td><td>GET</td><td><code>/api/v1/vehicles</code></td><td>List transport vehicles</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>TransportVehicles</td><td>GET</td><td><code>/api/v1/vehicles/{id}</code></td><td>Get a transport vehicle by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>DispatchOrders</td><td>GET</td><td><code>/api/v1/dispatch-orders</code></td><td>List dispatch orders</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>DispatchOrders</td><td>GET</td><td><code>/api/v1/dispatch-orders/{id}</code></td><td>Get a dispatch order by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders</code></td><td>Schedule a dispatch</td><td>-</td><td><code>ScheduleDispatchOrderResource</code>: destinationId, scheduledDate, priority, items</td><td>201: recurso creado</td></tr>
+    <tr><td>DispatchOrders</td><td>PATCH</td><td><code>/api/v1/dispatch-orders/{id}/priority</code></td><td>Change the priority of a pending dispatch</td><td>id (path)</td><td><code>ChangeDispatchPriorityResource</code>: priority</td><td>200: recurso actualizado</td></tr>
+    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/vehicle-assignment</code></td><td>Assign a vehicle</td><td>id (path)</td><td><code>AssignVehicleResource</code>: vehicleId</td><td>200: recurso actualizado</td></tr>
+    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/cargo-validation</code></td><td>Validate the scanned pallets</td><td>id (path)</td><td><code>ValidateCargoResource</code>: scannedPallets</td><td>200: recurso actualizado</td></tr>
+    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/departure</code></td><td>Register the departure</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/cancellation</code></td><td>Cancel a pending dispatch</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>CargoAssignments</td><td>GET</td><td><code>/api/v1/cargo-assignments</code></td><td>List cargo assignments</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>CargoAssignments</td><td>GET</td><td><code>/api/v1/cargo-assignments/{id}</code></td><td>Get a cargo assignment by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>TraceabilityLogs</td><td>GET</td><td><code>/api/v1/logs</code></td><td>List traceability logs</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>TraceabilityLogs</td><td>GET</td><td><code>/api/v1/logs/{id}</code></td><td>Get a traceability log by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>TraceabilityLogs</td><td>POST</td><td><code>/api/v1/logs/{id}/delivery</code></td><td>Confirm the delivery</td><td>id (path)</td><td><code>ConfirmDeliveryResource</code>: receivedBy</td><td>200: recurso actualizado</td></tr>
+    <tr><td>TraceabilityLogs</td><td>POST</td><td><code>/api/v1/logs/{id}/rejection</code></td><td>Register a rejected delivery</td><td>id (path)</td><td><code>RejectDeliveryResource</code>: reason</td><td>200: recurso actualizado</td></tr>
+    <tr><td>RouteCheckpoints</td><td>GET</td><td><code>/api/v1/route-checkpoints</code></td><td>List route checkpoints</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>RouteCheckpoints</td><td>GET</td><td><code>/api/v1/route-checkpoints/{id}</code></td><td>Get a route checkpoint by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>DeliveryRecords</td><td>GET</td><td><code>/api/v1/delivery-records</code></td><td>List delivery records</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>DeliveryRecords</td><td>GET</td><td><code>/api/v1/delivery-records/{id}</code></td><td>Get a delivery record by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>DeviceModels</td><td>GET</td><td><code>/api/v1/models</code></td><td>List device models</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>DeviceModels</td><td>GET</td><td><code>/api/v1/models/{id}</code></td><td>Get a device model by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>TelemetryDevices</td><td>GET</td><td><code>/api/v1/devices</code></td><td>List telemetry devices</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>TelemetryDevices</td><td>GET</td><td><code>/api/v1/devices/{id}</code></td><td>Get a telemetry device by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>TelemetryDevices</td><td>POST</td><td><code>/api/v1/devices</code></td><td>Provision a device in a vehicle</td><td>-</td><td><code>ProvisionDeviceResource</code>: vehicleId, modelId, deviceCode</td><td>201: recurso creado</td></tr>
+    <tr><td>LocationStreams</td><td>GET</td><td><code>/api/v1/location-streams</code></td><td>List location streams</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>LocationStreams</td><td>GET</td><td><code>/api/v1/location-streams/{id}</code></td><td>Get a location stream by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>LocationStreams</td><td>POST</td><td><code>/api/v1/location-streams</code></td><td>Ingest a device reading</td><td>-</td><td><code>RecordReadingResource</code>: deviceId, latitude, longitude, speed, temperature, timestamp</td><td>201: recurso creado</td></tr>
+    <tr><td>DisconnectionPeriods</td><td>GET</td><td><code>/api/v1/disconnection-periods</code></td><td>List disconnection periods</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>DisconnectionPeriods</td><td>GET</td><td><code>/api/v1/disconnection-periods/{id}</code></td><td>Get a disconnection period by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>AlertRules</td><td>GET</td><td><code>/api/v1/rules</code></td><td>List alert rules</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>AlertRules</td><td>GET</td><td><code>/api/v1/rules/{id}</code></td><td>Get an alert rule by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>AlertRules</td><td>POST</td><td><code>/api/v1/rules</code></td><td>Create an alert rule</td><td>-</td><td><code>CreateAlertRuleResource</code>: conditionType, threshold, severity, description</td><td>201: recurso creado</td></tr>
+    <tr><td>AlertRules</td><td>PATCH</td><td><code>/api/v1/rules/{id}/active</code></td><td>Enable or disable a rule</td><td>id (path)</td><td><code>UpdateAlertRuleStatusResource</code>: active</td><td>200: recurso actualizado</td></tr>
+    <tr><td>IncidentRecords</td><td>GET</td><td><code>/api/v1/incidents</code></td><td>List incident records</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>IncidentRecords</td><td>GET</td><td><code>/api/v1/incidents/{id}</code></td><td>Get an incident record by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>IncidentRecords</td><td>POST</td><td><code>/api/v1/incidents/detections</code></td><td>Run the anomaly detection now</td><td>-</td><td>-</td><td>201: recurso creado</td></tr>
+    <tr><td>IncidentRecords</td><td>POST</td><td><code>/api/v1/incidents/{id}/acknowledgement</code></td><td>Acknowledge an open incident</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>IncidentRecords</td><td>POST</td><td><code>/api/v1/incidents/{id}/corrective-actions</code></td><td>Register a corrective action</td><td>id (path)</td><td><code>RegisterCorrectiveActionResource</code>: description</td><td>200: recurso actualizado</td></tr>
+    <tr><td>IncidentRecords</td><td>POST</td><td><code>/api/v1/incidents/{id}/resolution</code></td><td>Resolve an incident</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>CorrectiveActions</td><td>GET</td><td><code>/api/v1/corrective-actions</code></td><td>List corrective actions</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>CorrectiveActions</td><td>GET</td><td><code>/api/v1/corrective-actions/{id}</code></td><td>Get a corrective action by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Notifications</td><td>GET</td><td><code>/api/v1/notifications</code></td><td>List notifications</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>Notifications</td><td>GET</td><td><code>/api/v1/notifications/{id}</code></td><td>Get a notification by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Notifications</td><td>PATCH</td><td><code>/api/v1/notifications/{id}/read</code></td><td>Mark a notification as read</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>Indicators</td><td>GET</td><td><code>/api/v1/analytics/indicators</code></td><td>Compute the indicators of a period</td><td>periodStart (query), periodEnd (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>LogisticsReports</td><td>GET</td><td><code>/api/v1/logistics-reports</code></td><td>List logistics reports</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>LogisticsReports</td><td>GET</td><td><code>/api/v1/logistics-reports/{id}</code></td><td>Get a logistics report by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>LogisticsReports</td><td>POST</td><td><code>/api/v1/logistics-reports</code></td><td>Generate and save a logistics report</td><td>-</td><td><code>GenerateLogisticsReportResource</code>: periodStart, periodEnd</td><td>201: recurso creado</td></tr>
+    <tr><td>SubscriptionPlans</td><td>GET</td><td><code>/api/v1/subscription-plans</code></td><td>List subscription plans</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>SubscriptionPlans</td><td>GET</td><td><code>/api/v1/subscription-plans/{id}</code></td><td>Get a subscription plan by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Subscriptions</td><td>GET</td><td><code>/api/v1/subscriptions</code></td><td>List subscriptions</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>Subscriptions</td><td>GET</td><td><code>/api/v1/subscriptions/{id}</code></td><td>Get a subscription by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Subscriptions</td><td>POST</td><td><code>/api/v1/subscriptions</code></td><td>Buy a plan</td><td>-</td><td><code>SubscribeResource</code>: companyName, planCode, billingCycle, cardHolder, cardNumber</td><td>201: recurso creado</td></tr>
+    <tr><td>Subscriptions</td><td>POST</td><td><code>/api/v1/subscriptions/{id}/cancellation</code></td><td>Cancel a subscription</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>Payments</td><td>GET</td><td><code>/api/v1/payments</code></td><td>List payments</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>Payments</td><td>GET</td><td><code>/api/v1/payments/{id}</code></td><td>Get a payment by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>NewsletterSubscribers</td><td>GET</td><td><code>/api/v1/newsletter-subscribers</code></td><td>List newsletter subscribers</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>NewsletterSubscribers</td><td>GET</td><td><code>/api/v1/newsletter-subscribers/{id}</code></td><td>Get a newsletter subscriber by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>NewsletterSubscribers</td><td>POST</td><td><code>/api/v1/newsletter-subscribers</code></td><td>Public form: newsletter</td><td>-</td><td><code>NewsletterSubscriptionResource</code>: email</td><td>201: recurso creado</td></tr>
+    <tr><td>ContactRequests</td><td>GET</td><td><code>/api/v1/contact-requests</code></td><td>List contact requests</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>ContactRequests</td><td>GET</td><td><code>/api/v1/contact-requests/{id}</code></td><td>Get a contact request by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>ContactRequests</td><td>POST</td><td><code>/api/v1/contact-requests</code></td><td>Public form: contact request</td><td>-</td><td><code>SubmitContactRequestResource</code>: fullName, email, company, message</td><td>201: recurso creado</td></tr>
+  </tbody>
+</table>
+
+<p align="justify">
+A continuación se presentan capturas de la interacción con la documentación desplegada utilizando datos de muestra. Primero se registró un usuario con el rol <em>Logistics Manager</em> mediante <code>sign-up</code>, que respondió <strong>201</strong>; luego se inició sesión con <code>sign-in</code>, que respondió <strong>200</strong> con el token JWT (omitido en la captura). Con el token autorizado, se creó una regla de alerta de temperatura con <code>POST /api/v1/rules</code> (<strong>201</strong>) y se consultó la lista de reglas con <code>GET /api/v1/rules</code> (<strong>200</strong>).
+</p>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/swagger-home.png" alt="Swagger UI BevTrace" width="90%">
+  <p><em>Figura: Documentación OpenAPI de los Web Services de BevTrace desplegada en Railway</em></p>
+</div>
+
+<p><strong>Ejemplo de request (sign-up):</strong></p>
+
+```json
+{
+  "roleId": 2,
+  "name": "Logistics Demo",
+  "email": "logistics@bevtrace.com",
+  "phone": "999999999",
+  "password": "********"
+}
+```
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/swagger-sign-up.png" alt="Sign-up response" width="90%">
+  <p><em>Figura: Respuesta 201 del endpoint POST /api/v1/authentication/sign-up</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/swagger-sign-in.png" alt="Sign-in response" width="90%">
+  <p><em>Figura: Respuesta 200 del endpoint POST /api/v1/authentication/sign-in con el token omitido</em></p>
+</div>
+
+<p><strong>Ejemplo de request (crear regla de alerta):</strong></p>
+
+```json
+{
+  "conditionType": "TEMPERATURE_MAX",
+  "threshold": 8,
+  "severity": "HIGH",
+  "description": "Temperatura de carga mayor a 8 C"
+}
+```
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/swagger-post-rules.png" alt="Create alert rule" width="90%">
+  <p><em>Figura: Respuesta 201 del endpoint POST /api/v1/rules</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/swagger-get-rules.png" alt="List alert rules" width="90%">
+  <p><em>Figura: Respuesta 200 del endpoint GET /api/v1/rules con la regla creada</em></p>
+</div>
+
+<p><strong>Commits relacionados con documentación en este sprint:</strong></p>
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead><tr><th>Commit Id</th><th>Commit Message</th><th>Committed on (Date)</th></tr></thead>
+  <tbody>
+    <tr><td>2543fdc</td><td>docs(telemetry): add database diagram</td><td>09/11/2026</td></tr>
+    <tr><td>4d706a0</td><td>docs(traceability): add database diagram</td><td>09/11/2026</td></tr>
+    <tr><td>90043c3</td><td>docs(telemetry): add backend class diagram</td><td>09/11/2026</td></tr>
+    <tr><td>d3a8160</td><td>docs(traceability): add backend class diagram</td><td>09/11/2026</td></tr>
+    <tr><td>7451962</td><td>docs: add architecture, api and context map documentation</td><td>08/11/2026</td></tr>
+    <tr><td>0eb1c28</td><td>docs(analytics): add backend and database diagrams</td><td>08/11/2026</td></tr>
+    <tr><td>5680a85</td><td>docs(dispatch): add backend and database diagrams</td><td>08/11/2026</td></tr>
+    <tr><td>440da7d</td><td>docs(iam): add backend and database diagrams</td><td>08/11/2026</td></tr>
+    <tr><td>c70a42f</td><td>docs(incident): add backend and database diagrams</td><td>06/11/2026</td></tr>
+    <tr><td>c585d70</td><td>docs(subscription): add backend and database diagrams</td><td>04/11/2026</td></tr>
+    <tr><td>47eabfd</td><td>docs(inventory): add backend and database diagrams</td><td>04/11/2026</td></tr>
+    <tr><td>57a02e9</td><td>docs(shared): add backend diagram</td><td>04/11/2026</td></tr>
+    <tr><td>e0b3f8c</td><td>docs: add project readme</td><td>04/11/2026</td></tr>
+  </tbody>
+</table>
+
