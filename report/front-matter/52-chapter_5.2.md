@@ -965,3 +965,589 @@ El seguimiento de las tareas, su estimación y el aporte individual de cada inte
 [java]: https://google.github.io/styleguide/javaguide.html "Google Java Style Guide"
 [spring]: https://docs.spring.io/spring-boot/documentation.html "Spring Boot Documentation"
 [gherkin]: https://cucumber.io/docs/gherkin/reference/ "Gherkin Reference"
+
+### 5.2.3. Sprint 3
+
+<p align="justify">
+Durante el Sprint 3, el equipo CodeCraft se enfocó en la implementación de la primera versión de los <strong>Web Services</strong> de BevTrace, construidos como una RESTful https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 con <strong>Java 21</strong>, <strong>Spring Boot 4</strong>, <strong>Spring Data JPA</strong>, <strong>Spring Security (JWT)</strong> y <strong>MySQL</strong>, documentada con <strong>Openhttps://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1</strong>. Este sprint reemplazó la Mock https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 utilizada en el Sprint 2 por un backend real que traslada las reglas de negocio del navegador a comandos de dominio, manteniendo los mismos nombres de recursos que consume la Frontend Web Application.
+</p>
+
+<p align="justify">
+El backend se organizó en los bounded contexts definidos en el Capítulo IV: <strong>Shared</strong>, <strong>IAM</strong>, <strong>Inventory</strong>, <strong>Dispatch</strong>, <strong>Traceability</strong>, <strong>Telemetry</strong>, <strong>Incident</strong>, <strong>Analytics</strong> y <strong>Subscription</strong>, cada uno con las capas <code>domain</code>, <code>application</code>, <code>infrastructure</code> e <code>interfaces</code>. Además, la Frontend Web Application fue actualizada para consumir los Web Services con autenticación JWT, y los Web Services fueron desplegados en <strong>Railway</strong> junto con una base de datos MySQL.
+</p>
+
+<p><strong>Repositorio Web Services:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-BackEnd" target="_blank">https://github.com/Codecraft-16692/BevTrace-BackEnd</a></p>
+<p><strong>Repositorio Frontend:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-FrontEnd" target="_blank">https://github.com/Codecraft-16692/BevTrace-FrontEnd</a></p>
+<p><strong>Web Services desplegados (Railway):</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1</a></p>
+<p><strong>Documentación Openhttps://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 (Swagger UI):</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html</a></p>
+<p><strong>Frontend Web Application (Vercel):</strong> <a href="https://bev-trace-front-end.vercel.app" target="_blank">https://bev-trace-front-end.vercel.app</a></p>
+
+#### 5.2.3.1. Sprint Planning 3
+
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead>
+    <tr><th colspan="2" style="text-align:center;">Sprint Planning Sprint 3</th></tr>
+  </thead>
+  <tbody>
+    <tr><td colspan="2" style="text-align:center;"><strong>Sprint Planning Background</strong></td></tr>
+    <tr><td>Date</td><td>28/10/2026</td></tr>
+    <tr><td>Time</td><td>4:00 p.m.</td></tr>
+    <tr><td>Location</td><td>WhatsApp, Microsoft Teams y Class (UPC)</td></tr>
+    <tr><td>Prepared By</td><td>Castillo Yataco, Mauricio Sebastian</td></tr>
+    <tr>
+      <td>Attendees (to planning meeting)</td>
+      <td>
+        Castillo Yataco, Mauricio Sebastian<br>
+        Heredia Hoyos, Danitza Ivonne<br>
+        Ochoa Prado, Enrique Augusto
+      </td>
+    </tr>
+    <tr><td>Sprint 3 Period</td><td>28/10/2026 - 12/11/2026</td></tr>
+    <tr><td colspan="2" style="text-align:center;"><strong>Sprint 2 Review Summary</strong></td></tr>
+    <tr>
+      <td colspan="2" align="justify">
+        Se completó la primera versión de la Frontend Web Application en Angular, con los nueve contextos de la SPA navegables, soporte bilingüe ES/EN y despliegue en Vercel. Durante la revisión se confirmó que los flujos principales de inventario, despacho, trazabilidad, telemetría, incidencias y analítica podían recorrerse de extremo a extremo, aunque los datos provenían de una Mock https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 con <code>json-server</code> y las reglas de negocio se ejecutaban en el navegador.
+      </td>
+    </tr>
+    <tr><td colspan="2" style="text-align:center;"><strong>Sprint 2 Retrospective Summary</strong></td></tr>
+    <tr>
+      <td colspan="2" align="justify">
+        El equipo identificó que la Mock https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 no permitía validar reglas de negocio, autenticación real ni persistencia, por lo que se acordó implementar los Web Services en Spring Boot respetando los mismos nombres de recursos y campos que consume la aplicación Angular, para facilitar la migración. Como acciones de mejora se acordó mantener GitFlow con una rama <code>feature/*</code> por bounded context, documentar cada endpoint con Openhttps://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 y desplegar los Web Services en un proveedor cloud con base de datos administrada.
+      </td>
+    </tr>
+    <tr><td colspan="2" style="text-align:center;"><strong>Sprint Goal &amp; User Stories</strong></td></tr>
+    <tr>
+      <td colspan="2" align="justify">
+        <strong>Sprint 3 Goal (Outcome-Impact-Customer-Confirmation):</strong><br><br>
+        <em>Our focus is on providing the first version of the BevTrace RESTful Web Services and connecting the web application to them.</em><br><br>
+        <em>We believe it delivers reliable and persistent operational data to Warehouse Operators and Logistics Managers, by moving the business rules of inventory, dispatch, traceability, telemetry, incidents, analytics and subscriptions from the browser to secured domain services.</em><br><br>
+        <em>This will be confirmed when a user can sign up and sign in with a JWT token, the documented endpoints can be executed from the deployed Openhttps://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 documentation with sample data, and the deployed web application consumes the deployed Web Services instead of the Mock https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1.</em>
+      </td>
+    </tr>
+    <tr><td>Sprint 3 Velocity</td><td>34 Story Points</td></tr>
+    <tr>
+      <td>Sum of Story Points</td>
+      <td>34 SP (TS01: 2 · TS02: 2 · TS03: 3 · TS04: 3 · TS05: 3 · TS06: 8 · TS07: 2 · TS08: 2 · TS09: 2 · TS10: 2 · TS11: 3 · TS12: 2)</td>
+    </tr>
+  </tbody>
+</table>
+
+#### 5.2.3.2. Aspect Leaders and Collaborators
+
+<p align="justify">
+En esta sección se presenta la matriz <strong>Leadership-and-Collaboration (LACX)</strong> del Sprint 3. Los aspectos se derivan del Sprint 3 Goal:
+</p>
+
+<ul>
+  <li><strong>Web Services: Shared, IAM, Inventory, Dispatch, Incident, Analytics &amp; Subscription:</strong> clases base, seguridad JWT, endpoints y reglas de dominio de estos contextos.</li>
+  <li><strong>Web Services: Traceability &amp; Telemetry:</strong> endpoints de registros de trazabilidad, checkpoints, entregas, dispositivos IoT, lecturas y periodos de desconexión.</li>
+  <li><strong>Web Services Deployment:</strong> despliegue en Railway, base de datos MySQL, variables de entorno y correcciones de producción.</li>
+  <li><strong>Web Application Integration:</strong> migración de la aplicación Angular desde la Mock https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 hacia los Web Services.</li>
+</ul>
+
+<table border="1" cellpadding="4" cellspacing="0" align="center">
+  <thead>
+    <tr>
+      <th>Team Member (Last Name, First Name)</th>
+      <th>GitHub Username</th>
+      <th>Web Services: Shared, IAM, Inventory, Dispatch, Incident, Analytics &amp; Subscription</th>
+      <th>Web Services: Traceability &amp; Telemetry</th>
+      <th>Web Services Deployment</th>
+      <th>Web Application Integration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Castillo Yataco, Mauricio Sebastian</td><td>M4uricioCastillo</td><td>L</td><td>C</td><td>C</td><td>L</td></tr>
+    <tr><td>Heredia Hoyos, Danitza Ivonne</td><td>UDnTzh</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+    <tr><td>Ochoa Prado, Enrique Augusto</td><td>EnriqueO-18</td><td>C</td><td>L</td><td>L</td><td>C</td></tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>L</strong> = Líder del aspecto</li>
+  <li><strong>C</strong> = Colaborador en el aspecto</li>
+</ul>
+
+#### 5.2.3.3. Sprint Backlog 3
+
+<p align="justify">
+El Sprint Backlog 3 reúne las Technical Stories del Product Backlog (Capítulo III) asociadas a los Web Services de BevTrace, junto con las tareas de despliegue e integración. Las tareas son monitoreadas mediante <strong>Jira</strong>.
+</p>
+
+<!-- PENDIENTE: agregar captura del tablero del Sprint 3 en Jira (report/assets/Chapter5/sprint3/sprint3-board.png) y su URL pública -->
+<p><strong>Tablero del Sprint 3 (Jira):</strong> <a href="#" target="_blank">URL pendiente</a></p>
+
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead>
+    <tr><th colspan="8" style="text-align:center;">Sprint # 3</th></tr>
+    <tr><th colspan="2">User Story</th><th colspan="6">Work-Item / Task</th></tr>
+    <tr><th>Id</th><th>Title</th><th>Id</th><th>Title</th><th>Description</th><th>Estimation (Hours)</th><th>Assigned To</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr><td rowspan="1">TS09</td><td rowspan="1">Endpoint de autenticación de usuarios</td><td>T301</td><td>Implementar sign-in con JWT</td><td>Endpoint <code>POST /api/v1/authentication/sign-in</code> que valida credenciales con BCrypt y retorna un token JWT.</td><td>3h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS10</td><td rowspan="1">Endpoint de registro de usuario</td><td>T302</td><td>Implementar sign-up con política de contraseñas</td><td>Endpoint <code>POST /api/v1/authentication/sign-up</code> que registra usuarios con un rol existente y aplica la política de contraseñas.</td><td>2h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS01</td><td rowspan="1">Endpoint de consulta de nivel de stock por lote</td><td>T303</td><td>Implementar endpoints de lotes, mermas y conciliación</td><td>Endpoints de <code>batches</code>, <code>waste-records</code>, <code>reconciliations</code> y <code>discrepancies</code> con sus comandos de dominio.</td><td>6h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS02</td><td rowspan="1">Endpoint de consulta de estado de despacho</td><td>T304</td><td>Implementar endpoints de órdenes de despacho</td><td>Endpoints de <code>dispatch-orders</code> con programación, prioridad, asignación de vehículo, validación de carga, salida y cancelación.</td><td>6h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS03</td><td rowspan="1">Webhook de notificación de despacho completado</td><td>T305</td><td>Implementar webhook de despacho completado</td><td>Notificar a sistemas externos cuando un despacho se completa.</td><td>3h</td><td>-</td><td>To Do</td></tr>
+    <tr><td rowspan="1">TS04</td><td rowspan="1">Endpoint de historial de trazabilidad de un lote</td><td>T306</td><td>Implementar endpoints de trazabilidad</td><td>Endpoints de <code>logs</code>, <code>route-checkpoints</code> y <code>delivery-records</code>, con confirmación y rechazo de entregas.</td><td>5h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS05</td><td rowspan="1">Endpoint de aprovisionamiento de dispositivo IoT</td><td>T307</td><td>Implementar aprovisionamiento de dispositivos</td><td>Endpoints de <code>devices</code> y <code>models</code> para aprovisionar dispositivos IoT en vehículos.</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS06</td><td rowspan="1">Servicio de ingesta de telemetría de sensores</td><td>T308</td><td>Implementar ingesta de lecturas y desconexiones</td><td>Endpoints de <code>location-streams</code> y <code>disconnection-periods</code>, con monitor de conectividad programado.</td><td>6h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS07</td><td rowspan="1">Endpoint de consulta de incidencias abiertas</td><td>T309</td><td>Implementar endpoints de incidencias y alertas</td><td>Endpoints de <code>incidents</code>, <code>rules</code>, <code>corrective-actions</code> y <code>notifications</code>.</td><td>5h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS08</td><td rowspan="1">Endpoint de exportación de indicadores operativos</td><td>T310</td><td>Implementar cálculo de indicadores y reportes</td><td>Endpoints <code>analytics/indicators</code> y <code>logistics-reports</code> con cálculo de OTIF, Fill Rate, ERI, rotación y mermas.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS11</td><td rowspan="1">Endpoint de creación de suscripción con pago</td><td>T311</td><td>Implementar suscripción con pago simulado</td><td>Endpoints de <code>subscriptions</code> y <code>subscription-plans</code> con validación de tarjeta simulada.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS12</td><td rowspan="1">Endpoint de consulta de pagos</td><td>T312</td><td>Implementar consulta de pagos</td><td>Endpoint de <code>payments</code> con el historial de pagos de la organización.</td><td>2h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="2">-</td><td rowspan="2">Despliegue de los Web Services</td><td>T313</td><td>Desplegar Web Services y MySQL en Railway</td><td>Configurar el servicio desde el repositorio, la base de datos MySQL, las variables de entorno, el dominio público y la carga de roles iniciales.</td><td>3h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td>T314</td><td>Corregir auditoría JPA en producción</td><td>Habilitar <code>@EnableJpaAuditing</code> para registrar <code>createdAt</code> y <code>updatedAt</code>, requisito de todos los comandos POST.</td><td>1h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td rowspan="2">-</td><td rowspan="2">Integración de la Web Application</td><td>T315</td><td>Migrar la aplicación Angular a los Web Services</td><td>Reemplazar la Mock API por los Web Services con autenticación JWT en todos los contextos.</td><td>6h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td>T316</td><td>Apuntar la aplicación desplegada a los Web Services</td><td>Actualizar la URL de producción de la API en <code>environment.ts</code> hacia el despliegue en Railway.</td><td>1h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+  </tbody>
+</table>
+
+#### 5.2.3.4. Development Evidence for Sprint Review
+
+<p align="justify">
+En el Sprint 3 se implementó la primera versión de los Web Services de BevTrace y se integró la Frontend Web Application con ellos. En el repositorio de Web Services se desarrolló cada bounded context en una rama <code>feature/*</code> integrada a <code>develop</code> mediante Pull Requests y luego a <code>main</code>. En el repositorio Frontend se reemplazó la Mock API por llamadas autenticadas a los Web Services. La siguiente tabla presenta los commits de implementación de cada repositorio durante el sprint, sin considerar los commits de merge.
+</p>
+
+<p><strong>Repositorio:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-BackEnd" target="_blank">Codecraft-16692/BevTrace-BackEnd</a> (129 commits)</p>
+
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead><tr><th>Repository</th><th>Branch</th><th>Commit Id</th><th>Commit Message</th><th>Commit Message Body</th><th>Committed on (Date)</th></tr></thead>
+  <tbody>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>fix/enable-jpa-auditing</td><td>32173e1</td><td>fix(shared): enable jpa auditing to populate created and updated timestamps</td><td>-</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>2543fdc</td><td>docs(telemetry): add database diagram</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>4d706a0</td><td>docs(traceability): add database diagram</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>90043c3</td><td>docs(telemetry): add backend class diagram</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>d3a8160</td><td>docs(traceability): add backend class diagram</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>d68a7a7</td><td>feat(telemetry): add disconnection periods controller</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>bef8485</td><td>feat(traceability): add delivery records controller</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>871fc93</td><td>feat(telemetry): add disconnection period resource and assembler</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>aa34ede</td><td>feat(traceability): add delivery record resource and assembler</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>1240127</td><td>feat(telemetry): add location streams controller</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>9dfce63</td><td>feat(traceability): add route checkpoints controller</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>414b944</td><td>feat(telemetry): add location stream resource and assembler</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>bfe7db5</td><td>feat(telemetry): add telemetry devices controller</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>b788c83</td><td>feat(traceability): add route checkpoint resource and assembler</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>261cef2</td><td>feat(telemetry): add telemetry device resources and assemblers</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>a709d41</td><td>feat(traceability): add traceability logs controller</td><td>-</td><td>09/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>e0e5c59</td><td>feat(telemetry): add device models controller</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>ff8b705</td><td>feat(traceability): add traceability log resources and assemblers</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>e33356e</td><td>feat(telemetry): add device model resource and assembler</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>691fcc4</td><td>feat(traceability): add traceability context facade for other bounded contexts</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>chore/project-docs-and-tests</td><td>7451962</td><td>docs: add architecture, api and context map documentation</td><td>Architecture notes, REST API reference, redundancy review, frontend migration guide and the bounded context map.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>chore/project-docs-and-tests</td><td>39d126f</td><td>test: add application context loads test</td><td>Boots the Spring application context against an in-memory H2 database.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/analytics</td><td>0eb1c28</td><td>docs(analytics): add backend and database diagrams</td><td>PlantUML class diagram of the analytics context and its database diagram.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>3ee4e18</td><td>feat(telemetry): add telemetry context facade for other bounded contexts</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/analytics</td><td>4b372ae</td><td>feat(analytics): add indicators and reports controllers</td><td>IndicatorsController and LogisticsReportsController with their resources and assemblers.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/analytics</td><td>6419a66</td><td>feat(analytics): add jpa adapter, report entity and kpi embeddable</td><td>LogisticsReportPersistenceEntity and KpiMetricEmbeddable with their repository and adapter.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/analytics</td><td>1bf6b06</td><td>feat(analytics): add report and indicator services</td><td>LogisticsReportCommandService, LogisticsReportQueryService and IndicatorQueryService. Includes the ACL outbound service that reads data from other contexts.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/analytics</td><td>056212e</td><td>feat(analytics): add report command, queries and kpi calculator</td><td>GenerateLogisticsReportCommand, report and indicator queries, the repository port and the KpiCalculator domain service.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/analytics</td><td>f9ecd00</td><td>feat(analytics): add logistics report aggregate and value objects</td><td>LogisticsReport aggregate and the value objects used by its KPIs.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>9404169</td><td>feat(traceability): add delivery record query service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>fa51ef1</td><td>feat(telemetry): add disconnection period query service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>6dded8a</td><td>feat(traceability): add route checkpoint query service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>b6364a5</td><td>feat(telemetry): add location stream query service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/dispatch</td><td>5680a85</td><td>docs(dispatch): add backend and database diagrams</td><td>PlantUML class diagram of the dispatch context and its database diagram.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/dispatch</td><td>d989a31</td><td>feat(dispatch): add rest controllers, resources and facade</td><td>Controllers for dispatch orders, cargo assignments, destinations, drivers and vehicles. Includes resources, assemblers and DispatchContextFacade.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/dispatch</td><td>482ec9f</td><td>feat(dispatch): add jpa entities, repositories and adapters</td><td>Persistence of the five dispatch aggregates with Spring Data JPA.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>9a05df3</td><td>feat(telemetry): add telemetry device query service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/dispatch</td><td>92824ba</td><td>feat(dispatch): add command service, query services and event handler</td><td>DispatchOrderCommandService, five query services and DeliveryConfirmedEventHandler.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/dispatch</td><td>bf00851</td><td>feat(dispatch): add dispatch commands, queries and cargo policy</td><td>Commands: ScheduleDispatchOrder, AssignVehicle, ValidateCargo, RegisterDeparture, CompleteDelivery, ChangeDispatchPriority and CancelDispatchOrder. Includes the repository ports and the CargoPolicy domain service.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/dispatch</td><td>d9a6612</td><td>feat(dispatch): add dispatch aggregates and domain events</td><td>Aggregates: DispatchOrder, CargoAssignment, DeliveryDestination, Driver and TransportVehicle.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/iam</td><td>440da7d</td><td>docs(iam): add backend and database diagrams</td><td>PlantUML class diagram of the iam context and its database diagram.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/iam</td><td>d584e1d</td><td>feat(iam): add auth, users and roles controllers</td><td>AuthenticationController, UsersController and RolesController with their resources and assemblers. Includes IamContextFacade for other contexts.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>46b9dd6</td><td>feat(traceability): add traceability log query service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/iam</td><td>ae9596c</td><td>feat(iam): add bcrypt hashing, jwt tokens and security pipeline</td><td>Includes WebSecurityConfiguration, the request authorization pipeline and UserDetailsServiceImpl.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/iam</td><td>67d20dd</td><td>feat(iam): add jpa entities, repositories and adapters</td><td>Persistence of users and roles with Spring Data JPA.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/iam</td><td>ce014a1</td><td>feat(iam): add user command service and query services</td><td>UserCommandService, UserQueryService and RoleQueryService. Includes the outbound ports used for password hashing and token generation.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>f6fb83b</td><td>feat(telemetry): add device model query service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/iam</td><td>105520d</td><td>feat(iam): add auth commands, queries and password policy</td><td>Commands: SignInCommand, SignUpCommand, AssignRoleCommand, ChangeUserStatusCommand. Includes the repository ports and the PasswordPolicy domain service.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/iam</td><td>8c7d62e</td><td>feat(iam): add User aggregate and Role entity</td><td>Domain model of the identity and access context.</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>c62442a</td><td>feat(traceability): add event handlers for dispatch departure and telemetry readings</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>c6fa17a</td><td>feat(telemetry): add connectivity monitor scheduler</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>e34c359</td><td>feat(traceability): add traceability log command service</td><td>-</td><td>08/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>155aba0</td><td>feat(telemetry): add location stream command service</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>6c3809b</td><td>feat(traceability): add delivery record repository adapter</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>2bfd7a6</td><td>feat(telemetry): add telemetry device command service</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>383ef3b</td><td>feat(traceability): add delivery record persistence entity and jpa repository</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>ab596e6</td><td>feat(telemetry): add disconnection period repository adapter</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>1e7f71c</td><td>feat(telemetry): add disconnection period persistence entity and jpa repository</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>cabcac2</td><td>feat(traceability): add route checkpoint repository adapter</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>5dbdd06</td><td>feat(telemetry): add location stream repository adapter</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>4afee87</td><td>feat(traceability): add route checkpoint persistence entity and jpa repository</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>a67c043</td><td>feat(telemetry): add location stream persistence entity and jpa repository</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>7c09b3f</td><td>feat(traceability): add traceability log repository adapter</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>8c047f0</td><td>feat(telemetry): add telemetry device repository adapter</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>1b2780c</td><td>feat(traceability): add traceability log persistence entity and jpa repository</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>ce3e66b</td><td>feat(telemetry): add telemetry device persistence entity and jpa repository</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>120f371</td><td>feat(traceability): add route planner domain service</td><td>-</td><td>07/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/incident</td><td>c70a42f</td><td>docs(incident): add backend and database diagrams</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>8c97430</td><td>feat(telemetry): add device model repository adapter</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>5942edf</td><td>feat(telemetry): add device model persistence entity and jpa repository</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/incident</td><td>27d992b</td><td>feat(incident): add rest controllers and resources</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>b22930f</td><td>feat(traceability): add delivery record repository port</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/incident</td><td>0405a77</td><td>feat(incident): add jpa entities, repositories and adapters</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>d2b117a</td><td>feat(telemetry): add disconnection period repository port</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>b12a71f</td><td>feat(traceability): add route checkpoint repository port</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/incident</td><td>d6d5273</td><td>feat(incident): add services, event handlers and anomaly scheduler</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>7fddc18</td><td>feat(telemetry): add location stream repository port</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/incident</td><td>8558f1c</td><td>feat(incident): add domain model, commands and queries</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>1f275be</td><td>feat(traceability): add traceability log repository port</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>3fe469b</td><td>feat(telemetry): add telemetry device repository port</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>d2b023e</td><td>feat(traceability): add delivery record queries</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>23e8a00</td><td>feat(telemetry): add device model repository port</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>58e2847</td><td>feat(traceability): add route checkpoint queries</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>3c7130a</td><td>feat(telemetry): add disconnection period queries</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>0a6c29f</td><td>feat(telemetry): add location stream queries</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>6756884</td><td>feat(traceability): add traceability log queries</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>0056121</td><td>feat(telemetry): add telemetry device queries</td><td>-</td><td>06/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>178e89a</td><td>feat(traceability): add confirm and reject delivery commands</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>bc240b8</td><td>feat(telemetry): add device model queries</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>a31b98d</td><td>feat(traceability): add update position command</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>59771ae</td><td>feat(telemetry): add detect disconnections command</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>4e0329d</td><td>feat(traceability): add start route command</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>92713cd</td><td>feat(telemetry): add record reading command</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>ef34634</td><td>feat(traceability): add delivery record aggregate</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>40cec44</td><td>feat(telemetry): add provision device command</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>86f0892</td><td>feat(traceability): add delivery confirmed domain event</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>d63c544</td><td>feat(telemetry): add disconnection period aggregate</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>d479e95</td><td>feat(telemetry): add location stream aggregate</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>d5e1a90</td><td>feat(traceability): add route checkpoint aggregate</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>f4f1866</td><td>feat(telemetry): add reading recorded domain event</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>6b35438</td><td>feat(traceability): add traceability log aggregate</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>12fff2e</td><td>feat(telemetry): add telemetry device aggregate</td><td>-</td><td>05/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>aed0989</td><td>feat(traceability): add delivery outcome value object</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>575720c</td><td>feat(telemetry): add device model aggregate</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>2206347</td><td>feat(traceability): add checkpoint status value object</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>8245010</td><td>feat(telemetry): add data status value object</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>c0d6393</td><td>feat(traceability): add log status value object</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>5a71caf</td><td>feat(telemetry): add connection status value object</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/subscription</td><td>c585d70</td><td>docs(subscription): add backend and database diagrams</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/subscription</td><td>09334a4</td><td>feat(subscription): add rest controllers and resources</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/subscription</td><td>b2efa47</td><td>feat(subscription): add jpa entities, repositories and adapters</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/subscription</td><td>e004484</td><td>feat(subscription): add command and query services</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/subscription</td><td>076eb20</td><td>feat(subscription): add domain model, commands and queries</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/inventory</td><td>47eabfd</td><td>docs(inventory): add backend and database diagrams</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/inventory</td><td>4a318b2</td><td>feat(inventory): add rest controllers, resources and acl facade</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/inventory</td><td>a34d8cb</td><td>feat(inventory): add jpa entities, repositories and adapters</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/inventory</td><td>7f7b34d</td><td>feat(inventory): add command and query services</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/inventory</td><td>a9e330c</td><td>feat(inventory): add domain model, commands and queries</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/shared</td><td>57a02e9</td><td>docs(shared): add backend diagram</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/shared</td><td>54df3b1</td><td>feat(shared): add global exception handler and response assemblers</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/shared</td><td>ed6d496</td><td>feat(shared): add openapi and i18n configuration</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/shared</td><td>a9f4d73</td><td>feat(shared): add auditable entity, naming strategy and filter specifications</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/shared</td><td>fa8b800</td><td>feat(shared): add result types and base aggregate root</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>main</td><td>e0b3f8c</td><td>docs: add project readme</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>main</td><td>cd62abb</td><td>feat: add spring boot application entry point</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>main</td><td>d24dc28</td><td>chore: add docker and docker compose setup</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>main</td><td>87770b9</td><td>chore: add application properties for dev and prod</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>main</td><td>c8145f4</td><td>chore: add maven build and gitignore</td><td>-</td><td>04/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>main</td><td>f72ad95</td><td>Delete server directory</td><td>-</td><td>04/11/2026</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Repositorio:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-FrontEnd" target="_blank">Codecraft-16692/BevTrace-FrontEnd</a> (20 commits)</p>
+
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead><tr><th>Repository</th><th>Branch</th><th>Commit Id</th><th>Commit Message</th><th>Commit Message Body</th><th>Committed on (Date)</th></tr></thead>
+  <tbody>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>ee2fbbc</td><td>chore: remove json-server mock</td><td>Delete the server folder, the api script and the json-server dependency. Update the README to run against the backend.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>c4d1b2f</td><td>feat(subscription): subscribe, cancel and public forms via the backend</td><td>Payment, card validation and declined-card handling are done by the server. Cancellation uses POST /subscriptions/{id}/cancellation.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>863f511</td><td>feat(analytics): generate reports on the backend</td><td>POST /logistics-reports computes the KPIs server-side.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>c9a27b0</td><td>feat(incident): run detection and incident actions on the backend</td><td>Detection uses POST /incidents/detections. Acknowledge, corrective action and resolution are commands. Notifications are created by the server.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>23f2c10</td><td>feat(telemetry): provision devices through the backend</td><td>The server validates duplicated codes and one device per vehicle.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>754da33</td><td>feat(traceability): confirm and reject deliveries through the backend</td><td>Route tracing now starts on departure on the server. Remove the client-side log, checkpoint and record creation.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>9d7008a</td><td>feat(dispatch): use dispatch order commands</td><td>Schedule, vehicle assignment, cargo validation, priority, departure and cancellation are single calls. Weight, pallets, stock and vehicle release are handled by the server.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>f3bd482</td><td>feat(inventory): use batch, waste and reconciliation commands</td><td>The backend enforces duplicate codes, stock deduction, discrepancies and notifications. Client-side stock updates are removed.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>0897ef9</td><td>feat(iam): authenticate against the backend with JWT</td><td>Sign-in and sign-up post to /authentication. The interceptor only touches API requests and signs out on 401. Role and active changes use PATCH /users/{id}/role|active.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>a7b7a5c</td><td>feat(shared): map backend error details and add command calls</td><td>Errors carrying an i18n key in details become BusinessError. BaseApiEndpoint gets command() for POST/PATCH sub-resources and tolerates forbidden relation lookups.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>1cb5216</td><td>chore(env): point development API to the Spring backend</td><td>Use http://localhost:8080/api/v1 instead of the json-server mock.</td><td>10/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>main</td><td>72e2a1b</td><td>chore(release): 1.1.0</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>6d0d78b</td><td>fix(traceability): close lifecycle hook comment in route map</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>c4d4e5b</td><td>fix(routing): redirect empty path to home before the authenticated layout</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>75be5b4</td><td>docs(i18n): update translations and README after removing simulations</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>d711826</td><td>feat(shared): add auto-refresh helper and refresh buttons</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>81e75bb</td><td>refactor(dispatch): remove simulated pallet scan buttons</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>4b3129d</td><td>refactor(traceability): remove simulated checkpoints and read position from API</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>0a7171b</td><td>refactor(telemetry): remove IoT simulator and make device panel read-only</td><td>-</td><td>28/10/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>fix/remove-simulations-and-plural-routes</td><td>10a9a79</td><td>refactor(routing): use plural resource paths under each bounded context</td><td>-</td><td>28/10/2026</td></tr>
+  </tbody>
+</table>
+
+#### 5.2.3.5. Execution Evidence for Sprint Review
+
+<p align="justify">
+Al cierre del Sprint 3, BevTrace cuenta con Web Services desplegados y documentados, y con una Frontend Web Application que consume dichos servicios mediante autenticación JWT. El usuario puede registrarse, iniciar sesión y operar los flujos de inventario, despacho, trazabilidad, telemetría, incidencias, analítica y suscripción con datos persistidos en MySQL.
+</p>
+
+<!-- PENDIENTE: agregar capturas de las vistas principales de la Web Application conectada a los Web Services y el enlace al video de este sprint -->
+<p><strong>Video de navegación del Sprint 3:</strong> <a href="#" target="_blank">URL pendiente</a></p>
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+<p align="justify">
+En este sprint se documentaron con <strong>OpenAPI</strong> (springdoc) los 93 endpoints de los Web Services de BevTrace, agrupados por recurso. La documentación se encuentra desplegada junto con los Web Services y permite ejecutar cada endpoint con datos de muestra desde Swagger UI. Los endpoints protegidos requieren un token JWT obtenido en <code>sign-in</code>, que se envía en la cabecera <code>Authorization: Bearer &lt;token&gt;</code> mediante el botón <strong>Authorize</strong>. Los endpoints de listado aceptan filtros con <code>?campo=valor</code>, ordenamiento con <code>_sort</code> y <code>_order</code>, y límite con <code>_limit</code>.
+</p>
+
+<p><strong>Documentación desplegada:</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html</a></p>
+<p><strong>Especificación OpenAPI (JSON):</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/v3/api-docs" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/v3/api-docs</a></p>
+<p><strong>Repositorio Web Services:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-BackEnd" target="_blank">https://github.com/Codecraft-16692/BevTrace-BackEnd</a></p>
+
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead><tr><th>Resource</th><th>HTTP Verb</th><th>Endpoint</th><th>Action</th><th>Parameters</th><th>Request Body</th><th>Response</th></tr></thead>
+  <tbody>
+    <tr><td>Authentication</td><td>POST</td><td><code>/api/v1/authentication/sign-up</code></td><td>Register a user</td><td>-</td><td><code>SignUpResource</code>: roleId, name, email, phone, password</td><td>201: usuario creado</td></tr>
+    <tr><td>Authentication</td><td>POST</td><td><code>/api/v1/authentication/sign-in</code></td><td>Sign in</td><td>-</td><td><code>SignInResource</code>: email, password</td><td>200: usuario autenticado con <code>roles</code> y <code>token</code> JWT</td></tr>
+    <tr><td>Users</td><td>GET</td><td><code>/api/v1/users</code></td><td>List users</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>Users</td><td>GET</td><td><code>/api/v1/users/{id}</code></td><td>Get a user by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Users</td><td>PATCH</td><td><code>/api/v1/users/{id}/role</code></td><td>Assign a role to a user</td><td>id (path)</td><td><code>UpdateUserRoleResource</code>: roleId</td><td>200: recurso actualizado</td></tr>
+    <tr><td>Users</td><td>PATCH</td><td><code>/api/v1/users/{id}/active</code></td><td>Enable or disable a user</td><td>id (path)</td><td><code>UpdateUserStatusResource</code>: active</td><td>200: recurso actualizado</td></tr>
+    <tr><td>Roles</td><td>GET</td><td><code>/api/v1/roles</code></td><td>List roles</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>Roles</td><td>GET</td><td><code>/api/v1/roles/{id}</code></td><td>Get a role by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Products</td><td>GET</td><td><code>/api/v1/products</code></td><td>List products</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>Products</td><td>GET</td><td><code>/api/v1/products/{id}</code></td><td>Get a product by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>WarehouseZones</td><td>GET</td><td><code>/api/v1/zones</code></td><td>List warehouse zones</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>WarehouseZones</td><td>GET</td><td><code>/api/v1/zones/{id}</code></td><td>Get a warehouse zone by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>ProductBatches</td><td>GET</td><td><code>/api/v1/batches</code></td><td>List product batches</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>ProductBatches</td><td>GET</td><td><code>/api/v1/batches/{id}</code></td><td>Get a product batch by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>ProductBatches</td><td>POST</td><td><code>/api/v1/batches</code></td><td>Register a batch announced by the plant</td><td>-</td><td><code>RegisterBatchResource</code>: productId, zoneId, batchNumber, initialQty, expirationDate</td><td>201: recurso creado</td></tr>
+    <tr><td>ProductBatches</td><td>POST</td><td><code>/api/v1/batches/receptions</code></td><td>Receive a batch by scanning its code</td><td>-</td><td><code>ReceiveBatchResource</code>: scanCode</td><td>201: recurso creado</td></tr>
+    <tr><td>WasteRecords</td><td>GET</td><td><code>/api/v1/waste-records</code></td><td>List waste records</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>WasteRecords</td><td>GET</td><td><code>/api/v1/waste-records/{id}</code></td><td>Get a waste record by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>WasteRecords</td><td>POST</td><td><code>/api/v1/waste-records</code></td><td>Report waste</td><td>-</td><td><code>ReportWasteResource</code>: batchId, quantity, reason</td><td>201: recurso creado</td></tr>
+    <tr><td>InventoryReconciliations</td><td>GET</td><td><code>/api/v1/reconciliations</code></td><td>List inventory reconciliations</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>InventoryReconciliations</td><td>GET</td><td><code>/api/v1/reconciliations/{id}</code></td><td>Get an inventory reconciliation by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>InventoryReconciliations</td><td>POST</td><td><code>/api/v1/reconciliations</code></td><td>Run a physical reconciliation</td><td>-</td><td><code>RunReconciliationResource</code>: counts</td><td>201: recurso creado</td></tr>
+    <tr><td>InventoryReconciliations</td><td>POST</td><td><code>/api/v1/reconciliations/{id}/confirmation</code></td><td>Confirm a reconciliation</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>InventoryDiscrepancies</td><td>GET</td><td><code>/api/v1/discrepancies</code></td><td>List inventory discrepancies</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>InventoryDiscrepancies</td><td>GET</td><td><code>/api/v1/discrepancies/{id}</code></td><td>Get an inventory discrepancy by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>InventoryDiscrepancies</td><td>POST</td><td><code>/api/v1/discrepancies/{id}/resolution</code></td><td>Resolve a discrepancy</td><td>id (path)</td><td><code>ResolveDiscrepancyResource</code>: note</td><td>200: recurso actualizado</td></tr>
+    <tr><td>DeliveryDestinations</td><td>GET</td><td><code>/api/v1/destinations</code></td><td>List delivery destinations</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>DeliveryDestinations</td><td>GET</td><td><code>/api/v1/destinations/{id}</code></td><td>Get a delivery destination by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Drivers</td><td>GET</td><td><code>/api/v1/drivers</code></td><td>List drivers</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>Drivers</td><td>GET</td><td><code>/api/v1/drivers/{id}</code></td><td>Get a driver by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>TransportVehicles</td><td>GET</td><td><code>/api/v1/vehicles</code></td><td>List transport vehicles</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>TransportVehicles</td><td>GET</td><td><code>/api/v1/vehicles/{id}</code></td><td>Get a transport vehicle by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>DispatchOrders</td><td>GET</td><td><code>/api/v1/dispatch-orders</code></td><td>List dispatch orders</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>DispatchOrders</td><td>GET</td><td><code>/api/v1/dispatch-orders/{id}</code></td><td>Get a dispatch order by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders</code></td><td>Schedule a dispatch</td><td>-</td><td><code>ScheduleDispatchOrderResource</code>: destinationId, scheduledDate, priority, items</td><td>201: recurso creado</td></tr>
+    <tr><td>DispatchOrders</td><td>PATCH</td><td><code>/api/v1/dispatch-orders/{id}/priority</code></td><td>Change the priority of a pending dispatch</td><td>id (path)</td><td><code>ChangeDispatchPriorityResource</code>: priority</td><td>200: recurso actualizado</td></tr>
+    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/vehicle-assignment</code></td><td>Assign a vehicle</td><td>id (path)</td><td><code>AssignVehicleResource</code>: vehicleId</td><td>200: recurso actualizado</td></tr>
+    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/cargo-validation</code></td><td>Validate the scanned pallets</td><td>id (path)</td><td><code>ValidateCargoResource</code>: scannedPallets</td><td>200: recurso actualizado</td></tr>
+    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/departure</code></td><td>Register the departure</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/cancellation</code></td><td>Cancel a pending dispatch</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>CargoAssignments</td><td>GET</td><td><code>/api/v1/cargo-assignments</code></td><td>List cargo assignments</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>CargoAssignments</td><td>GET</td><td><code>/api/v1/cargo-assignments/{id}</code></td><td>Get a cargo assignment by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>TraceabilityLogs</td><td>GET</td><td><code>/api/v1/logs</code></td><td>List traceability logs</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>TraceabilityLogs</td><td>GET</td><td><code>/api/v1/logs/{id}</code></td><td>Get a traceability log by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>TraceabilityLogs</td><td>POST</td><td><code>/api/v1/logs/{id}/delivery</code></td><td>Confirm the delivery</td><td>id (path)</td><td><code>ConfirmDeliveryResource</code>: receivedBy</td><td>200: recurso actualizado</td></tr>
+    <tr><td>TraceabilityLogs</td><td>POST</td><td><code>/api/v1/logs/{id}/rejection</code></td><td>Register a rejected delivery</td><td>id (path)</td><td><code>RejectDeliveryResource</code>: reason</td><td>200: recurso actualizado</td></tr>
+    <tr><td>RouteCheckpoints</td><td>GET</td><td><code>/api/v1/route-checkpoints</code></td><td>List route checkpoints</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>RouteCheckpoints</td><td>GET</td><td><code>/api/v1/route-checkpoints/{id}</code></td><td>Get a route checkpoint by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>DeliveryRecords</td><td>GET</td><td><code>/api/v1/delivery-records</code></td><td>List delivery records</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>DeliveryRecords</td><td>GET</td><td><code>/api/v1/delivery-records/{id}</code></td><td>Get a delivery record by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>DeviceModels</td><td>GET</td><td><code>/api/v1/models</code></td><td>List device models</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>DeviceModels</td><td>GET</td><td><code>/api/v1/models/{id}</code></td><td>Get a device model by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>TelemetryDevices</td><td>GET</td><td><code>/api/v1/devices</code></td><td>List telemetry devices</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>TelemetryDevices</td><td>GET</td><td><code>/api/v1/devices/{id}</code></td><td>Get a telemetry device by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>TelemetryDevices</td><td>POST</td><td><code>/api/v1/devices</code></td><td>Provision a device in a vehicle</td><td>-</td><td><code>ProvisionDeviceResource</code>: vehicleId, modelId, deviceCode</td><td>201: recurso creado</td></tr>
+    <tr><td>LocationStreams</td><td>GET</td><td><code>/api/v1/location-streams</code></td><td>List location streams</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>LocationStreams</td><td>GET</td><td><code>/api/v1/location-streams/{id}</code></td><td>Get a location stream by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>LocationStreams</td><td>POST</td><td><code>/api/v1/location-streams</code></td><td>Ingest a device reading</td><td>-</td><td><code>RecordReadingResource</code>: deviceId, latitude, longitude, speed, temperature, timestamp</td><td>201: recurso creado</td></tr>
+    <tr><td>DisconnectionPeriods</td><td>GET</td><td><code>/api/v1/disconnection-periods</code></td><td>List disconnection periods</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>DisconnectionPeriods</td><td>GET</td><td><code>/api/v1/disconnection-periods/{id}</code></td><td>Get a disconnection period by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>AlertRules</td><td>GET</td><td><code>/api/v1/rules</code></td><td>List alert rules</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>AlertRules</td><td>GET</td><td><code>/api/v1/rules/{id}</code></td><td>Get an alert rule by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>AlertRules</td><td>POST</td><td><code>/api/v1/rules</code></td><td>Create an alert rule</td><td>-</td><td><code>CreateAlertRuleResource</code>: conditionType, threshold, severity, description</td><td>201: recurso creado</td></tr>
+    <tr><td>AlertRules</td><td>PATCH</td><td><code>/api/v1/rules/{id}/active</code></td><td>Enable or disable a rule</td><td>id (path)</td><td><code>UpdateAlertRuleStatusResource</code>: active</td><td>200: recurso actualizado</td></tr>
+    <tr><td>IncidentRecords</td><td>GET</td><td><code>/api/v1/incidents</code></td><td>List incident records</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>IncidentRecords</td><td>GET</td><td><code>/api/v1/incidents/{id}</code></td><td>Get an incident record by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>IncidentRecords</td><td>POST</td><td><code>/api/v1/incidents/detections</code></td><td>Run the anomaly detection now</td><td>-</td><td>-</td><td>201: recurso creado</td></tr>
+    <tr><td>IncidentRecords</td><td>POST</td><td><code>/api/v1/incidents/{id}/acknowledgement</code></td><td>Acknowledge an open incident</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>IncidentRecords</td><td>POST</td><td><code>/api/v1/incidents/{id}/corrective-actions</code></td><td>Register a corrective action</td><td>id (path)</td><td><code>RegisterCorrectiveActionResource</code>: description</td><td>200: recurso actualizado</td></tr>
+    <tr><td>IncidentRecords</td><td>POST</td><td><code>/api/v1/incidents/{id}/resolution</code></td><td>Resolve an incident</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>CorrectiveActions</td><td>GET</td><td><code>/api/v1/corrective-actions</code></td><td>List corrective actions</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>CorrectiveActions</td><td>GET</td><td><code>/api/v1/corrective-actions/{id}</code></td><td>Get a corrective action by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Notifications</td><td>GET</td><td><code>/api/v1/notifications</code></td><td>List notifications</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>Notifications</td><td>GET</td><td><code>/api/v1/notifications/{id}</code></td><td>Get a notification by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Notifications</td><td>PATCH</td><td><code>/api/v1/notifications/{id}/read</code></td><td>Mark a notification as read</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>Indicators</td><td>GET</td><td><code>/api/v1/analytics/indicators</code></td><td>Compute the indicators of a period</td><td>periodStart (query), periodEnd (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>LogisticsReports</td><td>GET</td><td><code>/api/v1/logistics-reports</code></td><td>List logistics reports</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>LogisticsReports</td><td>GET</td><td><code>/api/v1/logistics-reports/{id}</code></td><td>Get a logistics report by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>LogisticsReports</td><td>POST</td><td><code>/api/v1/logistics-reports</code></td><td>Generate and save a logistics report</td><td>-</td><td><code>GenerateLogisticsReportResource</code>: periodStart, periodEnd</td><td>201: recurso creado</td></tr>
+    <tr><td>SubscriptionPlans</td><td>GET</td><td><code>/api/v1/subscription-plans</code></td><td>List subscription plans</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>SubscriptionPlans</td><td>GET</td><td><code>/api/v1/subscription-plans/{id}</code></td><td>Get a subscription plan by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Subscriptions</td><td>GET</td><td><code>/api/v1/subscriptions</code></td><td>List subscriptions</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>Subscriptions</td><td>GET</td><td><code>/api/v1/subscriptions/{id}</code></td><td>Get a subscription by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Subscriptions</td><td>POST</td><td><code>/api/v1/subscriptions</code></td><td>Buy a plan</td><td>-</td><td><code>SubscribeResource</code>: companyName, planCode, billingCycle, cardHolder, cardNumber</td><td>201: recurso creado</td></tr>
+    <tr><td>Subscriptions</td><td>POST</td><td><code>/api/v1/subscriptions/{id}/cancellation</code></td><td>Cancel a subscription</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>Payments</td><td>GET</td><td><code>/api/v1/payments</code></td><td>List payments</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>Payments</td><td>GET</td><td><code>/api/v1/payments/{id}</code></td><td>Get a payment by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>NewsletterSubscribers</td><td>GET</td><td><code>/api/v1/newsletter-subscribers</code></td><td>List newsletter subscribers</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>NewsletterSubscribers</td><td>GET</td><td><code>/api/v1/newsletter-subscribers/{id}</code></td><td>Get a newsletter subscriber by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>NewsletterSubscribers</td><td>POST</td><td><code>/api/v1/newsletter-subscribers</code></td><td>Public form: newsletter</td><td>-</td><td><code>NewsletterSubscriptionResource</code>: email</td><td>201: recurso creado</td></tr>
+    <tr><td>ContactRequests</td><td>GET</td><td><code>/api/v1/contact-requests</code></td><td>List contact requests</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>ContactRequests</td><td>GET</td><td><code>/api/v1/contact-requests/{id}</code></td><td>Get a contact request by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>ContactRequests</td><td>POST</td><td><code>/api/v1/contact-requests</code></td><td>Public form: contact request</td><td>-</td><td><code>SubmitContactRequestResource</code>: fullName, email, company, message</td><td>201: recurso creado</td></tr>
+  </tbody>
+</table>
+
+<p align="justify">
+A continuación se presentan capturas de la interacción con la documentación desplegada utilizando datos de muestra. Primero se registró un usuario con el rol <em>Logistics Manager</em> mediante <code>sign-up</code>, que respondió <strong>201</strong>; luego se inició sesión con <code>sign-in</code>, que respondió <strong>200</strong> con el token JWT (omitido en la captura). Con el token autorizado, se creó una regla de alerta de temperatura con <code>POST /api/v1/rules</code> (<strong>201</strong>) y se consultó la lista de reglas con <code>GET /api/v1/rules</code> (<strong>200</strong>).
+</p>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/swagger-home.png" alt="Swagger UI BevTrace" width="90%">
+  <p><em>Figura: Documentación OpenAPI de los Web Services de BevTrace desplegada en Railway</em></p>
+</div>
+
+<p><strong>Ejemplo de request (sign-up):</strong></p>
+
+```json
+{
+  "roleId": 2,
+  "name": "Logistics Demo",
+  "email": "logistics@bevtrace.com",
+  "phone": "999999999",
+  "password": "********"
+}
+```
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/swagger-sign-up.png" alt="Sign-up response" width="90%">
+  <p><em>Figura: Respuesta 201 del endpoint POST /api/v1/authentication/sign-up</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/swagger-sign-in.png" alt="Sign-in response" width="90%">
+  <p><em>Figura: Respuesta 200 del endpoint POST /api/v1/authentication/sign-in con el token omitido</em></p>
+</div>
+
+<p><strong>Ejemplo de request (crear regla de alerta):</strong></p>
+
+```json
+{
+  "conditionType": "TEMPERATURE_MAX",
+  "threshold": 8,
+  "severity": "HIGH",
+  "description": "Temperatura de carga mayor a 8 C"
+}
+```
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/swagger-post-rules.png" alt="Create alert rule" width="90%">
+  <p><em>Figura: Respuesta 201 del endpoint POST /api/v1/rules</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/swagger-get-rules.png" alt="List alert rules" width="90%">
+  <p><em>Figura: Respuesta 200 del endpoint GET /api/v1/rules con la regla creada</em></p>
+</div>
+
+<p><strong>Commits relacionados con documentación en este sprint:</strong></p>
+<table border="1" cellpadding="4" cellspacing="0">
+  <thead><tr><th>Commit Id</th><th>Commit Message</th><th>Committed on (Date)</th></tr></thead>
+  <tbody>
+    <tr><td>2543fdc</td><td>docs(telemetry): add database diagram</td><td>09/11/2026</td></tr>
+    <tr><td>4d706a0</td><td>docs(traceability): add database diagram</td><td>09/11/2026</td></tr>
+    <tr><td>90043c3</td><td>docs(telemetry): add backend class diagram</td><td>09/11/2026</td></tr>
+    <tr><td>d3a8160</td><td>docs(traceability): add backend class diagram</td><td>09/11/2026</td></tr>
+    <tr><td>7451962</td><td>docs: add architecture, api and context map documentation</td><td>08/11/2026</td></tr>
+    <tr><td>0eb1c28</td><td>docs(analytics): add backend and database diagrams</td><td>08/11/2026</td></tr>
+    <tr><td>5680a85</td><td>docs(dispatch): add backend and database diagrams</td><td>08/11/2026</td></tr>
+    <tr><td>440da7d</td><td>docs(iam): add backend and database diagrams</td><td>08/11/2026</td></tr>
+    <tr><td>c70a42f</td><td>docs(incident): add backend and database diagrams</td><td>06/11/2026</td></tr>
+    <tr><td>c585d70</td><td>docs(subscription): add backend and database diagrams</td><td>04/11/2026</td></tr>
+    <tr><td>47eabfd</td><td>docs(inventory): add backend and database diagrams</td><td>04/11/2026</td></tr>
+    <tr><td>57a02e9</td><td>docs(shared): add backend diagram</td><td>04/11/2026</td></tr>
+    <tr><td>e0b3f8c</td><td>docs: add project readme</td><td>04/11/2026</td></tr>
+  </tbody>
+</table>
+
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
+
+<p align="justify">
+Durante el Sprint 3 se desplegaron por primera vez los <strong>Web Services</strong> de BevTrace en <strong>Railway</strong>, junto con una base de datos <strong>MySQL</strong> administrada en el mismo proyecto. Además, se actualizó la Frontend Web Application desplegada en Vercel para que consuma los Web Services en lugar de la Mock API.
+</p>
+
+<p><strong>Despliegue de los Web Services (Railway):</strong></p>
+
+<ol>
+  <li>Se creó un nuevo proyecto en Railway con una cuenta del equipo y se conectó el repositorio <code>Codecraft-16692/BevTrace-BackEnd</code>, rama <code>main</code>, con despliegue automático en cada push.</li>
+  <li>Railway construyó la imagen a partir del <code>Dockerfile</code> multi-etapa del repositorio (Maven con JDK 21 para el build y JRE 21 para la ejecución).</li>
+  <li>Se agregó un servicio de base de datos <strong>MySQL</strong> al proyecto, con un volumen persistente.</li>
+  <li>Se configuraron las variables de entorno del servicio: <code>SPRING_PROFILES_ACTIVE=prod</code>, los datos de conexión <code>DATABASE_URL</code>, <code>DATABASE_PORT</code>, <code>DATABASE_NAME</code>, <code>DATABASE_USER</code> y <code>DATABASE_PASSWORD</code> (referenciados desde el servicio MySQL), <code>JWT_SECRET</code>, <code>SWAGGER_ENABLED</code>, <code>CORS_ORIGINS</code> (dominio de la aplicación en Vercel) y <code>SERVER_FORWARD_HEADERS_STRATEGY</code> para que la documentación OpenAPI reconozca el protocolo HTTPS del proxy.</li>
+  <li>Se generó un dominio público asociado al puerto 8080.</li>
+  <li>Se cargaron los roles iniciales (<code>ROLE_ADMIN</code>, <code>ROLE_LOGISTICS_MANAGER</code> y <code>ROLE_WAREHOUSE_OPERATOR</code>) en la tabla <code>roles</code>, necesarios para el registro de usuarios.</li>
+  <li>Al probar el registro se detectó que los comandos POST fallaban porque <code>created_at</code> quedaba nulo; se corrigió habilitando <code>@EnableJpaAuditing</code> en la aplicación y Railway redesplegó automáticamente la nueva versión.</li>
+  <li>Se verificó el despliegue con el endpoint de salud <code>/actuator/health</code> (estado <code>UP</code>) y ejecutando endpoints desde Swagger UI.</li>
+</ol>
+
+<p><strong>URL de los Web Services:</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1</a></p>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/railway-repo-connected.png" alt="Railway project" width="90%">
+  <p><em>Figura: Creación del servicio BevTrace-BackEnd en Railway desde el repositorio de GitHub</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/railway-variables.png" alt="Railway variables" width="90%">
+  <p><em>Figura: Variables de entorno del servicio (valores ocultos)</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/railway-networking.png" alt="Railway networking" width="90%">
+  <p><em>Figura: Dominio público del servicio y servicios MySQL y BevTrace-BackEnd en línea</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/railway-mysql-roles.png" alt="Railway MySQL roles" width="90%">
+  <p><em>Figura: Carga de los roles iniciales en la base de datos MySQL</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/railway-deployments.png" alt="Railway deployments" width="90%">
+  <p><em>Figura: Historial de despliegues de los Web Services en Railway</em></p>
+</div>
+
+<p><strong>Actualización de la Frontend Web Application (Vercel):</strong></p>
+
+<ol>
+  <li>Se migró la aplicación Angular para consumir los Web Services con autenticación JWT y se eliminó la Mock API (rama <code>feat/backend-integration</code>).</li>
+  <li>Se actualizó la URL de producción de la API en <code>src/environments/environment.ts</code> hacia el despliegue de Railway.</li>
+  <li>Vercel redesplegó automáticamente la aplicación desde la rama <code>main</code>.</li>
+</ol>
+
+<p><strong>URL de producción (Frontend):</strong> <a href="https://bev-trace-front-end.vercel.app" target="_blank">https://bev-trace-front-end.vercel.app</a></p>
+
+<!-- PENDIENTE: agregar captura del despliegue de la Frontend Web Application y de la Landing Page en Vercel -->
+
+#### 5.2.3.8. Team Collaboration Insights during Sprint
+
+<p align="justify">
+Durante el Sprint 3, el esfuerzo del equipo CodeCraft se centró en la implementación de los Web Services y su integración con la Frontend Web Application. En el repositorio de Web Services se aplicó GitFlow con una rama por bounded context (<code>feature/shared</code>, <code>feature/iam</code>, <code>feature/inventory</code>, <code>feature/dispatch</code>, <code>feature/traceability</code>, <code>feature/telemetry</code>, <code>feature/incident</code>, <code>feature/analytics</code> y <code>feature/subscription</code>), integradas hacia <code>develop</code> mediante Pull Requests y luego hacia <code>main</code>, además de la rama <code>fix/enable-jpa-auditing</code> para la corrección detectada en producción.
+</p>
+
+<p align="justify">
+<strong>Mauricio Castillo</strong> (<code>M4uricioCastillo</code>) implementó la base del proyecto Spring Boot y los contextos Shared, IAM, Inventory, Dispatch, Incident, Analytics y Subscription, la documentación técnica del repositorio y la migración de la aplicación Angular hacia los Web Services. <strong>Enrique Ochoa</strong> (<code>EnriqueO-18</code>) implementó los contextos Traceability y Telemetry con sus diagramas, desplegó los Web Services y la base de datos en Railway, corrigió la auditoría JPA requerida por los comandos POST y actualizó la URL de producción de la aplicación.
+</p>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/github-insights-backend.png" alt="Insights BackEnd" width="90%">
+  <p><em>Figura: Contribuciones al repositorio de Web Services (GitHub Insights)</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/github-insights-frontend.png" alt="Insights FrontEnd" width="90%">
+  <p><em>Figura: Contribuciones al repositorio Frontend (GitHub Insights)</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/github-insights-landing.png" alt="Insights Landing Page" width="90%">
+  <p><em>Figura: Contribuciones al repositorio de la Landing Page (GitHub Insights)</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/github-insights-report.png" alt="Insights Report" width="90%">
+  <p><em>Figura: Contribuciones al repositorio del informe (GitHub Insights)</em></p>
+</div>
