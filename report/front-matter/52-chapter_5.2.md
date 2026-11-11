@@ -1289,6 +1289,16 @@ Las siguientes capturas muestran el recorrido principal realizado sobre la Front
   <p><em>Figura: Panel principal con el resumen operativo calculado a partir de los Web Services</em></p>
 </div>
 
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-inventory-catalog.png" alt="inventory-catalog" width="90%">
+  <p><em>Figura: Catálogo de inventario con los lotes registrados e ingresados al almacén</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/webapp-waste-registry.png" alt="waste-registry" width="90%">
+  <p><em>Figura: Registro de una merma y actualización del stock del lote</em></p>
+</div>
+
 <!-- PENDIENTE: agregar el enlace al video de navegación de este sprint -->
 <p><strong>Video de navegación del Sprint 3:</strong> <a href="#" target="_blank">URL pendiente</a></p>
 
