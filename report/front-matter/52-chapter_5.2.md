@@ -893,7 +893,7 @@ Durante el Sprint 2 se desplegaron dos artefactos: la <strong>Frontend Web Appli
   <li>Se publicó la aplicación desde la rama <code>main</code> y se validó el acceso desde la URL pública.</li>
 </ol>
 
-<p><strong>URL de producción (Frontend):</strong> <a href="https://bev-trace-front-end.vercel.app" target="_blank">https://bev-trace-front-end.vercel.app</a></p>
+<p><strong>URL de producción del Frontend:</strong> <a href="https://bev-trace-front-end.vercel.app" target="_blank">https://bev-trace-front-end.vercel.app</a></p>
 <p><strong>URL de la Mock API:</strong> <a href="https://bevtrace-backend-production.up.railway.app/api/v1" target="_blank">https://bevtrace-backend-production.up.railway.app/api/v1</a></p>
 
 <div align="center">
@@ -969,7 +969,7 @@ El seguimiento de las tareas, su estimación y el aporte individual de cada inte
 ### 5.2.3. Sprint 3
 
 <p align="justify">
-Durante el Sprint 3, el equipo CodeCraft se enfocó en la implementación de la primera versión de los <strong>Web Services</strong> de BevTrace, construidos como una RESTful https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 con <strong>Java 21</strong>, <strong>Spring Boot 4</strong>, <strong>Spring Data JPA</strong>, <strong>Spring Security (JWT)</strong> y <strong>MySQL</strong>, documentada con <strong>Openhttps://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1</strong>. Este sprint reemplazó la Mock https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 utilizada en el Sprint 2 por un backend real que traslada las reglas de negocio del navegador a comandos de dominio, manteniendo los mismos nombres de recursos que consume la Frontend Web Application.
+Durante el Sprint 3, el equipo CodeCraft se enfocó en la implementación de la primera versión de los <strong>Web Services</strong> de BevTrace, construidos como una RESTful API con <strong>Java 21</strong>, <strong>Spring Boot 4</strong>, <strong>Spring Data JPA</strong>, <strong>Spring Security (JWT)</strong> y <strong>MySQL</strong>, documentada con <strong>OpenAPI</strong>. Este sprint reemplazó la Mock API utilizada en el Sprint 2 por un backend real que traslada las reglas de negocio del navegador a comandos de dominio, manteniendo los mismos nombres de recursos que consume la Frontend Web Application.
 </p>
 
 <p align="justify">
@@ -978,9 +978,9 @@ El backend se organizó en los bounded contexts definidos en el Capítulo IV: <s
 
 <p><strong>Repositorio Web Services:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-BackEnd" target="_blank">https://github.com/Codecraft-16692/BevTrace-BackEnd</a></p>
 <p><strong>Repositorio Frontend:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-FrontEnd" target="_blank">https://github.com/Codecraft-16692/BevTrace-FrontEnd</a></p>
-<p><strong>Web Services desplegados (Railway):</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1</a></p>
-<p><strong>Documentación Openhttps://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 (Swagger UI):</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html</a></p>
-<p><strong>Frontend Web Application (Vercel):</strong> <a href="https://bev-trace-front-end.vercel.app" target="_blank">https://bev-trace-front-end.vercel.app</a></p>
+<p><strong>Web Services desplegados en Railway:</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1</a></p>
+<p><strong>Documentación OpenAPI en Swagger UI:</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html</a></p>
+<p><strong>Frontend Web Application en Vercel:</strong> <a href="https://bev-trace-front-end.vercel.app" target="_blank">https://bev-trace-front-end.vercel.app</a></p>
 
 #### 5.2.3.1. Sprint Planning 3
 
@@ -1006,13 +1006,13 @@ El backend se organizó en los bounded contexts definidos en el Capítulo IV: <s
     <tr><td colspan="2" style="text-align:center;"><strong>Sprint 2 Review Summary</strong></td></tr>
     <tr>
       <td colspan="2" align="justify">
-        Se completó la primera versión de la Frontend Web Application en Angular, con los nueve contextos de la SPA navegables, soporte bilingüe ES/EN y despliegue en Vercel. Durante la revisión se confirmó que los flujos principales de inventario, despacho, trazabilidad, telemetría, incidencias y analítica podían recorrerse de extremo a extremo, aunque los datos provenían de una Mock https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 con <code>json-server</code> y las reglas de negocio se ejecutaban en el navegador.
+        Se completó la primera versión de la Frontend Web Application en Angular, con los nueve contextos de la SPA navegables, soporte bilingüe ES/EN y despliegue en Vercel. Durante la revisión se confirmó que los flujos principales de inventario, despacho, trazabilidad, telemetría, incidencias y analítica podían recorrerse de extremo a extremo, aunque los datos provenían de una Mock API con <code>json-server</code> y las reglas de negocio se ejecutaban en el navegador.
       </td>
     </tr>
     <tr><td colspan="2" style="text-align:center;"><strong>Sprint 2 Retrospective Summary</strong></td></tr>
     <tr>
       <td colspan="2" align="justify">
-        El equipo identificó que la Mock https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 no permitía validar reglas de negocio, autenticación real ni persistencia, por lo que se acordó implementar los Web Services en Spring Boot respetando los mismos nombres de recursos y campos que consume la aplicación Angular, para facilitar la migración. Como acciones de mejora se acordó mantener GitFlow con una rama <code>feature/*</code> por bounded context, documentar cada endpoint con Openhttps://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 y desplegar los Web Services en un proveedor cloud con base de datos administrada.
+        El equipo identificó que la Mock API no permitía validar reglas de negocio, autenticación real ni persistencia, por lo que se acordó implementar los Web Services en Spring Boot respetando los mismos nombres de recursos y campos que consume la aplicación Angular, para facilitar la migración. Como acciones de mejora se acordó mantener GitFlow con una rama <code>feature/*</code> por bounded context, documentar cada endpoint con OpenAPI y desplegar los Web Services en un proveedor cloud con base de datos administrada.
       </td>
     </tr>
     <tr><td colspan="2" style="text-align:center;"><strong>Sprint Goal &amp; User Stories</strong></td></tr>
@@ -1021,7 +1021,7 @@ El backend se organizó en los bounded contexts definidos en el Capítulo IV: <s
         <strong>Sprint 3 Goal (Outcome-Impact-Customer-Confirmation):</strong><br><br>
         <em>Our focus is on providing the first version of the BevTrace RESTful Web Services and connecting the web application to them.</em><br><br>
         <em>We believe it delivers reliable and persistent operational data to Warehouse Operators and Logistics Managers, by moving the business rules of inventory, dispatch, traceability, telemetry, incidents, analytics and subscriptions from the browser to secured domain services.</em><br><br>
-        <em>This will be confirmed when a user can sign up and sign in with a JWT token, the documented endpoints can be executed from the deployed Openhttps://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 documentation with sample data, and the deployed web application consumes the deployed Web Services instead of the Mock https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1.</em>
+        <em>This will be confirmed when a user can sign up and sign in with a JWT token, the documented endpoints can be executed from the deployed OpenAPI documentation with sample data, and the deployed web application consumes the deployed Web Services instead of the Mock API.</em>
       </td>
     </tr>
     <tr><td>Sprint 3 Velocity</td><td>34 Story Points</td></tr>
@@ -1042,7 +1042,7 @@ En esta sección se presenta la matriz <strong>Leadership-and-Collaboration (LAC
   <li><strong>Web Services: Shared, IAM, Inventory, Dispatch, Incident, Analytics &amp; Subscription:</strong> clases base, seguridad JWT, endpoints y reglas de dominio de estos contextos.</li>
   <li><strong>Web Services: Traceability &amp; Telemetry:</strong> endpoints de registros de trazabilidad, checkpoints, entregas, dispositivos IoT, lecturas y periodos de desconexión.</li>
   <li><strong>Web Services Deployment:</strong> despliegue en Railway, base de datos MySQL, variables de entorno y correcciones de producción.</li>
-  <li><strong>Web Application Integration:</strong> migración de la aplicación Angular desde la Mock https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1 hacia los Web Services.</li>
+  <li><strong>Web Application Integration:</strong> migración de la aplicación Angular desde la Mock API hacia los Web Services.</li>
 </ul>
 
 <table border="1" cellpadding="4" cellspacing="0" align="center">
@@ -1071,11 +1071,11 @@ En esta sección se presenta la matriz <strong>Leadership-and-Collaboration (LAC
 #### 5.2.3.3. Sprint Backlog 3
 
 <p align="justify">
-El Sprint Backlog 3 reúne las Technical Stories del Product Backlog (Capítulo III) asociadas a los Web Services de BevTrace, junto con las tareas de despliegue e integración. Las tareas son monitoreadas mediante <strong>Jira</strong>.
+El Sprint Backlog 3 reúne las Technical Stories del Product Backlog definido en el Capítulo III asociadas a los Web Services de BevTrace, junto con las tareas de despliegue e integración. Las tareas son monitoreadas mediante <strong>Jira</strong>.
 </p>
 
 <!-- PENDIENTE: agregar captura del tablero del Sprint 3 en Jira (report/assets/Chapter5/sprint3/sprint3-board.png) y su URL pública -->
-<p><strong>Tablero del Sprint 3 (Jira):</strong> <a href="#" target="_blank">URL pendiente</a></p>
+<p><strong>Tablero del Sprint 3 en Jira:</strong> <a href="#" target="_blank">URL pendiente</a></p>
 
 <table border="1" cellpadding="4" cellspacing="0">
   <thead>
@@ -1286,11 +1286,11 @@ Al cierre del Sprint 3, BevTrace cuenta con Web Services desplegados y documenta
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
 <p align="justify">
-En este sprint se documentaron con <strong>OpenAPI</strong> (springdoc) los 93 endpoints de los Web Services de BevTrace, agrupados por recurso. La documentación se encuentra desplegada junto con los Web Services y permite ejecutar cada endpoint con datos de muestra desde Swagger UI. Los endpoints protegidos requieren un token JWT obtenido en <code>sign-in</code>, que se envía en la cabecera <code>Authorization: Bearer &lt;token&gt;</code> mediante el botón <strong>Authorize</strong>. Los endpoints de listado aceptan filtros con <code>?campo=valor</code>, ordenamiento con <code>_sort</code> y <code>_order</code>, y límite con <code>_limit</code>.
+En este sprint se documentaron con <strong>OpenAPI</strong> mediante springdoc los 93 endpoints de los Web Services de BevTrace, agrupados por recurso. La documentación se encuentra desplegada junto con los Web Services y permite ejecutar cada endpoint con datos de muestra desde Swagger UI. Los endpoints protegidos requieren un token JWT obtenido en <code>sign-in</code>, que se envía en la cabecera <code>Authorization: Bearer &lt;token&gt;</code> mediante el botón <strong>Authorize</strong>. Los endpoints de listado aceptan filtros con <code>?campo=valor</code>, ordenamiento con <code>_sort</code> y <code>_order</code>, y límite con <code>_limit</code>.
 </p>
 
 <p><strong>Documentación desplegada:</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html</a></p>
-<p><strong>Especificación OpenAPI (JSON):</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/v3/api-docs" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/v3/api-docs</a></p>
+<p><strong>Especificación OpenAPI en formato JSON:</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/v3/api-docs" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/v3/api-docs</a></p>
 <p><strong>Repositorio Web Services:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-BackEnd" target="_blank">https://github.com/Codecraft-16692/BevTrace-BackEnd</a></p>
 
 <table border="1" cellpadding="4" cellspacing="0">
@@ -1401,7 +1401,7 @@ A continuación se presentan capturas de la interacción con la documentación d
   <p><em>Figura: Documentación OpenAPI de los Web Services de BevTrace desplegada en Railway</em></p>
 </div>
 
-<p><strong>Ejemplo de request (sign-up):</strong></p>
+<p><strong>Ejemplo de request para sign-up:</strong></p>
 
 ```json
 {
@@ -1423,7 +1423,7 @@ A continuación se presentan capturas de la interacción con la documentación d
   <p><em>Figura: Respuesta 200 del endpoint POST /api/v1/authentication/sign-in con el token omitido</em></p>
 </div>
 
-<p><strong>Ejemplo de request (crear regla de alerta):</strong></p>
+<p><strong>Ejemplo de request para crear una regla de alerta:</strong></p>
 
 ```json
 {
@@ -1470,13 +1470,13 @@ A continuación se presentan capturas de la interacción con la documentación d
 Durante el Sprint 3 se desplegaron por primera vez los <strong>Web Services</strong> de BevTrace en <strong>Railway</strong>, junto con una base de datos <strong>MySQL</strong> administrada en el mismo proyecto. Además, se actualizó la Frontend Web Application desplegada en Vercel para que consuma los Web Services en lugar de la Mock API.
 </p>
 
-<p><strong>Despliegue de los Web Services (Railway):</strong></p>
+<p><strong>Despliegue de los Web Services en Railway:</strong></p>
 
 <ol>
   <li>Se creó un nuevo proyecto en Railway con una cuenta del equipo y se conectó el repositorio <code>Codecraft-16692/BevTrace-BackEnd</code>, rama <code>main</code>, con despliegue automático en cada push.</li>
   <li>Railway construyó la imagen a partir del <code>Dockerfile</code> multi-etapa del repositorio (Maven con JDK 21 para el build y JRE 21 para la ejecución).</li>
   <li>Se agregó un servicio de base de datos <strong>MySQL</strong> al proyecto, con un volumen persistente.</li>
-  <li>Se configuraron las variables de entorno del servicio: <code>SPRING_PROFILES_ACTIVE=prod</code>, los datos de conexión <code>DATABASE_URL</code>, <code>DATABASE_PORT</code>, <code>DATABASE_NAME</code>, <code>DATABASE_USER</code> y <code>DATABASE_PASSWORD</code> (referenciados desde el servicio MySQL), <code>JWT_SECRET</code>, <code>SWAGGER_ENABLED</code>, <code>CORS_ORIGINS</code> (dominio de la aplicación en Vercel) y <code>SERVER_FORWARD_HEADERS_STRATEGY</code> para que la documentación OpenAPI reconozca el protocolo HTTPS del proxy.</li>
+  <li>Se configuraron las variables de entorno del servicio: <code>SPRING_PROFILES_ACTIVE=prod</code>, los datos de conexión <code>DATABASE_URL</code>, <code>DATABASE_PORT</code>, <code>DATABASE_NAME</code>, <code>DATABASE_USER</code> y <code>DATABASE_PASSWORD</code>, referenciados desde el servicio MySQL; <code>JWT_SECRET</code>; <code>SWAGGER_ENABLED</code>; <code>CORS_ORIGINS</code> con el dominio de la aplicación en Vercel; y <code>SERVER_FORWARD_HEADERS_STRATEGY</code> para que la documentación OpenAPI reconozca el protocolo HTTPS del proxy.</li>
   <li>Se generó un dominio público asociado al puerto 8080.</li>
   <li>Se cargaron los roles iniciales (<code>ROLE_ADMIN</code>, <code>ROLE_LOGISTICS_MANAGER</code> y <code>ROLE_WAREHOUSE_OPERATOR</code>) en la tabla <code>roles</code>, necesarios para el registro de usuarios.</li>
   <li>Al probar el registro se detectó que los comandos POST fallaban porque <code>created_at</code> quedaba nulo; se corrigió habilitando <code>@EnableJpaAuditing</code> en la aplicación y Railway redesplegó automáticamente la nueva versión.</li>
@@ -1492,7 +1492,7 @@ Durante el Sprint 3 se desplegaron por primera vez los <strong>Web Services</str
 
 <div align="center">
   <img src="../assets/Chapter5/sprint3/railway-variables.png" alt="Railway variables" width="90%">
-  <p><em>Figura: Variables de entorno del servicio (valores ocultos)</em></p>
+  <p><em>Figura: Variables de entorno configuradas en el servicio, con sus valores ocultos</em></p>
 </div>
 
 <div align="center">
@@ -1510,7 +1510,7 @@ Durante el Sprint 3 se desplegaron por primera vez los <strong>Web Services</str
   <p><em>Figura: Historial de despliegues de los Web Services en Railway</em></p>
 </div>
 
-<p><strong>Actualización de la Frontend Web Application (Vercel):</strong></p>
+<p><strong>Actualización de la Frontend Web Application en Vercel:</strong></p>
 
 <ol>
   <li>Se migró la aplicación Angular para consumir los Web Services con autenticación JWT y se eliminó la Mock API (rama <code>feat/backend-integration</code>).</li>
@@ -1518,7 +1518,7 @@ Durante el Sprint 3 se desplegaron por primera vez los <strong>Web Services</str
   <li>Vercel redesplegó automáticamente la aplicación desde la rama <code>main</code>.</li>
 </ol>
 
-<p><strong>URL de producción (Frontend):</strong> <a href="https://bev-trace-front-end.vercel.app" target="_blank">https://bev-trace-front-end.vercel.app</a></p>
+<p><strong>URL de producción del Frontend:</strong> <a href="https://bev-trace-front-end.vercel.app" target="_blank">https://bev-trace-front-end.vercel.app</a></p>
 
 <!-- PENDIENTE: agregar captura del despliegue de la Frontend Web Application y de la Landing Page en Vercel -->
 
@@ -1534,20 +1534,20 @@ Durante el Sprint 3, el esfuerzo del equipo CodeCraft se centró en la implement
 
 <div align="center">
   <img src="../assets/Chapter5/sprint3/github-insights-backend.png" alt="Insights BackEnd" width="90%">
-  <p><em>Figura: Contribuciones al repositorio de Web Services (GitHub Insights)</em></p>
+  <p><em>Figura: Contribuciones del equipo en el repositorio de Web Services según GitHub Insights</em></p>
 </div>
 
 <div align="center">
   <img src="../assets/Chapter5/sprint3/github-insights-frontend.png" alt="Insights FrontEnd" width="90%">
-  <p><em>Figura: Contribuciones al repositorio Frontend (GitHub Insights)</em></p>
+  <p><em>Figura: Contribuciones del equipo en el repositorio Frontend según GitHub Insights</em></p>
 </div>
 
 <div align="center">
   <img src="../assets/Chapter5/sprint3/github-insights-landing.png" alt="Insights Landing Page" width="90%">
-  <p><em>Figura: Contribuciones al repositorio de la Landing Page (GitHub Insights)</em></p>
+  <p><em>Figura: Contribuciones del equipo en el repositorio de la Landing Page según GitHub Insights</em></p>
 </div>
 
 <div align="center">
   <img src="../assets/Chapter5/sprint3/github-insights-report.png" alt="Insights Report" width="90%">
-  <p><em>Figura: Contribuciones al repositorio del informe (GitHub Insights)</em></p>
+  <p><em>Figura: Contribuciones del equipo en el repositorio del informe según GitHub Insights</em></p>
 </div>
