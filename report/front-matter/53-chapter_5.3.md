@@ -65,14 +65,14 @@ A continuación se presentan los registros detallados de las entrevistas semiest
  
 | N° de Entrevista | Datos del Entrevistado | Evidencia de Video |
 |:---:|:---|:---|
-| E1 | Lorenzo Soto, 28 años, Gerente de Logistica <br> <br> <img src="../assets/Chapter5/entrevistalorenzo.png" alt="Interview 1 Screenshot" width="100%"> | Duración de video: 16:02 <br> [Enlace de entrevista](https://drive.google.com/file/d/1yRKP967dpHZVmUgqLukwyNh1eWqOsskM/view?usp=sharing) |
+| E1 | Lorenzo Soto, 27 años, Gerente de Logistica <br> <br> <img src="../assets/Chapter5/entrevistalorenzo.png" alt="Interview 1 Screenshot" width="100%"> | Duración de video: 16:02 <br> [Enlace de entrevista](https://drive.google.com/file/d/1yRKP967dpHZVmUgqLukwyNh1eWqOsskM/view?usp=sharing) |
 | E2 | (pendiente) | Duración de video: (pendiente)<br>[Enlace de entrevista](#) |
  
 #### Entrevistados del segmento 2 (Operarios y Supervisores de Almacén)
  
 | N° de Entrevista | Datos del Entrevistado | Evidencia de Video |
 |:---:|:---|:---|
-| E1 | (pendiente) | Duración de video: (pendiente)<br>[Enlace de entrevista](#) |
+| E1 | Maria Lopez, 32 años <br> <br> <img src="../assets/Chapter5/EntrevistaOperador2.png" alt="Interview 2 Screenshot" width="100%"> | Duración de video: 18:04 <br>[Enlace de entrevista](https://drive.google.com/file/d/1Q89qkttgTcUbnvtcsZsHS4B1a7lGqxd9/view?usp=sharing) |
 | E2 | (pendiente) | Duración de video: (pendiente)<br>[Enlace de entrevista](#) |
 
 ### 5.3.3. Evaluaciones según heurísticas
