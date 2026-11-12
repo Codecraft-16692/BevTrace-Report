@@ -76,24 +76,25 @@ A continuación se presentan los registros detallados de las entrevistas semiest
 | E2 | (pendiente) | Duración de video: (pendiente)<br>[Enlace de entrevista](#) |
 
 ### 5.3.3. Evaluaciones según heurísticas
- 
+
 **UX Heuristics & Principles Evaluation**
- 
+
 Usability - Inclusive Design - Information Architecture
- 
+
 **CARRERA:** Ingeniería de Software
 **CURSO:** 1ASI0729 Desarrollo de Aplicaciones Open Source
 **NRC:** 16692
 **PROFESORES:** Angel Augusto Velásquez Nuñez
 **AUDITOR:** Mauricio Sebastian Castillo Yataco, Enrique Augusto Ochoa Prado (Equipo CodeCraft)
 **CLIENTE(S):** Jefes y Gerentes de Logística, Operarios y Supervisores de Almacén de empresas embotelladoras y distribuidoras
+
 **SITE o APP A EVALUAR:**
-BevTrace Web (Plataforma SaaS para la gestión logística, trazabilidad y monitoreo IoT de bebidas en envases PET)
- 
+BevTrace Web (Plataforma SaaS para la gestión logística, trazabilidad y monitoreo IoT de bebidas en envases PET) — https://bev-trace-front-end.vercel.app
+
 **TAREAS A EVALUAR:**
- 
+
 El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
- 
+
 1. Registro de usuario e inicio de sesión en la plataforma.
 2. Consulta del panel de control operativo y cambio de idioma de la interfaz.
 3. Recepción de un lote y registro de una merma de producto.
@@ -102,29 +103,90 @@ El alcance de esta evaluación incluye la revisión de la usabilidad de las sigu
 6. Gestión de una incidencia (reconocimiento, acción correctiva y resolución).
 7. Generación del reporte consolidado de indicadores logísticos (OTIF, Fill Rate, ERI, rotación y tasa de mermas).
 8. Suscripción a un plan con pago simulado y consulta del historial de facturación.
+
 No están incluidas en esta versión de la evaluación las siguientes tareas:
- 
-1. (completar, p. ej., integración con sistemas externos vía API/Webhooks).
-2. (completar, p. ej., exportación de indicadores en JSON/CSV).
-3. (completar).
+
+1. Integración con sistemas externos vía API/Webhooks (por ejemplo, SAP).
+2. Exportación de indicadores en formatos JSON/CSV.
+3. Configuración avanzada de reglas de alerta y administración de usuarios por rol.
+
 **ESCALA DE SEVERIDAD:**
- 
+
 Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
- 
+
 | Nivel | Descripción |
 |:---:|:---|
 | 1 | **Problema superficial:** Puede ser fácilmente superado por el usuario y ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
 | 2 | **Problema menor:** Puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja para resolverlo de cara al siguiente release. |
 | 3 | **Problema mayor:** Ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
 | 4 | **Problema muy grave:** Un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
- 
+
 **TABLA RESUMEN:**
- 
+
 | # | Problema | Escala de severidad | Heurística/Principio violada(o) |
 |:---:|:---|:---:|:---|
-| 1 | (pendiente) | (1-4) | (pendiente) |
-| 2 | (pendiente) | (1-4) | (pendiente) |
-| 3 | (pendiente) | (1-4) | (pendiente) |
-| 4 | (pendiente) | (1-4) | (pendiente) |
- 
+| 1 | La conciliación de inventario indica que existe una discrepancia, pero no señala en qué lote se encuentra | 3 | Usability: Ayudar a reconocer, diagnosticar y recuperarse de errores |
+| 2 | La pantalla de planes no indica cuál es el plan vigente del cliente y ofrece "Elegir plan" en todos | 3 | Usability: Visibilidad del estado del sistema |
+| 3 | El tiempo sin señal de un dispositivo IoT se muestra en minutos acumulados (p. ej., "11703 min") | 2 | Usability: Correspondencia entre el sistema y el mundo real |
+| 4 | Los estados de los checkpoints del mapa de ruta (alcanzado, pendiente, omitido) se distinguen solo por color | 2 | Inclusive Design: Proporciona experiencias comparables |
+| 5 | El historial de mermas identifica los lotes solo por código, sin el nombre del producto | 2 | Usability: Reconocer en lugar de recordar |
+
 **DESCRIPCIÓN DE PROBLEMAS:**
+
+#### PROBLEMA #1: La conciliación de inventario indica que existe una discrepancia, pero no señala en qué lote se encuentra
+
+* **Severidad:** 3
+* **Heurística violada:** Usabilidad - Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de los errores
+* **Problema:**
+  En la pantalla *Inventory reconciliation*, un aviso amarillo informa que "1 discrepancy needs to be resolved before confirming the reconciliation". Sin embargo, el aviso no indica qué lote presenta la diferencia ni en qué cantidad, y las filas de la tabla no se resaltan. El operario debe comparar manualmente cada fila entre el stock del sistema y el conteo físico para ubicar el error, lo que contradice el objetivo de evitar el conteo manual repetitivo y retrasa el cierre de la conciliación.
+* **Evidencia:** Figura "Inventory — Conciliación de inventario físico con el porcentaje de exactitud (ERI)", sección 5.2.2.5.
+* **Recomendación:**
+  Resaltar la fila con discrepancia (color más un ícono y la diferencia numérica, p. ej., "−12 u.") y hacer que el aviso enlace directamente al lote afectado ("Lote LT-2609-003: sistema 4,460 / contado 4,448"). Deshabilitar *Confirm* hasta que cada diferencia tenga un motivo registrado.
+
+---
+
+#### PROBLEMA #2: La pantalla de planes no indica cuál es el plan vigente del cliente y ofrece "Elegir plan" en todos
+
+* **Severidad:** 3
+* **Heurística violada:** Usabilidad - Visibilidad del estado del sistema
+* **Problema:**
+  La pantalla *Planes* muestra Essential, Professional y Enterprise con sus precios, pero no marca cuál es la suscripción activa del cliente (la evidencia del sprint la describe como "suscripción vigente"). Los botones "Elegir plan" aparecen habilitados incluso para el plan que el cliente ya tiene. El Jefe de Logística no puede confirmar su estado actual y podría iniciar un pago por un plan que ya posee o por uno inferior sin advertirlo.
+* **Evidencia:** Figura "Subscription — Planes de suscripción disponibles y suscripción vigente del cliente", sección 5.2.2.5.
+* **Recomendación:**
+  Añadir una etiqueta "Plan actual" con fecha de renovación en la tarjeta correspondiente, cambiar su botón a "Plan actual" (deshabilitado) y rotular los demás como "Mejorar a…" o "Cambiar a…", mostrando una confirmación con el resumen de cambio antes de pasar al checkout.
+
+---
+
+#### PROBLEMA #3: El tiempo sin señal de un dispositivo IoT se muestra en minutos acumulados
+
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Correspondencia entre el sistema y el mundo real
+* **Problema:**
+  En *Device connectivity*, el dispositivo IOT-1003 muestra "11703 min without signal". Esa cifra equivale a más de ocho días, pero el usuario debe hacer el cálculo mentalmente para interpretarla. Además, el aviso superior habla de dispositivos "sin señal por más de 30 minutos", lo que mezcla dos escalas de tiempo muy distintas en la misma pantalla y dificulta priorizar qué dispositivo atender primero.
+* **Evidencia:** Figura "Telemetry — Estado de conectividad de los dispositivos", sección 5.2.2.5.
+* **Recomendación:**
+  Formatear la duración en unidades legibles ("8 d 3 h sin señal"), ordenar la tabla por tiempo sin señal descendente y mostrar la fecha y hora absolutas de la última señal en una sola línea.
+
+---
+
+#### PROBLEMA #4: Los estados de los checkpoints del mapa de ruta se distinguen solo por color
+
+* **Severidad:** 2
+* **Heurística violada:** Inclusive Design - Proporciona experiencias comparables
+* **Problema:**
+  En *Active Route Traceability Map*, la leyenda diferencia los checkpoints "Reached", "Pending" y "Omitted" únicamente mediante puntos de color (verde, gris y rojo) y los puntos del mapa no tienen etiquetas de texto. Un usuario con daltonismo o baja visión no puede distinguir qué puntos fueron omitidos, lo cual es información crítica para el seguimiento de un despacho en ruta. Tampoco hay nombres de lugar que permitan relacionar cada punto con la ruta real.
+* **Evidencia:** Figura "Traceability — Seguimiento de un lote en tránsito, con checkpoints y cierre de la entrega", sección 5.2.2.5.
+* **Recomendación:**
+  Complementar el color con formas o íconos distintos (✓ alcanzado, ⏱ pendiente, ✕ omitido), agregar el nombre y la hora de cada checkpoint (visible al enfocar o en una lista lateral) y verificar un contraste mínimo de 3:1 entre los puntos y el fondo.
+
+---
+
+#### PROBLEMA #5: El historial de mermas identifica los lotes solo por código, sin el nombre del producto
+
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Reconocer en lugar de recordar
+* **Problema:**
+  La tabla *Waste history* y el selector del formulario "Register waste" muestran los lotes únicamente con códigos como "LT-2609-003". En otras pantallas (por ejemplo, *Batch entry*) el mismo lote sí aparece con su producto ("Bebida isotónica 750 ml"). El operario debe recordar de memoria qué producto corresponde a cada código o cambiar de pantalla para verificarlo, con riesgo de registrar la merma en el lote equivocado.
+* **Evidencia:** Figura "Inventory — Registro de mermas y alertas de discrepancia", sección 5.2.2.5.
+* **Recomendación:**
+  Mostrar código y producto juntos en la tabla y en el selector ("LT-2609-003 · Gaseosa Cola 1.5 L"), y permitir buscar el lote por nombre de producto además de por código.
