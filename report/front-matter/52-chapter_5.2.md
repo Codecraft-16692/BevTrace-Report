@@ -1569,7 +1569,35 @@ Durante el Sprint 3 se desplegaron por primera vez los <strong>Web Services</str
 
 <p><strong>URL de producción del Frontend:</strong> <a href="https://bev-trace-front-end.vercel.app" target="_blank">https://bev-trace-front-end.vercel.app</a></p>
 
-<!-- PENDIENTE: agregar captura del despliegue de la Frontend Web Application y de la Landing Page en Vercel -->
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/vercel-frontend-deployments.png" alt="Frontend Vercel deployments" width="90%">
+  <p><em>Figura: Historial de despliegues de la Frontend Web Application en Vercel desde el repositorio</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/frontend-live.png" alt="Frontend Web Application in production" width="90%">
+  <p><em>Figura: Frontend Web Application en producción consumiendo los Web Services desplegados</em></p>
+</div>
+
+<p><strong>Actualización de la Landing Page en Vercel:</strong></p>
+
+<ol>
+  <li>Se actualizaron los estilos de la Landing Page para alinearlos con la paleta de la Frontend Web Application y se agregaron los espacios para los videos del producto y del equipo.</li>
+  <li>Se incorporó la página de política de privacidad en español e inglés.</li>
+  <li>Vercel redesplegó automáticamente la Landing Page con cada cambio integrado en la rama <code>main</code>.</li>
+</ol>
+
+<p><strong>URL de producción de la Landing Page:</strong> <a href="https://bev-trace-landing-page.vercel.app" target="_blank">https://bev-trace-landing-page.vercel.app</a></p>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/vercel-landing-deployments.png" alt="Landing Page Vercel deployments" width="90%">
+  <p><em>Figura: Historial de despliegues de la Landing Page en Vercel desde el repositorio</em></p>
+</div>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/landing-live.png" alt="Landing Page in production" width="90%">
+  <p><em>Figura: Landing Page de BevTrace en producción</em></p>
+</div>
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
