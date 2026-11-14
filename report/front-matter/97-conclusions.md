@@ -19,3 +19,16 @@
 - Automatizar el pipeline de despliegue (CI/CD) del frontend y del backend, incluyendo pruebas automatizadas por bounded context, para reducir el esfuerzo manual de integración y asegurar la calidad en cada release.
 - Mantener el registro de control de versiones, el Student Outcome y las métricas de colaboración actualizados en cada entrega, acumulando las conclusiones por avance de forma continua.
 
+<!-- PENDIENTE: actualizar las conclusiones y recomendaciones con los resultados del Sprint 3 y de las entrevistas de validación, en relación con los Problem Statements, Assumptions, Hypothesis Statements y criterios de éxito del proceso Lean UX -->
+
+## Video About-the-Team.
+
+<!-- PENDIENTE: resumen de los aspectos más relevantes del video About-the-Team -->
+
+<!-- PENDIENTE: pauta de secuencias de contenido con el timing de inicio de cada sección (hh:mm:ss), incluyendo el testimonio ante cámara de cada integrante -->
+
+<!-- PENDIENTE: cuadro representativo del video (report/assets/about-the-team.png) -->
+
+<p><strong>Video en Microsoft Stream:</strong> <a href="#" target="_blank">URL pendiente</a></p>
+
+<p><strong>Video en YouTube, incrustado en la Landing Page:</strong> <a href="#" target="_blank">URL pendiente</a></p>
