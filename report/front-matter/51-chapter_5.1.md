@@ -18,7 +18,8 @@ En este segmento se presentara las herramientas utilizadas en el ciclo de vida d
 |Producto UI/UX|Figma|Diseño de interfaces (wireframes y mockups) y prototipos|[Figma][3]|
 |Landing Page|Visual Studio Code|Edición y desarrollo del código de las pantallas|[VS Code][4]|
 |Control de versiones|Git|Gestión de versiones del código de la Landing Page, FrontEnd y BackEnd|[Git][5]|
-|Despliegue|GitHub Pages|Publicación de la aplicación web|[GitHub Pages][6]|
+|Despliegue|Vercel|Publicación de la Landing Page y de la Frontend Web Application|[Vercel](https://vercel.com/)|
+|Despliegue|Railway|Publicación de los Web Services y de la base de datos MySQL|[Railway](https://railway.com/)|
 |Event Storming|Miro|Colaboración y modelado de los procesos involucrados en los Bounded Context|[Miro][7]|
 |Diagramas|PlantUML|Generación de diagramas UML requeridos de la aplicación|[PlantUML][8]|
 
