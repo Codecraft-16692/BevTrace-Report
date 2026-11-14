@@ -17,7 +17,7 @@ El video incluye además la opinión de un participante de las entrevistas de va
   <p><em>Figura: Video About-the-Product de BevTrace</em></p>
 </div>
 
-<p><strong>Video en Microsoft Stream:</strong> <a href="#" target="_blank">URL pendiente</a></p>
+<p><strong>Video en Microsoft Stream:</strong> <a href="https://1drv.ms/v/c/bb1bb7d896cb1613/IQA4sbwhWjBoTZlJTCaBuwGvAcmzon-Kw5gTJxnawwEdnbw?e=mRBVuo" target="_blank">https://1drv.ms/v/c/bb1bb7d896cb1613/IQA4sbwhWjBoTZlJTCaBuwGvAcmzon-Kw5gTJxnawwEdnbw?e=mRBVuo</a></p>
 
 <p><strong>Video en YouTube, incrustado en la Landing Page:</strong> <a href="https://youtu.be/_zAtXfpBqgs" target="_blank">https://youtu.be/_zAtXfpBqgs</a></p>
 
