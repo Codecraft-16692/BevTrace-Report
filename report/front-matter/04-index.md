@@ -11,7 +11,7 @@
 ## Capítulo I: Introducción
 - [1.1. Startup Profile](11-chapter_1.1.md)
   - [1.1.1. Descripción de la Startup](11-chapter_1.1.md#111-descripción-de-la-startup)
-  - [1.1.2. Perfiles de integrantes del equipo (CodeCraft)](11-chapter_1.1.md#112-perfiles-de-integrantes-del-equipo-codecraft)
+  - [1.1.2. Perfiles de integrantes del equipo](11-chapter_1.1.md#112-perfiles-de-integrantes-del-equipo)
 - [1.2. Solution Profile](12-chapter_1.2.md)
   - [1.2.1. Antecedentes y problemática](12-chapter_1.2.md#121-antecedentes-y-problemática)
   - [1.2.2. Lean UX Process](12-chapter_1.2.md#122-lean-ux-process)
@@ -38,7 +38,7 @@
     - [2.3.2.2. Segmento: Operarios y Supervisores de Almacén](23-chapter_2.3.md#2322-segmento-operarios-y-supervisores-de-almacén)
   - [2.3.3. User Journey Mapping](23-chapter_2.3.md#233-user-journey-mapping)
   - [2.3.4. Empathy Mapping](23-chapter_2.3.md#234-empathy-mapping)
-- [2.4. Big Picture Event Storm](24-chapter_2.4.md)
+- [2.4. Big Picture Event Storming](24-chapter_2.4.md)
 - [2.5. Ubiquitous Language](25-chapter_2.5.md)
 
 ---
@@ -75,9 +75,9 @@
   - [4.6.3. Software Architecture Container Diagrams](46-chapter_4.6.md#463-software-architecture-container-diagrams)
   - [4.6.4. Software Architecture Components Diagrams](46-chapter_4.6.md#464-software-architecture-components-diagrams)
 - [4.7. Software Object-Oriented Design](47-chapter_4.7.md)
-  - [4.7.1. Class Diagram](47-chapter_4.7.md#471-class-diagram)
+  - [4.7.1. Class Diagrams](47-chapter_4.7.md#471-class-diagrams)
 - [4.8. Database Design](48-chapter_4.8.md)
-  - [4.8.1. Database Diagram](48-chapter_4.8.md#481-database-diagram)
+  - [4.8.1. Database Diagrams](48-chapter_4.8.md#481-database-diagrams)
 
 ---
 
@@ -117,7 +117,7 @@
 
 ## Cierre
 - [Conclusiones](97-conclusions.md)
-  - [Recomendaciones](97-conclusions.md#recomendaciones)
+  - [Conclusiones y recomendaciones](97-conclusions.md#conclusiones-y-recomendaciones)
   - [Video About-the-Team](97-conclusions.md#video-about-the-team)
 - [Bibliografía](98-bibliographic_references.md)
 - [Anexos](99-annexes.md)
