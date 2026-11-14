@@ -8,7 +8,9 @@ El Video About-the-Product presenta BevTrace a los visitantes de la Landing Page
 A continuación, el video explica el modelo de negocio de BevTrace, basado en un esquema de suscripción accesible y escalable, con planes para negocios medianos y grandes. Luego muestra las principales características del producto con escenas de la plataforma: el registro y la actualización del stock por lote en el módulo de inventarios, la asignación de vehículos, rutas y choferes en la gestión de despachos con la autorización de cada salida, el monitoreo en tiempo real de la ubicación y el estado de los productos en ruta, y el panel de indicadores que alerta sobre anomalías. El video cierra destacando los beneficios de optimizar los tiempos de entrega y reducir las mermas no justificadas, e invita a los visitantes a probar la plataforma.
 </p>
 
-<!-- PENDIENTE: el enunciado pide incluir al menos un testimonio positivo de un usuario que participó en las entrevistas de validación -->
+<p align="justify">
+El video incluye además la opinión de un participante de las entrevistas de validación por cada segmento objetivo. Lorenzo Soto, Gerente de Logística, destaca que antes dependían de reportes manuales dispersos y descubrían las pérdidas demasiado tarde, y que con el panel de KPIs en tiempo real de BevTrace toman decisiones informadas y controlan las mermas de inmediato. María López, del segmento de Operarios y Supervisores de Almacén, señala que el sistema de lectura masiva y los escáneres facilitan el trabajo diario en el almacén, permitiendo despachar los camiones más rápido y eliminar el conteo manual repetitivo.
+</p>
 
 <div align="center">
   <img src="../assets/Chapter5/about-the-product.png" alt="Video About-the-Product" width="90%">
