@@ -1,4 +1,4 @@
-## 2.4. Big Picture Event Storm
+## 2.4. Big Picture Event Storming
 
 <p>
 Antes de definir funcionalidades, módulos o componentes técnicos para <strong>BevTrace</strong>,

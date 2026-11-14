@@ -17,7 +17,7 @@ Desarrollar una solución tecnológica SaaS robusta y escalable que permita a la
 
 Ser la plataforma logística líder en el sector de consumo masivo a nivel regional, estandarizando la trazabilidad inteligente y la digitalización de almacenes, convirtiendo el control de despachos en un proceso totalmente automatizado, transparente e impulsado por datos.
 
-### 1.1.2. Perfiles de integrantes del equipo (CodeCraft)
+### 1.1.2. Perfiles de integrantes del equipo
 <table border="1" width="100%">
   <colgroup>
     <col style="width:140px">
