@@ -72,7 +72,7 @@ A continuación se presentan los registros detallados de las entrevistas semiest
  
 | N° de Entrevista | Datos del Entrevistado | Evidencia de Video |
 |:---:|:---|:---|
-| E1 | Maria Lopez, 32 años <br> <br> <img src="../assets/Chapter5/EntrevistaOperador2.png" alt="Interview 2 Screenshot" width="100%"> | Duración de video: 18:04 <br>[Enlace de entrevista](https://drive.google.com/file/d/1Q89qkttgTcUbnvtcsZsHS4B1a7lGqxd9/view?usp=sharing) |
+| E1 | Maria Lopez, 32 años <br> <br> <img src="../assets/Chapter5/EntrevistaOperador2.png" alt="Interview 2 Screenshot" width="100%"> | Duración de video: 18:04 <br>[Enlace de entrevista](https://1drv.ms/v/c/bb1bb7d896cb1613/IQAhhWqtlsSVQ6owmpUTqNLPAVbU9gzV2gtHdNzNSaEMHDQ?e=4rCEQi) |
 | E2 | (pendiente) | Duración de video: (pendiente)<br>[Enlace de entrevista](#) |
 
 ### 5.3.3. Evaluaciones según heurísticas
