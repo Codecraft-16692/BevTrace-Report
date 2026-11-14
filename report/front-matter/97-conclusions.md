@@ -1,6 +1,6 @@
 # Conclusiones
 
-## Conclusiones.
+## Conclusiones y recomendaciones.
 
 - El proceso de needfinding permitió al equipo comprender la problemática real de la gestión logística en plantas embotelladoras de bebidas: mediante entrevistas a jefes y gerentes de logística y a operarios y supervisores de almacén, el análisis competitivo (SAP EWM, WebFleet y Verial) y la técnica de Event Storming, se evidenció que el registro manual de lotes y mermas, la falta de visibilidad del despacho en ruta y la detección tardía de incidencias generan pérdidas de producto, discrepancias de inventario y demoras en la toma de decisiones.
 - La aplicación de Lean UX (problem statements, assumptions, hypotheses y Lean UX Canvas) orientó las decisiones del equipo hacia las necesidades reales de ambos segmentos objetivo; cada User Story del Product Backlog proviene de hipótesis validadas con entrevistas y del Impact Map construido a partir de los business goals, evitando el desarrollo de funcionalidades sin sustento.
@@ -10,7 +10,7 @@
 - La gestión de la configuración de software bajo GitFlow (ramas feature por bounded context, integración mediante Pull Requests hacia develop, Conventional Commits y Semantic Versioning) garantizó la trazabilidad de cada cambio y la atribución correcta del aporte de cada integrante, evidenciada en las métricas de colaboración del repositorio y en la matriz LACX del sprint.
 - La distribución de responsabilidades mediante la matriz de liderazgo y colaboración (LACX), con un líder por grupo de bounded contexts y colaboradores en los demás aspectos, permitió desarrollar en paralelo sin bloqueos entre módulos, gracias a que la capa Shared (layout, internacionalización y clases base) se construyó al inicio del sprint y sirvió de fundamento para los demás contextos.
 
-## Recomendaciones.
+### Recomendaciones.
 
 - Reemplazar la Mock API (json-server) por Web Services RESTful reales por bounded context, implementando la capa de infraestructura definida en el Capítulo IV (endpoints, DTOs y assemblers ya modelados) para que la migración requiera cambios mínimos en el frontend.
 - Planificar la validación con usuarios reales de ambos segmentos interactuando con la aplicación desplegada, midiendo los indicadores definidos en el Sprint 2 Goal (registro de lotes, conciliación, despachos, trazabilidad e incidencias) para retroalimentar el backlog del siguiente ciclo.
