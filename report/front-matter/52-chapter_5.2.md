@@ -952,10 +952,10 @@ El seguimiento de las tareas, su estimación y el aporte individual de cada inte
 [6]: https://pages.github.com "GitHub Pages"
 [7]: https://miro.com "Miro"
 [8]: https://plantuml.com "PlantUML"
-[9]: https://github.com/Codecraft-16692/Codecraft-Report.git "Report"
-[10]: https://github.com/Codecraft-16692/Codecraft-LandingPage.git "LandingPage"
-[11]: githttps://github.com/Codecraft-16692/Codecraft-FrontEnd.git  "FrontEnd"
-[12]: https://github.com/Codecraft-16692/Codecraft-BackEnd.git "BackEnd"
+[9]: https://github.com/Codecraft-16692/BevTrace-Report.git "Report"
+[10]: https://github.com/Codecraft-16692/BevTrace-LandingPage.git "LandingPage"
+[11]: https://github.com/Codecraft-16692/BevTrace-FrontEnd.git "FrontEnd"
+[12]: https://github.com/Codecraft-16692/BevTrace-BackEnd.git "BackEnd"
 
 
 [html-css]: https://google.github.io/styleguide/htmlcssguide.html "Google HTML/CSS Style Guide"

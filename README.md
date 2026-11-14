@@ -41,7 +41,7 @@
 
 ## Project Report Collaboration Insights
 
-**URL del repositorio del informe:** https://github.com/Codecraft-16692/Codecraft-Report
+**URL del repositorio del informe:** https://github.com/Codecraft-16692/BevTrace-Report
 
 Evidencias de colaboración y participación del equipo para la entrega AV1:
 
