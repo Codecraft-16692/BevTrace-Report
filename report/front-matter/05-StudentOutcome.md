@@ -22,7 +22,7 @@ rango de audiencias.
   </tr>
   <tr>
     <td>Enrique Augusto Ochoa Prado </td>
-    <td><b>AV1:</b> Desarrollo del capitulo 4<br><br><b>TB1:</b> Lideré la implementación del frontend Angular por bounded contexts, la elaboración de los wireflows y user flows por objetivo de usuario y la coordinación del equipo.</td>
+    <td><b>AV1:</b> Desarrollo del capitulo 4<br><br><b>TB1:</b> Lideré la implementación del frontend Angular por bounded contexts, la elaboración de los wireflows y user flows por objetivo de usuario y la coordinación del equipo.<br><br><b>AV2:</b> Coordiné con Mauricio el despliegue de los Web Services en Railway y la conexión de la aplicación web con la API real, incluyendo las variables de entorno y los orígenes permitidos para el frontend. Comuniqué al equipo el ajuste de permisos por rol en la salida de despachos y en el registro de mermas detectado durante las pruebas en producción. Grabé las lecciones 1, 2 y 6 del curso de Fundamentos de Java, explicando conceptos de programación, errores comunes y buenas prácticas con ejemplos simples para estudiantes de secundaria sin experiencia previa.</td>
   </tr>
   <tr>
     <td rowspan="3">Comunica por escrito con efectividad a diferentes rangos de audiencia</td>
@@ -36,5 +36,5 @@ rango de audiencias.
   </tr>
   <tr>
     <td>Enrique Augusto Ochoa Prado </td>
-    <td><b>AV1:</b> Desarrollo del capitulo 4 y figma<br><br><b>TB1:</b> Lideré la implementación del frontend Angular por bounded contexts, la elaboración de los wireflows y user flows por objetivo de usuario y la coordinación del equipo.</td>
+    <td><b>AV1:</b> Desarrollo del capitulo 4 y figma<br><br><b>TB1:</b> Lideré la implementación del frontend Angular por bounded contexts, la elaboración de los wireflows y user flows por objetivo de usuario y la coordinación del equipo.<br><br><b>AV2:</b> Implementé y documenté los bounded contexts de Telemetry y Traceability en los Web Services, con sus diagramas de clases y de base de datos en el repositorio. Documenté en el informe la sección 5.2.3 del Sprint 3 (planificación, backlog y evidencias de desarrollo, ejecución, servicios con Swagger y despliegue en Railway y Vercel) y la configuración de despliegue de la sección 5.1.4. Describí en los Pull Requests del frontend las correcciones de permisos por rol y la integración con la API desplegada. Corregí el informe en base a la revisión de entregas anteriores: datos del curso en la carátula y los anexos, índice completo, bibliografía y títulos alineados a la plantilla. Redacté en el README del curso de Java la secuencia de lecciones con sus videos y prácticas para estudiantes de secundaria.</td>
   </tr>
