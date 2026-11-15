@@ -65,15 +65,19 @@ A continuación se presentan los registros detallados de las entrevistas semiest
  
 | N° de Entrevista | Datos del Entrevistado | Evidencia de Video |
 |:---:|:---|:---|
-| E1 | Lorenzo Soto, 27 años, Gerente de Logistica <br> <br> <img src="../assets/Chapter5/entrevistalorenzo.png" alt="Interview 1 Screenshot" width="100%"> | Duración de video: 16:02 <br> [Enlace de entrevista](https://1drv.ms/v/c/bb1bb7d896cb1613/IQDiY4PUkCaGQ5prhe8CBrm4AaILpoHuvxOBMd0MtBMtqzU?e=PE974F) |
+| E1 | Lorenzo Soto De la Cruz, 28 años, Gerente de Logística, Santiago de Surco <br> Fecha: 09/11/2026 <br> <br> <img src="../assets/Chapter5/entrevistalorenzo.png" alt="Interview 1 Screenshot" width="100%"> | Duración de video: 16:02 <br> [Enlace de entrevista](https://1drv.ms/v/c/bb1bb7d896cb1613/IQDiY4PUkCaGQ5prhe8CBrm4AaILpoHuvxOBMd0MtBMtqzU?e=PE974F) |
 | E2 | (pendiente) | Duración de video: (pendiente)<br>[Enlace de entrevista](#) |
+
+**Resumen E1:** Lorenzo Soto De la Cruz, Gerente de Logística, revisó la Landing Page y la aplicación web de BevTrace. Su percepción general de la plataforma fue neutral.
  
 #### Entrevistados del segmento 2 (Operarios y Supervisores de Almacén)
  
 | N° de Entrevista | Datos del Entrevistado | Evidencia de Video |
 |:---:|:---|:---|
-| E1 | Maria Lopez, 32 años <br> <br> <img src="../assets/Chapter5/EntrevistaOperador2.png" alt="Interview 2 Screenshot" width="100%"> | Duración de video: 18:04 <br>[Enlace de entrevista](https://1drv.ms/v/c/bb1bb7d896cb1613/IQAhhWqtlsSVQ6owmpUTqNLPAVbU9gzV2gtHdNzNSaEMHDQ?e=4rCEQi) |
+| E1 | María López, 32 años, Operaria de almacén, Chorrillos <br> Fecha: 11/11/2026 <br> <br> <img src="../assets/Chapter5/EntrevistaOperador2.png" alt="Interview 2 Screenshot" width="100%"> | Duración de video: 18:04 <br>[Enlace de entrevista](https://1drv.ms/v/c/bb1bb7d896cb1613/IQAhhWqtlsSVQ6owmpUTqNLPAVbU9gzV2gtHdNzNSaEMHDQ?e=4rCEQi) |
 | E2 | (pendiente) | Duración de video: (pendiente)<br>[Enlace de entrevista](#) |
+
+**Resumen E1:** María López, operaria de almacén y también entrevistada en el Capítulo II, revisó la Landing Page y la aplicación web de BevTrace. Mostró una percepción favorable de la plataforma, en especial de las funcionalidades de distribución, asignación de lotes y registro de mermas.
 
 ### 5.3.3. Evaluaciones según heurísticas
 
