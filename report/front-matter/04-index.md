@@ -88,7 +88,6 @@
   - [5.1.3. Source Code Style Guide & Conventions](51-chapter_5.1.md#513-source-code-style-guide--conventions)
   - [5.1.4. Software Deployment Configuration](51-chapter_5.1.md#514-software-deployment-configuration)
 - [5.2. Landing Page, Services & Applications Implementation](52-chapter_5.2.md)
-  <!-- PENDIENTE: 5.2.1. Sprint 1 no se encuentra en el informe -->
   - [5.2.2. Sprint 2](52-chapter_5.2.md#522-sprint-2)
     - [5.2.2.1. Sprint Planning 2](52-chapter_5.2.md#5221-sprint-planning-2)
     - [5.2.2.2. Aspect Leaders and Collaborators](52-chapter_5.2.md#5222-aspect-leaders-and-collaborators)
