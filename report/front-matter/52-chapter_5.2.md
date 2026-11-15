@@ -1357,6 +1357,15 @@ Las siguientes capturas muestran el recorrido principal realizado sobre la Front
   <p><em>Figura: Planes de suscripción obtenidos desde los Web Services</em></p>
 </div>
 
+<p align="justify">
+El video de navegación del Sprint 3, de 9:03 minutos, recorre la Frontend Web Application desplegada y conectada a los Web Services, con la sesión iniciada como Jefe de Logística. Se muestran todos los módulos de la aplicación: Panel, Inventario, Despachos, Trazabilidad, Dispositivos IoT, Incidencias, Analítica y Suscripción, con datos obtenidos desde los Web Services.
+</p>
+
+<div align="center">
+  <img src="../assets/Chapter5/sprint3/navigation-video.png" alt="Video de navegación del Sprint 3" width="90%">
+  <p><em>Figura: Video de navegación de la aplicación web en el Sprint 3</em></p>
+</div>
+
 <p><strong>Video de navegación del Sprint 3:</strong> <a href="https://1drv.ms/v/c/bb1bb7d896cb1613/IQBDOaR2aKNZRJyLhGtDC-OcAdXM8ihRa0MAaPlmpVy5dPE?e=BzvgVG" target="_blank">https://1drv.ms/v/c/bb1bb7d896cb1613/IQBDOaR2aKNZRJyLhGtDC-OcAdXM8ihRa0MAaPlmpVy5dPE?e=BzvgVG</a></p>
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
