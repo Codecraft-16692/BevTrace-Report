@@ -36,7 +36,7 @@
 | :--- |:-----------|:-----------------| :--- |
 | AV1 | 09-09-2026 | Castillo Yataco, Mauricio Sebastian | Estructura inicial correspondiente a la primera entrega. |
 | TB1 | 08-10-2026 | Ochoa Prado, Enrique Augusto | Segunda entrega: capítulos I-V completos, aplicación web por bounded contexts y despliegue. |
-| AV2 | 14-11-2026 | Ochoa Prado, Enrique Augusto | Tercera entrega: secciones 5.1.4, 5.2.3 Sprint 3 con los Web Services desplegados e integrados a la aplicación web, 5.3 Validation Interviews, 5.4 Video About-the-Product y Video About-the-Team. |
+| AV2 | 15-11-2026 | Ochoa Prado, Enrique Augusto | Tercera entrega: secciones 5.1.4, 5.2.3 Sprint 3 con los Web Services desplegados e integrados a la aplicación web, 5.3 Validation Interviews, 5.4 Video About-the-Product, Video About-the-Team, conclusiones y recomendaciones actualizadas, Student Outcome del AV2 y video de exposición. |
 
 <div style="page-break-after: always;"></div>
 
