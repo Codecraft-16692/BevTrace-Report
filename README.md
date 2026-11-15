@@ -2,6 +2,7 @@
 
 ![LogoUPC](report/assets/logos/UPC-logo.png)
 # Universidad Peruana de Ciencias Aplicadas
+## Facultad de Ingeniería
 ## Carrera de Ingeniería de Software
 
 **Curso:** 1ASI0729 Desarrollo de Aplicaciones Open Source  
@@ -24,7 +25,7 @@
 | U202411222 | Ochoa Prado, Enrique Augusto       |
 
 **Período:** 2026-20  
-**Fecha:** Setiembre 2026
+**Fecha:** Noviembre 2026
 
 </div>
 
