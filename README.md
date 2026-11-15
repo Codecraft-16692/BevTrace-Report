@@ -48,6 +48,10 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
 
 ![alt text](report/assets/Collab_insight_av1.png)
 
+Evidencias de colaboración y participación del equipo para la entrega AV2:
+
+![Collaboration Insights AV2](report/assets/Collab_insight_av2.png)
+
 <div style="page-break-after: always;"></div>
 
 ## Contenido Student Outcome
