@@ -1088,8 +1088,8 @@ El Sprint Backlog 3 reúne las Technical Stories del Product Backlog definido en
     <tr><th>Id</th><th>Title</th><th>Id</th><th>Title</th><th>Description</th><th>Estimation (Hours)</th><th>Assigned To</th><th>Status</th></tr>
   </thead>
   <tbody>
-    <tr><td rowspan="1">TS09</td><td rowspan="1">Endpoint de autenticación de usuarios</td><td>T301</td><td>Implementar sign-in con JWT</td><td>Endpoint <code>POST /api/v1/authentication/sign-in</code> que valida credenciales con BCrypt y retorna un token JWT.</td><td>3h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
-    <tr><td rowspan="1">TS10</td><td rowspan="1">Endpoint de registro de usuario</td><td>T302</td><td>Implementar sign-up con política de contraseñas</td><td>Endpoint <code>POST /api/v1/authentication/sign-up</code> que registra usuarios con un rol existente y aplica la política de contraseñas.</td><td>2h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS09</td><td rowspan="1">Endpoint de autenticación de usuarios</td><td>T301</td><td>Implementar sign-in con JWT</td><td>Endpoint <code>POST /api/v1/authentication/tokens</code> que valida credenciales con BCrypt y retorna un token JWT.</td><td>3h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">TS10</td><td rowspan="1">Endpoint de registro de usuario</td><td>T302</td><td>Implementar sign-up con política de contraseñas</td><td>Endpoint <code>POST /api/v1/authentication/registrations</code> que registra usuarios con un rol existente y aplica la política de contraseñas.</td><td>2h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
     <tr><td rowspan="1">TS01</td><td rowspan="1">Endpoint de consulta de nivel de stock por lote</td><td>T303</td><td>Implementar endpoints de lotes, mermas y conciliación</td><td>Endpoints de <code>batches</code>, <code>waste-records</code>, <code>reconciliations</code> y <code>discrepancies</code> con sus comandos de dominio.</td><td>6h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
     <tr><td rowspan="1">TS02</td><td rowspan="1">Endpoint de consulta de estado de despacho</td><td>T304</td><td>Implementar endpoints de órdenes de despacho</td><td>Endpoints de <code>dispatch-orders</code> con programación, prioridad, asignación de vehículo, validación de carga, salida y cancelación.</td><td>6h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
     <tr><td rowspan="1">TS03</td><td rowspan="1">Webhook de notificación de despacho completado</td><td>T305</td><td>Implementar webhook de despacho completado</td><td>Notificar a sistemas externos cuando un despacho se completa.</td><td>3h</td><td>-</td><td>To Do</td></tr>
@@ -1110,14 +1110,26 @@ El Sprint Backlog 3 reúne las Technical Stories del Product Backlog definido en
 #### 5.2.3.4. Development Evidence for Sprint Review
 
 <p align="justify">
-En el Sprint 3 se implementó la primera versión de los Web Services de BevTrace y se integró la Frontend Web Application con ellos. En el repositorio de Web Services se desarrolló cada bounded context en una rama <code>feature/*</code> integrada a <code>develop</code> mediante Pull Requests y luego a <code>main</code>. En el repositorio Frontend se reemplazó la Mock API por llamadas autenticadas a los Web Services. La siguiente tabla presenta los commits de implementación de cada repositorio durante el sprint, sin considerar los commits de merge.
+En el Sprint 3 se implementó la primera versión de los Web Services de BevTrace y se integró la Frontend Web Application con ellos. En el repositorio de Web Services se desarrolló cada bounded context en una rama <code>feature/*</code> integrada a <code>develop</code> mediante Pull Requests y luego a <code>main</code>. En el repositorio Frontend se reemplazó la Mock API por llamadas autenticadas a los Web Services. Al cierre del sprint, en la rama <code>feat/rest-resource-naming</code> de ambos repositorios, los endpoints de acciones se renombraron a sustantivos en plural (por ejemplo <code>/tokens</code>, <code>/registrations</code> y <code>/departures</code>), se incorporó la gestión de permisos de usuarios y el registro de productos, y se retiraron los formularios de newsletter y contacto. La siguiente tabla presenta los commits de implementación de cada repositorio durante el sprint, sin considerar los commits de merge.
 </p>
 
-<p><strong>Repositorio:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-BackEnd" target="_blank">Codecraft-16692/BevTrace-BackEnd</a> (129 commits)</p>
+<p><strong>Repositorio:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-BackEnd" target="_blank">Codecraft-16692/BevTrace-BackEnd</a> (141 commits)</p>
 
 <table border="1" cellpadding="4" cellspacing="0">
   <thead><tr><th>Repository</th><th>Branch</th><th>Commit Id</th><th>Commit Message</th><th>Commit Message Body</th><th>Committed on (Date)</th></tr></thead>
   <tbody>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>5c67554</td><td>docs(api): update endpoint paths and incident class diagram</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>cc5b406</td><td>refactor(subscription): remove newsletter and contact request endpoints</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>2b4da6e</td><td>refactor(subscription): expose subscription cancellation as cancellations resource</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>499b915</td><td>refactor(traceability): use plural resource names for traceability log actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>be8efe5</td><td>fix(inventory): restrict batch registration to administrators and logistics managers</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>d8e395a</td><td>refactor(inventory): use plural resource names for reconciliation and discrepancy actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>040833e</td><td>feat(inventory): add product registration endpoint</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>ca0bbca</td><td>refactor(dispatch): use plural resource names for dispatch order actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>aae2680</td><td>refactor(incident): use plural resource names for incident actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>bc6c661</td><td>refactor(iam): expose authentication as tokens and registrations resources</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>072a295</td><td>feat(iam): manage user access through permissions and revocations</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>bd66345</td><td>feat(iam): seed default roles and administrator account</td><td>-</td><td>14/11/2026</td></tr>
     <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>fix/enable-jpa-auditing</td><td>32173e1</td><td>fix(shared): enable jpa auditing to populate created and updated timestamps</td><td>-</td><td>10/11/2026</td></tr>
     <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>2543fdc</td><td>docs(telemetry): add database diagram</td><td>-</td><td>09/11/2026</td></tr>
     <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>4d706a0</td><td>docs(traceability): add database diagram</td><td>-</td><td>09/11/2026</td></tr>
@@ -1250,11 +1262,25 @@ En el Sprint 3 se implementó la primera versión de los Web Services de BevTrac
   </tbody>
 </table>
 
-<p><strong>Repositorio:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-FrontEnd" target="_blank">Codecraft-16692/BevTrace-FrontEnd</a> (20 commits)</p>
+<p><strong>Repositorio:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-FrontEnd" target="_blank">Codecraft-16692/BevTrace-FrontEnd</a> (34 commits)</p>
 
 <table border="1" cellpadding="4" cellspacing="0">
   <thead><tr><th>Repository</th><th>Branch</th><th>Commit Id</th><th>Commit Message</th><th>Commit Message Body</th><th>Committed on (Date)</th></tr></thead>
   <tbody>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>a47ada2</td><td>feat(i18n): add translations for permissions, product registration and role restrictions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>7630f68</td><td>refactor(subscription): remove newsletter and contact request features</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>6ce8310</td><td>feat(telemetry): add device provisioning shortcut for logistics managers</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>9399e4d</td><td>feat(incident): restrict rule management and detection to logistics managers</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>b1cc160</td><td>feat(dispatch): restrict order scheduling to logistics managers</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>6f2cb24</td><td>feat(inventory): restrict discrepancy resolution to logistics managers</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>fb09514</td><td>feat(shared): show navigation options according to the user role</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>00aa021</td><td>feat(inventory): add product registration form</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>573ba2a</td><td>feat(iam): grant permissions and revoke access from the user list</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>63c4faf</td><td>refactor(traceability): use plural resource names for traceability log actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>da76067</td><td>refactor(inventory): use plural resource names for reconciliation and discrepancy actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>ab5061e</td><td>refactor(dispatch): use plural resource names for dispatch order actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>4e7022d</td><td>refactor(incident): use plural resource names for incident actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>8301c7b</td><td>refactor(iam): call tokens and registrations authentication endpoints</td><td>-</td><td>14/11/2026</td></tr>
     <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>ee2fbbc</td><td>chore: remove json-server mock</td><td>Delete the server folder, the api script and the json-server dependency. Update the README to run against the backend.</td><td>10/11/2026</td></tr>
     <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>c4d1b2f</td><td>feat(subscription): subscribe, cancel and public forms via the backend</td><td>Payment, card validation and declined-card handling are done by the server. Cancellation uses POST /subscriptions/{id}/cancellation.</td><td>10/11/2026</td></tr>
     <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>863f511</td><td>feat(analytics): generate reports on the backend</td><td>POST /logistics-reports computes the KPIs server-side.</td><td>10/11/2026</td></tr>
@@ -1339,7 +1365,7 @@ Las siguientes capturas muestran el recorrido principal realizado sobre la Front
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
 <p align="justify">
-En este sprint se documentaron con <strong>OpenAPI</strong> mediante springdoc los 93 endpoints de los Web Services de BevTrace, agrupados por recurso. La documentación se encuentra desplegada junto con los Web Services y permite ejecutar cada endpoint con datos de muestra desde Swagger UI. Los endpoints protegidos requieren un token JWT obtenido en <code>sign-in</code>, que se envía en la cabecera <code>Authorization: Bearer &lt;token&gt;</code> mediante el botón <strong>Authorize</strong>. Los endpoints de listado aceptan filtros con <code>?campo=valor</code>, ordenamiento con <code>_sort</code> y <code>_order</code>, y límite con <code>_limit</code>.
+En este sprint se documentaron con <strong>OpenAPI</strong> mediante springdoc los 88 endpoints de los Web Services de BevTrace, agrupados por recurso. La documentación se encuentra desplegada junto con los Web Services y permite ejecutar cada endpoint con datos de muestra desde Swagger UI. Los endpoints protegidos requieren un token JWT obtenido en <code>authentication/tokens</code>, que se envía en la cabecera <code>Authorization: Bearer &lt;token&gt;</code> mediante el botón <strong>Authorize</strong>. Los endpoints de listado aceptan filtros con <code>?campo=valor</code>, ordenamiento con <code>_sort</code> y <code>_order</code>, y límite con <code>_limit</code>.
 </p>
 
 <p><strong>Documentación desplegada:</strong> <a href="https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html" target="_blank">https://bevtrace-backend-production-fcb0f88f.up.railway.app/swagger-ui/index.html</a></p>
@@ -1349,16 +1375,17 @@ En este sprint se documentaron con <strong>OpenAPI</strong> mediante springdoc l
 <table border="1" cellpadding="4" cellspacing="0">
   <thead><tr><th>Resource</th><th>HTTP Verb</th><th>Endpoint</th><th>Action</th><th>Parameters</th><th>Request Body</th><th>Response</th></tr></thead>
   <tbody>
-    <tr><td>Authentication</td><td>POST</td><td><code>/api/v1/authentication/sign-up</code></td><td>Register a user</td><td>-</td><td><code>SignUpResource</code>: roleId, name, email, phone, password</td><td>201: usuario creado</td></tr>
-    <tr><td>Authentication</td><td>POST</td><td><code>/api/v1/authentication/sign-in</code></td><td>Sign in</td><td>-</td><td><code>SignInResource</code>: email, password</td><td>200: usuario autenticado con <code>roles</code> y <code>token</code> JWT</td></tr>
+    <tr><td>Authentication</td><td>POST</td><td><code>/api/v1/authentication/registrations</code></td><td>Register a user</td><td>-</td><td><code>SignUpResource</code>: roleId, name, email, phone, password</td><td>201: usuario creado</td></tr>
+    <tr><td>Authentication</td><td>POST</td><td><code>/api/v1/authentication/tokens</code></td><td>Sign in</td><td>-</td><td><code>SignInResource</code>: email, password</td><td>200: usuario autenticado con <code>roles</code> y <code>token</code> JWT</td></tr>
     <tr><td>Users</td><td>GET</td><td><code>/api/v1/users</code></td><td>List users</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>Users</td><td>GET</td><td><code>/api/v1/users/{id}</code></td><td>Get a user by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
-    <tr><td>Users</td><td>PATCH</td><td><code>/api/v1/users/{id}/role</code></td><td>Assign a role to a user</td><td>id (path)</td><td><code>UpdateUserRoleResource</code>: roleId</td><td>200: recurso actualizado</td></tr>
-    <tr><td>Users</td><td>PATCH</td><td><code>/api/v1/users/{id}/active</code></td><td>Enable or disable a user</td><td>id (path)</td><td><code>UpdateUserStatusResource</code>: active</td><td>200: recurso actualizado</td></tr>
+    <tr><td>Users</td><td>POST</td><td><code>/api/v1/users/{id}/permissions</code></td><td>Grant a permission to a user</td><td>id (path)</td><td><code>GrantPermissionResource</code>: roleId</td><td>201: permiso otorgado y cuenta habilitada</td></tr>
+    <tr><td>Users</td><td>POST</td><td><code>/api/v1/users/{id}/revocations</code></td><td>Revoke the access of a user</td><td>id (path)</td><td>-</td><td>201: acceso revocado y cuenta deshabilitada</td></tr>
     <tr><td>Roles</td><td>GET</td><td><code>/api/v1/roles</code></td><td>List roles</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>Roles</td><td>GET</td><td><code>/api/v1/roles/{id}</code></td><td>Get a role by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
     <tr><td>Products</td><td>GET</td><td><code>/api/v1/products</code></td><td>List products</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>Products</td><td>GET</td><td><code>/api/v1/products/{id}</code></td><td>Get a product by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Products</td><td>POST</td><td><code>/api/v1/products</code></td><td>Add a product to the catalogue</td><td>-</td><td><code>RegisterProductResource</code>: skuCode, name, category, volumeMl, packagingType</td><td>201: recurso creado</td></tr>
     <tr><td>WarehouseZones</td><td>GET</td><td><code>/api/v1/zones</code></td><td>List warehouse zones</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>WarehouseZones</td><td>GET</td><td><code>/api/v1/zones/{id}</code></td><td>Get a warehouse zone by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
     <tr><td>ProductBatches</td><td>GET</td><td><code>/api/v1/batches</code></td><td>List product batches</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
@@ -1371,10 +1398,10 @@ En este sprint se documentaron con <strong>OpenAPI</strong> mediante springdoc l
     <tr><td>InventoryReconciliations</td><td>GET</td><td><code>/api/v1/reconciliations</code></td><td>List inventory reconciliations</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>InventoryReconciliations</td><td>GET</td><td><code>/api/v1/reconciliations/{id}</code></td><td>Get an inventory reconciliation by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
     <tr><td>InventoryReconciliations</td><td>POST</td><td><code>/api/v1/reconciliations</code></td><td>Run a physical reconciliation</td><td>-</td><td><code>RunReconciliationResource</code>: counts</td><td>201: recurso creado</td></tr>
-    <tr><td>InventoryReconciliations</td><td>POST</td><td><code>/api/v1/reconciliations/{id}/confirmation</code></td><td>Confirm a reconciliation</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>InventoryReconciliations</td><td>POST</td><td><code>/api/v1/reconciliations/{id}/confirmations</code></td><td>Confirm a reconciliation</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
     <tr><td>InventoryDiscrepancies</td><td>GET</td><td><code>/api/v1/discrepancies</code></td><td>List inventory discrepancies</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>InventoryDiscrepancies</td><td>GET</td><td><code>/api/v1/discrepancies/{id}</code></td><td>Get an inventory discrepancy by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
-    <tr><td>InventoryDiscrepancies</td><td>POST</td><td><code>/api/v1/discrepancies/{id}/resolution</code></td><td>Resolve a discrepancy</td><td>id (path)</td><td><code>ResolveDiscrepancyResource</code>: note</td><td>200: recurso actualizado</td></tr>
+    <tr><td>InventoryDiscrepancies</td><td>POST</td><td><code>/api/v1/discrepancies/{id}/resolutions</code></td><td>Resolve a discrepancy</td><td>id (path)</td><td><code>ResolveDiscrepancyResource</code>: note</td><td>200: recurso actualizado</td></tr>
     <tr><td>DeliveryDestinations</td><td>GET</td><td><code>/api/v1/destinations</code></td><td>List delivery destinations</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>DeliveryDestinations</td><td>GET</td><td><code>/api/v1/destinations/{id}</code></td><td>Get a delivery destination by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
     <tr><td>Drivers</td><td>GET</td><td><code>/api/v1/drivers</code></td><td>List drivers</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
@@ -1384,17 +1411,17 @@ En este sprint se documentaron con <strong>OpenAPI</strong> mediante springdoc l
     <tr><td>DispatchOrders</td><td>GET</td><td><code>/api/v1/dispatch-orders</code></td><td>List dispatch orders</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>DispatchOrders</td><td>GET</td><td><code>/api/v1/dispatch-orders/{id}</code></td><td>Get a dispatch order by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
     <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders</code></td><td>Schedule a dispatch</td><td>-</td><td><code>ScheduleDispatchOrderResource</code>: destinationId, scheduledDate, priority, items</td><td>201: recurso creado</td></tr>
-    <tr><td>DispatchOrders</td><td>PATCH</td><td><code>/api/v1/dispatch-orders/{id}/priority</code></td><td>Change the priority of a pending dispatch</td><td>id (path)</td><td><code>ChangeDispatchPriorityResource</code>: priority</td><td>200: recurso actualizado</td></tr>
-    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/vehicle-assignment</code></td><td>Assign a vehicle</td><td>id (path)</td><td><code>AssignVehicleResource</code>: vehicleId</td><td>200: recurso actualizado</td></tr>
-    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/cargo-validation</code></td><td>Validate the scanned pallets</td><td>id (path)</td><td><code>ValidateCargoResource</code>: scannedPallets</td><td>200: recurso actualizado</td></tr>
-    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/departure</code></td><td>Register the departure</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
-    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/cancellation</code></td><td>Cancel a pending dispatch</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>DispatchOrders</td><td>PATCH</td><td><code>/api/v1/dispatch-orders/{id}/priorities</code></td><td>Change the priority of a pending dispatch</td><td>id (path)</td><td><code>ChangeDispatchPriorityResource</code>: priority</td><td>200: recurso actualizado</td></tr>
+    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/vehicle-assignments</code></td><td>Assign a vehicle</td><td>id (path)</td><td><code>AssignVehicleResource</code>: vehicleId</td><td>200: recurso actualizado</td></tr>
+    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/cargo-validations</code></td><td>Validate the scanned pallets</td><td>id (path)</td><td><code>ValidateCargoResource</code>: scannedPallets</td><td>200: recurso actualizado</td></tr>
+    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/departures</code></td><td>Register the departure</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>DispatchOrders</td><td>POST</td><td><code>/api/v1/dispatch-orders/{id}/cancellations</code></td><td>Cancel a pending dispatch</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
     <tr><td>CargoAssignments</td><td>GET</td><td><code>/api/v1/cargo-assignments</code></td><td>List cargo assignments</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>CargoAssignments</td><td>GET</td><td><code>/api/v1/cargo-assignments/{id}</code></td><td>Get a cargo assignment by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
     <tr><td>TraceabilityLogs</td><td>GET</td><td><code>/api/v1/logs</code></td><td>List traceability logs</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>TraceabilityLogs</td><td>GET</td><td><code>/api/v1/logs/{id}</code></td><td>Get a traceability log by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
-    <tr><td>TraceabilityLogs</td><td>POST</td><td><code>/api/v1/logs/{id}/delivery</code></td><td>Confirm the delivery</td><td>id (path)</td><td><code>ConfirmDeliveryResource</code>: receivedBy</td><td>200: recurso actualizado</td></tr>
-    <tr><td>TraceabilityLogs</td><td>POST</td><td><code>/api/v1/logs/{id}/rejection</code></td><td>Register a rejected delivery</td><td>id (path)</td><td><code>RejectDeliveryResource</code>: reason</td><td>200: recurso actualizado</td></tr>
+    <tr><td>TraceabilityLogs</td><td>POST</td><td><code>/api/v1/logs/{id}/deliveries</code></td><td>Confirm the delivery</td><td>id (path)</td><td><code>ConfirmDeliveryResource</code>: receivedBy</td><td>200: recurso actualizado</td></tr>
+    <tr><td>TraceabilityLogs</td><td>POST</td><td><code>/api/v1/logs/{id}/rejections</code></td><td>Register a rejected delivery</td><td>id (path)</td><td><code>RejectDeliveryResource</code>: reason</td><td>200: recurso actualizado</td></tr>
     <tr><td>RouteCheckpoints</td><td>GET</td><td><code>/api/v1/route-checkpoints</code></td><td>List route checkpoints</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>RouteCheckpoints</td><td>GET</td><td><code>/api/v1/route-checkpoints/{id}</code></td><td>Get a route checkpoint by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
     <tr><td>DeliveryRecords</td><td>GET</td><td><code>/api/v1/delivery-records</code></td><td>List delivery records</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
@@ -1412,18 +1439,18 @@ En este sprint se documentaron con <strong>OpenAPI</strong> mediante springdoc l
     <tr><td>AlertRules</td><td>GET</td><td><code>/api/v1/rules</code></td><td>List alert rules</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>AlertRules</td><td>GET</td><td><code>/api/v1/rules/{id}</code></td><td>Get an alert rule by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
     <tr><td>AlertRules</td><td>POST</td><td><code>/api/v1/rules</code></td><td>Create an alert rule</td><td>-</td><td><code>CreateAlertRuleResource</code>: conditionType, threshold, severity, description</td><td>201: recurso creado</td></tr>
-    <tr><td>AlertRules</td><td>PATCH</td><td><code>/api/v1/rules/{id}/active</code></td><td>Enable or disable a rule</td><td>id (path)</td><td><code>UpdateAlertRuleStatusResource</code>: active</td><td>200: recurso actualizado</td></tr>
-    <tr><td>IncidentRecords</td><td>GET</td><td><code>/api/v1/incidents</code></td><td>List incident records</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
-    <tr><td>IncidentRecords</td><td>GET</td><td><code>/api/v1/incidents/{id}</code></td><td>Get an incident record by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
-    <tr><td>IncidentRecords</td><td>POST</td><td><code>/api/v1/incidents/detections</code></td><td>Run the anomaly detection now</td><td>-</td><td>-</td><td>201: recurso creado</td></tr>
-    <tr><td>IncidentRecords</td><td>POST</td><td><code>/api/v1/incidents/{id}/acknowledgement</code></td><td>Acknowledge an open incident</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
-    <tr><td>IncidentRecords</td><td>POST</td><td><code>/api/v1/incidents/{id}/corrective-actions</code></td><td>Register a corrective action</td><td>id (path)</td><td><code>RegisterCorrectiveActionResource</code>: description</td><td>200: recurso actualizado</td></tr>
-    <tr><td>IncidentRecords</td><td>POST</td><td><code>/api/v1/incidents/{id}/resolution</code></td><td>Resolve an incident</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>AlertRules</td><td>PATCH</td><td><code>/api/v1/rules/{id}/states</code></td><td>Enable or disable a rule</td><td>id (path)</td><td><code>UpdateAlertRuleStatusResource</code>: active</td><td>200: recurso actualizado</td></tr>
+    <tr><td>Incidents</td><td>GET</td><td><code>/api/v1/incidents</code></td><td>List incident records</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
+    <tr><td>Incidents</td><td>GET</td><td><code>/api/v1/incidents/{id}</code></td><td>Get an incident record by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
+    <tr><td>Incidents</td><td>POST</td><td><code>/api/v1/incidents/detections</code></td><td>Run the anomaly detection now</td><td>-</td><td>-</td><td>201: recurso creado</td></tr>
+    <tr><td>Incidents</td><td>POST</td><td><code>/api/v1/incidents/{id}/acknowledgments</code></td><td>Acknowledge an open incident</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>Incidents</td><td>POST</td><td><code>/api/v1/incidents/{id}/corrective-actions</code></td><td>Register a corrective action</td><td>id (path)</td><td><code>RegisterCorrectiveActionResource</code>: description</td><td>200: recurso actualizado</td></tr>
+    <tr><td>Incidents</td><td>POST</td><td><code>/api/v1/incidents/{id}/resolutions</code></td><td>Resolve an incident</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
     <tr><td>CorrectiveActions</td><td>GET</td><td><code>/api/v1/corrective-actions</code></td><td>List corrective actions</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>CorrectiveActions</td><td>GET</td><td><code>/api/v1/corrective-actions/{id}</code></td><td>Get a corrective action by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
     <tr><td>Notifications</td><td>GET</td><td><code>/api/v1/notifications</code></td><td>List notifications</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>Notifications</td><td>GET</td><td><code>/api/v1/notifications/{id}</code></td><td>Get a notification by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
-    <tr><td>Notifications</td><td>PATCH</td><td><code>/api/v1/notifications/{id}/read</code></td><td>Mark a notification as read</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>Notifications</td><td>PATCH</td><td><code>/api/v1/notifications/{id}/read-receipts</code></td><td>Mark a notification as read</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
     <tr><td>Indicators</td><td>GET</td><td><code>/api/v1/analytics/indicators</code></td><td>Compute the indicators of a period</td><td>periodStart (query), periodEnd (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>LogisticsReports</td><td>GET</td><td><code>/api/v1/logistics-reports</code></td><td>List logistics reports</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>LogisticsReports</td><td>GET</td><td><code>/api/v1/logistics-reports/{id}</code></td><td>Get a logistics report by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
@@ -1433,20 +1460,14 @@ En este sprint se documentaron con <strong>OpenAPI</strong> mediante springdoc l
     <tr><td>Subscriptions</td><td>GET</td><td><code>/api/v1/subscriptions</code></td><td>List subscriptions</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>Subscriptions</td><td>GET</td><td><code>/api/v1/subscriptions/{id}</code></td><td>Get a subscription by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
     <tr><td>Subscriptions</td><td>POST</td><td><code>/api/v1/subscriptions</code></td><td>Buy a plan</td><td>-</td><td><code>SubscribeResource</code>: companyName, planCode, billingCycle, cardHolder, cardNumber</td><td>201: recurso creado</td></tr>
-    <tr><td>Subscriptions</td><td>POST</td><td><code>/api/v1/subscriptions/{id}/cancellation</code></td><td>Cancel a subscription</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
+    <tr><td>Subscriptions</td><td>POST</td><td><code>/api/v1/subscriptions/{id}/cancellations</code></td><td>Cancel a subscription</td><td>id (path)</td><td>-</td><td>200: recurso actualizado</td></tr>
     <tr><td>Payments</td><td>GET</td><td><code>/api/v1/payments</code></td><td>List payments</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
     <tr><td>Payments</td><td>GET</td><td><code>/api/v1/payments/{id}</code></td><td>Get a payment by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
-    <tr><td>NewsletterSubscribers</td><td>GET</td><td><code>/api/v1/newsletter-subscribers</code></td><td>List newsletter subscribers</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
-    <tr><td>NewsletterSubscribers</td><td>GET</td><td><code>/api/v1/newsletter-subscribers/{id}</code></td><td>Get a newsletter subscriber by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
-    <tr><td>NewsletterSubscribers</td><td>POST</td><td><code>/api/v1/newsletter-subscribers</code></td><td>Public form: newsletter</td><td>-</td><td><code>NewsletterSubscriptionResource</code>: email</td><td>201: recurso creado</td></tr>
-    <tr><td>ContactRequests</td><td>GET</td><td><code>/api/v1/contact-requests</code></td><td>List contact requests</td><td>filtros opcionales  (query)</td><td>-</td><td>200: lista de recursos</td></tr>
-    <tr><td>ContactRequests</td><td>GET</td><td><code>/api/v1/contact-requests/{id}</code></td><td>Get a contact request by id</td><td>id (path)</td><td>-</td><td>200: recurso; 404 si no existe</td></tr>
-    <tr><td>ContactRequests</td><td>POST</td><td><code>/api/v1/contact-requests</code></td><td>Public form: contact request</td><td>-</td><td><code>SubmitContactRequestResource</code>: fullName, email, company, message</td><td>201: recurso creado</td></tr>
   </tbody>
 </table>
 
 <p align="justify">
-A continuación se presentan capturas de la interacción con la documentación desplegada utilizando datos de muestra. Primero se registró un usuario con el rol <em>Logistics Manager</em> mediante <code>sign-up</code>, que respondió <strong>201</strong>; luego se inició sesión con <code>sign-in</code>, que respondió <strong>200</strong> con el token JWT (omitido en la captura). Con el token autorizado, se creó una regla de alerta de temperatura con <code>POST /api/v1/rules</code> (<strong>201</strong>) y se consultó la lista de reglas con <code>GET /api/v1/rules</code> (<strong>200</strong>).
+A continuación se presentan capturas de la interacción con la documentación utilizando datos de muestra. El registro y el inicio de sesión se ejecutaron sobre la versión con nombres de recurso en plural, levantada en un entorno local con Docker Compose antes de su despliegue. Primero se registró un usuario con el rol <em>Warehouse Operator</em> mediante <code>authentication/registrations</code>, que respondió <strong>201</strong> con la cuenta deshabilitada (<code>active: false</code>) hasta que un jefe de logística o el administrador le otorgue un permiso; luego se inició sesión como administrador con <code>authentication/tokens</code>, que respondió <strong>200</strong> con sus roles y el token JWT. En la documentación desplegada, con un token autorizado, se creó una regla de alerta de temperatura con <code>POST /api/v1/rules</code> (<strong>201</strong>) y se consultó la lista de reglas con <code>GET /api/v1/rules</code> (<strong>200</strong>).
 </p>
 
 <div align="center">
@@ -1454,26 +1475,26 @@ A continuación se presentan capturas de la interacción con la documentación d
   <p><em>Figura: Documentación OpenAPI de los Web Services de BevTrace desplegada en Railway</em></p>
 </div>
 
-<p><strong>Ejemplo de request para sign-up:</strong></p>
+<p><strong>Ejemplo de request para registrations:</strong></p>
 
 ```json
 {
-  "roleId": 2,
-  "name": "Logistics Demo",
-  "email": "logistics@bevtrace.com",
-  "phone": "999999999",
+  "roleId": 3,
+  "name": "Operador Prueba",
+  "email": "operador2@bevtrace.com",
+  "phone": "987654321",
   "password": "********"
 }
 ```
 
 <div align="center">
-  <img src="../assets/Chapter5/sprint3/swagger-sign-up.png" alt="Sign-up response" width="90%">
-  <p><em>Figura: Respuesta 201 del endpoint POST /api/v1/authentication/sign-up</em></p>
+  <img src="../assets/Chapter5/sprint3/swagger-registrations.png" alt="Registrations response" width="90%">
+  <p><em>Figura: Respuesta 201 del endpoint POST /api/v1/authentication/registrations</em></p>
 </div>
 
 <div align="center">
-  <img src="../assets/Chapter5/sprint3/swagger-sign-in.png" alt="Sign-in response" width="90%">
-  <p><em>Figura: Respuesta 200 del endpoint POST /api/v1/authentication/sign-in con el token omitido</em></p>
+  <img src="../assets/Chapter5/sprint3/swagger-tokens.png" alt="Tokens response" width="90%">
+  <p><em>Figura: Respuesta 200 del endpoint POST /api/v1/authentication/tokens</em></p>
 </div>
 
 <p><strong>Ejemplo de request para crear una regla de alerta:</strong></p>
