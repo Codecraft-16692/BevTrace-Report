@@ -7,10 +7,10 @@
 </p>
 <h4 align = "center">
 <br>
-  1ASI0730
+  1ASI0729
 </h4>
 <h4 align = "center">
-  Aplicaciones Web
+  Desarrollo de Aplicaciones Open Source
 </h4>
 <p align = "center">
   NRC
@@ -44,12 +44,11 @@
 || Código     | Apellidos y Nombres                           |
 | :--- |:-----------|:----------------------------------------------|
 |1| u202113229 | Castillo Yataco, Mauricio Sebastian            |
-|2| U201910803 | Heredia Hoyos, Danitza Ivonne                  |
-|3| U202411222 | Ochoa Prado, Enrique Augusto                   |
+|2| U202411222 | Ochoa Prado, Enrique Augusto                   |
 </div>
 <h4 align = "center">
   Período 202620
 </h4>
 <h4 align = "center">
-  Octubre 2026
+  Noviembre 2026
 </h4>

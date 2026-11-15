@@ -17,7 +17,7 @@ Desarrollar una solución tecnológica SaaS robusta y escalable que permita a la
 
 Ser la plataforma logística líder en el sector de consumo masivo a nivel regional, estandarizando la trazabilidad inteligente y la digitalización de almacenes, convirtiendo el control de despachos en un proceso totalmente automatizado, transparente e impulsado por datos.
 
-### 1.1.2. Perfiles de integrantes del equipo (CodeCraft)
+### 1.1.2. Perfiles de integrantes del equipo
 <table border="1" width="100%">
   <colgroup>
     <col style="width:140px">
@@ -30,15 +30,6 @@ Ser la plataforma logística líder en el sector de consumo masivo a nivel regio
     <td valign="top">
       <strong>Mauricio Sebastian Castillo Yataco</strong> - Ingeniería de Software<br><br>
       Mi nombre es Mauricio Castillo y me encuentro realizando mis estudios universitarios en la carrera de Ingeniería de Software en la UPC. Durante mi formación académica, he adquirido conocimientos fundamentales en el desarrollo de software, abarcando áreas clave como programación, bases de datos y desarrollo web. Las dinámicas de trabajo colaborativo han sido una constante en mi experiencia estudiantil, donde he demostrado capacidad de integración y trabajo en equipo. Mi compromiso se centra en aplicar una metodología rigurosa y perseverante que permita alcanzar resultados óptimos en conjunto con mis compañeros de proyecto..
-    </td>
-  </tr>
-  <tr>
-    <td width="140" valign="top" align="center">
-      <img src="../assets/Chapter1/Danitza.webp" alt="Foto de Danitza" width="120" />
-    </td>
-    <td valign="top">
-      <strong>Danitza Ivonne Heredia Hoyos</strong> - Ingeniería de Software<br><br>
-      Mi nombre es Danitza Ivonne Heredia Hoyos y soy estudiante de Ingeniería de Software en la UPC. A lo largo de mi formación he desarrollado competencias en desarrollo web y de software, trabajando con enfoque colaborativo en equipos multidisciplinarios. Me caracterizo por la organización, la comunicación y el compromiso con la calidad de cada entrega, aportando al equipo una perspectiva detallista que asegura que los requisitos de cada módulo se cumplan con precisión desde el diseño hasta la implementación.
     </td>
   </tr>
   <tr>

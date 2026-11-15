@@ -18,7 +18,8 @@ En este segmento se presentara las herramientas utilizadas en el ciclo de vida d
 |Producto UI/UX|Figma|Diseño de interfaces (wireframes y mockups) y prototipos|[Figma][3]|
 |Landing Page|Visual Studio Code|Edición y desarrollo del código de las pantallas|[VS Code][4]|
 |Control de versiones|Git|Gestión de versiones del código de la Landing Page, FrontEnd y BackEnd|[Git][5]|
-|Despliegue|GitHub Pages|Publicación de la aplicación web|[GitHub Pages][6]|
+|Despliegue|Vercel|Publicación de la Landing Page y de la Frontend Web Application|[Vercel](https://vercel.com/)|
+|Despliegue|Railway|Publicación de los Web Services y de la base de datos MySQL|[Railway](https://railway.com/)|
 |Event Storming|Miro|Colaboración y modelado de los procesos involucrados en los Bounded Context|[Miro][7]|
 |Diagramas|PlantUML|Generación de diagramas UML requeridos de la aplicación|[PlantUML][8]|
 
@@ -131,3 +132,53 @@ En esta sección se describen las convenciones de estilo y nomenclatura adoptada
 - Uso de endpoints REST con recursos en plural y parámetros de recurso por path.
 - Uso de Javadoc para clases públicas relevantes.
 
+
+### 5.1.4. Software Deployment Configuration.
+
+En esta sección se especifica la configuración y los pasos necesarios para desplegar cada uno de los productos digitales de BevTrace a partir de sus repositorios en la organización de GitHub del equipo.
+
+|     Producto     |     Repositorio     |   Plataforma de despliegue   |   URL de producción   |
+|:---: |:---: |:---: |:---: |
+| Landing Page | [BevTrace-LandingPage](https://github.com/Codecraft-16692/BevTrace-LandingPage) | Vercel | [bev-trace-landing-page.vercel.app](https://bev-trace-landing-page.vercel.app) |
+| Frontend Web Application | [BevTrace-FrontEnd](https://github.com/Codecraft-16692/BevTrace-FrontEnd) | Vercel | [bev-trace-front-end.vercel.app](https://bev-trace-front-end.vercel.app) |
+| Web Services | [BevTrace-BackEnd](https://github.com/Codecraft-16692/BevTrace-BackEnd) | Railway | [bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1](https://bevtrace-backend-production-fcb0f88f.up.railway.app/api/v1) |
+
+##### Landing Page
+
+La Landing Page es un sitio estático compuesto por `index.html` y las carpetas `css`, `js`, `assets` y `legal`, por lo que no requiere un paso de compilación.
+
+1. En Vercel, crear un nuevo proyecto e importar el repositorio `Codecraft-16692/BevTrace-LandingPage` desde GitHub.
+2. Mantener la rama `main` como rama de producción y publicar el contenido desde la raíz del repositorio.
+3. Con la integración de GitHub, cada push a `main` genera un despliegue en el entorno Production, registrado en la sección Deployments del repositorio.
+
+##### Frontend Web Application
+
+La Frontend Web Application es una aplicación Angular que consume los Web Services desplegados en Railway.
+
+1. Definir en `src/environments/environment.ts` la propiedad `serverBasePath` con la URL de producción de los Web Services.
+2. En Vercel, crear un nuevo proyecto e importar el repositorio `Codecraft-16692/BevTrace-FrontEnd` desde GitHub.
+3. Configurar el proyecto como aplicación Angular, con el comando de compilación `npm run build` (`ng build`).
+4. Mantener la rama `main` como rama de producción. Cada push a `main` genera un despliegue en el entorno Production y cada push a otras ramas o Pull Requests genera un despliegue en el entorno Preview.
+5. Agregar el dominio de producción en la variable `CORS_ORIGINS` de los Web Services para permitir las solicitudes desde la aplicación.
+
+##### Web Services
+
+Los Web Services son una aplicación Spring Boot con Java 21 que utiliza una base de datos MySQL y se despliega mediante el `Dockerfile` multi-etapa del repositorio.
+
+1. En Railway, crear un nuevo proyecto y agregar un servicio conectado al repositorio `Codecraft-16692/BevTrace-BackEnd`, rama `main`, con despliegue automático en cada push.
+2. Railway construye la imagen a partir del `Dockerfile`: la etapa de build compila el proyecto con Maven y JDK 21, y la etapa de ejecución corre el archivo `.jar` con JRE 21 en el puerto 8080.
+3. Agregar al proyecto un servicio de base de datos MySQL.
+4. Configurar las variables de entorno del servicio de Web Services:
+
+| Variable | Valor |
+|:--- |:--- |
+| `SPRING_PROFILES_ACTIVE` | `prod` |
+| `DATABASE_URL`, `DATABASE_PORT`, `DATABASE_NAME`, `DATABASE_USER`, `DATABASE_PASSWORD` | Referencias a las variables del servicio MySQL |
+| `JWT_SECRET` | Secreto para firmar los tokens JWT, de al menos 32 caracteres |
+| `CORS_ORIGINS` | Dominio de producción de la Frontend Web Application |
+| `SWAGGER_ENABLED` | `true`, para exponer Swagger UI |
+| `SERVER_FORWARD_HEADERS_STRATEGY` | `framework`, para que Swagger UI use el esquema HTTPS del dominio público |
+
+5. Generar un dominio público asociado al puerto 8080.
+6. Cargar los roles iniciales (`ROLE_ADMIN`, `ROLE_LOGISTICS_MANAGER` y `ROLE_WAREHOUSE_OPERATOR`) en la tabla `roles`, necesarios para el registro de usuarios.
+7. Verificar el despliegue con el endpoint `/actuator/health` y con Swagger UI.
