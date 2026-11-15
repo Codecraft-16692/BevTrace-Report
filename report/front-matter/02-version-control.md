@@ -3,6 +3,7 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
+| 2.9.0 | 15/11/26 | Ochoa Prado, Enrique Augusto | Student Outcome: entradas AV2 de Castillo Yataco, Mauricio Sebastian y conclusiones AV2 del equipo en ambos criterios |
 | 2.8.0 | 15/11/26 | Ochoa Prado, Enrique Augusto | Sección Video About-the-Team con resumen, secuencia de contenido, cuadro representativo y enlaces |
 | 2.7.2 | 14/11/26 | Ochoa Prado, Enrique Augusto | Carátula, perfiles del equipo y Sprint 3 actualizados con los integrantes actuales |
 | 2.7.1 | 14/11/26 | Ochoa Prado, Enrique Augusto | Carátula: facultad y fecha de la entrega AV2 |
