@@ -1357,7 +1357,7 @@ Las siguientes capturas muestran el recorrido principal realizado sobre la Front
   <p><em>Figura: Planes de suscripción obtenidos desde los Web Services</em></p>
 </div>
 
-<p><strong>Video de navegación del Sprint 3:</strong> <a href="#" target="_blank"></a></p>
+<p><strong>Video de navegación del Sprint 3:</strong> <a href="https://1drv.ms/v/c/bb1bb7d896cb1613/IQBDOaR2aKNZRJyLhGtDC-OcAdXM8ihRa0MAaPlmpVy5dPE?e=BzvgVG" target="_blank">https://1drv.ms/v/c/bb1bb7d896cb1613/IQBDOaR2aKNZRJyLhGtDC-OcAdXM8ihRa0MAaPlmpVy5dPE?e=BzvgVG</a></p>
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
