@@ -3,6 +3,7 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
+| 2.11.1 | 15/11/26 | Ochoa Prado, Enrique Augusto | Capítulo 5.3.2: se retiran las filas de entrevistas E2 no realizadas |
 | 2.11.0 | 15/11/26 | Ochoa Prado, Enrique Augusto | Capítulo 5.3.2: datos, fechas y resúmenes de las entrevistas de validación E1 |
 | 2.10.0 | 15/11/26 | Ochoa Prado, Enrique Augusto | Anexo A: enlace al video de exposición del AV2 |
 | 2.9.0 | 15/11/26 | Ochoa Prado, Enrique Augusto | Student Outcome: entradas AV2 de Castillo Yataco, Mauricio Sebastian y conclusiones AV2 del equipo en ambos criterios |
