@@ -3,6 +3,7 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
+| 2.7.1 | 14/11/26 | Ochoa Prado, Enrique Augusto | Carátula: facultad y fecha de la entrega AV2 |
 | 2.7.0 | 14/11/26 | Ochoa Prado, Enrique Augusto | Sección 5.2.3: endpoints con nombres de recurso en plural en la documentación de servicios (88 endpoints), nuevas capturas de registrations y tokens, y commits de la rama feat/rest-resource-naming en las evidencias de desarrollo |
 | 2.6.0 | 14/11/26 | Ochoa Prado, Enrique Augusto | Sección 5.4 Video About-the-Product con descripción, captura y enlaces, y tablero del Sprint 3 en Jira en la sección 5.2.3.3 |
 | 2.5.0 | 14/11/26 | Ochoa Prado, Enrique Augusto | Títulos alineados a la plantilla del informe, entradas AV2 del Student Outcome y registro de la entrega AV2 en el README |
