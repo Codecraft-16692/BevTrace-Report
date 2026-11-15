@@ -998,7 +998,6 @@ El backend se organizó en los bounded contexts definidos en el Capítulo IV: <s
       <td>Attendees (to planning meeting)</td>
       <td>
         Castillo Yataco, Mauricio Sebastian<br>
-        Heredia Hoyos, Danitza Ivonne<br>
         Ochoa Prado, Enrique Augusto
       </td>
     </tr>
@@ -1058,7 +1057,6 @@ En esta sección se presenta la matriz <strong>Leadership-and-Collaboration (LAC
   </thead>
   <tbody>
     <tr><td>Castillo Yataco, Mauricio Sebastian</td><td>M4uricioCastillo</td><td>L</td><td>C</td><td>C</td><td>L</td></tr>
-    <tr><td>Heredia Hoyos, Danitza Ivonne</td><td>UDnTzh</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
     <tr><td>Ochoa Prado, Enrique Augusto</td><td>EnriqueO-18</td><td>C</td><td>L</td><td>L</td><td>C</td></tr>
   </tbody>
 </table>
