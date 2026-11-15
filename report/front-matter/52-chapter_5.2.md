@@ -1110,14 +1110,26 @@ El Sprint Backlog 3 reúne las Technical Stories del Product Backlog definido en
 #### 5.2.3.4. Development Evidence for Sprint Review
 
 <p align="justify">
-En el Sprint 3 se implementó la primera versión de los Web Services de BevTrace y se integró la Frontend Web Application con ellos. En el repositorio de Web Services se desarrolló cada bounded context en una rama <code>feature/*</code> integrada a <code>develop</code> mediante Pull Requests y luego a <code>main</code>. En el repositorio Frontend se reemplazó la Mock API por llamadas autenticadas a los Web Services. La siguiente tabla presenta los commits de implementación de cada repositorio durante el sprint, sin considerar los commits de merge.
+En el Sprint 3 se implementó la primera versión de los Web Services de BevTrace y se integró la Frontend Web Application con ellos. En el repositorio de Web Services se desarrolló cada bounded context en una rama <code>feature/*</code> integrada a <code>develop</code> mediante Pull Requests y luego a <code>main</code>. En el repositorio Frontend se reemplazó la Mock API por llamadas autenticadas a los Web Services. Al cierre del sprint, en la rama <code>feat/rest-resource-naming</code> de ambos repositorios, los endpoints de acciones se renombraron a sustantivos en plural (por ejemplo <code>/tokens</code>, <code>/registrations</code> y <code>/departures</code>), se incorporó la gestión de permisos de usuarios y el registro de productos, y se retiraron los formularios de newsletter y contacto. La siguiente tabla presenta los commits de implementación de cada repositorio durante el sprint, sin considerar los commits de merge.
 </p>
 
-<p><strong>Repositorio:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-BackEnd" target="_blank">Codecraft-16692/BevTrace-BackEnd</a> (129 commits)</p>
+<p><strong>Repositorio:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-BackEnd" target="_blank">Codecraft-16692/BevTrace-BackEnd</a> (141 commits)</p>
 
 <table border="1" cellpadding="4" cellspacing="0">
   <thead><tr><th>Repository</th><th>Branch</th><th>Commit Id</th><th>Commit Message</th><th>Commit Message Body</th><th>Committed on (Date)</th></tr></thead>
   <tbody>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>5c67554</td><td>docs(api): update endpoint paths and incident class diagram</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>cc5b406</td><td>refactor(subscription): remove newsletter and contact request endpoints</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>2b4da6e</td><td>refactor(subscription): expose subscription cancellation as cancellations resource</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>499b915</td><td>refactor(traceability): use plural resource names for traceability log actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>be8efe5</td><td>fix(inventory): restrict batch registration to administrators and logistics managers</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>d8e395a</td><td>refactor(inventory): use plural resource names for reconciliation and discrepancy actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>040833e</td><td>feat(inventory): add product registration endpoint</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>ca0bbca</td><td>refactor(dispatch): use plural resource names for dispatch order actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>aae2680</td><td>refactor(incident): use plural resource names for incident actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>bc6c661</td><td>refactor(iam): expose authentication as tokens and registrations resources</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>072a295</td><td>feat(iam): manage user access through permissions and revocations</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feat/rest-resource-naming</td><td>bd66345</td><td>feat(iam): seed default roles and administrator account</td><td>-</td><td>14/11/2026</td></tr>
     <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>fix/enable-jpa-auditing</td><td>32173e1</td><td>fix(shared): enable jpa auditing to populate created and updated timestamps</td><td>-</td><td>10/11/2026</td></tr>
     <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/telemetry</td><td>2543fdc</td><td>docs(telemetry): add database diagram</td><td>-</td><td>09/11/2026</td></tr>
     <tr><td>Codecraft-16692/BevTrace-BackEnd</td><td>feature/traceability</td><td>4d706a0</td><td>docs(traceability): add database diagram</td><td>-</td><td>09/11/2026</td></tr>
@@ -1250,11 +1262,25 @@ En el Sprint 3 se implementó la primera versión de los Web Services de BevTrac
   </tbody>
 </table>
 
-<p><strong>Repositorio:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-FrontEnd" target="_blank">Codecraft-16692/BevTrace-FrontEnd</a> (20 commits)</p>
+<p><strong>Repositorio:</strong> <a href="https://github.com/Codecraft-16692/BevTrace-FrontEnd" target="_blank">Codecraft-16692/BevTrace-FrontEnd</a> (34 commits)</p>
 
 <table border="1" cellpadding="4" cellspacing="0">
   <thead><tr><th>Repository</th><th>Branch</th><th>Commit Id</th><th>Commit Message</th><th>Commit Message Body</th><th>Committed on (Date)</th></tr></thead>
   <tbody>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>a47ada2</td><td>feat(i18n): add translations for permissions, product registration and role restrictions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>7630f68</td><td>refactor(subscription): remove newsletter and contact request features</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>6ce8310</td><td>feat(telemetry): add device provisioning shortcut for logistics managers</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>9399e4d</td><td>feat(incident): restrict rule management and detection to logistics managers</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>b1cc160</td><td>feat(dispatch): restrict order scheduling to logistics managers</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>6f2cb24</td><td>feat(inventory): restrict discrepancy resolution to logistics managers</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>fb09514</td><td>feat(shared): show navigation options according to the user role</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>00aa021</td><td>feat(inventory): add product registration form</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>573ba2a</td><td>feat(iam): grant permissions and revoke access from the user list</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>63c4faf</td><td>refactor(traceability): use plural resource names for traceability log actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>da76067</td><td>refactor(inventory): use plural resource names for reconciliation and discrepancy actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>ab5061e</td><td>refactor(dispatch): use plural resource names for dispatch order actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>4e7022d</td><td>refactor(incident): use plural resource names for incident actions</td><td>-</td><td>14/11/2026</td></tr>
+    <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/rest-resource-naming</td><td>8301c7b</td><td>refactor(iam): call tokens and registrations authentication endpoints</td><td>-</td><td>14/11/2026</td></tr>
     <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>ee2fbbc</td><td>chore: remove json-server mock</td><td>Delete the server folder, the api script and the json-server dependency. Update the README to run against the backend.</td><td>10/11/2026</td></tr>
     <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>c4d1b2f</td><td>feat(subscription): subscribe, cancel and public forms via the backend</td><td>Payment, card validation and declined-card handling are done by the server. Cancellation uses POST /subscriptions/{id}/cancellation.</td><td>10/11/2026</td></tr>
     <tr><td>Codecraft-16692/BevTrace-FrontEnd</td><td>feat/backend-integration</td><td>863f511</td><td>feat(analytics): generate reports on the backend</td><td>POST /logistics-reports computes the KPIs server-side.</td><td>10/11/2026</td></tr>
