@@ -23,12 +23,27 @@
 
 ## Video About-the-Team.
 
-<!-- PENDIENTE: resumen de los aspectos más relevantes del video About-the-Team -->
+<p align="justify">
+El Video About-the-Team presenta al equipo CodeCraft y el trabajo realizado en el desarrollo de BevTrace. El video inicia con una portada del equipo y escenas de operaciones de almacén que contextualizan el problema logístico que aborda el producto. A continuación, cada integrante brinda su testimonio ante cámara.
+</p>
 
-<!-- PENDIENTE: pauta de secuencias de contenido con el timing de inicio de cada sección (hh:mm:ss), incluyendo el testimonio ante cámara de cada integrante -->
+<p align="justify">
+Mauricio Castillo resume el concepto de BevTrace, describe sus aportes tanto en la Frontend Web Application como en los Web Services, y finaliza explicando lo que aprendió al desarrollar BevTrace y cómo lo ha implementado y lo seguirá implementando. Enrique Ochoa describe su trabajo en los bounded contexts de Telemetry y Traceability, en Angular y en Spring Boot, el despliegue de los Web Services en Railway, la documentación del Sprint 3 en el informe y las lecciones que preparó para el curso de Java; luego explica cómo el proyecto le permitió comunicarse de forma oral y escrita con distintas audiencias, y las competencias que desarrolló en diseño orientado al dominio, servicios RESTful con seguridad JWT, despliegue en la nube y trabajo colaborativo con GitFlow.
+</p>
 
-<!-- PENDIENTE: cuadro representativo del video (report/assets/about-the-team.png) -->
+| Sección | Inicio (hh:mm:ss) |
+|:---|:---:|
+| Introducción | 00:00:07 |
+| Testimonio de Castillo Yataco, Mauricio Sebastian | 00:00:30 |
+| Testimonio de Ochoa Prado, Enrique Augusto | 00:01:25 |
+| Cierre | 00:02:39 |
 
-<p><strong>Video en Microsoft Stream:</strong> <a href="#" target="_blank">URL pendiente</a></p>
+<div align="center">
+  <img src="../assets/about-the-team.png" alt="Video About-the-Team" width="90%">
+  <p><em>Figura: Video About-the-Team del equipo CodeCraft</em></p>
+</div>
 
-<p><strong>Video en YouTube, incrustado en la Landing Page:</strong> <a href="#" target="_blank">URL pendiente</a></p>
+| Plataforma | Enlace | Duración |
+|:---|:---|:---:|
+| Microsoft Stream | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202411222_upc_edu_pe/IQCLLyXpAWxoQ7I5Sm77bKbzAamY75xbwK79PrkNYgiEvtw?e=Zfh0AS) | 2:51 |
+| YouTube, incrustado en la Landing Page | [Ver video en YouTube](https://youtu.be/MKmzsqJC4GI) | 2:51 |

@@ -3,6 +3,7 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
+| 2.8.0 | 15/11/26 | Ochoa Prado, Enrique Augusto | Sección Video About-the-Team con resumen, secuencia de contenido, cuadro representativo y enlaces |
 | 2.7.2 | 14/11/26 | Ochoa Prado, Enrique Augusto | Carátula, perfiles del equipo y Sprint 3 actualizados con los integrantes actuales |
 | 2.7.1 | 14/11/26 | Ochoa Prado, Enrique Augusto | Carátula: facultad y fecha de la entrega AV2 |
 | 2.7.0 | 14/11/26 | Ochoa Prado, Enrique Augusto | Sección 5.2.3: endpoints con nombres de recurso en plural en la documentación de servicios (88 endpoints), nuevas capturas de registrations y tokens, y commits de la rama feat/rest-resource-naming en las evidencias de desarrollo |
