@@ -3,6 +3,7 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
+| 3.0.1 | 15/11/26 | Ochoa Prado, Enrique Augusto | Student Outcome: cierre de la tabla y párrafo introductorio según el Anexo A del enunciado |
 | 3.0.0 | 15/11/26 | Ochoa Prado, Enrique Augusto | Entrega de la tercera versión del informe (AV2) |
 | 2.12.0 | 15/11/26 | Ochoa Prado, Enrique Augusto | Conclusiones y recomendaciones actualizadas con los resultados del Sprint 3, las entrevistas de validación y la evaluación heurística |
 | 2.11.1 | 15/11/26 | Ochoa Prado, Enrique Augusto | Capítulo 5.3.2: se retiran las filas de entrevistas E2 no realizadas |
