@@ -6,6 +6,5 @@ A continuación se presenta la relación de videos de exposición del equipo Cod
 
 | Entrega | Título del video | Enlace |
 |---|---|---|
-| AV1 | Exposición del Avance 1 — Proyecto BevTrace (CodeCraft — 1ASI0729) | [Video de Exposición AV1](#) |
 | TB1 | Exposición del Trabajo Parcial 1 — Proyecto BevTrace (CodeCraft — 1ASI0729) | [Video de Exposición TB1](https://shorturl.at/rDIdz) |
-| AV2 | Exposición del Avance 2 — Proyecto BevTrace (CodeCraft — 1ASI0729) | [Video de Exposición AV2](#) |
+| AV2 | Exposición del Avance 2 — Proyecto BevTrace (CodeCraft — 1ASI0729) | [Video de Exposición AV2](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202411222_upc_edu_pe/IQBuOw7511y4QL1Cbbhku3bNAQGokWNE2WmRRTUMMJr6jlA?e=5KpJ71) |
