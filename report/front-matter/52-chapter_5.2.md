@@ -1522,6 +1522,7 @@ A continuación se presentan capturas de la interacción con la documentación u
 <table border="1" cellpadding="4" cellspacing="0">
   <thead><tr><th>Commit Id</th><th>Commit Message</th><th>Committed on (Date)</th></tr></thead>
   <tbody>
+    <tr><td>5c67554</td><td>docs(api): update endpoint paths and incident class diagram</td><td>14/11/2026</td></tr>
     <tr><td>2543fdc</td><td>docs(telemetry): add database diagram</td><td>09/11/2026</td></tr>
     <tr><td>4d706a0</td><td>docs(traceability): add database diagram</td><td>09/11/2026</td></tr>
     <tr><td>90043c3</td><td>docs(telemetry): add backend class diagram</td><td>09/11/2026</td></tr>
