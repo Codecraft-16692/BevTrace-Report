@@ -2,15 +2,21 @@
 
 ### 4.8.1. Database Diagrams
 
-El siguiente diagrama general representa la arquitectura de base de datos relacional completa para la plataforma BevTrace. Este esquema unifica todos los Bounded Contexts logísticos, junto con la gestión de identidad y suscripciones, ilustrando las relaciones principales mediante el uso de llaves foráneas (Foreign Keys). Las llaves foráneas se usan solo entre tablas del mismo Bounded Context; cuando una tabla necesita referenciar una entidad de otro contexto, guarda únicamente su identificador, sin llave foránea, para que cada contexto pueda separarse más adelante en su propio servicio sin depender de las tablas de los demás. El diseño evita la redundancia de datos separando las entidades maestras (productos, zonas, vehículos, conductores, destinos y modelos de dispositivo) de las tablas transaccionales que las referencian. Los estados de negocio (por ejemplo, el estado de un lote, de un despacho o de un incidente) se almacenan como columnas controladas por la capa de dominio.
+El siguiente diagrama general representa la arquitectura de base de datos relacional completa para la plataforma BevTrace. Este esquema unifica todos los Bounded Contexts logísticos, junto con los contextos de identidad (IAM) y de suscripciones (Subscription), ilustrando las relaciones principales mediante el uso de llaves foráneas (Foreign Keys). Las llaves foráneas se usan solo entre tablas del mismo Bounded Context; cuando una tabla necesita referenciar una entidad de otro contexto, guarda únicamente su identificador, sin llave foránea, para que cada contexto pueda separarse más adelante en su propio servicio sin depender de las tablas de los demás. El diseño evita la redundancia de datos separando las entidades maestras (productos, zonas, vehículos, conductores, destinos y modelos de dispositivo) de las tablas transaccionales que las referencian. Los estados de negocio (por ejemplo, el estado de un lote, de un despacho o de un incidente) se almacenan como columnas controladas por la capa de dominio.
 
 <img src="../assets/Chapter4/bk1.png" alt="bk general" width="100%"/>
 
-#### Bounded Context: IAM & Subscriptions
+#### Bounded Context: IAM
 
-Este esquema detalla el contexto de identidad, acceso y contratación de la plataforma. La tabla `roles` define los perfiles de autorización (administrador, Logistics Manager y Warehouse Operator) y se relaciona con `users`, que almacena el nombre, correo, contraseña, teléfono, estado de la cuenta y fecha de creación de cada persona registrada. La contratación se modela con `subscription_plans`, que describe cada plan por su código, precio, moneda, periodo de facturación y límites de rutas, dispositivos y usuarios. Cada cliente se vincula a un plan mediante la tabla `subscriptions`, que registra la empresa, el ciclo de facturación, el estado y el periodo vigente. Los cobros asociados se guardan en `payments`, conservando únicamente los últimos cuatro dígitos de la tarjeta, el monto y el resultado del pago.
+Este esquema detalla el contexto de identidad y acceso de la plataforma. La tabla `roles` define los perfiles de autorización (administrador, Logistics Manager y Warehouse Operator) y se relaciona con `users`, que almacena el nombre, correo, contraseña, teléfono, estado de la cuenta y fecha de creación de cada persona registrada.
 
 <img src="../assets/Chapter4/bk2.png" alt="bk IAM" width="100%"/>
+
+#### Bounded Context: Subscription
+
+Este esquema detalla el contexto de contratación de la plataforma. La tabla `subscription_plans` describe cada plan por su código, precio, moneda, periodo de facturación y límites de rutas, dispositivos y usuarios. Cada cliente se vincula a un plan mediante la tabla `subscriptions`, que registra el identificador del usuario titular, la empresa, el ciclo de facturación, el estado y el periodo vigente. Los cobros asociados se guardan en `payments`, conservando únicamente los últimos cuatro dígitos de la tarjeta, el monto y el resultado del pago.
+
+<img src="../assets/Chapter4/bk9.png" alt="bk Subscription" width="100%"/>
 
 #### Bounded Context: Inventory Management
 
