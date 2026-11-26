@@ -3,6 +3,8 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
+| 3.1.1 | 26/11/26 | Ochoa Prado, Enrique Augusto | Sección 4.8.1: diagramas de base de datos separados para los Bounded Contexts IAM y Subscription |
+| 3.1.0 | 26/11/26 | Ochoa Prado, Enrique Augusto | Sección 4.8.1: diagramas de base de datos sin llaves foráneas entre Bounded Contexts |
 | 3.0.1 | 15/11/26 | Ochoa Prado, Enrique Augusto | Student Outcome: cierre de la tabla y párrafo introductorio según el Anexo A del enunciado |
 | 3.0.0 | 15/11/26 | Ochoa Prado, Enrique Augusto | Entrega de la tercera versión del informe (AV2) |
 | 2.12.0 | 15/11/26 | Ochoa Prado, Enrique Augusto | Conclusiones y recomendaciones actualizadas con los resultados del Sprint 3, las entrevistas de validación y la evaluación heurística |
