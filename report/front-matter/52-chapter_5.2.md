@@ -108,6 +108,8 @@ En esta sección se presenta la matriz <strong>Leadership-and-Collaboration (LAC
 El Sprint Backlog 2 reúne las historias de usuario y tareas necesarias para implementar la primera versión de la Frontend Web Application de BevTrace, organizadas por bounded context. Las historias de usuario provienen del Product Backlog del Capítulo III y las tareas son monitoreadas mediante <strong>Jira</strong>.
 </p>
 
+<p><strong>Tablero del Sprint 2 en Jira:</strong> <a href="https://acortar.link/3wP02w" target="_blank">https://acortar.link/3wP02w</a></p>
+
 <div align="center">
   <img src="../assets/Chapter5/sprint2-board.png" alt="Sprint 2 Board Screenshot" width="100%">
   <p><em>Figura: Tablero del Sprint 2 en Jira (Proyecto BevTrace)</em></p>
@@ -119,7 +121,7 @@ El Sprint Backlog 2 reúne las historias de usuario y tareas necesarias para imp
     <tr><th colspan="2">User Story</th><th colspan="6">Work-Item / Task</th></tr>
     <tr>
       <th>Id</th><th>Title</th><th>Id</th><th>Title</th><th>Description</th>
-      <th>Estimation (Hours)</th><th>Assigned To</th><th>Status</th>
+      <th>Estimation (Hours)</th><th>Assigned To</th><th>Status (To-do / In-Process / To-Review / Done)</th>
     </tr>
   </thead>
   <tbody>
@@ -927,7 +929,7 @@ El Sprint Backlog 3 reúne las Technical Stories del Product Backlog definido en
   <thead>
     <tr><th colspan="8" style="text-align:center;">Sprint # 3</th></tr>
     <tr><th colspan="2">User Story</th><th colspan="6">Work-Item / Task</th></tr>
-    <tr><th>Id</th><th>Title</th><th>Id</th><th>Title</th><th>Description</th><th>Estimation (Hours)</th><th>Assigned To</th><th>Status</th></tr>
+    <tr><th>Id</th><th>Title</th><th>Id</th><th>Title</th><th>Description</th><th>Estimation (Hours)</th><th>Assigned To</th><th>Status (To-do / In-Process / To-Review / Done)</th></tr>
   </thead>
   <tbody>
     <tr><td rowspan="2">TS09</td><td rowspan="2">Endpoint de autenticación de usuarios</td><td>T301</td><td>Implementar hashing de contraseñas y generación de tokens JWT</td><td>Servicios de hashing con BCrypt y de emisión y validación de tokens JWT en la capa de infraestructura de IAM.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
@@ -939,8 +941,8 @@ El Sprint Backlog 3 reúne las Technical Stories del Product Backlog definido en
     <tr><td>T307</td><td>Implementar endpoints REST de inventario</td><td>Endpoints de <code>products</code>, <code>batches</code>, <code>zones</code>, <code>waste-records</code>, <code>reconciliations</code> y <code>discrepancies</code>.</td><td>5h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
     <tr><td rowspan="2">TS02</td><td rowspan="2">Endpoint de consulta de estado de despacho</td><td>T308</td><td>Implementar aggregate de órdenes de despacho</td><td>Aggregate <code>DispatchOrder</code> con programación, prioridad y asignación de vehículo, junto con conductores, vehículos y destinos.</td><td>6h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
     <tr><td>T309</td><td>Implementar validación de carga, salida y cancelación</td><td>Comandos de validación de carga, salida y cancelación expuestos como subrecursos de <code>dispatch-orders</code>.</td><td>6h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
-    <tr><td rowspan="2">TS03</td><td rowspan="2">Webhook de notificación de despacho completado</td><td>T310</td><td>Publicar el evento de despacho completado</td><td>Emitir un evento de dominio cuando una orden de despacho se completa.</td><td>4h</td><td>Ochoa, Enrique</td><td>To Do</td></tr>
-    <tr><td>T311</td><td>Implementar el envío del webhook</td><td>Enviar la notificación del evento a la URL configurada por el sistema externo.</td><td>4h</td><td>Ochoa, Enrique</td><td>To Do</td></tr>
+    <tr><td rowspan="2">TS03</td><td rowspan="2">Webhook de notificación de despacho completado</td><td>T310</td><td>Publicar el evento de despacho completado</td><td>Emitir un evento de dominio cuando una orden de despacho se completa.</td><td>4h</td><td>Ochoa, Enrique</td><td>To-do</td></tr>
+    <tr><td>T311</td><td>Implementar el envío del webhook</td><td>Enviar la notificación del evento a la URL configurada por el sistema externo.</td><td>4h</td><td>Ochoa, Enrique</td><td>To-do</td></tr>
     <tr><td rowspan="2">TS04</td><td rowspan="2">Endpoint de historial de trazabilidad de un lote</td><td>T312</td><td>Implementar aggregate de trazabilidad y su manejador de eventos</td><td>Aggregate <code>TraceabilityLog</code> con checkpoints de ruta, creado a partir de los eventos de despacho.</td><td>5h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
     <tr><td>T313</td><td>Implementar confirmación y rechazo de entregas</td><td>Endpoints de <code>logs</code>, <code>route-checkpoints</code> y <code>delivery-records</code>, con las entregas y rechazos como subrecursos de <code>logs</code>.</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
     <tr><td rowspan="2">TS05</td><td rowspan="2">Endpoint de aprovisionamiento de dispositivo IoT</td><td>T314</td><td>Implementar aggregate de dispositivos y modelos</td><td>Aggregates <code>TelemetryDevice</code> y <code>DeviceModel</code> con la regla de un dispositivo por vehículo.</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
