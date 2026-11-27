@@ -108,6 +108,8 @@ En esta sección se presenta la matriz <strong>Leadership-and-Collaboration (LAC
 El Sprint Backlog 2 reúne las historias de usuario y tareas necesarias para implementar la primera versión de la Frontend Web Application de BevTrace, organizadas por bounded context. Las historias de usuario provienen del Product Backlog del Capítulo III y las tareas son monitoreadas mediante <strong>Jira</strong>.
 </p>
 
+<p><strong>Tablero del Sprint 2 en Jira:</strong> <a href="https://acortar.link/3wP02w" target="_blank">https://acortar.link/3wP02w</a></p>
+
 <div align="center">
   <img src="../assets/Chapter5/sprint2-board.png" alt="Sprint 2 Board Screenshot" width="100%">
   <p><em>Figura: Tablero del Sprint 2 en Jira (Proyecto BevTrace)</em></p>
@@ -119,212 +121,56 @@ El Sprint Backlog 2 reúne las historias de usuario y tareas necesarias para imp
     <tr><th colspan="2">User Story</th><th colspan="6">Work-Item / Task</th></tr>
     <tr>
       <th>Id</th><th>Title</th><th>Id</th><th>Title</th><th>Description</th>
-      <th>Estimation (Hours)</th><th>Assigned To</th><th>Status</th>
+      <th>Estimation (Hours)</th><th>Assigned To</th><th>Status (To-do / In-Process / To-Review / Done)</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td rowspan="3">—</td><td rowspan="3">Componentes base y layout principal (Shared)</td>
-      <td>T201</td><td>Implementar layout, toolbar, sidebar y footer</td>
-      <td>Desarrollar el layout principal con toolbar, sidebar, dashboard principal, vista 404, componentes de banner y chips de estado, y el mapa de ruta, aplicando la paleta (Azul Petróleo / Azul Cian) y la tipografía Roboto de la guía de estilos.</td>
-      <td>4h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td>T202</td><td>Implementar internacionalización ES/EN</td>
-      <td>Configurar <code>ngx-translate</code>, archivos de traducción y selector de idioma para todas las vistas.</td>
-      <td>3h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td>T203</td><td>Implementar clases base de consumo de API</td>
-      <td>Crear <code>BaseApiEndpoint</code> y <code>BaseStore</code> (signals) con manejo centralizado de errores y notificaciones.</td>
-      <td>3h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="3">—</td><td rowspan="3">Identidad y acceso (IAM)</td>
-      <td>T204</td><td>Implementar gestión de roles y validación de credenciales</td>
-      <td>Crear entidades <code>User</code> y <code>Role</code> y las reglas de validación (correo con "@"; contraseña de más de 8 caracteres, con al menos una mayúscula y un número).</td>
-      <td>3h</td><td>Heredia, Danitza</td><td>Done</td>
-    </tr>
-    <tr>
-      <td>T205</td><td>Implementar vistas sign-in y sign-up</td>
-      <td>Desarrollar los formularios de inicio de sesión y registro con validaciones y selección de rol.</td>
-      <td>4h</td><td>Heredia, Danitza</td><td>Done</td>
-    </tr>
-    <tr>
-      <td>T206</td><td>Implementar gestión de usuarios y sesión</td>
-      <td>Desarrollar el store de autenticación, la gestión de usuarios, la sesión y el guard de rutas según rol.</td>
-      <td>4h</td><td>Heredia, Danitza</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="2">—</td><td rowspan="2">Suscripciones y planes (Subscription)</td>
-      <td>T207</td><td>Implementar entidades, API y store de Subscription</td>
-      <td>Crear entidades <code>SubscriptionPlan</code>, <code>Subscription</code> y <code>Payment</code>, con endpoints, assemblers y store.</td>
-      <td>4h</td><td>Heredia, Danitza</td><td>Done</td>
-    </tr>
-    <tr>
-      <td>T208</td><td>Implementar vistas de planes y suscripción</td>
-      <td>Desarrollar la gestión de planes y de la suscripción vigente, el checkout y pago con tarjeta (se conservan solo los últimos cuatro dígitos), la facturación, las solicitudes de contacto y la suscripción al boletín.</td>
-      <td>4h</td><td>Heredia, Danitza</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="2">US01</td><td rowspan="2">Registro automático de ingreso de lote</td>
-      <td>T209</td><td>Implementar entidades, API y store de Inventory</td>
-      <td>Crear <code>ProductBatch</code>, <code>BeverageProduct</code> y <code>WarehouseZone</code>, con endpoints, assemblers y store basado en signals.</td>
-      <td>4h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td>T210</td><td>Implementar vista de ingreso de lote</td>
-      <td>Desarrollar el registro de ingreso por código de lote, con rechazo y solicitud de verificación manual si el código no es válido.</td>
-      <td>5h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="1">US02</td><td rowspan="1">Alerta de discrepancia de inventario</td>
-      <td>T211</td><td>Implementar vista de discrepancias</td>
-      <td>Desarrollar la lista de discrepancias entre cantidad esperada y contada, con estado y nota de resolución.</td>
-      <td>3h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="1">US03</td><td rowspan="1">Registro de mermas de producto</td>
-      <td>T212</td><td>Implementar formulario de mermas</td>
-      <td>Desarrollar el registro de merma (lote, cantidad y motivo) y su listado.</td>
-      <td>2h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="1">US04</td><td rowspan="1">Conciliación de inventario físico</td>
-      <td>T213</td><td>Implementar vista de conciliación</td>
-      <td>Desarrollar la confirmación de la conciliación y el porcentaje de exactitud (ERI).</td>
-      <td>3h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="2">US05</td><td rowspan="2">Programación de un despacho</td>
-      <td>T214</td><td>Implementar entidades, API y store de Dispatch</td>
-      <td>Crear <code>DispatchOrder</code>, <code>CargoAssignment</code>, <code>TransportVehicle</code>, <code>Driver</code> y <code>DeliveryDestination</code>, con endpoints y store.</td>
-      <td>4h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td>T215</td><td>Implementar vista de programación de despacho</td>
-      <td>Desarrollar el formulario para programar un despacho (lotes, destino, fecha y prioridad) y la lista de órdenes.</td>
-      <td>4h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="1">US06</td><td rowspan="1">Asignación de vehículo a despacho</td>
-      <td>T216</td><td>Implementar vista de asignación de vehículo</td>
-      <td>Desarrollar la selección de vehículo y conductor con validación de capacidad y autorización de salida.</td>
-      <td>3h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="1">US07</td><td rowspan="1">Validación masiva de pallets antes del despacho</td>
-      <td>T217</td><td>Implementar vista de validación de pallets</td>
-      <td>Desarrollar la validación de la carga contra la orden, indicando pallets conformes y faltantes.</td>
-      <td>5h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="1">US08</td><td rowspan="1">Registro de salida de un despacho</td>
-      <td>T218</td><td>Implementar registro de salida</td>
-      <td>Desarrollar la acción de registrar la salida del transporte y actualizar el estado del despacho.</td>
-      <td>2h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="2">US09</td><td rowspan="2">Seguimiento en tiempo real de un lote en tránsito</td>
-      <td>T219</td><td>Implementar entidades, API y store de Traceability</td>
-      <td>Crear <code>TraceabilityLog</code>, <code>RouteCheckpoint</code> y <code>DeliveryRecord</code>, con endpoints, assemblers y store.</td>
-      <td>4h</td><td>Ochoa, Enrique</td><td>Done</td>
-    </tr>
-    <tr>
-      <td>T220</td><td>Implementar vista de seguimiento en tránsito</td>
-      <td>Desarrollar la vista con la ubicación actual, el estado y el avance del lote en ruta.</td>
-      <td>8h</td><td>Ochoa, Enrique</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="1">US10</td><td rowspan="1">Registro de checkpoint en ruta</td>
-      <td>T221</td><td>Implementar vista de checkpoints</td>
-      <td>Desarrollar el registro de puntos de control con su orden, estado y hora de llegada.</td>
-      <td>5h</td><td>Ochoa, Enrique</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="1">US11</td><td rowspan="1">Finalización de la trazabilidad de un lote</td>
-      <td>T222</td><td>Implementar cierre de trazabilidad y registro de entrega</td>
-      <td>Desarrollar la confirmación de entrega o rechazo con su registro (<code>DeliveryRecord</code>).</td>
-      <td>3h</td><td>Ochoa, Enrique</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="2">US12</td><td rowspan="2">Visualización de estado de conectividad de dispositivos</td>
-      <td>T223</td><td>Implementar entidades, API y store de Telemetry</td>
-      <td>Crear <code>TelemetryDevice</code>, <code>LocationStream</code> y <code>ConnectionStatus</code>, con endpoints y store.</td>
-      <td>3h</td><td>Ochoa, Enrique</td><td>Done</td>
-    </tr>
-    <tr>
-      <td>T224</td><td>Implementar vista de conectividad de dispositivos</td>
-      <td>Desarrollar la vista de estado de dispositivos, marcando como crítica la unidad con más de 30 minutos sin señal.</td>
-      <td>3h</td><td>Ochoa, Enrique</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="1">US13</td><td rowspan="1">Notificación de reconexión de dispositivo</td>
-      <td>T225</td><td>Implementar notificación de reconexión</td>
-      <td>Desarrollar el aviso al usuario cuando un dispositivo recupera la conexión.</td>
-      <td>2h</td><td>Ochoa, Enrique</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="2">US14</td><td rowspan="2">Detección de anomalía en la distribución</td>
-      <td>T226</td><td>Implementar entidades, API y store de Incident</td>
-      <td>Crear <code>IncidentRecord</code>, <code>AlertRule</code> y <code>AutomatedAlert</code>, con endpoints, assemblers y store.</td>
-      <td>4h</td><td>Heredia, Danitza</td><td>Done</td>
-    </tr>
-    <tr>
-      <td>T227</td><td>Implementar vista de incidencias</td>
-      <td>Desarrollar la gestión de incidencias detectadas (tipo, severidad y estado) y de las reglas de alerta que las generan.</td>
-      <td>5h</td><td>Heredia, Danitza</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="1">US15</td><td rowspan="1">Notificación de resolución de incidencia</td>
-      <td>T228</td><td>Implementar notificación de resolución</td>
-      <td>Desarrollar el centro de notificaciones, que avisa al usuario cuando una incidencia es resuelta.</td>
-      <td>2h</td><td>Heredia, Danitza</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="1">US16</td><td rowspan="1">Registro de acción correctiva</td>
-      <td>T229</td><td>Implementar formulario de acción correctiva</td>
-      <td>Desarrollar el registro de la acción tomada sobre una incidencia.</td>
-      <td>2h</td><td>Heredia, Danitza</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="2">US17</td><td rowspan="2">Reporte consolidado de indicadores logísticos</td>
-      <td>T230</td><td>Implementar entidades, API y store de Analytics</td>
-      <td>Crear <code>LogisticsReport</code> y <code>LogisticsKPI</code>, con endpoints y store.</td>
-      <td>4h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td>T231</td><td>Implementar vista de reporte de indicadores</td>
-      <td>Desarrollar el dashboard de indicadores (OTIF, Fill Rate, ERI y rotación) con gráficos mediante <code>ng2-charts</code>.</td>
-      <td>5h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="1">US18</td><td rowspan="1">Cálculo automático de la tasa de mermas</td>
-      <td>T232</td><td>Implementar vista de tasa de mermas</td>
-      <td>Desarrollar la visualización de la tasa de mermas calculada a partir de los registros de merma.</td>
-      <td>3h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="4">—</td><td rowspan="4">Configuración y despliegue</td>
-      <td>T233</td><td>Implementar la Mock API</td>
-      <td>Crear el servidor <code>json-server</code> con el script <code>seed.mjs</code> que genera los datos de prueba de todos los contextos.</td>
-      <td>4h</td><td>Ochoa, Enrique</td><td>Done</td>
-    </tr>
-    <tr>
-      <td>T234</td><td>Desplegar la Mock API en Railway</td>
-      <td>Publicar la carpeta <code>server</code> en Railway y exponer la API bajo <code>/api/v1</code>.</td>
-      <td>2h</td><td>Ochoa, Enrique</td><td>Done</td>
-    </tr>
-    <tr>
-      <td>T235</td><td>Desplegar la Frontend Web Application en Vercel</td>
-      <td>Conectar el repositorio a Vercel, generar el build de producción de Angular y publicarlo.</td>
-      <td>2h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
-    <tr>
-      <td>T236</td><td>Conectar el frontend con la API desplegada</td>
-      <td>Actualizar la URL base de consumo para apuntar a la Mock API en Railway.</td>
-      <td>1h</td><td>Castillo, Mauricio</td><td>Done</td>
-    </tr>
+    <tr><td rowspan="3">—</td><td rowspan="3">Componentes base y layout principal (Shared)</td><td>T201</td><td>Implementar clases base de consumo de API</td><td>Crear <code>BaseApiEndpoint</code> y <code>BaseStore</code> (signals) con manejo centralizado de errores y notificaciones.</td><td>5h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td>T202</td><td>Implementar layout, toolbar, sidebar y footer</td><td>Desarrollar el layout principal con toolbar, sidebar, dashboard principal, vista 404, componentes de banner y chips de estado, y el mapa de ruta, aplicando la paleta (Azul Petróleo / Azul Cian) y la tipografía Roboto de la guía de estilos.</td><td>6h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td>T203</td><td>Implementar internacionalización ES/EN y selector de idioma</td><td>Configurar ngx-translate, los archivos de traducción en español e inglés y el selector de idioma para todas las vistas.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="3">—</td><td rowspan="3">Identidad y acceso (IAM)</td><td>T204</td><td>Implementar gestión de roles y validación de credenciales</td><td>Crear entidades <code>User</code> y <code>Role</code> y las reglas de validación (correo con "@"; contraseña de más de 8 caracteres, con al menos una mayúscula y un número).</td><td>4h</td><td>Heredia, Danitza</td><td>Done</td></tr>
+    <tr><td>T205</td><td>Implementar vistas sign-in y sign-up</td><td>Desarrollar los formularios de inicio de sesión y registro con validaciones y selección de rol.</td><td>4h</td><td>Heredia, Danitza</td><td>Done</td></tr>
+    <tr><td>T206</td><td>Implementar gestión de usuarios y sesión</td><td>Desarrollar el store de autenticación, la gestión de usuarios, la sesión y el guard de rutas según rol.</td><td>4h</td><td>Heredia, Danitza</td><td>Done</td></tr>
+    <tr><td rowspan="2">—</td><td rowspan="2">Suscripciones y planes (Subscription)</td><td>T207</td><td>Implementar entidades, API y store de Subscription</td><td>Crear entidades <code>SubscriptionPlan</code>, <code>Subscription</code> y <code>Payment</code>, con endpoints, assemblers y store.</td><td>4h</td><td>Heredia, Danitza</td><td>Done</td></tr>
+    <tr><td>T208</td><td>Implementar vistas de planes y suscripción</td><td>Desarrollar la gestión de planes y de la suscripción vigente, el checkout y pago con tarjeta (se conservan solo los últimos cuatro dígitos), la facturación, las solicitudes de contacto y la suscripción al boletín.</td><td>4h</td><td>Heredia, Danitza</td><td>Done</td></tr>
+    <tr><td rowspan="3">US01</td><td rowspan="3">Registro automático de ingreso de lote</td><td>T209</td><td>Implementar modelos de dominio de Inventory</td><td>Crear las entidades ProductBatch, BeverageProduct y WarehouseZone con sus reglas de dominio.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td>T210</td><td>Implementar API, assemblers y store de Inventory</td><td>Configurar los endpoints, DTOs y assemblers de productos, lotes y zonas, y el store basado en signals.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td>T211</td><td>Implementar vista de ingreso de lote</td><td>Desarrollar el registro de ingreso por código de lote, con rechazo y solicitud de verificación manual si el código no es válido.</td><td>5h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="2">US02</td><td rowspan="2">Alerta de discrepancia de inventario</td><td>T212</td><td>Implementar modelos e infraestructura de conciliación y discrepancias</td><td>Definir las entidades de conciliación y discrepancia con su lógica y configurar sus endpoints y assemblers.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td>T213</td><td>Implementar vista de discrepancias</td><td>Desarrollar la lista de discrepancias entre cantidad esperada y contada, con estado y nota de resolución.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="2">US03</td><td rowspan="2">Registro de mermas de producto</td><td>T214</td><td>Implementar modelo y endpoints de mermas</td><td>Definir el modelo de registro de merma y configurar sus endpoints y assembler.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td>T215</td><td>Implementar formulario y listado de mermas</td><td>Desarrollar el registro de merma (lote, cantidad y motivo) y su listado.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">US04</td><td rowspan="1">Conciliación de inventario físico</td><td>T216</td><td>Implementar vista de conciliación</td><td>Desarrollar la confirmación de la conciliación y el porcentaje de exactitud (ERI).</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="3">US05</td><td rowspan="3">Programación de un despacho</td><td>T217</td><td>Implementar modelos de dominio de Dispatch</td><td>Crear las entidades DispatchOrder y CargoAssignment con sus comandos y reglas de asignación de carga.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td>T218</td><td>Implementar API, assemblers y store de Dispatch</td><td>Configurar los endpoints, DTOs y assemblers de órdenes y carga, y el store de Dispatch.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td>T219</td><td>Implementar vista de programación de despacho</td><td>Desarrollar el formulario para programar un despacho (lotes, destino, fecha y prioridad) y la lista de órdenes.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="2">US06</td><td rowspan="2">Asignación de vehículo a despacho</td><td>T220</td><td>Implementar modelos e infraestructura de flota y destinos</td><td>Crear las entidades TransportVehicle, Driver y DeliveryDestination con sus endpoints y assemblers.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td>T221</td><td>Implementar vista de asignación de vehículo</td><td>Desarrollar la selección de vehículo y conductor con validación de capacidad y autorización de salida.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">US07</td><td rowspan="1">Validación masiva de pallets antes del despacho</td><td>T222</td><td>Implementar vista de validación de pallets</td><td>Desarrollar la validación de la carga contra la orden, indicando pallets conformes y faltantes.</td><td>5h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">US08</td><td rowspan="1">Registro de salida de un despacho</td><td>T223</td><td>Implementar registro de salida y detalle del despacho</td><td>Desarrollar la acción de registrar la salida del transporte en la vista de detalle y actualizar el estado del despacho en la cola.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="3">US09</td><td rowspan="3">Seguimiento en tiempo real de un lote en tránsito</td><td>T224</td><td>Implementar modelos y planificador de rutas de Traceability</td><td>Crear TraceabilityLog, RouteCheckpoint y DeliveryRecord, con los comandos de ruta y el planificador que estima la duración del recorrido.</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td>T225</td><td>Implementar API, assemblers y store de Traceability</td><td>Configurar los DTOs, los servicios de endpoints y los assemblers de trazabilidad, y el store de Traceability.</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td>T226</td><td>Implementar vista de seguimiento en tránsito</td><td>Desarrollar la vista con la ubicación actual, el estado y el avance del lote en ruta.</td><td>8h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td rowspan="1">US10</td><td rowspan="1">Registro de checkpoint en ruta</td><td>T227</td><td>Implementar vista de checkpoints</td><td>Desarrollar el registro de puntos de control con su orden, estado y hora de llegada.</td><td>5h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td rowspan="2">US11</td><td rowspan="2">Finalización de la trazabilidad de un lote</td><td>T228</td><td>Implementar cierre de trazabilidad y registro de entrega</td><td>Desarrollar la confirmación de entrega o rechazo con su registro (<code>DeliveryRecord</code>).</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td>T229</td><td>Implementar historial de entregas</td><td>Desarrollar la vista de historial de entregas con el receptor, la fecha y el estado de cada entrega.</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td rowspan="3">US12</td><td rowspan="3">Visualización de estado de conectividad de dispositivos</td><td>T230</td><td>Implementar modelos, API y store de Telemetry</td><td>Crear TelemetryDevice, LocationStream y ConnectionStatus con sus comandos, DTOs, endpoints, assemblers y store.</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td>T231</td><td>Implementar vista de conectividad de dispositivos</td><td>Desarrollar la vista de estado de dispositivos, marcando como crítica la unidad con más de 30 minutos sin señal.</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td>T232</td><td>Implementar formulario de aprovisionamiento de dispositivo</td><td>Desarrollar el formulario que registra un dispositivo con su modelo y su vehículo, validando los datos antes de enviarlos.</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td rowspan="1">US13</td><td rowspan="1">Notificación de reconexión de dispositivo</td><td>T233</td><td>Implementar notificación de reconexión</td><td>Desarrollar el aviso al usuario cuando un dispositivo recupera la conexión.</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td rowspan="3">US14</td><td rowspan="3">Detección de anomalía en la distribución</td><td>T234</td><td>Implementar entidades, API y store de Incident</td><td>Crear <code>IncidentRecord</code>, <code>AlertRule</code> y <code>AutomatedAlert</code>, con endpoints, assemblers y store.</td><td>4h</td><td>Heredia, Danitza</td><td>Done</td></tr>
+    <tr><td>T235</td><td>Implementar vista de incidencias</td><td>Desarrollar la gestión de incidencias detectadas con su tipo, severidad y estado.</td><td>5h</td><td>Heredia, Danitza</td><td>Done</td></tr>
+    <tr><td>T236</td><td>Implementar vista de reglas de alerta</td><td>Desarrollar la gestión de las reglas de alerta con su condición, umbral y severidad.</td><td>4h</td><td>Heredia, Danitza</td><td>Done</td></tr>
+    <tr><td rowspan="1">US15</td><td rowspan="1">Notificación de resolución de incidencia</td><td>T237</td><td>Implementar notificación de resolución</td><td>Desarrollar el centro de notificaciones, que avisa al usuario cuando una incidencia es resuelta.</td><td>4h</td><td>Heredia, Danitza</td><td>Done</td></tr>
+    <tr><td rowspan="1">US16</td><td rowspan="1">Registro de acción correctiva</td><td>T238</td><td>Implementar formulario de acción correctiva</td><td>Desarrollar el registro de la acción tomada sobre una incidencia.</td><td>4h</td><td>Heredia, Danitza</td><td>Done</td></tr>
+    <tr><td rowspan="3">US17</td><td rowspan="3">Reporte consolidado de indicadores logísticos</td><td>T239</td><td>Implementar entidades, API y store de Analytics</td><td>Crear <code>LogisticsReport</code> y <code>LogisticsKPI</code>, con endpoints y store.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td>T240</td><td>Implementar vista de reporte de indicadores</td><td>Desarrollar el dashboard de indicadores (OTIF, Fill Rate, ERI y rotación) con gráficos mediante <code>ng2-charts</code>.</td><td>5h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td>T241</td><td>Implementar generador de reportes logísticos</td><td>Desarrollar la vista que genera reportes logísticos por periodo a partir de los indicadores.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="1">US18</td><td rowspan="1">Cálculo automático de la tasa de mermas</td><td>T242</td><td>Implementar vista de tasa de mermas</td><td>Desarrollar la visualización de la tasa de mermas calculada a partir de los registros de merma.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td rowspan="4">—</td><td rowspan="4">Configuración y despliegue</td><td>T243</td><td>Implementar la Mock API</td><td>Crear el servidor <code>json-server</code> con el script <code>seed.mjs</code> que genera los datos de prueba de todos los contextos.</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td>T244</td><td>Desplegar la Mock API en Railway con rutas personalizadas</td><td>Configurar las rutas personalizadas del servidor, publicar la carpeta server en Railway y exponer la API bajo /api/v1.</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
+    <tr><td>T245</td><td>Desplegar la Frontend Web Application en Vercel</td><td>Conectar el repositorio a Vercel, generar el build de producción de Angular y publicarlo.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
+    <tr><td>T246</td><td>Conectar el frontend con la API desplegada y verificar el consumo</td><td>Actualizar la URL base de consumo hacia la Mock API en Railway y verificar que todos los módulos obtengan sus datos desplegados.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
   </tbody>
 </table>
 
@@ -1083,7 +929,7 @@ El Sprint Backlog 3 reúne las Technical Stories del Product Backlog definido en
   <thead>
     <tr><th colspan="8" style="text-align:center;">Sprint # 3</th></tr>
     <tr><th colspan="2">User Story</th><th colspan="6">Work-Item / Task</th></tr>
-    <tr><th>Id</th><th>Title</th><th>Id</th><th>Title</th><th>Description</th><th>Estimation (Hours)</th><th>Assigned To</th><th>Status</th></tr>
+    <tr><th>Id</th><th>Title</th><th>Id</th><th>Title</th><th>Description</th><th>Estimation (Hours)</th><th>Assigned To</th><th>Status (To-do / In-Process / To-Review / Done)</th></tr>
   </thead>
   <tbody>
     <tr><td rowspan="2">TS09</td><td rowspan="2">Endpoint de autenticación de usuarios</td><td>T301</td><td>Implementar hashing de contraseñas y generación de tokens JWT</td><td>Servicios de hashing con BCrypt y de emisión y validación de tokens JWT en la capa de infraestructura de IAM.</td><td>4h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
@@ -1095,8 +941,8 @@ El Sprint Backlog 3 reúne las Technical Stories del Product Backlog definido en
     <tr><td>T307</td><td>Implementar endpoints REST de inventario</td><td>Endpoints de <code>products</code>, <code>batches</code>, <code>zones</code>, <code>waste-records</code>, <code>reconciliations</code> y <code>discrepancies</code>.</td><td>5h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
     <tr><td rowspan="2">TS02</td><td rowspan="2">Endpoint de consulta de estado de despacho</td><td>T308</td><td>Implementar aggregate de órdenes de despacho</td><td>Aggregate <code>DispatchOrder</code> con programación, prioridad y asignación de vehículo, junto con conductores, vehículos y destinos.</td><td>6h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
     <tr><td>T309</td><td>Implementar validación de carga, salida y cancelación</td><td>Comandos de validación de carga, salida y cancelación expuestos como subrecursos de <code>dispatch-orders</code>.</td><td>6h</td><td>Castillo, Mauricio</td><td>Done</td></tr>
-    <tr><td rowspan="2">TS03</td><td rowspan="2">Webhook de notificación de despacho completado</td><td>T310</td><td>Publicar el evento de despacho completado</td><td>Emitir un evento de dominio cuando una orden de despacho se completa.</td><td>4h</td><td>Ochoa, Enrique</td><td>To Do</td></tr>
-    <tr><td>T311</td><td>Implementar el envío del webhook</td><td>Enviar la notificación del evento a la URL configurada por el sistema externo.</td><td>4h</td><td>Ochoa, Enrique</td><td>To Do</td></tr>
+    <tr><td rowspan="2">TS03</td><td rowspan="2">Webhook de notificación de despacho completado</td><td>T310</td><td>Publicar el evento de despacho completado</td><td>Emitir un evento de dominio cuando una orden de despacho se completa.</td><td>4h</td><td>Ochoa, Enrique</td><td>To-do</td></tr>
+    <tr><td>T311</td><td>Implementar el envío del webhook</td><td>Enviar la notificación del evento a la URL configurada por el sistema externo.</td><td>4h</td><td>Ochoa, Enrique</td><td>To-do</td></tr>
     <tr><td rowspan="2">TS04</td><td rowspan="2">Endpoint de historial de trazabilidad de un lote</td><td>T312</td><td>Implementar aggregate de trazabilidad y su manejador de eventos</td><td>Aggregate <code>TraceabilityLog</code> con checkpoints de ruta, creado a partir de los eventos de despacho.</td><td>5h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
     <tr><td>T313</td><td>Implementar confirmación y rechazo de entregas</td><td>Endpoints de <code>logs</code>, <code>route-checkpoints</code> y <code>delivery-records</code>, con las entregas y rechazos como subrecursos de <code>logs</code>.</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
     <tr><td rowspan="2">TS05</td><td rowspan="2">Endpoint de aprovisionamiento de dispositivo IoT</td><td>T314</td><td>Implementar aggregate de dispositivos y modelos</td><td>Aggregates <code>TelemetryDevice</code> y <code>DeviceModel</code> con la regla de un dispositivo por vehículo.</td><td>4h</td><td>Ochoa, Enrique</td><td>Done</td></tr>
